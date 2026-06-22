@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>台股財務監測 // FINMETRICS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #060912;
+    --bg2: #0b1120;
+    --panel: rgba(13, 21, 38, 0.72);
+    --grid: rgba(0, 240, 255, 0.045);
+    --cyan: #00f0ff;
+    --magenta: #ff2d95;
+    --lime: #a6ff00;
+    --amber: #ffb000;
+    --violet: #b14dff;
+    --txt: #d8e6f2;
+    --dim: #6f86a3;
+    --line: rgba(0, 240, 255, 0.16);
+    --up3: rgba(255, 45, 149, 0.85);
+    --up2: rgba(255, 99, 80, 0.55);
+    --up1: rgba(255, 176, 0, 0.30);
+    --dn3: rgba(0, 255, 150, 0.80);
+    --dn2: rgba(0, 200, 200, 0.45);
+    --dn1: rgba(0, 160, 200, 0.25);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'JetBrains Mono', 'Consolas', 'Courier New', monospace;
+    color: var(--txt);
+    background:
+      radial-gradient(1200px 700px at 12% -10%, rgba(177, 77, 255, 0.10), transparent 60%),
+      radial-gradient(1000px 600px at 100% 0%, rgba(0, 240, 255, 0.10), transparent 55%),
+      linear-gradient(180deg, var(--bg2), var(--bg));
+    background-attachment: fixed;
+    min-height: 100vh;
+    position: relative;
+  }
+  body::before {
+    content: "";
+    position: fixed; inset: 0; pointer-events: none; z-index: 0;
+    background-image:
+      linear-gradient(var(--grid) 1px, transparent 1px),
+      linear-gradient(90deg, var(--grid) 1px, transparent 1px);
+    background-size: 44px 44px;
+    mask-image: radial-gradient(circle at 50% 30%, black, transparent 95%);
+  }
+  .wrap { position: relative; z-index: 1; max-width: 1500px; margin: 0 auto; padding: 18px 18px 80px; }
+
+  /* ---------- Header ---------- */
+  header.topbar {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 14px;
+    padding: 16px 18px; margin-bottom: 16px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+    box-shadow: 0 0 0 1px rgba(0,240,255,0.05), 0 18px 50px rgba(0,0,0,0.45);
+  }
+  .brand { display: flex; flex-direction: column; gap: 2px; margin-right: auto; }
+  .brand h1 {
+    font-family: 'Orbitron', sans-serif; font-weight: 900; letter-spacing: 2px;
+    margin: 0; font-size: 20px; line-height: 1;
+    background: linear-gradient(90deg, var(--cyan), var(--magenta));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    text-shadow: 0 0 18px rgba(0, 240, 255, 0.25);
+  }
+  .brand .sub { font-size: 11px; color: var(--dim); letter-spacing: 1px; }
+  .updated { font-size: 11px; color: var(--dim); text-align: right; }
+  .updated b { color: var(--cyan); }
+
+  /* ---------- Controls ---------- */
+  .controls {
+    display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+    padding: 12px 14px; margin-bottom: 16px;
+    background: var(--panel); border: 1px solid var(--line); border-radius: 12px;
+  }
+  .ctl { display: flex; flex-direction: column; gap: 4px; }
+  .ctl label { font-size: 10px; color: var(--dim); letter-spacing: 1px; text-transform: uppercase; }
+  select, input[type="text"], input[type="password"] {
+    background: #0a1220; color: var(--txt);
+    border: 1px solid var(--line); border-radius: 7px;
+    padding: 7px 9px; font-family: inherit; font-size: 13px; outline: none;
+  }
+  select:focus, input:focus { border-color: var(--cyan); box-shadow: 0 0 0 2px rgba(0,240,255,0.15); }
+
+  .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  .seg button {
+    background: transparent; color: var(--dim); border: none; cursor: pointer;
+    padding: 7px 12px; font-family: inherit; font-size: 12px; letter-spacing: 1px;
+  }
+  .seg button.active { background: rgba(0, 240, 255, 0.14); color: var(--cyan); text-shadow: 0 0 8px rgba(0,240,255,0.5); }
+
+  .chip {
+    background: transparent; border: 1px solid var(--line); color: var(--dim);
+    border-radius: 999px; padding: 7px 12px; cursor: pointer; font-family: inherit; font-size: 12px;
+    transition: all .15s;
+  }
+  .chip.on { color: var(--magenta); border-color: var(--magenta); box-shadow: 0 0 12px rgba(255,45,149,0.25); }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: linear-gradient(90deg, rgba(0,240,255,0.18), rgba(255,45,149,0.18));
+    color: var(--cyan); border: 1px solid var(--cyan);
+    border-radius: 9px; padding: 9px 16px; cursor: pointer;
+    font-family: 'Orbitron', sans-serif; font-weight: 700; font-size: 12px; letter-spacing: 1px;
+    text-shadow: 0 0 8px rgba(0,240,255,0.4);
+    transition: all .15s;
+  }
+  .btn:hover { background: var(--cyan); color: #04121a; text-shadow: none; box-shadow: 0 0 22px rgba(0,240,255,0.5); }
+  .btn:disabled { opacity: .55; cursor: progress; }
+  .btn .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--lime); box-shadow: 0 0 8px var(--lime); }
+  .btn-ghost {
+    background: transparent; color: var(--violet); border-color: var(--violet);
+    text-shadow: 0 0 8px rgba(177,77,255,0.4);
+  }
+  .btn-ghost:hover { background: var(--violet); color: #0a0312; box-shadow: 0 0 22px rgba(177,77,255,0.5); }
+
+  /* ---------- Modal ---------- */
+  .modal-overlay {
+    position: fixed; inset: 0; z-index: 80; display: none;
+    background: rgba(2, 5, 12, 0.78); backdrop-filter: blur(5px);
+    align-items: flex-start; justify-content: center; padding: 5vh 16px;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal {
+    width: min(860px, 100%); max-height: 90vh; overflow-y: auto;
+    background: linear-gradient(180deg, #0c1426, #080d18);
+    border: 1px solid var(--cyan); border-radius: 14px;
+    box-shadow: 0 0 0 1px rgba(0,240,255,0.08), 0 24px 70px rgba(0,0,0,0.6), 0 0 40px rgba(0,240,255,0.12);
+  }
+  .modal-head {
+    position: sticky; top: 0; display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 20px; border-bottom: 1px solid var(--line);
+    background: linear-gradient(180deg, #0e1830, #0c1426);
+  }
+  .modal-head h3 {
+    margin: 0; font-family: 'Orbitron', sans-serif; font-size: 16px; letter-spacing: 1px;
+    background: linear-gradient(90deg, var(--cyan), var(--magenta));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+  }
+  .modal-close {
+    background: transparent; border: 1px solid var(--line); color: var(--dim);
+    width: 32px; height: 32px; border-radius: 8px; cursor: pointer; font-size: 20px; line-height: 1;
+  }
+  .modal-close:hover { color: var(--magenta); border-color: var(--magenta); }
+  .modal-body { padding: 18px 20px 24px; font-size: 13px; line-height: 1.7; }
+  .modal-intro { color: var(--txt); background: rgba(0,240,255,0.05); border-left: 2px solid var(--cyan); padding: 10px 14px; border-radius: 6px; margin: 0 0 16px; }
+  .def-sec { margin: 12px 0; }
+  .def-tag { display: inline-block; font-family:'Orbitron',sans-serif; font-size: 11px; letter-spacing: 1px; padding: 3px 10px; border-radius: 6px; margin-bottom: 4px; }
+  .def-tag.stmt { color: var(--cyan); border: 1px solid var(--cyan); }
+  .def-tag.mark { color: var(--amber); border: 1px solid var(--amber); }
+  .def-tag.sig { color: var(--lime); border: 1px solid var(--lime); }
+  .sig-list { display: flex; flex-direction: column; gap: 8px; margin-top: 8px; }
+  .sig-row { display: flex; gap: 10px; align-items: flex-start; color: var(--dim); }
+  .sig-row > .tag { flex: 0 0 auto; cursor: default; align-self: flex-start; }
+  #sigHelp.flash { animation: sigflash 1.6s ease; }
+  @keyframes sigflash { 0%,100% { background: transparent; } 25% { background: rgba(166,255,0,0.10); } }
+  .def-sec p { margin: 4px 0 0; color: var(--dim); }
+  .def-sec p b, .modal-intro b { color: var(--txt); }
+  .def-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 10px; margin: 14px 0; }
+  .def { background: rgba(255,255,255,0.03); border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; color: var(--dim); }
+  .def b { color: var(--cyan); display: inline-block; margin-right: 6px; }
+  .warn-txt { color: #ff7aa8; }
+  .good-txt { color: var(--lime); }
+  .modal-foot { color: var(--dim); font-size: 11px; margin-top: 14px; border-top: 1px dashed var(--line); padding-top: 10px; }
+
+  /* ---------- Group section ---------- */
+  .group { margin-bottom: 26px; }
+  .group-head {
+    display: flex; align-items: center; gap: 12px; margin: 0 2px 8px;
+  }
+  .group-head h2 {
+    font-family: 'Orbitron', sans-serif; font-size: 15px; letter-spacing: 2px; margin: 0;
+    color: var(--cyan); text-shadow: 0 0 10px rgba(0,240,255,0.3);
+  }
+  .group-head .bar { flex: 1; height: 1px; background: linear-gradient(90deg, var(--line), transparent); }
+  .group-head .count { font-size: 11px; color: var(--dim); }
+
+  .tablewrap {
+    border: 1px solid var(--line); border-radius: 12px; overflow: hidden;
+    background: var(--panel);
+  }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; table-layout: fixed; }
+  thead th {
+    position: sticky; top: 0; background: #0a1322; color: var(--dim);
+    font-weight: 400; font-size: 10px; letter-spacing: 1px; text-transform: uppercase;
+    padding: 10px 6px; text-align: center; white-space: nowrap; cursor: pointer; user-select: none;
+    border-bottom: 1px solid var(--line);
+    overflow: hidden; text-overflow: ellipsis;
+  }
+  thead th:hover { color: var(--cyan); }
+  thead th .arrow { color: var(--cyan); font-size: 9px; }
+  tbody td { padding: 9px 6px; text-align: center; white-space: nowrap; border-bottom: 1px solid rgba(255,255,255,0.04); overflow: hidden; text-overflow: ellipsis; }
+  tbody tr { cursor: pointer; transition: background .12s; }
+  tbody tr:hover { background: rgba(0, 240, 255, 0.05); }
+  tbody tr.expanded { background: rgba(177,77,255,0.06); }
+  .sid { color: var(--violet); font-weight: 700; }
+  .sname { color: var(--txt); }
+  .muted { color: var(--dim); }
+
+  .pct { font-weight: 700; }
+  .pct.up { color: #ff7aa8; }
+  .pct.dn { color: #5cffc0; }
+
+  /* heatmap mini cells for 5 metrics */
+  .heat { display: inline-flex; gap: 3px; justify-content: center; }
+  .cell {
+    width: 30px; height: 22px; border-radius: 4px; display: inline-flex;
+    align-items: center; justify-content: center; font-size: 9px; color: #02070d;
+    border: 1px solid transparent;
+  }
+  .cell.empty { background: transparent; border: 1px dashed rgba(255,255,255,0.10); color: var(--dim); }
+  .lv-up3 { background: var(--up3); box-shadow: 0 0 12px rgba(255,45,149,0.6); color: #fff; font-weight:700; }
+  .lv-up2 { background: var(--up2); color: #1a0008; font-weight:700; }
+  .lv-up1 { background: var(--up1); color: #ffe; }
+  .lv-dn3 { background: var(--dn3); box-shadow: 0 0 12px rgba(0,255,150,0.5); color: #003; font-weight:700; }
+  .lv-dn2 { background: var(--dn2); color: #012; font-weight:700; }
+  .lv-dn1 { background: var(--dn1); color: #def; }
+  .lv-0   { background: rgba(255,255,255,0.05); color: var(--dim); }
+
+  tr.row-strong td { box-shadow: inset 3px 0 0 var(--magenta); }
+
+  /* tags */
+  .tags { display: flex; flex-wrap: wrap; gap: 4px; justify-content: center; }
+  .tags .tag { cursor: pointer; }
+  .tags .tag:hover { filter: brightness(1.4); }
+  .tag { font-size: 10px; padding: 2px 7px; border-radius: 999px; border: 1px solid; white-space: nowrap; }
+  .tag.good { color: var(--lime); border-color: var(--lime); background: rgba(166,255,0,0.08); }
+  .tag.warn { color: var(--magenta); border-color: var(--magenta); background: rgba(255,45,149,0.08); }
+  .tag.info { color: var(--cyan); border-color: var(--cyan); background: rgba(0,240,255,0.08); }
+
+  svg.spark { vertical-align: middle; }
+
+  /* expand detail */
+  tr.detail td { background: #08101e; padding: 0; }
+  .detail-group { padding: 6px 16px 0; }
+  .dg-title { font-family:'Orbitron',sans-serif; font-size: 11px; letter-spacing: 2px; color: var(--magenta); margin: 10px 0 4px; text-shadow: 0 0 8px rgba(255,45,149,0.3); }
+  .detail-inner { padding: 6px 0 10px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 12px; }
+  .mini { border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; }
+  .mini h4 { margin: 0 0 8px; font-size: 11px; color: var(--cyan); letter-spacing: 1px; font-family:'Orbitron',sans-serif; }
+  .mini table { font-size: 11px; width: 100%; table-layout: auto; }
+  .mini td, .mini th { padding: 3px 6px; border: none; }
+  .mini td:first-child { text-align: left; }
+  .mini td:last-child { text-align: right; }
+
+  .empty-state { text-align: center; color: var(--dim); padding: 60px 20px; }
+
+  /* toast / progress */
+  #toast {
+    position: fixed; left: 50%; bottom: 24px; transform: translateX(-50%);
+    background: var(--panel); border: 1px solid var(--cyan); color: var(--cyan);
+    padding: 10px 18px; border-radius: 10px; font-size: 13px; z-index: 50;
+    box-shadow: 0 0 24px rgba(0,240,255,0.3); display: none; backdrop-filter: blur(4px);
+  }
+  .legend { display: flex; flex-wrap: wrap; gap: 12px; font-size: 10px; color: var(--dim); margin: 6px 2px 0; align-items:center;}
+  .legend .sw { display:inline-block; width:14px; height:10px; border-radius:3px; vertical-align:middle; margin-right:4px; }
+  @media (max-width: 720px) {
+    .updated { width: 100%; text-align: left; }
+    thead th, tbody td { padding: 7px 5px; font-size: 11px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="topbar">
+    <div class="brand">
+      <h1>FINMETRICS // 台股財務監測</h1>
+      <span class="sub">應收帳款 · 存貨 · 合約負債 · 營收 · 獲利 ＜AI 供應鏈基本面雷達＞</span>
+    </div>
+    <div class="updated" id="updatedBox">資料載入中…</div>
+    <button class="btn btn-ghost" id="helpBtn">？ 指標說明</button>
+    <button class="btn" id="refreshBtn"><span class="dot"></span> 更新即時資料</button>
+  </header>
+
+  <section class="controls">
+    <div class="ctl">
+      <label>分組方式</label>
+      <div class="seg" id="groupSeg">
+        <button data-g="theme" class="active">自訂主題</button>
+        <button data-g="industry">官方產業別</button>
+        <button data-g="global">全市場 Top</button>
+      </div>
+    </div>
+    <div class="ctl">
+      <label>焦點指標</label>
+      <select id="metricSel">
+        <optgroup label="綜合損益">
+          <option value="revenue" selected>季營收</option>
+          <option value="gross">營業毛利</option>
+          <option value="op_income">營業利益</option>
+          <option value="pre_tax">稅前淨利</option>
+          <option value="net">稅後淨利</option>
+          <option value="month_rev">月營收</option>
+        </optgroup>
+        <optgroup label="資產負債">
+          <option value="ar">應收帳款</option>
+          <option value="inventory">存貨</option>
+          <option value="contract_liab">合約負債</option>
+          <option value="total_assets">總資產</option>
+          <option value="total_liab">總負債</option>
+          <option value="equity">股東權益</option>
+        </optgroup>
+        <optgroup label="現金流量">
+          <option value="op_cf">營業現金流</option>
+          <option value="inv_cf">投資現金流</option>
+          <option value="fin_cf">籌資現金流</option>
+        </optgroup>
+      </select>
+    </div>
+    <div class="ctl">
+      <label>排序依據</label>
+      <select id="sortSel">
+        <option value="yoy">YoY 年增率</option>
+        <option value="qoq">QoQ 季增率</option>
+        <option value="value">最新絕對值</option>
+        <option value="severity">訊號嚴重度</option>
+      </select>
+    </div>
+    <div class="ctl">
+      <label>搜尋</label>
+      <input type="text" id="searchBox" placeholder="代號 / 名稱" />
+    </div>
+    <div class="ctl">
+      <label>快速濾鏡</label>
+      <div style="display:flex; gap:6px;">
+        <button class="chip" id="warnChip">只看警示</button>
+        <button class="chip" id="strongChip">只看強烈變動</button>
+      </div>
+    </div>
+    <div class="ctl" style="margin-left:auto;">
+      <label>FinMind Token（選填，提高額度）</label>
+      <input type="password" id="tokenBox" placeholder="貼上 token 可抓更多" style="width:180px;" />
+    </div>
+  </section>
+
+  <div class="legend">
+    熱力：
+    <span><span class="sw lv-up3"></span>強烈↑(±50%)</span>
+    <span><span class="sw lv-up2"></span>顯著↑(30%)</span>
+    <span><span class="sw lv-up1"></span>留意↑(15%)</span>
+    <span><span class="sw lv-dn1"></span>留意↓</span>
+    <span><span class="sw lv-dn2"></span>顯著↓</span>
+    <span><span class="sw lv-dn3"></span>強烈↓</span>
+    ｜ 點任一列可展開近 8 季明細
+  </div>
+
+  <main id="content"></main>
+</div>
+
+<div id="helpModal" class="modal-overlay">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>指標說明 // 財報三表與五大指標</h3>
+      <button class="modal-close" id="helpClose">×</button>
+    </div>
+    <div class="modal-body">
+      <p class="modal-intro">財報三大表互相連動：<b>綜合損益表</b>看「賺多少」、<b>資產負債表</b>看「家底與體質」、<b>現金流量表</b>看「真的收到多少現金」。獲利好不代表現金流好，三表一起看才能避免被單一數字誤導。</p>
+
+      <div class="def-sec"><div class="def-tag stmt">綜合損益表</div>
+        <p>一段期間（通常一季）公司「收入 − 成本費用 = 賺賠」的成績單。由上而下：營收 → 毛利 → 營業利益 → 稅前/稅後淨利 → EPS。能分辨賺的是本業還是業外。</p>
+      </div>
+      <div class="def-sec"><div class="def-tag stmt">資產負債表</div>
+        <p>某一時間點（季底）公司「有什麼（資產）、欠什麼（負債）、自己的（股東權益）」的快照。恆等式：資產 = 負債 + 股東權益。看財務結構是否穩健。</p>
+      </div>
+      <div class="def-sec"><div class="def-tag stmt">現金流量表</div>
+        <p>一段期間現金實際的進出，分三類：<b>營業</b>（本業收現，最重要）、<b>投資</b>（買設備/轉投資，擴張期常為負）、<b>籌資</b>（借還款、發股利）。本儀表板已將官方年度累計值<b>還原為單季</b>。</p>
+      </div>
+
+      <div class="def-grid">
+        <div class="def"><b>營收</b>本業賣產品/服務的收入，獲利的源頭。台股每月 10 日前公布上月「月營收」，是最即時的領先指標。</div>
+        <div class="def"><b>獲利</b>本儀表板以「營業利益」（本業賺錢能力）與「稅後淨利」為主軸，毛利率為品質輔助。EPS = 每股盈餘。</div>
+        <div class="def"><b>應收帳款</b>已認列營收但客戶還沒付的錢。<span class="warn-txt">應收增速明顯快於營收 → 收款品質惡化或塞貨疑慮。</span></div>
+        <div class="def"><b>存貨</b>尚未賣出的原料/在製品/成品。<span class="warn-txt">存貨↑但營收↓可能滯銷；</span><span class="good-txt">存貨↑且營收↑多為備貨迎需求。</span></div>
+        <div class="def"><b>合約負債</b>客戶<b>預付</b>但公司尚未交貨/認列的款項（在手訂單）。<span class="good-txt">大增通常是未來營收的領先指標</span>，AI 供應鏈特別值得關注。</div>
+        <div class="def"><b>總資產 / 總負債 / 股東權益</b>公司規模與財務結構。股東權益 = 資產 − 負債，是真正屬於股東的淨值。</div>
+        <div class="def"><b>營業現金流</b>本業實際收到的現金。<span class="warn-txt">若淨利為正但營業現金流長期為負，獲利品質需存疑（可能賺的是帳面數字）。</span></div>
+      </div>
+
+      <div class="def-sec"><div class="def-tag mark">變動標記與排序</div>
+        <p>每檔顯示五大指標的 YoY（年增率）熱力色塊：上升暖色（洋紅）、下降冷色（青綠），色越深變動越大。等級：強烈 ±50%、顯著 30%、留意 15%。可依 YoY / QoQ / 絕對值 / 訊號嚴重度排序。基期過小者自動降權，避免假訊號。</p>
+      </div>
+
+      <div class="def-sec" id="sigHelp"><div class="def-tag sig">訊號說明（交叉判讀）</div>
+        <p>單看一個指標漲跌容易誤判，「訊號」是結合多個指標的交叉規則，幫你快速判讀。表格最右欄會以彩色標籤呈現：</p>
+        <div class="sig-list">
+          <div class="sig-row"><span class="tag good">合約負債暴增</span><span>合約負債 YoY ≥ 30%。客戶預付／在手訂單大增，<span class="good-txt">通常是未來營收的領先指標</span>，AI 供應鏈題材特別值得留意。</span></div>
+          <div class="sig-row"><span class="tag warn">存貨↑營收↓</span><span>存貨 YoY ≥ 15% 但營收 YoY ≤ 0。<span class="warn-txt">貨越積越多、銷售卻沒跟上 → 可能滯銷或需求轉弱（警示）。</span></span></div>
+          <div class="sig-row"><span class="tag info">備貨迎需求</span><span>存貨與營收同步成長（皆 YoY ≥ 15%）。增加庫存是為了接單出貨，<span style="color:var(--cyan)">屬中性偏正。</span></span></div>
+          <div class="sig-row"><span class="tag warn">應收&gt;營收增速</span><span>應收帳款 YoY 明顯高於營收 YoY（高出 10 個百分點以上）。<span class="warn-txt">收款速度跟不上認列營收 → 收款品質惡化或塞貨疑慮（警示）。</span></span></div>
+        </div>
+        <p class="muted" style="font-size:11px;margin-top:6px;">※ 沒有任何訊號時該欄顯示「—」，代表目前無明顯交叉警訊或亮點。</p>
+      </div>
+      <p class="modal-foot">※ 資料延遲：財報每季更新（5/15、8/14、11/14、隔年 3/31），月營收每月一次。合約負債非每家公司都有，缺值顯示「—」。跨產業僅比變動率，不比絕對水準。</p>
+    </div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script src="config/token.js" onerror="window.__noToken=1"></script>
+<script src="data/data.js"></script>
+<script>
+/* =========================================================================
+ *  FINMETRICS 前端分析層
+ *  資料來源：window.SEED_DATA（由 etl/build_data.py 產生）/ 更新時即時抓 FinMind
+ *  所有 QoQ / YoY / 交叉訊號 / heatmap / 排序皆在此計算（單一邏輯來源）
+ * ========================================================================= */
+
+const FINMIND = 'https://api.finmindtrade.com/api/v4/data';
+const BALANCE_FIELDS = {
+  ar: 'AccountsReceivableNet', inventory: 'Inventories', contract_liab: 'CurrentContractLiabilities',
+  total_assets: 'TotalAssets', total_liab: 'Liabilities', equity: 'Equity'
+};
+const INCOME_FIELDS  = {
+  revenue: 'Revenue', gross: 'GrossProfit', op_income: 'OperatingIncome',
+  pre_tax: 'PreTaxIncome', net: 'IncomeAfterTaxes', eps: 'EPS'
+};
+const CASHFLOW_FIELDS = {
+  op_cf: 'CashFlowsFromOperatingActivities',
+  inv_cf: 'CashProvidedByInvestingActivities',
+  fin_cf: 'CashFlowsProvidedFromFinancingActivities'
+};
+
+const METRIC_LABELS = {
+  ar: '應收帳款', inventory: '存貨', contract_liab: '合約負債',
+  total_assets: '總資產', total_liab: '總負債', equity: '股東權益',
+  revenue: '季營收', gross: '營業毛利', op_income: '營業利益',
+  pre_tax: '稅前淨利', net: '稅後淨利', eps: 'EPS',
+  op_cf: '營業現金流', inv_cf: '投資現金流', fin_cf: '籌資現金流',
+  month_rev: '月營收'
+};
+// 五大指標 heatmap 顯示順序
+const HEAT_METRICS = ['ar', 'inventory', 'contract_liab', 'revenue', 'net'];
+const HEAT_SHORT = { ar: '應收', inventory: '存貨', contract_liab: '合約', revenue: '營收', net: '淨利' };
+
+let DATA = window.SEED_DATA || { stocks: [], config: {} };
+let TH = Object.assign({ strong: 0.5, notable: 0.3, watch: 0.15, small_base: 100000000 }, (DATA.config || {}).thresholds || {});
+
+const state = {
+  group: 'theme',
+  metric: 'revenue',
+  sort: 'yoy',
+  search: '',
+  warnOnly: false,
+  strongOnly: false,
+  expanded: new Set(),
+};
+
+/* ---------------- 工具 ---------------- */
+const $ = (s) => document.querySelector(s);
+const isNum = (v) => typeof v === 'number' && isFinite(v);
+
+function pctChange(cur, prev) {
+  if (!isNum(cur) || !isNum(prev) || prev === 0) return null;
+  return cur / prev - 1;
+}
+function fmtMoney(v) {
+  if (!isNum(v)) return '—';
+  const a = Math.abs(v);
+  if (a >= 1e8) return (v / 1e8).toFixed(1) + '億';
+  if (a >= 1e4) return Math.round(v / 1e4).toLocaleString() + '萬';
+  return v.toLocaleString();
+}
+function fmtPct(x) {
+  if (!isNum(x)) return '—';
+  return (x >= 0 ? '+' : '') + (x * 100).toFixed(1) + '%';
+}
+function fmtEps(v) { return isNum(v) ? v.toFixed(2) : '—'; }
+
+// 取某季指標陣列的最新一期分析
+function metricSeries(stock, key) {
+  let arr, periods;
+  if (key === 'month_rev') {
+    arr = stock.month_rev ? stock.month_rev.values : [];
+    periods = stock.month_rev ? stock.month_rev.months : [];
+    return analyzeSeries(arr, periods, 12); // 月：YoY 比 12 期前
+  }
+  let src;
+  if (key in BALANCE_FIELDS) src = stock.balance;
+  else if (key in CASHFLOW_FIELDS) src = stock.cashflow;
+  else src = stock.income;
+  arr = src ? src[key] : null;
+  periods = stock.quarters || [];
+  return analyzeSeries(arr || [], periods, 4); // 季：YoY 比 4 期前
+}
+
+function analyzeSeries(arr, periods, yoyLag) {
+  let i = -1;
+  for (let k = arr.length - 1; k >= 0; k--) { if (isNum(arr[k])) { i = k; break; } }
+  if (i < 0) return { latest: null, period: null, qoq: null, yoy: null, arr, periods };
+  const qoq = i >= 1 ? pctChange(arr[i], arr[i - 1]) : null;
+  const yoy = i >= yoyLag ? pctChange(arr[i], arr[i - yoyLag]) : null;
+  return { latest: arr[i], period: periods[i] || null, qoq, yoy, idx: i, arr, periods };
+}
+
+// 變動等級：回傳 {lvl:0-3, dir:'up'|'dn', cls}
+function levelOf(yoy, base) {
+  if (!isNum(yoy)) return { lvl: -1, cls: 'empty' };
+  // 基期過小：降權（避免雜訊洗版）
+  const a = Math.abs(yoy);
+  let lvl = 0;
+  if (a >= TH.strong) lvl = 3; else if (a >= TH.notable) lvl = 2; else if (a >= TH.watch) lvl = 1;
+  if (isNum(base) && Math.abs(base) < TH.small_base && lvl > 1) lvl = 1; // 小基期降級
+  const dir = yoy >= 0 ? 'up' : 'dn';
+  return { lvl, dir, cls: lvl === 0 ? 'lv-0' : `lv-${dir}${lvl}` };
+}
+
+/* ---------------- 交叉訊號（plan §5.3） ---------------- */
+function computeSignals(stock) {
+  const rev = metricSeries(stock, 'revenue');
+  const inv = metricSeries(stock, 'inventory');
+  const ar = metricSeries(stock, 'ar');
+  const cl = metricSeries(stock, 'contract_liab');
+  const sig = [];
+  if (isNum(cl.yoy) && cl.yoy >= TH.notable && (!isNum(cl.latest) || Math.abs(cl.latest) >= TH.small_base)) {
+    sig.push({ t: '合約負債暴增', c: 'good', sev: 2, hint: '在手訂單/預收增加，營收領先指標' });
+  }
+  if (isNum(inv.yoy) && inv.yoy >= TH.watch) {
+    if (isNum(rev.yoy) && rev.yoy <= 0) sig.push({ t: '存貨↑營收↓', c: 'warn', sev: 3, hint: '可能滯銷或需求轉弱' });
+    else if (isNum(rev.yoy) && rev.yoy >= TH.watch) sig.push({ t: '備貨迎需求', c: 'info', sev: 1, hint: '存貨與營收同步增，中性偏正' });
+  }
+  if (isNum(ar.yoy) && isNum(rev.yoy) && ar.yoy > rev.yoy + 0.10 && ar.yoy >= TH.watch) {
+    sig.push({ t: '應收>營收增速', c: 'warn', sev: 2, hint: '收款品質惡化或塞貨疑慮' });
+  }
+  return sig;
+}
+
+function severityScore(stock) {
+  const sigs = computeSignals(stock);
+  return sigs.reduce((m, s) => Math.max(m, s.sev), 0);
+}
+
+/* ---------------- Sparkline ---------------- */
+function sparkline(arr, dir) {
+  const vals = arr.slice(-8).map((v) => (isNum(v) ? v : null));
+  const real = vals.filter(isNum);
+  if (real.length < 2) return '<span class="muted">—</span>';
+  const min = Math.min(...real), max = Math.max(...real);
+  const w = 78, h = 22, pad = 2;
+  const span = max - min || 1;
+  const n = vals.length;
+  const pts = [];
+  vals.forEach((v, k) => {
+    if (!isNum(v)) return;
+    const x = pad + (w - 2 * pad) * (k / (n - 1));
+    const y = h - pad - (h - 2 * pad) * ((v - min) / span);
+    pts.push(`${x.toFixed(1)},${y.toFixed(1)}`);
+  });
+  const up = real[real.length - 1] >= real[0];
+  const col = up ? 'var(--magenta)' : 'var(--lime)';
+  const last = pts[pts.length - 1].split(',');
+  return `<svg class="spark" width="${w}" height="${h}">
+    <polyline points="${pts.join(' ')}" fill="none" stroke="${col}" stroke-width="1.5" opacity="0.9"/>
+    <circle cx="${last[0]}" cy="${last[1]}" r="2.2" fill="${col}"/>
+  </svg>`;
+}
+
+/* ---------------- 渲染 ---------------- */
+function focusLabel() { return METRIC_LABELS[state.metric] || state.metric; }
+
+function buildRows(stocks) {
+  return stocks.map((s) => {
+    const f = metricSeries(s, state.metric);
+    const sigs = computeSignals(s);
+    return { stock: s, f, sigs, sev: sigs.reduce((m, x) => Math.max(m, x.sev), 0) };
+  });
+}
+
+function sortRows(rows) {
+  const key = state.sort;
+  rows.sort((a, b) => {
+    let va, vb;
+    if (key === 'value') { va = a.f.latest; vb = b.f.latest; }
+    else if (key === 'qoq') { va = a.f.qoq; vb = b.f.qoq; }
+    else if (key === 'severity') { va = a.sev; vb = b.sev; }
+    else { va = a.f.yoy; vb = b.f.yoy; }
+    va = isNum(va) ? va : -Infinity; vb = isNum(vb) ? vb : -Infinity;
+    return vb - va;
+  });
+  return rows;
+}
+
+function passFilters(r) {
+  if (state.search) {
+    const q = state.search.toLowerCase();
+    if (!(r.stock.id.toLowerCase().includes(q) || (r.stock.name || '').toLowerCase().includes(q))) return false;
+  }
+  if (state.warnOnly && !r.sigs.some((s) => s.c === 'warn')) return false;
+  if (state.strongOnly) {
+    const lv = levelOf(r.f.yoy, r.f.latest);
+    if (lv.lvl < 3) return false;
+  }
+  return true;
+}
+
+function heatCells(stock) {
+  return '<span class="heat">' + HEAT_METRICS.map((m) => {
+    const an = metricSeries(stock, m);
+    if (!isNum(an.yoy)) return `<span class="cell empty" title="${HEAT_SHORT[m]}：無資料">${HEAT_SHORT[m]}</span>`;
+    const lv = levelOf(an.yoy, an.latest);
+    return `<span class="cell ${lv.cls}" title="${HEAT_SHORT[m]} YoY ${fmtPct(an.yoy)}（${an.period || ''}）">${fmtPct(an.yoy).replace('%','')}</span>`;
+  }).join('') + '</span>';
+}
+
+function rowHtml(r) {
+  const s = r.stock, f = r.f;
+  const lv = levelOf(f.yoy, f.latest);
+  const strong = lv.lvl >= 3 ? ' row-strong' : '';
+  const valStr = state.metric === 'eps' ? fmtEps(f.latest) : fmtMoney(f.latest);
+  const tags = r.sigs.map((g) => `<span class="tag ${g.c}" title="${g.hint}">${g.t}</span>`).join('');
+  const sparkArr = metricSeries(s, state.metric).arr || [];
+  return `<tr data-id="${s.id}" class="${strong}">
+    <td class="l sid">${s.id}</td>
+    <td class="l sname">${s.name || ''}<div class="muted" style="font-size:10px">${s.theme || ''}</div></td>
+    <td>${valStr}<div class="muted" style="font-size:10px">${f.period || ''}</div></td>
+    <td class="pct ${isNum(f.qoq) ? (f.qoq >= 0 ? 'up' : 'dn') : 'muted'}">${fmtPct(f.qoq)}</td>
+    <td class="pct ${isNum(f.yoy) ? (f.yoy >= 0 ? 'up' : 'dn') : 'muted'}">${fmtPct(f.yoy)}</td>
+    <td>${sparkline(sparkArr, lv.dir)}</td>
+    <td>${heatCells(s)}</td>
+    <td><div class="tags">${tags || '<span class="muted">—</span>'}</div></td>
+  </tr>`;
+}
+
+function miniBlock(stock, m) {
+  const an = metricSeries(stock, m);
+  const periods = an.periods.slice(-8);
+  const vals = an.arr.slice(-8);
+  if (!vals.some(isNum)) return '';
+  const rows = periods.map((p, k) => {
+    const v = vals[k];
+    return `<tr><td class="muted l">${p}</td><td>${m === 'eps' ? fmtEps(v) : fmtMoney(v)}</td></tr>`;
+  }).join('');
+  return `<div class="mini"><h4>${METRIC_LABELS[m]}　<span class="muted" style="font-size:10px">YoY ${fmtPct(an.yoy)} / QoQ ${fmtPct(an.qoq)}</span></h4>
+    <table>${rows}</table></div>`;
+}
+
+function detailHtml(stock) {
+  const groups = [
+    ['綜合損益', ['revenue', 'gross', 'op_income', 'pre_tax', 'net', 'eps']],
+    ['資產負債', ['ar', 'inventory', 'contract_liab', 'total_assets', 'total_liab', 'equity']],
+    ['現金流量（單季）', ['op_cf', 'inv_cf', 'fin_cf']],
+  ];
+  let html = '';
+  groups.forEach(([title, metrics]) => {
+    const blocks = metrics.map((m) => miniBlock(stock, m)).filter(Boolean).join('');
+    if (blocks) html += `<div class="detail-group"><div class="dg-title">${title}</div><div class="detail-inner">${blocks}</div></div>`;
+  });
+  // 月營收區塊
+  const mr = metricSeries(stock, 'month_rev');
+  const mp = mr.periods.slice(-12), mv = mr.arr.slice(-12);
+  if (mv.some(isNum)) {
+    const mrows = mp.map((p, k) => `<tr><td class="muted l">${p}</td><td>${fmtMoney(mv[k])}</td></tr>`).join('');
+    html += `<div class="detail-group"><div class="dg-title">月營收</div><div class="detail-inner"><div class="mini"><h4>月營收　<span class="muted" style="font-size:10px">YoY ${fmtPct(mr.yoy)} / MoM ${fmtPct(mr.qoq)}</span></h4><table>${mrows}</table></div></div></div>`;
+  }
+  return html;
+}
+
+function tableHtml(rows) {
+  const cols = [
+    ['l', '', '代號'], ['l', '', '名稱'],
+    ['', 'value', focusLabel()], ['', 'qoq', 'QoQ'], ['', 'yoy', 'YoY'],
+    ['', '', '趨勢'], ['', '', '五指標 YoY'], ['', '', '訊號'],
+  ];
+  const head = cols.map(([cls, key, label]) => {
+    const active = (key === 'value' && state.sort === 'value') || (key && key === state.sort);
+    return `<th ${key ? `data-sort="${key === 'value' ? 'value' : key}"` : ''}>${label}${active ? ' <span class="arrow">▼</span>' : ''}</th>`;
+  }).join('');
+  const widths = ['7%', '15%', '13%', '9%', '9%', '12%', '23%', '12%'];
+  const colgroup = '<colgroup>' + widths.map((w) => `<col style="width:${w}">`).join('') + '</colgroup>';
+  let body = '';
+  rows.forEach((r) => {
+    body += rowHtml(r);
+    if (state.expanded.has(r.stock.id)) {
+      body += `<tr class="detail"><td colspan="8">${detailHtml(r.stock)}</td></tr>`;
+    }
+  });
+  return `<div class="tablewrap"><table>${colgroup}<thead><tr>${head}</tr></thead><tbody>${body}</tbody></table></div>`;
+}
+
+function render() {
+  const content = $('#content');
+  const stocks = DATA.stocks || [];
+  if (!stocks.length) { content.innerHTML = '<div class="empty-state">尚無資料，請點右上角「更新即時資料」。</div>'; return; }
+
+  let html = '';
+  if (state.group === 'global') {
+    let rows = buildRows(stocks).filter(passFilters);
+    rows = sortRows(rows).slice(0, 25);
+    html += `<div class="group"><div class="group-head"><h2>全市場 // ${focusLabel()} 變動 TOP ${rows.length}</h2><div class="bar"></div><span class="count">${rows.length} 檔</span></div>${tableHtml(rows)}</div>`;
+  } else {
+    const keyName = state.group === 'theme' ? 'theme' : 'industry';
+    const groups = {};
+    stocks.forEach((s) => { const k = s[keyName] || '其他'; (groups[k] = groups[k] || []).push(s); });
+    const names = Object.keys(groups).sort();
+    names.forEach((name) => {
+      let rows = buildRows(groups[name]).filter(passFilters);
+      if (!rows.length) return;
+      rows = sortRows(rows);
+      html += `<div class="group"><div class="group-head"><h2>${name}</h2><div class="bar"></div><span class="count">${rows.length} 檔</span></div>${tableHtml(rows)}</div>`;
+    });
+    if (!html) html = '<div class="empty-state">沒有符合篩選條件的個股。</div>';
+  }
+  content.innerHTML = html;
+  bindTableEvents();
+}
+
+function bindTableEvents() {
+  document.querySelectorAll('thead th[data-sort]').forEach((th) => {
+    th.onclick = () => { state.sort = th.dataset.sort; $('#sortSel').value = state.sort; render(); };
+  });
+  document.querySelectorAll('tbody tr[data-id]').forEach((tr) => {
+    tr.onclick = () => {
+      const id = tr.dataset.id;
+      if (state.expanded.has(id)) state.expanded.delete(id); else state.expanded.add(id);
+      render();
+    };
+  });
+  document.querySelectorAll('tbody .tags .tag').forEach((tag) => {
+    tag.onclick = (e) => { e.stopPropagation(); openHelp(true); };
+  });
+}
+
+function renderUpdated() {
+  const box = $('#updatedBox');
+  const t = DATA.updated_at;
+  let disp = t;
+  try { disp = new Date(t).toLocaleString('zh-TW', { hour12: false }); } catch (e) {}
+  box.innerHTML = `資料來源 <b>${DATA.source || 'FinMind'}</b>｜最後更新<br><b>${disp || '—'}</b>`;
+}
+
+function openHelp(toSignals) {
+  const m = $('#helpModal');
+  m.classList.add('open');
+  const sig = $('#sigHelp');
+  if (toSignals && sig) {
+    requestAnimationFrame(() => {
+      sig.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      sig.classList.remove('flash'); void sig.offsetWidth; sig.classList.add('flash');
+    });
+  } else {
+    m.querySelector('.modal').scrollTop = 0;
+  }
+}
+
+/* ---------------- 即時更新（純前端抓 FinMind） ---------------- */
+function toast(msg, keep) {
+  const el = $('#toast');
+  el.textContent = msg; el.style.display = 'block';
+  if (!keep) { clearTimeout(el._t); el._t = setTimeout(() => (el.style.display = 'none'), 2600); }
+}
+
+function isRateLimit(e) { return e && /RATE_LIMIT/.test(e.message || ''); }
+
+async function fmFetch(dataset, dataId, startDate, token) {
+  const u = new URL(FINMIND);
+  u.searchParams.set('dataset', dataset);
+  u.searchParams.set('data_id', dataId);
+  u.searchParams.set('start_date', startDate);
+  if (token) u.searchParams.set('token', token);
+  const r = await fetch(u.toString());
+  if (r.status === 402 || r.status === 429) throw new Error('RATE_LIMIT');
+  if (!r.ok) throw new Error(dataset + ' HTTP ' + r.status);
+  const j = await r.json();
+  if (j && typeof j.msg === 'string' && /limit/i.test(j.msg)) throw new Error('RATE_LIMIT');
+  return j.data || [];
+}
+
+// 一次抓全市場基本資料，建 id -> {name, industry}
+async function fetchInfoMapLive(token) {
+  const u = new URL(FINMIND);
+  u.searchParams.set('dataset', 'TaiwanStockInfo');
+  if (token) u.searchParams.set('token', token);
+  const r = await fetch(u.toString());
+  if (r.status === 402 || r.status === 429) throw new Error('RATE_LIMIT');
+  const j = await r.json();
+  const map = {};
+  (j.data || []).forEach((x) => { if (x.stock_id && !map[x.stock_id]) map[x.stock_id] = { name: x.stock_name, industry: x.industry_category }; });
+  return map;
+}
+
+function stockHasData(s) {
+  if (!s || !s.quarters || !s.quarters.length) return false;
+  const inc = (s.income && s.income.revenue) || [];
+  return inc.some(isNum);
+}
+function qLabelVal(label) { if (!label) return -1; const [y, q] = label.split('Q'); return parseInt(y, 10) * 4 + parseInt(q, 10); }
+// 依財報公布期限，推算「目前應該已有」的最新季別值
+function expectedQuarterVal(d) {
+  const y = d.getFullYear(), m = d.getMonth() + 1, day = d.getDate();
+  const after = (mm, dd) => (m > mm || (m === mm && day >= dd));
+  if (after(11, 14)) return y * 4 + 3;     // Q3 截止 11/14
+  if (after(8, 14)) return y * 4 + 2;       // Q2 截止 8/14
+  if (after(5, 15)) return y * 4 + 1;       // Q1 截止 5/15
+  if (after(3, 31)) return (y - 1) * 4 + 4; // 前一年 Q4 截止 3/31
+  return (y - 1) * 4 + 3;
+}
+
+function qLabelFix(d) { const [y, m] = d.split('-'); return `${y}Q${Math.floor((parseInt(m, 10) - 1) / 3) + 1}`; }
+
+function pivotQuarterly(rows, fields, quarters) {
+  const byQ = {};
+  rows.forEach((x) => {
+    const t = x.type;
+    if (!Object.values(fields).includes(t)) return;
+    const ql = qLabelFix(x.date);
+    (byQ[ql] = byQ[ql] || {})[t] = x.value;
+  });
+  const out = {};
+  for (const key in fields) out[key] = quarters.map((q) => (byQ[q] && byQ[q][fields[key]] != null ? byQ[q][fields[key]] : null));
+  return out;
+}
+
+function deCumulate(cum, quarters) {
+  // 年度累計還原為單季：Q1=累計；Q2~Q4=本期−上期
+  return quarters.map((q, i) => {
+    const qn = parseInt(q.split('Q')[1], 10);
+    const v = cum[i];
+    if (v == null) return null;
+    if (qn === 1) return v;
+    if (i >= 1 && cum[i - 1] != null) return v - cum[i - 1];
+    return null;
+  });
+}
+
+function buildMonthRev(mr) {
+  const mrMap = {};
+  mr.forEach((x) => { const k = (x.revenue_year && x.revenue_month) ? `${x.revenue_year}-${String(x.revenue_month).padStart(2, '0')}` : x.date.slice(0, 7); mrMap[k] = x.revenue; });
+  const months = Object.keys(mrMap).sort().slice(-26);
+  return { months, values: months.map((m) => mrMap[m]) };
+}
+
+// 全抓：四表 + 月營收（基本資料用共用 infoMap，不逐檔抓）
+async function buildStockLive(cfg, token, infoMap) {
+  const qStart = new Date(Date.now() - 365 * 4 * 86400000).toISOString().slice(0, 10);
+  const mStart = new Date(Date.now() - 31 * 26 * 86400000).toISOString().slice(0, 10);
+  const [bs, fs, cf, mr] = await Promise.all([
+    fmFetch('TaiwanStockBalanceSheet', cfg.id, qStart, token),
+    fmFetch('TaiwanStockFinancialStatements', cfg.id, qStart, token),
+    fmFetch('TaiwanStockCashFlowsStatement', cfg.id, qStart, token),
+    fmFetch('TaiwanStockMonthRevenue', cfg.id, mStart, token),
+  ]);
+  const meta = (infoMap && infoMap[cfg.id]) || {};
+  const industry = meta.industry || '未分類';
+  const name = cfg.name || meta.name || cfg.id;
+  const qb = (DATA.config.quarters_back || 9) + 4;
+  const qset = new Set();
+  bs.concat(fs).concat(cf).forEach((x) => qset.add(qLabelFix(x.date)));
+  const quarters = Array.from(qset).sort().slice(-qb);
+  const balance = pivotQuarterly(bs, BALANCE_FIELDS, quarters);
+  const income = pivotQuarterly(fs, INCOME_FIELDS, quarters);
+  const cfCum = pivotQuarterly(cf, CASHFLOW_FIELDS, quarters);
+  const cashflow = {};
+  for (const k in CASHFLOW_FIELDS) cashflow[k] = deCumulate(cfCum[k], quarters);
+  return {
+    id: cfg.id, name, industry, theme: cfg.theme || '其他',
+    has_contract_liab: balance.contract_liab.some((v) => v != null),
+    quarters, balance, income, cashflow,
+    month_rev: buildMonthRev(mr),
+  };
+}
+
+// 只更新月營收（季資料沿用既有），1 次請求
+async function refreshMonthOnly(existing, cfg, token) {
+  const mStart = new Date(Date.now() - 31 * 26 * 86400000).toISOString().slice(0, 10);
+  const mr = await fmFetch('TaiwanStockMonthRevenue', cfg.id, mStart, token);
+  return Object.assign({}, existing, { theme: cfg.theme || existing.theme, month_rev: buildMonthRev(mr) });
+}
+
+async function refreshData() {
+  const btn = $('#refreshBtn');
+  const token = $('#tokenBox').value.trim();
+  const list = (DATA.config && DATA.config.stocks) ? DATA.config.stocks : (DATA.stocks || []).map((s) => ({ id: s.id, name: s.name, theme: s.theme }));
+  if (!list.length) { toast('無追蹤清單可更新'); return; }
+  btn.disabled = true;
+  const oldById = {};
+  (DATA.stocks || []).forEach((s) => { oldById[s.id] = s; });
+
+  // 智慧分類：缺資料/落後最新財報季 -> 全抓；其餘 -> 只更新月營收
+  const expVal = expectedQuarterVal(new Date());
+  const fullList = [], monthList = [];
+  list.forEach((c) => {
+    const ex = oldById[c.id];
+    if (!stockHasData(ex)) { fullList.push(c); return; }
+    const lp = metricSeries(ex, 'revenue').period;
+    if (qLabelVal(lp) < expVal) fullList.push(c);
+    else monthList.push(c);
+  });
+
+  const newById = Object.assign({}, oldById);
+  let okCount = 0, done = 0, limited = false;
+  const total = fullList.length + monthList.length;
+  try {
+    const infoMap = fullList.length ? await fetchInfoMapLive(token) : {};
+    for (const c of fullList) {
+      done++;
+      toast(`全抓 ${done}/${total}　${c.id} ${c.name || ''}（缺/新財報）`, true);
+      try { newById[c.id] = await buildStockLive(c, token, infoMap); okCount++; }
+      catch (e) { if (isRateLimit(e)) { limited = true; break; } console.warn('skip', c.id, e); }
+      await new Promise((r) => setTimeout(r, 120));
+    }
+    if (!limited) for (const c of monthList) {
+      done++;
+      toast(`更新月營收 ${done}/${total}　${c.id} ${c.name || ''}`, true);
+      try { newById[c.id] = await refreshMonthOnly(oldById[c.id], c, token); okCount++; }
+      catch (e) { if (isRateLimit(e)) { limited = true; break; } console.warn('skip', c.id, e); }
+      await new Promise((r) => setTimeout(r, 100));
+    }
+    if (!okCount && limited) throw new Error('觸發 FinMind 額度（600 次/小時），請稍後再試或改用 ETL');
+    DATA = { updated_at: new Date().toISOString(), source: 'FinMind (即時)', config: DATA.config, stocks: list.map((c) => newById[c.id]).filter(Boolean) };
+    renderUpdated();
+    render();
+    const t = new Date().toLocaleTimeString('zh-TW', { hour12: false });
+    let msg = `更新完成：成功 ${okCount}/${total} 檔（需全抓 ${fullList.length}、月營收 ${monthList.length}）@ ${t}`;
+    if (limited) msg += `；已達額度，剩餘沿用舊值，稍後再按可續抓`;
+    toast(msg);
+  } catch (e) {
+    toast('更新失敗：' + e.message);
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+/* ---------------- 控制項綁定 ---------------- */
+function bindControls() {
+  $('#groupSeg').querySelectorAll('button').forEach((b) => {
+    b.onclick = () => {
+      $('#groupSeg').querySelectorAll('button').forEach((x) => x.classList.remove('active'));
+      b.classList.add('active'); state.group = b.dataset.g; render();
+    };
+  });
+  $('#metricSel').onchange = (e) => { state.metric = e.target.value; render(); };
+  $('#sortSel').onchange = (e) => { state.sort = e.target.value; render(); };
+  $('#searchBox').oninput = (e) => { state.search = e.target.value.trim(); render(); };
+  $('#warnChip').onclick = (e) => { state.warnOnly = !state.warnOnly; e.target.classList.toggle('on'); render(); };
+  $('#strongChip').onclick = (e) => { state.strongOnly = !state.strongOnly; e.target.classList.toggle('on'); render(); };
+  $('#refreshBtn').onclick = refreshData;
+  $('#helpBtn').onclick = () => openHelp(false);
+  $('#helpClose').onclick = () => $('#helpModal').classList.remove('open');
+  $('#helpModal').onclick = (e) => { if (e.target.id === 'helpModal') $('#helpModal').classList.remove('open'); };
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') $('#helpModal').classList.remove('open'); });
+}
+
+/* ---------------- 啟動 ---------------- */
+function init() {
+  if (!window.SEED_DATA) {
+    $('#content').innerHTML = '<div class="empty-state">找不到 data/data.js。<br>請先執行 <code>python etl/build_data.py</code> 產生資料，或點右上角「更新即時資料」直接抓取。</div>';
+  }
+  if (window.FINMIND_TOKEN) $('#tokenBox').value = window.FINMIND_TOKEN; // 自動帶入本機 token
+  if (location.search.includes('sig')) openHelp(true);
+  else if (location.search.includes('help')) openHelp(false);
+  bindControls();
+  renderUpdated();
+  render();
+}
+init();
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+# FinMind token（機密，勿進版控）
+config/token.js
+finmind token
+
+# Python
+__pycache__/
+*.pyc
+
+# 暫存/預覽
+_preview.png
+etl/_*.py
