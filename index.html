@@ -70,9 +70,11 @@
     -webkit-background-clip: text; background-clip: text; color: transparent;
     text-shadow: 0 0 18px rgba(0, 240, 255, 0.25);
   }
-  .brand .sub { font-size: 11px; color: var(--dim); letter-spacing: 1px; }
+  .brand .sub { font-size: 11px; color: var(--dim); letter-spacing: 1px; line-height: 1.45; }
+  .topbar-meta { display: flex; flex-direction: column; gap: 2px; align-items: flex-end; }
   .updated { font-size: 11px; color: var(--dim); text-align: right; }
   .updated b { color: var(--cyan); }
+  .updated.visit b { color: var(--lime); }
 
   /* ---------- Controls ---------- */
   .controls {
@@ -185,21 +187,23 @@
   .tablewrap {
     border: 1px solid var(--line); border-radius: 12px; overflow: hidden;
     background: var(--panel);
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
   }
-  table { width: 100%; border-collapse: collapse; font-size: 13px; table-layout: fixed; }
-  thead th {
+  .tablewrap > table.stock-table { width: 100%; border-collapse: collapse; font-size: 13px; table-layout: fixed; min-width: 860px; }
+  .tablewrap > table.stock-table thead th {
     position: sticky; top: 0; background: #0a1322; color: var(--dim);
     font-weight: 400; font-size: 10px; letter-spacing: 1px; text-transform: uppercase;
     padding: 10px 6px; text-align: center; white-space: nowrap; cursor: pointer; user-select: none;
     border-bottom: 1px solid var(--line);
     overflow: hidden; text-overflow: ellipsis;
   }
-  thead th:hover { color: var(--cyan); }
-  thead th .arrow { color: var(--cyan); font-size: 9px; }
-  tbody td { padding: 9px 6px; text-align: center; white-space: nowrap; border-bottom: 1px solid rgba(255,255,255,0.04); overflow: hidden; text-overflow: ellipsis; }
-  tbody tr { cursor: pointer; transition: background .12s; }
-  tbody tr:hover { background: rgba(0, 240, 255, 0.05); }
-  tbody tr.expanded { background: rgba(177,77,255,0.06); }
+  .tablewrap > table.stock-table thead th:hover { color: var(--cyan); }
+  .tablewrap > table.stock-table thead th .arrow { color: var(--cyan); font-size: 9px; }
+  .tablewrap > table.stock-table > tbody > tr:not(.detail) > td { padding: 9px 6px; text-align: center; white-space: nowrap; border-bottom: 1px solid rgba(255,255,255,0.04); overflow: hidden; text-overflow: ellipsis; }
+  .tablewrap > table.stock-table > tbody > tr:not(.detail) { cursor: pointer; transition: background .12s; }
+  .tablewrap > table.stock-table > tbody > tr:not(.detail):hover { background: rgba(0, 240, 255, 0.05); }
+  .tablewrap > table.stock-table > tbody > tr.expanded { background: rgba(177,77,255,0.06); }
   .sid { color: var(--violet); font-weight: 700; }
   .sname { color: var(--txt); }
   .muted { color: var(--dim); }
@@ -224,7 +228,7 @@
   .lv-dn1 { background: var(--dn1); color: #def; }
   .lv-0   { background: rgba(255,255,255,0.05); color: var(--dim); }
 
-  tr.row-strong td { box-shadow: inset 3px 0 0 var(--magenta); }
+  .tablewrap > table.stock-table > tbody > tr.row-strong > td { box-shadow: inset 3px 0 0 var(--magenta); }
 
   /* tags */
   .tags { display: flex; flex-wrap: wrap; gap: 4px; justify-content: center; }
@@ -238,7 +242,17 @@
   svg.spark { vertical-align: middle; }
 
   /* expand detail */
-  tr.detail td { background: #08101e; padding: 0; }
+  .tablewrap > table.stock-table > tbody > tr.detail { cursor: default; }
+  .tablewrap > table.stock-table > tbody > tr.detail:hover { background: transparent; }
+  .tablewrap > table.stock-table > tbody > tr.detail > td {
+    background: #08101e;
+    padding: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.04);
+    text-align: left;
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+  }
   .detail-group { padding: 6px 16px 0; }
   .dg-title { font-family:'Orbitron',sans-serif; font-size: 11px; letter-spacing: 2px; color: var(--magenta); margin: 10px 0 4px; text-shadow: 0 0 8px rgba(255,45,149,0.3); }
   .detail-inner { padding: 6px 0 10px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 12px; }
@@ -263,9 +277,82 @@
   }
   .legend { display: flex; flex-wrap: wrap; gap: 12px; font-size: 10px; color: var(--dim); margin: 6px 2px 0; align-items:center;}
   .legend .sw { display:inline-block; width:14px; height:10px; border-radius:3px; vertical-align:middle; margin-right:4px; }
+  .legend .legend-hint { margin-left: auto; }
+
+  /* ---------- Responsive ---------- */
+  @media (max-width: 960px) {
+    .wrap { padding: 14px 14px 64px; }
+    .brand h1 { font-size: 18px; }
+  }
+
   @media (max-width: 720px) {
-    .updated { width: 100%; text-align: left; }
-    thead th, tbody td { padding: 7px 5px; font-size: 11px; }
+    .wrap { padding: 10px 10px 56px; }
+
+    header.topbar {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 10px;
+      padding: 14px;
+    }
+    .brand { margin-right: 0; }
+    .brand h1 { font-size: 15px; letter-spacing: 1px; }
+    .brand .sub { font-size: 10px; letter-spacing: 0; }
+    .topbar-meta { align-items: flex-start; }
+    .updated { text-align: left; }
+    #helpBtn { width: 100%; justify-content: center; min-height: 44px; }
+
+    .controls {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 12px;
+      padding: 12px;
+    }
+    .ctl { width: 100%; }
+    .ctl select,
+    .ctl input[type="text"] { width: 100%; min-height: 40px; font-size: 16px; }
+    .seg { display: flex; width: 100%; }
+    .seg button {
+      flex: 1;
+      padding: 10px 6px;
+      font-size: 11px;
+      letter-spacing: 0;
+      min-height: 40px;
+    }
+    .chip { min-height: 40px; padding: 10px 14px; }
+
+    .legend {
+      gap: 8px;
+      font-size: 9px;
+      line-height: 1.5;
+    }
+    .legend .legend-hint { width: 100%; margin-left: 0; }
+
+    .group-head h2 { font-size: 13px; letter-spacing: 1px; flex-wrap: wrap; }
+    .tablewrap > table.stock-table thead th,
+    .tablewrap > table.stock-table > tbody > tr:not(.detail) > td { padding: 8px 5px; font-size: 11px; }
+    .cell { min-width: 26px; height: 20px; font-size: 8px; padding: 0 2px; }
+    .heat { gap: 2px; }
+    .tag { font-size: 9px; padding: 2px 5px; }
+    .detail-inner { grid-template-columns: 1fr; }
+    .detail-group { padding: 6px 10px 0; }
+    /* 明細列釘在左側並限制為視窗寬度，避免被表格 min-width 撐寬而需左右拖動 */
+    .tablewrap > table.stock-table > tbody > tr.detail > td { position: sticky; left: 0; }
+    .tablewrap > table.stock-table > tbody > tr.detail .detail-group { width: calc(100vw - 24px); box-sizing: border-box; }
+
+    .modal-overlay { padding: 2vh 10px; }
+    .modal-head { padding: 12px 14px; }
+    .modal-head h3 { font-size: 14px; }
+    .modal-body { padding: 14px; font-size: 12px; }
+    .def-grid { grid-template-columns: 1fr; }
+    .sig-row { flex-direction: column; gap: 4px; }
+  }
+
+  @media (max-width: 480px) {
+    .tablewrap > table.stock-table { min-width: 640px; }
+    /* 極窄螢幕隱藏趨勢圖欄，保留 YoY 與五指標 */
+    .tablewrap > table.stock-table thead th:nth-child(6),
+    .tablewrap > table.stock-table > tbody > tr:not(.detail) > td:nth-child(6) { display: none; }
+    .brand h1 { font-size: 14px; }
   }
 </style>
 </head>
@@ -276,19 +363,27 @@
       <h1>FINMETRICS // 台股財務監測</h1>
       <span class="sub">應收帳款 · 存貨 · 合約負債 · 營收 · 獲利 ＜AI 供應鏈基本面雷達＞</span>
     </div>
-    <div class="updated" id="updatedBox">資料載入中…</div>
+    <div class="topbar-meta">
+      <div class="updated" id="updatedBox">資料載入中…</div>
+      <div class="updated visit" id="visitBox"></div>
+    </div>
     <button class="btn btn-ghost" id="helpBtn">？ 指標說明</button>
-    <button class="btn" id="refreshBtn"><span class="dot"></span> 更新即時資料</button>
   </header>
 
   <section class="controls">
     <div class="ctl">
       <label>分組方式</label>
       <div class="seg" id="groupSeg">
-        <button data-g="theme" class="active">自訂主題</button>
+        <button data-g="theme" class="active">細產業</button>
         <button data-g="industry">官方產業別</button>
         <button data-g="global">全市場 Top</button>
       </div>
+    </div>
+    <div class="ctl" id="groupFilterCtl">
+      <label id="groupFilterLabel">細產業</label>
+      <select id="groupFilter">
+        <option value="">全部</option>
+      </select>
     </div>
     <div class="ctl">
       <label>焦點指標</label>
@@ -349,10 +444,6 @@
         <button class="chip" id="strongChip">只看強烈變動</button>
       </div>
     </div>
-    <div class="ctl" style="margin-left:auto;">
-      <label>FinMind Token（選填，提高額度）</label>
-      <input type="password" id="tokenBox" placeholder="貼上 token 可抓更多" style="width:180px;" />
-    </div>
   </section>
 
   <div class="legend">
@@ -363,7 +454,7 @@
     <span><span class="sw lv-dn1"></span>留意↓</span>
     <span><span class="sw lv-dn2"></span>顯著↓</span>
     <span><span class="sw lv-dn3"></span>強烈↓</span>
-    ｜ 點任一列可展開近 8 季明細
+    <span class="legend-hint">｜ 點任一列可展開近 8 季明細</span>
   </div>
 
   <main id="content"></main>
@@ -417,9 +508,7 @@
   </div>
 </div>
 
-<div id="toast"></div>
 
-<script src="config/token.js" onerror="window.__noToken=1"></script>
 <script>
   // 以日期為版本參數，確保每日更新後載入最新 data.js（避免瀏覽器快取舊資料）
   document.write('<scr' + 'ipt src="data/data.js?d=' + new Date().toISOString().slice(0, 10) + '"></scr' + 'ipt>');
@@ -427,11 +516,10 @@
 <script>
 /* =========================================================================
  *  FINMETRICS 前端分析層
- *  資料來源：window.SEED_DATA（由 etl/build_data.py 產生）/ 更新時即時抓 FinMind
+ *  資料來源：window.SEED_DATA（由 etl/build_data.py 產生，GitHub Actions 每日排程更新）
  *  所有 QoQ / YoY / 交叉訊號 / heatmap / 排序皆在此計算（單一邏輯來源）
  * ========================================================================= */
 
-const FINMIND = 'https://api.finmindtrade.com/api/v4/data';
 const BALANCE_FIELDS = {
   ar: 'AccountsReceivableNet', inventory: 'Inventories', contract_liab: 'CurrentContractLiabilities',
   total_assets: 'TotalAssets', total_liab: 'Liabilities', equity: 'Equity',
@@ -478,6 +566,7 @@ const state = {
   warnOnly: false,
   strongOnly: false,
   expanded: new Set(),
+  groupFilter: '',
 };
 
 /* ---------------- 工具 ---------------- */
@@ -500,6 +589,42 @@ function fmtPct(x) {
   return (x >= 0 ? '+' : '') + (x * 100).toFixed(1) + '%';
 }
 function fmtEps(v) { return isNum(v) ? v.toFixed(2) : '—'; }
+
+function groupField() {
+  if (state.group === 'theme') return 'theme';
+  if (state.group === 'industry') return 'industry';
+  return null;
+}
+
+function collectGroupNames(stocks) {
+  const field = groupField();
+  if (!field) return [];
+  const set = new Set();
+  stocks.forEach((s) => set.add(s[field] || '其他'));
+  return Array.from(set).sort((a, b) => a.localeCompare(b, 'zh-Hant'));
+}
+
+function syncGroupFilter() {
+  const ctl = $('#groupFilterCtl');
+  const sel = $('#groupFilter');
+  const label = $('#groupFilterLabel');
+  if (!ctl || !sel || !label) return;
+  const field = groupField();
+  if (!field) {
+    ctl.style.display = 'none';
+    state.groupFilter = '';
+    return;
+  }
+  ctl.style.display = '';
+  label.textContent = state.group === 'theme' ? '細產業' : '官方產業別';
+  const names = collectGroupNames(DATA.stocks || []);
+  const cur = state.groupFilter;
+  sel.innerHTML = '<option value="">全部</option>' + names.map((n) => {
+    const esc = n.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+    return `<option value="${esc}"${n === cur ? ' selected' : ''}>${esc}</option>`;
+  }).join('');
+  if (cur && !names.includes(cur)) state.groupFilter = '';
+}
 
 // 取某季指標陣列的最新一期分析
 function metricSeries(stock, key) {
@@ -708,13 +833,13 @@ function tableHtml(rows) {
       body += `<tr class="detail"><td colspan="8">${detailHtml(r.stock)}</td></tr>`;
     }
   });
-  return `<div class="tablewrap"><table>${colgroup}<thead><tr>${head}</tr></thead><tbody>${body}</tbody></table></div>`;
+  return `<div class="tablewrap"><table class="stock-table">${colgroup}<thead><tr>${head}</tr></thead><tbody>${body}</tbody></table></div>`;
 }
 
 function render() {
   const content = $('#content');
   const stocks = DATA.stocks || [];
-  if (!stocks.length) { content.innerHTML = '<div class="empty-state">尚無資料，請點右上角「更新即時資料」。</div>'; return; }
+  if (!stocks.length) { content.innerHTML = '<div class="empty-state">尚無資料，請執行 <code>python etl/build_data.py</code> 或等待 GitHub Actions 排程更新。</div>'; return; }
 
   let html = '';
   if (state.group === 'global') {
@@ -725,7 +850,7 @@ function render() {
     const keyName = state.group === 'theme' ? 'theme' : 'industry';
     const groups = {};
     stocks.forEach((s) => { const k = s[keyName] || '其他'; (groups[k] = groups[k] || []).push(s); });
-    const names = Object.keys(groups).sort();
+    const names = Object.keys(groups).sort().filter((n) => !state.groupFilter || n === state.groupFilter);
     names.forEach((name) => {
       let rows = buildRows(groups[name]).filter(passFilters);
       if (!rows.length) return;
@@ -762,6 +887,22 @@ function renderUpdated() {
   box.innerHTML = `資料來源 <b>${DATA.source || 'FinMind'}</b>｜最後更新<br><b>${disp || '—'}</b>`;
 }
 
+async function trackVisitor() {
+  const box = $('#visitBox');
+  if (!box || location.protocol === 'file:') return;
+  try {
+    const r = await fetch('https://tally.yuki.sh/hits/finmetrics/taiwan-stock.json');
+    if (!r.ok) throw new Error(String(r.status));
+    const { visit, visitor } = await r.json();
+    const n = (typeof visitor === 'number' ? visitor : visit) || 0;
+    const pv = typeof visit === 'number' ? visit : n;
+    box.innerHTML = `累計訪問 <b>${n.toLocaleString('zh-TW')}</b> 人次`;
+    box.title = `不重複訪客 ${n.toLocaleString('zh-TW')} 人｜累計瀏覽 ${pv.toLocaleString('zh-TW')} 次`;
+  } catch (_) {
+    box.innerHTML = '';
+  }
+}
+
 function openHelp(toSignals) {
   const m = $('#helpModal');
   m.classList.add('open');
@@ -776,202 +917,24 @@ function openHelp(toSignals) {
   }
 }
 
-/* ---------------- 即時更新（純前端抓 FinMind） ---------------- */
-function toast(msg, keep) {
-  const el = $('#toast');
-  el.textContent = msg; el.style.display = 'block';
-  if (!keep) { clearTimeout(el._t); el._t = setTimeout(() => (el.style.display = 'none'), 2600); }
-}
-
-function isRateLimit(e) { return e && /RATE_LIMIT/.test(e.message || ''); }
-
-async function fmFetch(dataset, dataId, startDate, token) {
-  const u = new URL(FINMIND);
-  u.searchParams.set('dataset', dataset);
-  u.searchParams.set('data_id', dataId);
-  u.searchParams.set('start_date', startDate);
-  if (token) u.searchParams.set('token', token);
-  const r = await fetch(u.toString());
-  if (r.status === 402 || r.status === 429) throw new Error('RATE_LIMIT');
-  if (!r.ok) throw new Error(dataset + ' HTTP ' + r.status);
-  const j = await r.json();
-  if (j && typeof j.msg === 'string' && /limit/i.test(j.msg)) throw new Error('RATE_LIMIT');
-  return j.data || [];
-}
-
-// 一次抓全市場基本資料，建 id -> {name, industry}
-async function fetchInfoMapLive(token) {
-  const u = new URL(FINMIND);
-  u.searchParams.set('dataset', 'TaiwanStockInfo');
-  if (token) u.searchParams.set('token', token);
-  const r = await fetch(u.toString());
-  if (r.status === 402 || r.status === 429) throw new Error('RATE_LIMIT');
-  const j = await r.json();
-  const map = {};
-  (j.data || []).forEach((x) => { if (x.stock_id && !map[x.stock_id]) map[x.stock_id] = { name: x.stock_name, industry: x.industry_category }; });
-  return map;
-}
-
-function stockHasData(s) {
-  if (!s || !s.quarters || !s.quarters.length) return false;
-  const inc = (s.income && s.income.revenue) || [];
-  return inc.some(isNum);
-}
-function qLabelVal(label) { if (!label) return -1; const [y, q] = label.split('Q'); return parseInt(y, 10) * 4 + parseInt(q, 10); }
-// 依財報公布期限，推算「目前應該已有」的最新季別值
-function expectedQuarterVal(d) {
-  const y = d.getFullYear(), m = d.getMonth() + 1, day = d.getDate();
-  const after = (mm, dd) => (m > mm || (m === mm && day >= dd));
-  if (after(11, 14)) return y * 4 + 3;     // Q3 截止 11/14
-  if (after(8, 14)) return y * 4 + 2;       // Q2 截止 8/14
-  if (after(5, 15)) return y * 4 + 1;       // Q1 截止 5/15
-  if (after(3, 31)) return (y - 1) * 4 + 4; // 前一年 Q4 截止 3/31
-  return (y - 1) * 4 + 3;
-}
-
-function qLabelFix(d) { const [y, m] = d.split('-'); return `${y}Q${Math.floor((parseInt(m, 10) - 1) / 3) + 1}`; }
-
-function pivotQuarterly(rows, fields, quarters) {
-  const byQ = {};
-  rows.forEach((x) => {
-    const t = x.type;
-    if (!Object.values(fields).includes(t)) return;
-    const ql = qLabelFix(x.date);
-    (byQ[ql] = byQ[ql] || {})[t] = x.value;
-  });
-  const out = {};
-  for (const key in fields) out[key] = quarters.map((q) => (byQ[q] && byQ[q][fields[key]] != null ? byQ[q][fields[key]] : null));
-  return out;
-}
-
-function deCumulate(cum, quarters) {
-  // 年度累計還原為單季：Q1=累計；Q2~Q4=本期−上期
-  return quarters.map((q, i) => {
-    const qn = parseInt(q.split('Q')[1], 10);
-    const v = cum[i];
-    if (v == null) return null;
-    if (qn === 1) return v;
-    if (i >= 1 && cum[i - 1] != null) return v - cum[i - 1];
-    return null;
-  });
-}
-
-function buildMonthRev(mr) {
-  const mrMap = {};
-  mr.forEach((x) => { const k = (x.revenue_year && x.revenue_month) ? `${x.revenue_year}-${String(x.revenue_month).padStart(2, '0')}` : x.date.slice(0, 7); mrMap[k] = x.revenue; });
-  const months = Object.keys(mrMap).sort().slice(-26);
-  return { months, values: months.map((m) => mrMap[m]) };
-}
-
-// 全抓：四表 + 月營收（基本資料用共用 infoMap，不逐檔抓）
-async function buildStockLive(cfg, token, infoMap) {
-  const qStart = new Date(Date.now() - 365 * 4 * 86400000).toISOString().slice(0, 10);
-  const mStart = new Date(Date.now() - 31 * 26 * 86400000).toISOString().slice(0, 10);
-  const [bs, fs, cf, mr] = await Promise.all([
-    fmFetch('TaiwanStockBalanceSheet', cfg.id, qStart, token),
-    fmFetch('TaiwanStockFinancialStatements', cfg.id, qStart, token),
-    fmFetch('TaiwanStockCashFlowsStatement', cfg.id, qStart, token),
-    fmFetch('TaiwanStockMonthRevenue', cfg.id, mStart, token),
-  ]);
-  const meta = (infoMap && infoMap[cfg.id]) || {};
-  const industry = meta.industry || '未分類';
-  const name = cfg.name || meta.name || cfg.id;
-  const qb = (DATA.config.quarters_back || 9) + 4;
-  const qset = new Set();
-  bs.concat(fs).concat(cf).forEach((x) => qset.add(qLabelFix(x.date)));
-  const quarters = Array.from(qset).sort().slice(-qb);
-  const balance = pivotQuarterly(bs, BALANCE_FIELDS, quarters);
-  const income = pivotQuarterly(fs, INCOME_FIELDS, quarters);
-  const cfCum = pivotQuarterly(cf, CASHFLOW_FIELDS, quarters);
-  const cashflow = {};
-  for (const k in CASHFLOW_FIELDS) cashflow[k] = deCumulate(cfCum[k], quarters);
-  cashflow.fcf = cashflow.op_cf.map((o, i) => {
-    const c = cashflow.capex[i];
-    return (o != null && c != null) ? o + c : null;
-  });
-  return {
-    id: cfg.id, name, industry, theme: cfg.theme || '其他',
-    has_contract_liab: balance.contract_liab.some((v) => v != null),
-    quarters, balance, income, cashflow,
-    month_rev: buildMonthRev(mr),
-  };
-}
-
-// 只更新月營收（季資料沿用既有），1 次請求
-async function refreshMonthOnly(existing, cfg, token) {
-  const mStart = new Date(Date.now() - 31 * 26 * 86400000).toISOString().slice(0, 10);
-  const mr = await fmFetch('TaiwanStockMonthRevenue', cfg.id, mStart, token);
-  return Object.assign({}, existing, { theme: cfg.theme || existing.theme, month_rev: buildMonthRev(mr) });
-}
-
-async function refreshData() {
-  const btn = $('#refreshBtn');
-  const token = $('#tokenBox').value.trim();
-  const list = (DATA.config && DATA.config.stocks) ? DATA.config.stocks : (DATA.stocks || []).map((s) => ({ id: s.id, name: s.name, theme: s.theme }));
-  if (!list.length) { toast('無追蹤清單可更新'); return; }
-  btn.disabled = true;
-  const oldById = {};
-  (DATA.stocks || []).forEach((s) => { oldById[s.id] = s; });
-
-  // 智慧分類：缺資料/落後最新財報季 -> 全抓；其餘 -> 只更新月營收
-  const expVal = expectedQuarterVal(new Date());
-  const fullList = [], monthList = [];
-  list.forEach((c) => {
-    const ex = oldById[c.id];
-    if (!stockHasData(ex)) { fullList.push(c); return; }
-    const lp = metricSeries(ex, 'revenue').period;
-    if (qLabelVal(lp) < expVal) fullList.push(c);
-    else monthList.push(c);
-  });
-
-  const newById = Object.assign({}, oldById);
-  let okCount = 0, done = 0, limited = false;
-  const total = fullList.length + monthList.length;
-  try {
-    const infoMap = fullList.length ? await fetchInfoMapLive(token) : {};
-    for (const c of fullList) {
-      done++;
-      toast(`全抓 ${done}/${total}　${c.id} ${c.name || ''}（缺/新財報）`, true);
-      try { newById[c.id] = await buildStockLive(c, token, infoMap); okCount++; }
-      catch (e) { if (isRateLimit(e)) { limited = true; break; } console.warn('skip', c.id, e); }
-      await new Promise((r) => setTimeout(r, 120));
-    }
-    if (!limited) for (const c of monthList) {
-      done++;
-      toast(`更新月營收 ${done}/${total}　${c.id} ${c.name || ''}`, true);
-      try { newById[c.id] = await refreshMonthOnly(oldById[c.id], c, token); okCount++; }
-      catch (e) { if (isRateLimit(e)) { limited = true; break; } console.warn('skip', c.id, e); }
-      await new Promise((r) => setTimeout(r, 100));
-    }
-    if (!okCount && limited) throw new Error('觸發 FinMind 額度（600 次/小時），請稍後再試或改用 ETL');
-    DATA = { updated_at: new Date().toISOString(), source: 'FinMind (即時)', config: DATA.config, stocks: list.map((c) => newById[c.id]).filter(Boolean) };
-    renderUpdated();
-    render();
-    const t = new Date().toLocaleTimeString('zh-TW', { hour12: false });
-    let msg = `更新完成：成功 ${okCount}/${total} 檔（需全抓 ${fullList.length}、月營收 ${monthList.length}）@ ${t}`;
-    if (limited) msg += `；已達額度，剩餘沿用舊值，稍後再按可續抓`;
-    toast(msg);
-  } catch (e) {
-    toast('更新失敗：' + e.message);
-  } finally {
-    btn.disabled = false;
-  }
-}
-
 /* ---------------- 控制項綁定 ---------------- */
 function bindControls() {
   $('#groupSeg').querySelectorAll('button').forEach((b) => {
     b.onclick = () => {
       $('#groupSeg').querySelectorAll('button').forEach((x) => x.classList.remove('active'));
-      b.classList.add('active'); state.group = b.dataset.g; render();
+      b.classList.add('active');
+      state.group = b.dataset.g;
+      state.groupFilter = '';
+      syncGroupFilter();
+      render();
     };
   });
+  $('#groupFilter').onchange = (e) => { state.groupFilter = e.target.value; render(); };
   $('#metricSel').onchange = (e) => { state.metric = e.target.value; render(); };
   $('#sortSel').onchange = (e) => { state.sort = e.target.value; render(); };
   $('#searchBox').oninput = (e) => { state.search = e.target.value.trim(); render(); };
   $('#warnChip').onclick = (e) => { state.warnOnly = !state.warnOnly; e.target.classList.toggle('on'); render(); };
   $('#strongChip').onclick = (e) => { state.strongOnly = !state.strongOnly; e.target.classList.toggle('on'); render(); };
-  $('#refreshBtn').onclick = refreshData;
   $('#helpBtn').onclick = () => openHelp(false);
   $('#helpClose').onclick = () => $('#helpModal').classList.remove('open');
   $('#helpModal').onclick = (e) => { if (e.target.id === 'helpModal') $('#helpModal').classList.remove('open'); };
@@ -981,15 +944,16 @@ function bindControls() {
 /* ---------------- 啟動 ---------------- */
 function init() {
   if (!window.SEED_DATA) {
-    $('#content').innerHTML = '<div class="empty-state">找不到 data/data.js。<br>請先執行 <code>python etl/build_data.py</code> 產生資料，或點右上角「更新即時資料」直接抓取。</div>';
+    $('#content').innerHTML = '<div class="empty-state">找不到 data/data.js。<br>請先執行 <code>python etl/build_data.py</code> 產生資料，或等待 GitHub Actions 排程更新。</div>';
   }
-  if (window.FINMIND_TOKEN) $('#tokenBox').value = window.FINMIND_TOKEN; // 自動帶入本機 token
   const exId = new URLSearchParams(location.search).get('expand');
   if (exId) { state.expanded.add(exId); state.search = exId; }
   if (location.search.includes('sig')) openHelp(true);
   else if (location.search.includes('help')) openHelp(false);
   bindControls();
+  syncGroupFilter();
   renderUpdated();
+  trackVisitor();
   render();
 }
 init();

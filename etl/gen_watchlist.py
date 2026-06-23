@@ -25,7 +25,16 @@ import requests
 
 ROOT = Path(__file__).resolve().parent.parent
 CONFIG_PATH = ROOT / "config" / "watchlist.json"
+SUB_INDUSTRY_PATH = ROOT / "config" / "sub_industry.json"
 TOKEN_FILE = ROOT / "finmind token"
+
+
+def load_sub_industry() -> dict:
+    """細產業對照表 stock_id -> 細主題。"""
+    if not SUB_INDUSTRY_PATH.exists():
+        return {}
+    raw = json.loads(SUB_INDUSTRY_PATH.read_text(encoding="utf-8"))
+    return {k: v for k, v in raw.items() if not k.startswith("_")}
 
 FINMIND = "https://api.finmindtrade.com/api/v4/data"
 TWSE_ALL = "https://openapi.twse.com.tw/v1/exchangeReport/STOCK_DAY_ALL"
@@ -94,7 +103,12 @@ def main() -> int:
     token = get_token()
 
     cfg = json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
-    custom_theme = {s["id"]: s["theme"] for s in cfg.get("stocks", []) if s.get("theme")}
+    sub_ind = load_sub_industry()
+    # 既有自訂主題：排除「等於官方產業別」的粗主題，這些應由細產業表或官方別接手
+    custom_theme = {
+        s["id"]: s["theme"] for s in cfg.get("stocks", [])
+        if s.get("theme") and s["id"] not in sub_ind
+    }
     keep_ids = [s["id"] for s in cfg.get("stocks", [])]  # 既有清單一律保留
 
     print("抓取全市場基本資料 (FinMind)...")
@@ -140,7 +154,7 @@ def main() -> int:
         stocks.append({
             "id": sid,
             "name": meta["name"],
-            "theme": custom_theme.get(sid) or (meta["industry"] or "其他"),
+            "theme": sub_ind.get(sid) or custom_theme.get(sid) or (meta["industry"] or "其他"),
         })
 
     cfg["stocks"] = stocks
