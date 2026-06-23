@@ -211,9 +211,9 @@
   /* heatmap mini cells for 5 metrics */
   .heat { display: inline-flex; gap: 3px; justify-content: center; }
   .cell {
-    width: 30px; height: 22px; border-radius: 4px; display: inline-flex;
+    min-width: 30px; padding: 0 4px; height: 22px; border-radius: 4px; display: inline-flex;
     align-items: center; justify-content: center; font-size: 9px; color: #02070d;
-    border: 1px solid transparent;
+    border: 1px solid transparent; white-space: nowrap; box-sizing: border-box;
   }
   .cell.empty { background: transparent; border: 1px dashed rgba(255,255,255,0.10); color: var(--dim); }
   .lv-up3 { background: var(--up3); box-shadow: 0 0 12px rgba(255,45,149,0.6); color: #fff; font-weight:700; }
@@ -242,12 +242,15 @@
   .detail-group { padding: 6px 16px 0; }
   .dg-title { font-family:'Orbitron',sans-serif; font-size: 11px; letter-spacing: 2px; color: var(--magenta); margin: 10px 0 4px; text-shadow: 0 0 8px rgba(255,45,149,0.3); }
   .detail-inner { padding: 6px 0 10px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 12px; }
-  .mini { border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; }
-  .mini h4 { margin: 0 0 8px; font-size: 11px; color: var(--cyan); letter-spacing: 1px; font-family:'Orbitron',sans-serif; }
-  .mini table { font-size: 11px; width: 100%; table-layout: auto; }
-  .mini td, .mini th { padding: 3px 6px; border: none; }
-  .mini td:first-child { text-align: left; }
-  .mini td:last-child { text-align: right; }
+  .mini { border: 1px solid var(--line); border-radius: 8px; padding: 10px 10px; background: rgba(255,255,255,0.015); overflow: hidden; }
+  .mini h4 { margin: 0 0 6px; font-size: 12px; color: var(--cyan); letter-spacing: .5px; font-weight: 700; text-align: center; line-height: 1.4; }
+  .mini h4 .kq { display: block; font-size: 10px; color: var(--dim); letter-spacing: 0; margin-top: 2px; font-weight: 400; }
+  .mini h4 .kq .up { color: #ff7aa8; } .mini h4 .kq .dn { color: #5cffc0; }
+  .mini table { font-size: 11px; width: 100%; table-layout: fixed; border-collapse: collapse; }
+  .mini td { padding: 3px 4px; border: none; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .mini td.per { color: var(--dim); }
+  .mini tr:last-child td { color: var(--txt); font-weight: 700; }
+  .mini tr:last-child td.per { color: var(--cyan); font-weight: 400; }
 
   .empty-state { text-align: center; color: var(--dim); padding: 60px 20px; }
 
@@ -292,16 +295,27 @@
       <select id="metricSel">
         <optgroup label="綜合損益">
           <option value="revenue" selected>季營收</option>
+          <option value="cogs">營業成本</option>
           <option value="gross">營業毛利</option>
+          <option value="op_exp">營業費用</option>
           <option value="op_income">營業利益</option>
+          <option value="nonop">營業外收支</option>
           <option value="pre_tax">稅前淨利</option>
           <option value="net">稅後淨利</option>
+          <option value="eps">EPS</option>
           <option value="month_rev">月營收</option>
         </optgroup>
         <optgroup label="資產負債">
           <option value="ar">應收帳款</option>
           <option value="inventory">存貨</option>
           <option value="contract_liab">合約負債</option>
+          <option value="ap">應付帳款</option>
+          <option value="cash">現金及約當現金</option>
+          <option value="current_assets">流動資產</option>
+          <option value="current_liab">流動負債</option>
+          <option value="st_borrow">短期借款</option>
+          <option value="noncurrent_liab">非流動負債</option>
+          <option value="ppe">不動產廠房設備</option>
           <option value="total_assets">總資產</option>
           <option value="total_liab">總負債</option>
           <option value="equity">股東權益</option>
@@ -310,6 +324,8 @@
           <option value="op_cf">營業現金流</option>
           <option value="inv_cf">投資現金流</option>
           <option value="fin_cf">籌資現金流</option>
+          <option value="capex">資本支出</option>
+          <option value="fcf">自由現金流</option>
         </optgroup>
       </select>
     </div>
@@ -415,24 +431,33 @@
 const FINMIND = 'https://api.finmindtrade.com/api/v4/data';
 const BALANCE_FIELDS = {
   ar: 'AccountsReceivableNet', inventory: 'Inventories', contract_liab: 'CurrentContractLiabilities',
-  total_assets: 'TotalAssets', total_liab: 'Liabilities', equity: 'Equity'
+  total_assets: 'TotalAssets', total_liab: 'Liabilities', equity: 'Equity',
+  cash: 'CashAndCashEquivalents', current_assets: 'CurrentAssets', current_liab: 'CurrentLiabilities',
+  ap: 'AccountsPayable', st_borrow: 'ShorttermBorrowings', noncurrent_liab: 'NoncurrentLiabilities',
+  ppe: 'PropertyPlantAndEquipment'
 };
 const INCOME_FIELDS  = {
-  revenue: 'Revenue', gross: 'GrossProfit', op_income: 'OperatingIncome',
+  revenue: 'Revenue', cogs: 'CostOfGoodsSold', gross: 'GrossProfit', op_exp: 'OperatingExpenses',
+  op_income: 'OperatingIncome', nonop: 'TotalNonoperatingIncomeAndExpense',
   pre_tax: 'PreTaxIncome', net: 'IncomeAfterTaxes', eps: 'EPS'
 };
 const CASHFLOW_FIELDS = {
   op_cf: 'CashFlowsFromOperatingActivities',
   inv_cf: 'CashProvidedByInvestingActivities',
-  fin_cf: 'CashFlowsProvidedFromFinancingActivities'
+  fin_cf: 'CashFlowsProvidedFromFinancingActivities',
+  capex: 'PropertyAndPlantAndEquipment'
 };
 
 const METRIC_LABELS = {
   ar: '應收帳款', inventory: '存貨', contract_liab: '合約負債',
   total_assets: '總資產', total_liab: '總負債', equity: '股東權益',
-  revenue: '季營收', gross: '營業毛利', op_income: '營業利益',
+  cash: '現金及約當現金', current_assets: '流動資產', current_liab: '流動負債',
+  ap: '應付帳款', st_borrow: '短期借款', noncurrent_liab: '非流動負債', ppe: '不動產廠房設備',
+  revenue: '季營收', cogs: '營業成本', gross: '營業毛利', op_exp: '營業費用',
+  op_income: '營業利益', nonop: '營業外收支',
   pre_tax: '稅前淨利', net: '稅後淨利', eps: 'EPS',
   op_cf: '營業現金流', inv_cf: '投資現金流', fin_cf: '籌資現金流',
+  capex: '資本支出', fcf: '自由現金流',
   month_rev: '月營收'
 };
 // 五大指標 heatmap 顯示順序
@@ -483,7 +508,7 @@ function metricSeries(stock, key) {
   }
   let src;
   if (key in BALANCE_FIELDS) src = stock.balance;
-  else if (key in CASHFLOW_FIELDS) src = stock.cashflow;
+  else if (key in CASHFLOW_FIELDS || key === 'fcf') src = stock.cashflow;
   else src = stock.income;
   arr = src ? src[key] : null;
   periods = stock.quarters || [];
@@ -627,37 +652,37 @@ function rowHtml(r) {
   </tr>`;
 }
 
-function miniBlock(stock, m) {
+function pctSpan(x) {
+  if (!isNum(x)) return '<span>—</span>';
+  return `<span class="${x >= 0 ? 'up' : 'dn'}">${fmtPct(x)}</span>`;
+}
+
+function miniBlock(stock, m, count) {
   const an = metricSeries(stock, m);
-  const periods = an.periods.slice(-8);
-  const vals = an.arr.slice(-8);
+  const n = count || 8;
+  const periods = an.periods.slice(-n);
+  const vals = an.arr.slice(-n);
   if (!vals.some(isNum)) return '';
+  const qoqLabel = (m === 'month_rev') ? 'MoM' : 'QoQ';
   const rows = periods.map((p, k) => {
     const v = vals[k];
-    return `<tr><td class="muted l">${p}</td><td>${m === 'eps' ? fmtEps(v) : fmtMoney(v)}</td></tr>`;
+    return `<tr><td class="per">${p}</td><td>${m === 'eps' ? fmtEps(v) : fmtMoney(v)}</td></tr>`;
   }).join('');
-  return `<div class="mini"><h4>${METRIC_LABELS[m]}　<span class="muted" style="font-size:10px">YoY ${fmtPct(an.yoy)} / QoQ ${fmtPct(an.qoq)}</span></h4>
+  return `<div class="mini"><h4>${METRIC_LABELS[m]}<span class="kq">YoY ${pctSpan(an.yoy)} ｜ ${qoqLabel} ${pctSpan(an.qoq)}</span></h4>
     <table>${rows}</table></div>`;
 }
 
 function detailHtml(stock) {
   const groups = [
-    ['綜合損益', ['revenue', 'gross', 'op_income', 'pre_tax', 'net', 'eps']],
-    ['資產負債', ['ar', 'inventory', 'contract_liab', 'total_assets', 'total_liab', 'equity']],
-    ['現金流量（單季）', ['op_cf', 'inv_cf', 'fin_cf']],
+    ['綜合損益', ['revenue', 'cogs', 'gross', 'op_exp', 'op_income', 'nonop', 'pre_tax', 'net', 'eps', 'month_rev']],
+    ['資產負債', ['ar', 'inventory', 'contract_liab', 'ap', 'cash', 'current_assets', 'current_liab', 'st_borrow', 'noncurrent_liab', 'ppe', 'total_assets', 'total_liab', 'equity']],
+    ['現金流量（單季）', ['op_cf', 'inv_cf', 'fin_cf', 'capex', 'fcf']],
   ];
   let html = '';
   groups.forEach(([title, metrics]) => {
-    const blocks = metrics.map((m) => miniBlock(stock, m)).filter(Boolean).join('');
+    const blocks = metrics.map((m) => miniBlock(stock, m, m === 'month_rev' ? 12 : 8)).filter(Boolean).join('');
     if (blocks) html += `<div class="detail-group"><div class="dg-title">${title}</div><div class="detail-inner">${blocks}</div></div>`;
   });
-  // 月營收區塊
-  const mr = metricSeries(stock, 'month_rev');
-  const mp = mr.periods.slice(-12), mv = mr.arr.slice(-12);
-  if (mv.some(isNum)) {
-    const mrows = mp.map((p, k) => `<tr><td class="muted l">${p}</td><td>${fmtMoney(mv[k])}</td></tr>`).join('');
-    html += `<div class="detail-group"><div class="dg-title">月營收</div><div class="detail-inner"><div class="mini"><h4>月營收　<span class="muted" style="font-size:10px">YoY ${fmtPct(mr.yoy)} / MoM ${fmtPct(mr.qoq)}</span></h4><table>${mrows}</table></div></div></div>`;
-  }
   return html;
 }
 
@@ -857,6 +882,10 @@ async function buildStockLive(cfg, token, infoMap) {
   const cfCum = pivotQuarterly(cf, CASHFLOW_FIELDS, quarters);
   const cashflow = {};
   for (const k in CASHFLOW_FIELDS) cashflow[k] = deCumulate(cfCum[k], quarters);
+  cashflow.fcf = cashflow.op_cf.map((o, i) => {
+    const c = cashflow.capex[i];
+    return (o != null && c != null) ? o + c : null;
+  });
   return {
     id: cfg.id, name, industry, theme: cfg.theme || '其他',
     has_contract_liab: balance.contract_liab.some((v) => v != null),
@@ -952,6 +981,8 @@ function init() {
     $('#content').innerHTML = '<div class="empty-state">找不到 data/data.js。<br>請先執行 <code>python etl/build_data.py</code> 產生資料，或點右上角「更新即時資料」直接抓取。</div>';
   }
   if (window.FINMIND_TOKEN) $('#tokenBox').value = window.FINMIND_TOKEN; // 自動帶入本機 token
+  const exId = new URLSearchParams(location.search).get('expand');
+  if (exId) { state.expanded.add(exId); state.search = exId; }
   if (location.search.includes('sig')) openHelp(true);
   else if (location.search.includes('help')) openHelp(false);
   bindControls();

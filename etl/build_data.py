@@ -38,11 +38,23 @@ BALANCE_FIELDS = {
     "total_assets": "TotalAssets",          # 總資產
     "total_liab": "Liabilities",             # 總負債
     "equity": "Equity",                      # 股東權益總額
+    # 流動性
+    "cash": "CashAndCashEquivalents",        # 現金及約當現金
+    "current_assets": "CurrentAssets",       # 流動資產合計
+    "current_liab": "CurrentLiabilities",    # 流動負債合計
+    "ap": "AccountsPayable",                 # 應付帳款
+    # 槓桿
+    "st_borrow": "ShorttermBorrowings",      # 短期借款
+    "noncurrent_liab": "NoncurrentLiabilities",  # 非流動負債合計
+    "ppe": "PropertyPlantAndEquipment",      # 不動產廠房及設備
 }
 INCOME_FIELDS = {
     "revenue": "Revenue",                    # 單季營收
+    "cogs": "CostOfGoodsSold",               # 營業成本
     "gross": "GrossProfit",                  # 營業毛利
+    "op_exp": "OperatingExpenses",           # 營業費用
     "op_income": "OperatingIncome",          # 營業利益
+    "nonop": "TotalNonoperatingIncomeAndExpense",  # 營業外收支
     "pre_tax": "PreTaxIncome",               # 稅前淨利
     "net": "IncomeAfterTaxes",               # 稅後淨利
     "eps": "EPS",                            # 每股盈餘
@@ -52,6 +64,7 @@ CASHFLOW_FIELDS = {
     "op_cf": "CashFlowsFromOperatingActivities",          # 營業活動現金流
     "inv_cf": "CashProvidedByInvestingActivities",        # 投資活動現金流
     "fin_cf": "CashFlowsProvidedFromFinancingActivities", # 籌資活動現金流
+    "capex": "PropertyAndPlantAndEquipment",              # 取得不動產廠房設備（資本支出，負值）
 }
 
 TZ = timezone(timedelta(hours=8))  # 台北時間
@@ -121,6 +134,9 @@ def has_data(stock: dict) -> bool:
         return False
     if "cashflow" not in stock or "total_assets" not in stock.get("balance", {}):
         return False
+    # v3 schema：含流動性/槓桿/FCF 等新欄位，缺則強制重抓
+    if "cash" not in stock.get("balance", {}) or "fcf" not in stock.get("cashflow", {}):
+        return False
     inc = stock.get("income", {}).get("revenue", [])
     bal = stock.get("balance", {}).get("ar", [])
     mr = stock.get("month_rev", {}).get("values", [])
@@ -137,7 +153,7 @@ def empty_stock(cfg_stock: dict) -> dict:
         "quarters": [],
         "balance": {k: [] for k in BALANCE_FIELDS},
         "income": {k: [] for k in INCOME_FIELDS},
-        "cashflow": {k: [] for k in CASHFLOW_FIELDS},
+        "cashflow": {**{k: [] for k in CASHFLOW_FIELDS}, "fcf": []},
         "month_rev": {"months": [], "values": []},
     }
 
@@ -224,6 +240,11 @@ def build_stock(cfg_stock: dict, cfg: dict, token: str | None, info_map: dict) -
     # 現金流量：原始為年度累計 -> 還原為單季
     cf_cum = pivot_quarterly(cf, CASHFLOW_FIELDS, quarters)
     cashflow = {k: de_cumulate(cf_cum[k], quarters) for k in CASHFLOW_FIELDS}
+    # 自由現金流 FCF = 營業現金流 + 資本支出（capex 為負值）
+    cashflow["fcf"] = [
+        (o + c) if (o is not None and c is not None) else None
+        for o, c in zip(cashflow["op_cf"], cashflow["capex"])
+    ]
 
     # 月營收（以 revenue_year/revenue_month 標示「歸屬月份」，而非公告日）
     mr_map = {}
