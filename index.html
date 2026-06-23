@@ -420,7 +420,10 @@
 <div id="toast"></div>
 
 <script src="config/token.js" onerror="window.__noToken=1"></script>
-<script src="data/data.js"></script>
+<script>
+  // 以日期為版本參數，確保每日更新後載入最新 data.js（避免瀏覽器快取舊資料）
+  document.write('<scr' + 'ipt src="data/data.js?d=' + new Date().toISOString().slice(0, 10) + '"></scr' + 'ipt>');
+</script>
 <script>
 /* =========================================================================
  *  FINMETRICS 前端分析層
