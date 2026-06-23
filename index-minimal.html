@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>台股財務監測 // CLEAN</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #f4f6fb;
+    --bg2: #eef1f8;
+    --panel: #ffffff;
+    --txt: #1c2333;
+    --txt2: #3b4458;
+    --dim: #8a93a8;
+    --line: #e6e9f1;
+    --line2: #eef1f7;
+    --accent: #4f46e5;     /* indigo */
+    --accent-soft: #eef0ff;
+    --teal: #0d9488;
+    --amber: #d97706;
+    /* Taiwan convention: up=red, down=green */
+    --up: #e23744;
+    --dn: #12a36b;
+    --spark-up: #e23744;
+    --spark-dn: #12a36b;
+    --up3: #e23744;
+    --up2: #f4717c;
+    --up1: #fbd3d6;
+    --dn3: #12a36b;
+    --dn2: #5fc79f;
+    --dn1: #cdeede;
+    --radius: 14px;
+    --shadow: 0 1px 2px rgba(20,28,54,0.04), 0 8px 24px rgba(20,28,54,0.06);
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    font-family: 'Noto Sans TC', 'Inter', system-ui, sans-serif;
+    color: var(--txt);
+    background:
+      radial-gradient(900px 500px at 100% -8%, rgba(79,70,229,0.06), transparent 60%),
+      radial-gradient(800px 460px at -5% 0%, rgba(13,148,136,0.05), transparent 58%),
+      linear-gradient(180deg, var(--bg), var(--bg2));
+    background-attachment: fixed;
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 1500px; margin: 0 auto; padding: 22px 18px 90px; }
+
+  /* ---------- Header ---------- */
+  header.topbar {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 14px;
+    padding: 18px 22px; margin-bottom: 16px;
+    background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+  .brand { display: flex; flex-direction: column; gap: 4px; margin-right: auto; }
+  .brand h1 {
+    font-family: 'Inter', sans-serif; font-weight: 800; letter-spacing: -.3px;
+    margin: 0; font-size: 20px; line-height: 1.1; color: var(--txt);
+  }
+  .brand h1 .mark { color: var(--accent); }
+  .brand .sub { font-size: 12px; color: var(--dim); }
+  .updated { font-size: 12px; color: var(--dim); text-align: right; line-height: 1.5; }
+  .updated b { color: var(--accent); font-weight: 600; }
+
+  /* ---------- Controls ---------- */
+  .controls {
+    display: flex; flex-wrap: wrap; gap: 12px; align-items: center;
+    padding: 14px 16px; margin-bottom: 16px;
+    background: var(--panel); border: 1px solid var(--line); border-radius: var(--radius);
+    box-shadow: var(--shadow);
+  }
+  .ctl { display: flex; flex-direction: column; gap: 5px; }
+  .ctl label { font-size: 10px; color: var(--dim); letter-spacing: .6px; text-transform: uppercase; font-weight: 600; }
+  select, input[type="text"], input[type="password"] {
+    background: #fbfcfe; color: var(--txt);
+    border: 1px solid var(--line); border-radius: 10px;
+    padding: 9px 11px; font-family: inherit; font-size: 13px; outline: none; transition: all .15s;
+  }
+  select:focus, input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px rgba(79,70,229,0.14); background: #fff; }
+
+  .seg { display: inline-flex; border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: #f6f7fb; }
+  .seg button {
+    background: transparent; color: var(--dim); border: none; cursor: pointer;
+    padding: 9px 14px; font-family: inherit; font-size: 12px; font-weight: 600; transition: all .15s;
+  }
+  .seg button.active { background: var(--accent); color: #fff; }
+
+  .chip {
+    background: #f6f7fb; border: 1px solid var(--line); color: var(--txt2);
+    border-radius: 999px; padding: 8px 14px; cursor: pointer; font-family: inherit; font-size: 12px; font-weight: 500;
+    transition: all .15s;
+  }
+  .chip:hover { border-color: var(--accent); color: var(--accent); }
+  .chip.on { color: #fff; border-color: var(--accent); background: var(--accent); }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--accent); color: #fff; border: 1px solid var(--accent);
+    border-radius: 11px; padding: 10px 18px; cursor: pointer;
+    font-family: 'Inter', sans-serif; font-weight: 700; font-size: 12.5px; letter-spacing: .2px;
+    transition: all .15s; box-shadow: 0 4px 14px rgba(79,70,229,0.22);
+  }
+  .btn:hover { background: #423bd4; box-shadow: 0 6px 20px rgba(79,70,229,0.34); transform: translateY(-1px); }
+  .btn:disabled { opacity: .55; cursor: progress; }
+  .btn .dot { width: 8px; height: 8px; border-radius: 50%; background: #b6ffcb; box-shadow: 0 0 8px #7cf0a3; }
+  .btn-ghost { background: #fff; color: var(--accent); border-color: var(--line); box-shadow: var(--shadow); }
+  .btn-ghost:hover { background: var(--accent-soft); border-color: var(--accent); box-shadow: 0 4px 14px rgba(79,70,229,0.16); }
+
+  /* ---------- Modal ---------- */
+  .modal-overlay {
+    position: fixed; inset: 0; z-index: 80; display: none;
+    background: rgba(28, 35, 51, 0.42); backdrop-filter: blur(4px);
+    align-items: flex-start; justify-content: center; padding: 5vh 16px;
+  }
+  .modal-overlay.open { display: flex; }
+  .modal {
+    width: min(860px, 100%); max-height: 90vh; overflow-y: auto;
+    background: var(--panel); border: 1px solid var(--line); border-radius: 18px;
+    box-shadow: 0 24px 70px rgba(20, 28, 54, 0.22);
+  }
+  .modal-head {
+    position: sticky; top: 0; display: flex; align-items: center; justify-content: space-between;
+    padding: 18px 22px; border-bottom: 1px solid var(--line); background: var(--panel);
+  }
+  .modal-head h3 { margin: 0; font-family: 'Inter', sans-serif; font-size: 17px; font-weight: 700; color: var(--txt); }
+  .modal-close {
+    background: #f6f7fb; border: 1px solid var(--line); color: var(--dim);
+    width: 34px; height: 34px; border-radius: 9px; cursor: pointer; font-size: 20px; line-height: 1;
+  }
+  .modal-close:hover { color: var(--up); border-color: var(--up); background: #fdeef0; }
+  .modal-body { padding: 20px 22px 26px; font-size: 13.5px; line-height: 1.75; color: var(--txt2); }
+  .modal-intro { color: var(--txt2); background: var(--accent-soft); border-left: 3px solid var(--accent); padding: 12px 16px; border-radius: 10px; margin: 0 0 18px; }
+  .def-sec { margin: 14px 0; }
+  .def-tag { display: inline-block; font-family:'Inter',sans-serif; font-weight:600; font-size: 11px; letter-spacing: .3px; padding: 4px 12px; border-radius: 999px; margin-bottom: 5px; }
+  .def-tag.stmt { color: var(--accent); border: 1px solid var(--accent); background: var(--accent-soft); }
+  .def-tag.mark { color: var(--amber); border: 1px solid var(--amber); background: #fff7ed; }
+  .def-tag.sig { color: var(--teal); border: 1px solid var(--teal); background: #effaf7; }
+  .sig-list { display: flex; flex-direction: column; gap: 10px; margin-top: 10px; }
+  .sig-row { display: flex; gap: 12px; align-items: flex-start; color: var(--txt2); }
+  .sig-row > .tag { flex: 0 0 auto; cursor: default; align-self: flex-start; }
+  #sigHelp.flash { animation: sigflash 1.6s ease; }
+  @keyframes sigflash { 0%,100% { background: transparent; } 25% { background: #effaf7; } }
+  .def-sec p { margin: 4px 0 0; color: var(--txt2); }
+  .def-sec p b, .modal-intro b { color: var(--txt); font-weight: 700; }
+  .def-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap: 12px; margin: 16px 0; }
+  .def { background: #fafbfd; border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; color: var(--txt2); }
+  .def b { color: var(--accent); display: inline-block; margin-right: 6px; }
+  .warn-txt { color: var(--up); }
+  .good-txt { color: var(--dn); }
+  .modal-foot { color: var(--dim); font-size: 11.5px; margin-top: 16px; border-top: 1px dashed var(--line); padding-top: 12px; }
+
+  /* ---------- Group section ---------- */
+  .group { margin-bottom: 26px; }
+  .group-head { display: flex; align-items: center; gap: 12px; margin: 0 2px 10px; }
+  .group-head h2 { font-family: 'Inter', sans-serif; font-size: 15px; font-weight: 700; margin: 0; color: var(--txt); letter-spacing: -.2px; }
+  .group-head .bar { flex: 1; height: 1px; background: linear-gradient(90deg, var(--line), transparent); }
+  .group-head .count { font-size: 12px; color: var(--dim); }
+
+  .tablewrap {
+    border: 1px solid var(--line); border-radius: var(--radius); overflow: hidden;
+    background: var(--panel); box-shadow: var(--shadow);
+  }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; table-layout: fixed; }
+  thead th {
+    position: sticky; top: 0; background: #f8f9fc; color: var(--dim);
+    font-weight: 600; font-size: 10px; letter-spacing: .6px; text-transform: uppercase;
+    padding: 12px 6px; text-align: center; white-space: nowrap; cursor: pointer; user-select: none;
+    border-bottom: 1px solid var(--line);
+    overflow: hidden; text-overflow: ellipsis;
+  }
+  thead th:hover { color: var(--accent); }
+  thead th .arrow { color: var(--accent); font-size: 9px; }
+  tbody td { padding: 10px 6px; text-align: center; white-space: nowrap; border-bottom: 1px solid var(--line2); overflow: hidden; text-overflow: ellipsis; color: var(--txt2); }
+  tbody tr { cursor: pointer; transition: background .12s; }
+  tbody tr:hover { background: #f7f8fd; }
+  tbody tr.expanded { background: var(--accent-soft); }
+  .sid { color: var(--accent); font-weight: 700; }
+  .sname { color: var(--txt); font-weight: 500; }
+  .muted { color: var(--dim); }
+
+  .pct { font-weight: 700; }
+  .pct.up { color: var(--up); }
+  .pct.dn { color: var(--dn); }
+
+  /* heatmap mini cells */
+  .heat { display: inline-flex; gap: 3px; justify-content: center; }
+  .cell {
+    min-width: 30px; padding: 0 4px; height: 22px; border-radius: 6px; display: inline-flex;
+    align-items: center; justify-content: center; font-size: 9px;
+    border: 1px solid transparent; white-space: nowrap; box-sizing: border-box; font-weight: 700;
+  }
+  .cell.empty { background: transparent; border: 1px dashed var(--line); color: var(--dim); font-weight: 400; }
+  .lv-up3 { background: var(--up3); color: #fff; }
+  .lv-up2 { background: var(--up2); color: #fff; }
+  .lv-up1 { background: var(--up1); color: #a32530; }
+  .lv-dn3 { background: var(--dn3); color: #fff; }
+  .lv-dn2 { background: var(--dn2); color: #04361f; }
+  .lv-dn1 { background: var(--dn1); color: #0a6b45; }
+  .lv-0   { background: #f0f2f6; color: var(--dim); font-weight: 400; }
+
+  tr.row-strong td { box-shadow: inset 3px 0 0 var(--up); }
+
+  /* tags */
+  .tags { display: flex; flex-wrap: wrap; gap: 4px; justify-content: center; }
+  .tags .tag { cursor: pointer; }
+  .tags .tag:hover { filter: brightness(0.97); }
+  .tag { font-size: 10px; padding: 3px 9px; border-radius: 999px; border: 1px solid; white-space: nowrap; font-weight: 600; }
+  .tag.good { color: var(--dn); border-color: #b7e6d2; background: #effaf5; }
+  .tag.warn { color: var(--up); border-color: #f6c4c8; background: #fdeef0; }
+  .tag.info { color: var(--accent); border-color: #cdd0fa; background: var(--accent-soft); }
+
+  svg.spark { vertical-align: middle; }
+
+  /* expand detail */
+  tr.detail td { background: #fafbfd; padding: 0; }
+  .detail-group { padding: 8px 18px 0; }
+  .dg-title { font-family:'Inter',sans-serif; font-weight:700; font-size: 11px; letter-spacing: .5px; color: var(--accent); margin: 12px 0 6px; text-transform: uppercase; }
+  .detail-inner { padding: 8px 0 12px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap: 12px; }
+  .mini { border: 1px solid var(--line); border-radius: 12px; padding: 11px; background: var(--panel); overflow: hidden; box-shadow: var(--shadow); }
+  .mini h4 { margin: 0 0 7px; font-size: 12px; color: var(--txt); letter-spacing: 0; font-weight: 700; text-align: center; line-height: 1.4; }
+  .mini h4 .kq { display: block; font-size: 10px; color: var(--dim); letter-spacing: 0; margin-top: 3px; font-weight: 400; }
+  .mini h4 .kq .up { color: var(--up); } .mini h4 .kq .dn { color: var(--dn); }
+  .mini table { font-size: 11px; width: 100%; table-layout: fixed; border-collapse: collapse; }
+  .mini td { padding: 4px; border: none; text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .mini td.per { color: var(--dim); }
+  .mini tr:last-child td { color: var(--txt); font-weight: 700; }
+  .mini tr:last-child td.per { color: var(--accent); font-weight: 400; }
+
+  .empty-state { text-align: center; color: var(--dim); padding: 60px 20px; }
+  .empty-state code { background: #eef1f7; padding: 2px 6px; border-radius: 6px; color: var(--accent); }
+
+  /* toast / progress */
+  #toast {
+    position: fixed; left: 50%; bottom: 26px; transform: translateX(-50%);
+    background: var(--txt); border: 1px solid var(--txt); color: #fff;
+    padding: 11px 20px; border-radius: 12px; font-size: 13px; z-index: 50;
+    box-shadow: 0 14px 40px rgba(20,28,54,0.3); display: none;
+  }
+  .legend { display: flex; flex-wrap: wrap; gap: 12px; font-size: 10.5px; color: var(--dim); margin: 8px 2px 0; align-items:center;}
+  .legend .sw { display:inline-block; width:14px; height:10px; border-radius:4px; vertical-align:middle; margin-right:4px; border: 1px solid rgba(0,0,0,0.04); }
+  @media (max-width: 720px) {
+    .updated { width: 100%; text-align: left; }
+    thead th, tbody td { padding: 8px 5px; font-size: 11px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="topbar">
+    <div class="brand">
+      <h1>FINMETRICS <span class="mark">//</span> 台股財務監測</h1>
+      <span class="sub">應收帳款 · 存貨 · 合約負債 · 營收 · 獲利 ＜AI 供應鏈基本面雷達＞</span>
+    </div>
+    <div class="updated" id="updatedBox">資料載入中…</div>
+    <button class="btn btn-ghost" id="helpBtn">？ 指標說明</button>
+    <button class="btn" id="refreshBtn"><span class="dot"></span> 更新即時資料</button>
+  </header>
+
+  <section class="controls">
+    <div class="ctl">
+      <label>分組方式</label>
+      <div class="seg" id="groupSeg">
+        <button data-g="theme" class="active">自訂主題</button>
+        <button data-g="industry">官方產業別</button>
+        <button data-g="global">全市場 Top</button>
+      </div>
+    </div>
+    <div class="ctl">
+      <label>焦點指標</label>
+      <select id="metricSel">
+        <optgroup label="綜合損益">
+          <option value="revenue" selected>季營收</option>
+          <option value="cogs">營業成本</option>
+          <option value="gross">營業毛利</option>
+          <option value="op_exp">營業費用</option>
+          <option value="op_income">營業利益</option>
+          <option value="nonop">營業外收支</option>
+          <option value="pre_tax">稅前淨利</option>
+          <option value="net">稅後淨利</option>
+          <option value="eps">EPS</option>
+          <option value="month_rev">月營收</option>
+        </optgroup>
+        <optgroup label="資產負債">
+          <option value="ar">應收帳款</option>
+          <option value="inventory">存貨</option>
+          <option value="contract_liab">合約負債</option>
+          <option value="ap">應付帳款</option>
+          <option value="cash">現金及約當現金</option>
+          <option value="current_assets">流動資產</option>
+          <option value="current_liab">流動負債</option>
+          <option value="st_borrow">短期借款</option>
+          <option value="noncurrent_liab">非流動負債</option>
+          <option value="ppe">不動產廠房設備</option>
+          <option value="total_assets">總資產</option>
+          <option value="total_liab">總負債</option>
+          <option value="equity">股東權益</option>
+        </optgroup>
+        <optgroup label="現金流量">
+          <option value="op_cf">營業現金流</option>
+          <option value="inv_cf">投資現金流</option>
+          <option value="fin_cf">籌資現金流</option>
+          <option value="capex">資本支出</option>
+          <option value="fcf">自由現金流</option>
+        </optgroup>
+      </select>
+    </div>
+    <div class="ctl">
+      <label>排序依據</label>
+      <select id="sortSel">
+        <option value="yoy">YoY 年增率</option>
+        <option value="qoq">QoQ 季增率</option>
+        <option value="value">最新絕對值</option>
+        <option value="severity">訊號嚴重度</option>
+      </select>
+    </div>
+    <div class="ctl">
+      <label>搜尋</label>
+      <input type="text" id="searchBox" placeholder="代號 / 名稱" />
+    </div>
+    <div class="ctl">
+      <label>快速濾鏡</label>
+      <div style="display:flex; gap:6px;">
+        <button class="chip" id="warnChip">只看警示</button>
+        <button class="chip" id="strongChip">只看強烈變動</button>
+      </div>
+    </div>
+    <div class="ctl" style="margin-left:auto;">
+      <label>FinMind Token（選填，提高額度）</label>
+      <input type="password" id="tokenBox" placeholder="貼上 token 可抓更多" style="width:180px;" />
+    </div>
+  </section>
+
+  <div class="legend">
+    熱力：
+    <span><span class="sw lv-up3"></span>強烈↑(±50%)</span>
+    <span><span class="sw lv-up2"></span>顯著↑(30%)</span>
+    <span><span class="sw lv-up1"></span>留意↑(15%)</span>
+    <span><span class="sw lv-dn1"></span>留意↓</span>
+    <span><span class="sw lv-dn2"></span>顯著↓</span>
+    <span><span class="sw lv-dn3"></span>強烈↓</span>
+    ｜ 點任一列可展開近 8 季明細
+  </div>
+
+  <main id="content"></main>
+</div>
+
+<div id="helpModal" class="modal-overlay">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>指標說明 // 財報三表與五大指標</h3>
+      <button class="modal-close" id="helpClose">×</button>
+    </div>
+    <div class="modal-body">
+      <p class="modal-intro">財報三大表互相連動：<b>綜合損益表</b>看「賺多少」、<b>資產負債表</b>看「家底與體質」、<b>現金流量表</b>看「真的收到多少現金」。獲利好不代表現金流好，三表一起看才能避免被單一數字誤導。</p>
+
+      <div class="def-sec"><div class="def-tag stmt">綜合損益表</div>
+        <p>一段期間（通常一季）公司「收入 − 成本費用 = 賺賠」的成績單。由上而下：營收 → 毛利 → 營業利益 → 稅前/稅後淨利 → EPS。能分辨賺的是本業還是業外。</p>
+      </div>
+      <div class="def-sec"><div class="def-tag stmt">資產負債表</div>
+        <p>某一時間點（季底）公司「有什麼（資產）、欠什麼（負債）、自己的（股東權益）」的快照。恆等式：資產 = 負債 + 股東權益。看財務結構是否穩健。</p>
+      </div>
+      <div class="def-sec"><div class="def-tag stmt">現金流量表</div>
+        <p>一段期間現金實際的進出，分三類：<b>營業</b>（本業收現，最重要）、<b>投資</b>（買設備/轉投資，擴張期常為負）、<b>籌資</b>（借還款、發股利）。本儀表板已將官方年度累計值<b>還原為單季</b>。</p>
+      </div>
+
+      <div class="def-grid">
+        <div class="def"><b>營收</b>本業賣產品/服務的收入，獲利的源頭。台股每月 10 日前公布上月「月營收」，是最即時的領先指標。</div>
+        <div class="def"><b>獲利</b>本儀表板以「營業利益」（本業賺錢能力）與「稅後淨利」為主軸，毛利率為品質輔助。EPS = 每股盈餘。</div>
+        <div class="def"><b>應收帳款</b>已認列營收但客戶還沒付的錢。<span class="warn-txt">應收增速明顯快於營收 → 收款品質惡化或塞貨疑慮。</span></div>
+        <div class="def"><b>存貨</b>尚未賣出的原料/在製品/成品。<span class="warn-txt">存貨↑但營收↓可能滯銷；</span><span class="good-txt">存貨↑且營收↑多為備貨迎需求。</span></div>
+        <div class="def"><b>合約負債</b>客戶<b>預付</b>但公司尚未交貨/認列的款項（在手訂單）。<span class="good-txt">大增通常是未來營收的領先指標</span>，AI 供應鏈特別值得關注。</div>
+        <div class="def"><b>總資產 / 總負債 / 股東權益</b>公司規模與財務結構。股東權益 = 資產 − 負債，是真正屬於股東的淨值。</div>
+        <div class="def"><b>營業現金流</b>本業實際收到的現金。<span class="warn-txt">若淨利為正但營業現金流長期為負，獲利品質需存疑（可能賺的是帳面數字）。</span></div>
+      </div>
+
+      <div class="def-sec"><div class="def-tag mark">變動標記與排序</div>
+        <p>每檔顯示五大指標的 YoY（年增率）熱力色塊：上升紅色、下降綠色，色越深變動越大。等級：強烈 ±50%、顯著 30%、留意 15%。可依 YoY / QoQ / 絕對值 / 訊號嚴重度排序。基期過小者自動降權，避免假訊號。</p>
+      </div>
+
+      <div class="def-sec" id="sigHelp"><div class="def-tag sig">訊號說明（交叉判讀）</div>
+        <p>單看一個指標漲跌容易誤判，「訊號」是結合多個指標的交叉規則，幫你快速判讀。表格最右欄會以彩色標籤呈現：</p>
+        <div class="sig-list">
+          <div class="sig-row"><span class="tag good">合約負債暴增</span><span>合約負債 YoY ≥ 30%。客戶預付／在手訂單大增，<span class="good-txt">通常是未來營收的領先指標</span>，AI 供應鏈題材特別值得留意。</span></div>
+          <div class="sig-row"><span class="tag warn">存貨↑營收↓</span><span>存貨 YoY ≥ 15% 但營收 YoY ≤ 0。<span class="warn-txt">貨越積越多、銷售卻沒跟上 → 可能滯銷或需求轉弱（警示）。</span></span></div>
+          <div class="sig-row"><span class="tag info">備貨迎需求</span><span>存貨與營收同步成長（皆 YoY ≥ 15%）。增加庫存是為了接單出貨，<span style="color:var(--accent)">屬中性偏正。</span></span></div>
+          <div class="sig-row"><span class="tag warn">應收&gt;營收增速</span><span>應收帳款 YoY 明顯高於營收 YoY（高出 10 個百分點以上）。<span class="warn-txt">收款速度跟不上認列營收 → 收款品質惡化或塞貨疑慮（警示）。</span></span></div>
+        </div>
+        <p class="muted" style="font-size:11px;margin-top:6px;">※ 沒有任何訊號時該欄顯示「—」，代表目前無明顯交叉警訊或亮點。</p>
+      </div>
+      <p class="modal-foot">※ 資料延遲：財報每季更新（5/15、8/14、11/14、隔年 3/31），月營收每月一次。合約負債非每家公司都有，缺值顯示「—」。跨產業僅比變動率，不比絕對水準。</p>
+    </div>
+  </div>
+</div>
+
+<div id="toast"></div>
+
+<script src="config/token.js" onerror="window.__noToken=1"></script>
+<script src="data/data.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>

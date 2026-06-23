@@ -1,0 +1,97 @@
+name: 每日更新台股財務資料
+
+# 觸發條件
+on:
+  schedule:
+    # 每天台北時間 21:00 執行（UTC 13:00；GitHub Actions 一律使用 UTC）
+    - cron: "0 13 * * *"
+  # 允許在 Actions 頁面手動按鈕觸發，方便補跑
+  workflow_dispatch:
+
+# 讓 workflow 內的 GITHUB_TOKEN 有權限把更新後的 data.js 推回 repo
+permissions:
+  contents: write
+
+# 避免同時間多個 run 互相覆蓋
+concurrency:
+  group: build-data
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+
+    steps:
+      - name: 取出原始碼
+        uses: actions/checkout@v4
+
+      - name: 設定 Python 環境
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: 安裝相依套件
+        run: python -m pip install --upgrade pip requests
+
+      - name: 執行 build_data.py 並產生 log
+        id: run
+        env:
+          # 在 repo 的 Settings > Secrets and variables > Actions 新增 FINMIND_TOKEN
+          FINMIND_TOKEN: ${{ secrets.FINMIND_TOKEN }}
+        run: |
+          set -o pipefail
+          mkdir -p logs
+          # 以台北時間命名 log（檔名與內容皆用 UTC+8）
+          TS=$(TZ=Asia/Taipei date '+%Y-%m-%d_%H%M%S')
+          TS_HUMAN=$(TZ=Asia/Taipei date '+%Y-%m-%d %H:%M:%S %Z')
+          LOG_FILE="logs/build_${TS}.log"
+
+          {
+            echo "==================================================="
+            echo "執行開始時間（台北）：${TS_HUMAN}"
+            echo "觸發方式：${{ github.event_name }}"
+            echo "FINMIND_TOKEN：$([ -n "$FINMIND_TOKEN" ] && echo '有設定' || echo '無（guest 額度）')"
+            echo "---------------------------------------------------"
+          } | tee "$LOG_FILE"
+
+          # 執行並把 stdout/stderr 同時寫入 log。
+          # build_data.py 會輸出：新抓/沿用/略過 檔數、是否觸發額度限制、各檔錯誤訊息等。
+          set +e
+          python etl/build_data.py 2>&1 | tee -a "$LOG_FILE"
+          EXIT_CODE=${PIPESTATUS[0]}
+          set -e
+
+          END_HUMAN=$(TZ=Asia/Taipei date '+%Y-%m-%d %H:%M:%S %Z')
+          {
+            echo "---------------------------------------------------"
+            echo "執行結束時間（台北）：${END_HUMAN}"
+            echo "程式結束碼（exit code）：${EXIT_CODE}  （0=全部成功；2=部分缺漏，多因 FinMind 額度限制）"
+            echo "==================================================="
+          } | tee -a "$LOG_FILE"
+
+          echo "log_file=${LOG_FILE}" >> "$GITHUB_OUTPUT"
+          echo "exit_code=${EXIT_CODE}" >> "$GITHUB_OUTPUT"
+          # 不論部分缺漏與否都讓 step 成功，以便後續提交與保留 log
+          exit 0
+
+      - name: 上傳 log 為 Artifact（保留 30 天，方便在 Actions 頁面下載）
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-log-${{ github.run_id }}
+          path: logs/*.log
+          retention-days: 30
+
+      - name: 提交更新後的資料與 log
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/data.js logs/
+          if git diff --cached --quiet; then
+            echo "沒有變更，略過提交。"
+          else
+            STAMP=$(TZ=Asia/Taipei date '+%Y-%m-%d %H:%M')
+            git commit -m "chore(data): 每日自動更新財務資料 ${STAMP} (exit=${{ steps.run.outputs.exit_code }})"
+            git push
+          fi
