@@ -29,6 +29,7 @@ API = "https://api.finmindtrade.com/api/v4/data"
 ROOT = Path(__file__).resolve().parent.parent
 CONFIG_PATH = ROOT / "config" / "watchlist.json"
 OUT_PATH = ROOT / "data" / "data.js"
+VERSION_PATH = ROOT / "data" / "version.js"
 
 # FinMind 欄位對應（Phase 1 資料探勘確認）
 BALANCE_FIELDS = {
@@ -333,6 +334,11 @@ def main() -> int:
     js = "// 由 etl/build_data.py 自動產生，請勿手動編輯。\n"
     js += "window.SEED_DATA = " + json.dumps(payload, ensure_ascii=False, indent=1) + ";\n"
     OUT_PATH.write_text(js, encoding="utf-8")
+    VERSION_PATH.write_text(
+        "// 由 etl/build_data.py 自動產生，供 index.html 快取破壞用。\n"
+        f'window.__SEED_V = "{payload["updated_at"]}";\n',
+        encoding="utf-8",
+    )
     ok = sum(1 for s in stocks if has_data(s))
     print(f"\n完成！已寫出 {OUT_PATH}", flush=True)
     print(f"  新抓 {fetched}、沿用 {reused}、略過 {skipped}；目前有資料 {ok}/{len(stocks)} 檔", flush=True)

@@ -509,9 +509,13 @@
 </div>
 
 
+<script src="data/version.js"></script>
 <script>
-  // 以日期為版本參數，確保每日更新後載入最新 data.js（避免瀏覽器快取舊資料）
-  document.write('<scr' + 'ipt src="data/data.js?d=' + new Date().toISOString().slice(0, 10) + '"></scr' + 'ipt>');
+  // 以資料更新時間為版本參數，同日多次更新也能載入最新 data.js
+  (function () {
+    var v = window.__SEED_V || new Date().toISOString().slice(0, 10);
+    document.write('<scr' + 'ipt src="data/data.js?v=' + encodeURIComponent(v) + '"></scr' + 'ipt>');
+  })();
 </script>
 <script>
 /* =========================================================================
