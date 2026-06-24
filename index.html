@@ -329,16 +329,11 @@
     .legend .legend-hint { width: 100%; margin-left: 0; }
 
     .group-head h2 { font-size: 13px; letter-spacing: 1px; flex-wrap: wrap; }
-    .tablewrap > table.stock-table thead th,
-    .tablewrap > table.stock-table > tbody > tr:not(.detail) > td { padding: 8px 5px; font-size: 11px; }
-    .cell { min-width: 26px; height: 20px; font-size: 8px; padding: 0 2px; }
+    .cell { min-width: 0; height: 20px; font-size: 8px; padding: 0 2px; }
     .heat { gap: 2px; }
     .tag { font-size: 9px; padding: 2px 5px; }
     .detail-inner { grid-template-columns: 1fr; }
     .detail-group { padding: 6px 10px 0; }
-    /* 明細列釘在左側並限制為視窗寬度，避免被表格 min-width 撐寬而需左右拖動 */
-    .tablewrap > table.stock-table > tbody > tr.detail > td { position: sticky; left: 0; }
-    .tablewrap > table.stock-table > tbody > tr.detail .detail-group { width: calc(100vw - 24px); box-sizing: border-box; }
 
     .modal-overlay { padding: 2vh 10px; }
     .modal-head { padding: 12px 14px; }
@@ -349,10 +344,6 @@
   }
 
   @media (max-width: 480px) {
-    .tablewrap > table.stock-table { min-width: 640px; }
-    /* 極窄螢幕隱藏趨勢圖欄，保留 YoY 與五指標 */
-    .tablewrap > table.stock-table thead th:nth-child(6),
-    .tablewrap > table.stock-table > tbody > tr:not(.detail) > td:nth-child(6) { display: none; }
     .brand h1 { font-size: 14px; }
   }
 </style>
@@ -1068,23 +1059,16 @@
     .legend { gap: 8px; font-size: 9px; }
     .legend .legend-hint { width: 100%; margin-left: 0; }
     .group-head h2 { font-size: 14px; }
-    .tablewrap > table.stock-table thead th,
-    .tablewrap > table.stock-table > tbody > tr:not(.detail) > td { padding: 8px 5px; font-size: 11px; }
-    .cell { min-width: 26px; height: 20px; font-size: 8px; padding: 0 2px; }
+    .cell { min-width: 0; height: 20px; font-size: 8px; padding: 0 2px; }
     .heat { gap: 2px; }
     .tag { font-size: 9px; padding: 2px 6px; }
     .detail-inner { grid-template-columns: 1fr; }
     .detail-group { padding: 6px 10px 0; }
-    .tablewrap > table.stock-table > tbody > tr.detail > td { position: sticky; left: 0; }
-    .tablewrap > table.stock-table > tbody > tr.detail .detail-group { width: calc(100vw - 24px); box-sizing: border-box; }
     .modal-overlay { padding: 2vh 10px; }
     .def-grid { grid-template-columns: 1fr; }
     .sig-row { flex-direction: column; gap: 4px; }
   }
   @media (max-width: 480px) {
-    .tablewrap > table.stock-table { min-width: 640px; }
-    .tablewrap > table.stock-table thead th:nth-child(6),
-    .tablewrap > table.stock-table > tbody > tr:not(.detail) > td:nth-child(6) { display: none; }
     .brand h1 { font-size: 15px; }
   }
 </style>
@@ -1328,24 +1312,231 @@
     .legend { gap: 8px; font-size: 9px; }
     .legend .legend-hint { width: 100%; margin-left: 0; }
     .group-head h2 { font-size: 14px; }
-    .tablewrap > table.stock-table thead th,
-    .tablewrap > table.stock-table > tbody > tr:not(.detail) > td { padding: 8px 5px; font-size: 11px; }
-    .cell { min-width: 26px; height: 20px; font-size: 8px; padding: 0 2px; }
+    .cell { min-width: 0; height: 20px; font-size: 8px; padding: 0 2px; }
     .heat { gap: 2px; }
     .tag { font-size: 9px; padding: 2px 6px; }
     .detail-inner { grid-template-columns: 1fr; }
     .detail-group { padding: 6px 10px 0; }
-    .tablewrap > table.stock-table > tbody > tr.detail > td { position: sticky; left: 0; }
-    .tablewrap > table.stock-table > tbody > tr.detail .detail-group { width: calc(100vw - 24px); box-sizing: border-box; }
     .modal-overlay { padding: 2vh 10px; }
     .def-grid { grid-template-columns: 1fr; }
     .sig-row { flex-direction: column; gap: 4px; }
   }
   @media (max-width: 480px) {
-    .tablewrap > table.stock-table { min-width: 640px; }
-    .tablewrap > table.stock-table thead th:nth-child(6),
-    .tablewrap > table.stock-table > tbody > tr:not(.detail) > td:nth-child(6) { display: none; }
     .brand h1 { font-size: 15px; }
+  }
+</style>
+
+<!-- ============ 行動版卡片版面（全風格共用） ============ -->
+<style id="layout-mobile" media="all">
+  /* 與賽博霓虹一致：全站 border-box，避免 width:100% 表單元素撐破容器 */
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  html { overflow-x: clip; }
+  body { overflow-x: clip; max-width: 100%; }
+
+  /* 表單元素基礎寬度約束（對齊賽博霓虹） */
+  select, input[type="text"], input[type="password"] {
+    max-width: 100%;
+    min-width: 0;
+  }
+  .controls { max-width: 100%; }
+  .ctl { min-width: 0; max-width: 100%; }
+  .theme-ctl { margin-left: auto; }
+
+  .cardlist {
+    display: flex; flex-direction: column; gap: 10px;
+    width: 100%; max-width: 100%;
+  }
+  .stock-card {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--panel);
+    padding: 12px 14px;
+    cursor: pointer;
+    transition: background .12s;
+    overflow: hidden;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+  .stock-card:hover { background: color-mix(in srgb, var(--line) 35%, var(--panel)); }
+  .stock-card.expanded { background: color-mix(in srgb, var(--line) 55%, var(--panel)); }
+  .stock-card.row-strong { box-shadow: inset 3px 0 0 var(--magenta, var(--accent2, var(--accent))); }
+
+  .card-sigs {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--line);
+  }
+  .card-sigs .tags { justify-content: flex-start; }
+
+  .card-head {
+    display: flex; align-items: flex-start; justify-content: space-between;
+    gap: 10px; margin-bottom: 10px;
+  }
+  .card-title { flex: 1; min-width: 0; }
+  .card-title .sid { margin-right: 6px; }
+  .card-title .sname { font-weight: 600; word-break: break-word; }
+  .card-theme { display: block; font-size: 10px; margin-top: 2px; }
+  .card-spark { flex: 0 0 auto; }
+
+  .card-focus {
+    display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px;
+    margin-bottom: 8px;
+  }
+  .card-lbl { font-size: 10px; color: var(--dim); letter-spacing: .5px; text-transform: uppercase; }
+  .card-val { font-size: 16px; font-weight: 700; color: var(--txt); }
+  .card-period { font-size: 10px; width: 100%; }
+
+  .card-rates {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 8px;
+    margin-bottom: 10px;
+  }
+  .card-rate {
+    background: color-mix(in srgb, var(--line) 40%, var(--panel));
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 8px 10px;
+    display: flex; flex-direction: column; gap: 4px;
+  }
+  .card-rate .pct { font-size: 14px; font-weight: 700; }
+
+  .card-heat { margin-bottom: 4px; }
+  .card-heat > .card-lbl { display: block; margin-bottom: 4px; }
+  .card-heat-note { font-size: 9px; line-height: 1.4; margin-bottom: 6px; }
+  .card-heat .heat {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 4px;
+    width: 100%;
+  }
+  .card-heat .heat-labeled .heat-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    min-height: 38px;
+    padding: 4px 1px;
+    height: auto;
+  }
+  .card-heat .heat-k {
+    font-size: 8px;
+    line-height: 1.1;
+    opacity: 0.9;
+    white-space: nowrap;
+  }
+  .card-heat .heat-v {
+    font-size: 9px;
+    font-weight: 700;
+    line-height: 1.1;
+  }
+  .card-heat .cell.empty .heat-k,
+  .card-heat .cell.empty .heat-v { color: var(--dim); }
+  .card-heat .cell {
+    min-width: 0; width: 100%;
+    font-size: 8px; padding: 0 1px;
+    overflow: hidden; text-overflow: ellipsis;
+  }
+
+  .card-detail {
+    margin-top: 12px; padding-top: 12px;
+    border-top: 1px solid var(--line);
+    cursor: default;
+  }
+  .card-detail .detail-group { padding: 0; }
+  .card-detail .detail-inner { grid-template-columns: 1fr; }
+  .card-detail .mini {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .card-detail .mini table { min-width: 0; }
+
+  .card-hint {
+    font-size: 10px; text-align: center;
+    margin-top: 8px; padding-top: 8px;
+    border-top: 1px dashed var(--line);
+  }
+
+  @media (max-width: 720px) {
+    html, body { overflow-x: clip; }
+    .wrap { max-width: 100%; overflow-x: clip; padding: 10px 10px 56px; }
+
+    header.topbar {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 10px;
+      padding: 14px;
+    }
+    .brand { margin-right: 0; }
+    .brand h1 { font-size: 15px; letter-spacing: 1px; }
+    .brand .sub { font-size: 10px; letter-spacing: 0; word-break: break-word; }
+    .topbar-meta { align-items: flex-start; }
+    .updated { text-align: left; width: 100%; }
+    #helpBtn { width: 100%; justify-content: center; min-height: 44px; }
+    .theme-ctl { margin-left: 0 !important; width: 100%; }
+
+    .controls {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 12px;
+      padding: 12px;
+      width: 100%;
+      max-width: 100%;
+      overflow-x: clip;
+      box-sizing: border-box;
+    }
+    .ctl { width: 100%; min-width: 0; max-width: 100%; }
+    .ctl select,
+    .ctl input[type="text"],
+    .ctl input[type="password"] {
+      width: 100%;
+      min-width: 0;
+      max-width: 100%;
+      min-height: 40px;
+      font-size: 16px;
+      box-sizing: border-box;
+      box-shadow: none;
+    }
+    .seg { display: flex; width: 100%; }
+    .seg button {
+      flex: 1;
+      padding: 10px 6px;
+      font-size: 11px;
+      letter-spacing: 0;
+      min-height: 40px;
+    }
+    .chip { min-height: 40px; padding: 10px 14px; }
+
+    .legend {
+      gap: 8px;
+      font-size: 9px;
+      line-height: 1.5;
+    }
+    .legend .legend-hint { width: 100%; margin-left: 0; }
+    .legend-hint-table { display: none; }
+    .legend-hint-card { display: inline; }
+
+    .group-head h2 { font-size: 13px; letter-spacing: 1px; flex-wrap: wrap; word-break: break-word; }
+    .cell { min-width: 0; }
+    .heat { flex-wrap: wrap; }
+
+    .modal-overlay { padding: 2vh 10px; }
+    .modal { width: 100%; max-width: 100%; }
+    .modal-head { padding: 12px 14px; }
+    .modal-head h3 { font-size: 14px; }
+    .modal-body { padding: 14px; font-size: 12px; }
+    .def-grid { grid-template-columns: 1fr; }
+    .sig-row { flex-direction: column; gap: 4px; }
+
+    .controls .ctl[style*="margin-left"] { margin-left: 0 !important; width: 100%; }
+  }
+  @media (min-width: 721px) {
+    .legend-hint-table { display: inline; }
+    .legend-hint-card { display: none; }
+  }
+  @media (max-width: 480px) {
+    .brand h1 { font-size: 14px; }
   }
 </style>
 
@@ -1391,6 +1582,15 @@
       <label id="groupFilterLabel">細產業</label>
       <select id="groupFilter">
         <option value="">全部</option>
+      </select>
+    </div>
+    <div class="ctl" id="topNCtl" style="display:none;">
+      <label>Top N</label>
+      <select id="topNSel">
+        <option value="10">10</option>
+        <option value="25" selected>25</option>
+        <option value="50">50</option>
+        <option value="100">100</option>
       </select>
     </div>
     <div class="ctl">
@@ -1452,7 +1652,7 @@
         <button class="chip" id="strongChip">只看強烈變動</button>
       </div>
     </div>
-    <div class="ctl" style="margin-left:auto;">
+    <div class="ctl theme-ctl" id="themeCtl">
       <label>介面風格</label>
       <select id="themeSel">
         <option value="finmetrics">賽博霓虹</option>
@@ -1472,7 +1672,9 @@
     <span><span class="sw lv-dn1"></span>留意↓</span>
     <span><span class="sw lv-dn2"></span>顯著↓</span>
     <span><span class="sw lv-dn3"></span>強烈↓</span>
-    <span class="legend-hint">｜ 點任一列可展開近 8 季明細</span>
+    <span class="legend-hint legend-hint-table">｜ 點任一列可展開近 8 季明細</span>
+    <span class="legend-hint legend-hint-card">｜ 點卡片可展開近 8 季明細</span>
+    <span class="legend-hint legend-hint-card legend-heat-keys">｜ 五指標：應收·存貨·合約·營收·淨利</span>
   </div>
 
   <main id="content"></main>
@@ -1537,8 +1739,8 @@
       </div>
 
       <div class="def-sec"><div class="def-tag mark">變動標記與排序</div>
-        <p>每檔顯示五大指標的 YoY（年增率）熱力色塊：上升暖色（洋紅）、下降冷色（青綠），色越深變動越大。等級：強烈 ±50%、顯著 30%、留意 15%。可依 YoY / QoQ / 絕對值 / 訊號嚴重度排序。基期過小者自動降權，避免假訊號。</p>
-        <p><b>趨勢欄</b>＝你在上方「焦點指標」選的那個指標，<b>最近 8 季（約兩年）的數值走勢迷你圖</b>，末端圓點為最新一期。線形顏色僅比較「最新一期 vs 最早一期」：收高為暖色（洋紅，整體上升）、收低為冷色（青綠，整體下降）。<span class="warn-txt">顏色只看頭尾，中間先跌後漲等轉折要看線形本身。</span>數值會正規化到圖框高度，看的是「形狀」而非絕對金額。</p>
+        <p>每檔顯示五大指標的 YoY（年增率）熱力色塊：上升暖色（洋紅）、下降冷色（青綠），色越深變動越大。等級：強烈 ±50%、顯著 30%、留意 15%。可依 YoY / <span id="sortPeriodHelp">QoQ</span> / 絕對值 / 訊號嚴重度排序。基期過小者自動降權，避免假訊號。</p>
+        <p><b>趨勢欄</b>＝你在上方「焦點指標」選的那個指標，<b id="trendWindowHelp">最近 8 季（約兩年）的數值走勢迷你圖</b>，末端圓點為最新一期。線形顏色僅比較「最新一期 vs 最早一期」：收高為暖色（洋紅，整體上升）、收低為冷色（青綠，整體下降）。<span class="warn-txt">顏色只看頭尾，中間先跌後漲等轉折要看線形本身。</span>數值會正規化到圖框高度，看的是「形狀」而非絕對金額。</p>
       </div>
 
       <div class="def-sec" id="sigHelp"><div class="def-tag sig">訊號說明（交叉判讀）</div>
@@ -1606,6 +1808,7 @@ const METRIC_LABELS = {
 // 五大指標 heatmap 顯示順序
 const HEAT_METRICS = ['ar', 'inventory', 'contract_liab', 'revenue', 'net'];
 const HEAT_SHORT = { ar: '應收', inventory: '存貨', contract_liab: '合約', revenue: '營收', net: '淨利' };
+const TOP_N_OPTIONS = [10, 25, 50, 100];
 
 let DATA = window.SEED_DATA || { stocks: [], config: {} };
 let TH = Object.assign({ strong: 0.5, notable: 0.3, watch: 0.15, small_base: 100000000 }, (DATA.config || {}).thresholds || {});
@@ -1619,6 +1822,7 @@ const state = {
   strongOnly: false,
   expanded: new Set(),
   groupFilter: '',
+  topN: 25,
 };
 
 /* ---------------- 工具 ---------------- */
@@ -1676,6 +1880,19 @@ function syncGroupFilter() {
     return `<option value="${esc}"${n === cur ? ' selected' : ''}>${esc}</option>`;
   }).join('');
   if (cur && !names.includes(cur)) state.groupFilter = '';
+  syncTopNCtl();
+}
+
+function syncTopNCtl() {
+  const ctl = $('#topNCtl');
+  const sel = $('#topNSel');
+  if (!ctl || !sel) return;
+  if (state.group === 'global') {
+    ctl.style.display = '';
+    sel.value = String(state.topN);
+  } else {
+    ctl.style.display = 'none';
+  }
 }
 
 // 取某季指標陣列的最新一期分析
@@ -1768,6 +1985,19 @@ function sparkline(arr, dir) {
 
 /* ---------------- 渲染 ---------------- */
 function focusLabel() { return METRIC_LABELS[state.metric] || state.metric; }
+function isMonthMetric() { return state.metric === 'month_rev'; }
+function periodChangeLabel() { return isMonthMetric() ? 'MoM' : 'QoQ'; }
+function periodChangeSortText() { return isMonthMetric() ? 'MoM 月增率' : 'QoQ 季增率'; }
+function trendWindowText() { return isMonthMetric() ? '最近 8 個月' : '最近 8 季（約兩年）'; }
+
+function syncMetricUi() {
+  const qoqOpt = $('#sortSel')?.querySelector('option[value="qoq"]');
+  if (qoqOpt) qoqOpt.textContent = periodChangeSortText();
+  const trendHelp = $('#trendWindowHelp');
+  if (trendHelp) trendHelp.textContent = trendWindowText() + '的數值走勢迷你圖';
+  const sortHelp = $('#sortPeriodHelp');
+  if (sortHelp) sortHelp.textContent = periodChangeLabel();
+}
 
 function buildRows(stocks) {
   return stocks.map((s) => {
@@ -1804,12 +2034,21 @@ function passFilters(r) {
   return true;
 }
 
-function heatCells(stock) {
-  return '<span class="heat">' + HEAT_METRICS.map((m) => {
+function heatCells(stock, opts) {
+  const labeled = opts && opts.labeled;
+  return '<span class="heat' + (labeled ? ' heat-labeled' : '') + '">' + HEAT_METRICS.map((m) => {
     const an = metricSeries(stock, m);
-    if (!isNum(an.yoy)) return `<span class="cell empty" title="${HEAT_SHORT[m]}：無資料">${HEAT_SHORT[m]}</span>`;
+    const lbl = HEAT_SHORT[m];
+    if (!isNum(an.yoy)) {
+      if (labeled) return `<span class="cell empty heat-item" title="${lbl}：無資料"><span class="heat-k">${lbl}</span><span class="heat-v">—</span></span>`;
+      return `<span class="cell empty" title="${lbl}：無資料">${lbl}</span>`;
+    }
     const lv = levelOf(an.yoy, an.latest);
-    return `<span class="cell ${lv.cls}" title="${HEAT_SHORT[m]} YoY ${fmtPct(an.yoy)}（${an.period || ''}）">${fmtPct(an.yoy).replace('%','')}</span>`;
+    const pct = fmtPct(an.yoy).replace('%', '');
+    if (labeled) {
+      return `<span class="cell ${lv.cls} heat-item" title="${lbl} YoY ${fmtPct(an.yoy)}（${an.period || ''}）"><span class="heat-k">${lbl}</span><span class="heat-v">${pct}</span></span>`;
+    }
+    return `<span class="cell ${lv.cls}" title="${lbl} YoY ${fmtPct(an.yoy)}（${an.period || ''}）">${pct}</span>`;
   }).join('') + '</span>';
 }
 
@@ -1869,7 +2108,7 @@ function detailHtml(stock) {
 function tableHtml(rows) {
   const cols = [
     ['l', '', '代號'], ['l', '', '名稱'],
-    ['', 'value', focusLabel()], ['', 'qoq', 'QoQ'], ['', 'yoy', 'YoY'],
+    ['', 'value', focusLabel()], ['', 'qoq', periodChangeLabel()], ['', 'yoy', 'YoY'],
     ['', '', '趨勢'], ['', '', '五指標 YoY'], ['', '', '訊號'],
   ];
   const head = cols.map(([cls, key, label]) => {
@@ -1888,6 +2127,64 @@ function tableHtml(rows) {
   return `<div class="tablewrap"><table class="stock-table">${colgroup}<thead><tr>${head}</tr></thead><tbody>${body}</tbody></table></div>`;
 }
 
+const MOBILE_MQ = window.matchMedia('(max-width: 720px)');
+function useCardLayout() { return MOBILE_MQ.matches; }
+
+function placeThemeCtl() {
+  const ctl = $('#themeCtl');
+  const helpBtn = $('#helpBtn');
+  const controls = document.querySelector('.controls');
+  if (!ctl || !helpBtn || !controls) return;
+  if (useCardLayout()) helpBtn.insertAdjacentElement('afterend', ctl);
+  else controls.appendChild(ctl);
+}
+
+function cardHtml(r) {
+  const s = r.stock, f = r.f;
+  const lv = levelOf(f.yoy, f.latest);
+  const strong = lv.lvl >= 3 ? ' row-strong' : '';
+  const expanded = state.expanded.has(s.id);
+  const valStr = state.metric === 'eps' ? fmtEps(f.latest) : fmtMoney(f.latest);
+  const tags = r.sigs.map((g) => `<span class="tag ${g.c}" title="${g.hint}">${g.t}</span>`).join('');
+  const sparkArr = metricSeries(s, state.metric).arr || [];
+  const qoqCls = isNum(f.qoq) ? (f.qoq >= 0 ? 'up' : 'dn') : 'muted';
+  const yoyCls = isNum(f.yoy) ? (f.yoy >= 0 ? 'up' : 'dn') : 'muted';
+  return `<article class="stock-card${strong}${expanded ? ' expanded' : ''}" data-id="${s.id}">
+    <div class="card-sigs"><div class="tags">${tags || '<span class="muted">無訊號</span>'}</div></div>
+    <div class="card-head">
+      <div class="card-title">
+        <span class="sid">${s.id}</span><span class="sname">${s.name || ''}</span>
+        ${s.theme ? `<span class="card-theme muted">${s.theme}</span>` : ''}
+      </div>
+      <div class="card-spark">${sparkline(sparkArr, lv.dir)}</div>
+    </div>
+    <div class="card-focus">
+      <span class="card-lbl">${focusLabel()}</span>
+      <span class="card-val">${valStr}</span>
+      ${f.period ? `<span class="card-period muted">${f.period}</span>` : ''}
+    </div>
+    <div class="card-rates">
+      <div class="card-rate"><span class="card-lbl">${periodChangeLabel()}</span><span class="pct ${qoqCls}">${fmtPct(f.qoq)}</span></div>
+      <div class="card-rate"><span class="card-lbl">YoY</span><span class="pct ${yoyCls}">${fmtPct(f.yoy)}</span></div>
+    </div>
+    <div class="card-heat">
+      <span class="card-lbl">五指標 YoY</span>
+      <div class="card-heat-note muted">應收 · 存貨 · 合約負債 · 營收 · 淨利</div>
+      ${heatCells(s, { labeled: true })}
+    </div>
+    ${expanded ? `<div class="card-detail">${detailHtml(s)}</div>` : ''}
+    <div class="card-hint muted">${expanded ? '點擊收合明細' : '點擊展開近 8 季明細'}</div>
+  </article>`;
+}
+
+function cardsHtml(rows) {
+  return `<div class="cardlist">${rows.map(cardHtml).join('')}</div>`;
+}
+
+function listHtml(rows) {
+  return useCardLayout() ? cardsHtml(rows) : tableHtml(rows);
+}
+
 function render() {
   const content = $('#content');
   const stocks = DATA.stocks || [];
@@ -1896,8 +2193,8 @@ function render() {
   let html = '';
   if (state.group === 'global') {
     let rows = buildRows(stocks).filter(passFilters);
-    rows = sortRows(rows).slice(0, 25);
-    html += `<div class="group"><div class="group-head"><h2>全市場 // ${focusLabel()} 變動 TOP ${rows.length}</h2><div class="bar"></div><span class="count">${rows.length} 檔</span></div>${tableHtml(rows)}</div>`;
+    rows = sortRows(rows).slice(0, state.topN);
+    html += `<div class="group"><div class="group-head"><h2>全市場 // ${focusLabel()} 變動 TOP ${state.topN}</h2><div class="bar"></div><span class="count">${rows.length} 檔</span></div>${listHtml(rows)}</div>`;
   } else {
     const keyName = state.group === 'theme' ? 'theme' : 'industry';
     const groups = {};
@@ -1907,26 +2204,27 @@ function render() {
       let rows = buildRows(groups[name]).filter(passFilters);
       if (!rows.length) return;
       rows = sortRows(rows);
-      html += `<div class="group"><div class="group-head"><h2>${name}</h2><div class="bar"></div><span class="count">${rows.length} 檔</span></div>${tableHtml(rows)}</div>`;
+      html += `<div class="group"><div class="group-head"><h2>${name}</h2><div class="bar"></div><span class="count">${rows.length} 檔</span></div>${listHtml(rows)}</div>`;
     });
     if (!html) html = '<div class="empty-state">沒有符合篩選條件的個股。</div>';
   }
   content.innerHTML = html;
-  bindTableEvents();
+  bindListEvents();
 }
 
-function bindTableEvents() {
+function bindListEvents() {
   document.querySelectorAll('thead th[data-sort]').forEach((th) => {
     th.onclick = () => { state.sort = th.dataset.sort; $('#sortSel').value = state.sort; render(); };
   });
-  document.querySelectorAll('tbody tr[data-id]').forEach((tr) => {
-    tr.onclick = () => {
-      const id = tr.dataset.id;
+  document.querySelectorAll('tbody tr[data-id], .stock-card[data-id]').forEach((el) => {
+    el.onclick = (e) => {
+      if (e.target.closest('.tag') || e.target.closest('.card-detail')) return;
+      const id = el.dataset.id;
       if (state.expanded.has(id)) state.expanded.delete(id); else state.expanded.add(id);
       render();
     };
   });
-  document.querySelectorAll('tbody .tags .tag').forEach((tag) => {
+  document.querySelectorAll('.tags .tag').forEach((tag) => {
     tag.onclick = (e) => { e.stopPropagation(); openHelp(true); };
   });
 }
@@ -2000,7 +2298,12 @@ function bindControls() {
     };
   });
   $('#groupFilter').onchange = (e) => { state.groupFilter = e.target.value; render(); };
-  $('#metricSel').onchange = (e) => { state.metric = e.target.value; render(); };
+  $('#topNSel').onchange = (e) => {
+    const n = parseInt(e.target.value, 10);
+    state.topN = TOP_N_OPTIONS.includes(n) ? n : 25;
+    render();
+  };
+  $('#metricSel').onchange = (e) => { state.metric = e.target.value; syncMetricUi(); render(); };
   $('#sortSel').onchange = (e) => { state.sort = e.target.value; render(); };
   $('#searchBox').oninput = (e) => { state.search = e.target.value.trim(); render(); };
   $('#warnChip').onclick = (e) => { state.warnOnly = !state.warnOnly; e.target.classList.toggle('on'); render(); };
@@ -2025,9 +2328,13 @@ function init() {
   initTheme();
   bindControls();
   syncGroupFilter();
+  syncTopNCtl();
+  syncMetricUi();
   renderUpdated();
   trackVisitor();
+  placeThemeCtl();
   render();
+  MOBILE_MQ.addEventListener('change', () => { placeThemeCtl(); render(); });
 }
 init();
 </script>
