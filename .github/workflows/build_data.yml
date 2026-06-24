@@ -3,10 +3,20 @@ name: 每日更新台股財務資料
 # 觸發條件
 on:
   schedule:
-    # 每天台北時間 21:00 執行（UTC 13:00；GitHub Actions 一律使用 UTC）
-    - cron: "0 13 * * *"
+    # 每日台北 08:00–20:00 之間每小時跑一次「接續全量」更新（UTC 00:00–12:00，均落在同一台北日），
+    # 讓 600 額度的 token 能分多個小時逐批刷新全部個股。
+    - cron: "0 0-12 * * *"
   # 允許在 Actions 頁面手動按鈕觸發，方便補跑
   workflow_dispatch:
+    inputs:
+      mode:
+        description: "執行模式（increment=增量；refresh=接續全量；full=整批重抓）"
+        type: choice
+        options:
+          - increment
+          - refresh
+          - full
+        default: increment
 
 # 讓 workflow 內的 GITHUB_TOKEN 有權限把更新後的 data.js 推回 repo
 permissions:
@@ -47,10 +57,23 @@ jobs:
           TS_HUMAN=$(TZ=Asia/Taipei date '+%Y-%m-%d %H:%M:%S %Z')
           LOG_FILE="logs/build_${TS}.log"
 
+          # 依觸發來源決定執行模式：
+          #   排程觸發 -> 接續全量（--refresh）；手動觸發則依 mode 輸入決定。
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            ARGS="--refresh"
+          else
+            case "${{ github.event.inputs.mode }}" in
+              refresh) ARGS="--refresh" ;;
+              full) ARGS="--full" ;;
+              *) ARGS="" ;;
+            esac
+          fi
+
           {
             echo "==================================================="
             echo "執行開始時間（台北）：${TS_HUMAN}"
-            echo "觸發方式：${{ github.event_name }}"
+            echo "觸發方式：${{ github.event_name }}（cron='${{ github.event.schedule }}'）"
+            echo "執行參數：build_data.py ${ARGS:-（增量）}"
             echo "FINMIND_TOKEN：$([ -n "$FINMIND_TOKEN" ] && echo '有設定' || echo '無（guest 額度）')"
             echo "---------------------------------------------------"
           } | tee "$LOG_FILE"
@@ -58,7 +81,7 @@ jobs:
           # 執行並把 stdout/stderr 同時寫入 log。
           # build_data.py 會輸出：新抓/沿用/略過 檔數、是否觸發額度限制、各檔錯誤訊息等。
           set +e
-          python etl/build_data.py 2>&1 | tee -a "$LOG_FILE"
+          python etl/build_data.py $ARGS 2>&1 | tee -a "$LOG_FILE"
           EXIT_CODE=${PIPESTATUS[0]}
           set -e
 

@@ -6,12 +6,18 @@
 
 用法：
     python etl/build_data.py            # 增量更新：保留既有資料，只抓「新增/缺資料」的個股
-    python etl/build_data.py --full     # 全量重抓所有個股
+    python etl/build_data.py --refresh  # 接續全量：當天已刷新過的沿用，其餘（含舊資料）重抓，可分多小時接續
+    python etl/build_data.py --full     # 全量重抓所有個股（清空既有，逐次從頭抓）
     set FINMIND_TOKEN=xxx && python etl/build_data.py   # 帶 token 提高額度（避免 guest 額度限制）
 
 增量快取（plan §9）：FinMind guest 有每小時請求上限。本程式預設只抓 data/data.js
 裡尚未有資料的個股，已抓過的直接沿用；若中途觸發額度限制，會保留已成功的資料並提前結束，
 稍後再跑一次即可把剩下的補齊。
+
+接續全量（--refresh）：token 額度有限（如每小時 600 次）時，無法一次刷新所有個股。
+此模式以「今日台北 00:00」為界，當天已重抓過（fetched_at >= 今日 00:00）的個股沿用，
+其餘（含舊資料）一律重抓；觸發額度時保留已完成的，下個小時再跑就會接著刷新剩下的，
+直到當天全部更新完畢。
 """
 from __future__ import annotations
 
@@ -32,8 +38,15 @@ OUT_PATH = ROOT / "data" / "data.js"
 VERSION_PATH = ROOT / "data" / "version.js"
 
 # FinMind 欄位對應（Phase 1 資料探勘確認）
+# 註：欄位值可為單一 FinMind type，或多個 type 組成的清單（pivot_quarterly 會自動加總）
 BALANCE_FIELDS = {
-    "ar": "AccountsReceivableNet",          # 應收帳款
+    # 應收帳款 = 應收帳款淨額 + 應收票據淨額 + 其他應收款淨額 + 應收帳款－關係人淨額
+    "ar": [
+        "AccountsReceivableNet",
+        "BillsReceivableNet",
+        "OtherReceivable",
+        "AccountsReceivableDuefromRelatedPartiesNet",
+    ],
     "inventory": "Inventories",              # 存貨
     "contract_liab": "CurrentContractLiabilities",  # 合約負債（部分公司無）
     "total_assets": "TotalAssets",          # 總資產
@@ -144,6 +157,26 @@ def has_data(stock: dict) -> bool:
     return any(v is not None for v in inc + bal + mr)
 
 
+def is_fresh(stock: dict, cutoff: datetime | None) -> bool:
+    """是否可沿用此個股而不重抓。
+
+    一般增量（cutoff=None）：只要有資料即可沿用。
+    接續全量（cutoff=今日台北 00:00）：除了有資料，還需在 cutoff 之後抓過（fetched_at >= cutoff）；
+    舊資料 fetched_at 早於 cutoff（或缺漏）者一律重抓，以分批刷新全部個股。
+    """
+    if not has_data(stock):
+        return False
+    if cutoff is None:
+        return True
+    fa = stock.get("fetched_at")
+    if not fa:
+        return False
+    try:
+        return datetime.fromisoformat(fa) >= cutoff
+    except Exception:  # noqa: BLE001
+        return False
+
+
 def empty_stock(cfg_stock: dict) -> dict:
     return {
         "id": cfg_stock["id"],
@@ -176,18 +209,33 @@ def fetch_info_map(token: str | None) -> dict:
     return info
 
 
-def pivot_quarterly(rows: list[dict], fields: dict[str, str], quarters: list[str]) -> dict:
-    """把 FinMind 的 (date,type,value) 長表，pivot 成各指標對齊 quarters 的陣列。"""
+def pivot_quarterly(rows: list[dict], fields: dict[str, str | list[str]], quarters: list[str]) -> dict:
+    """把 FinMind 的 (date,type,value) 長表，pivot 成各指標對齊 quarters 的陣列。
+
+    fields 的值可為單一 FinMind type；若為清單，則該指標 = 清單中各 type 的加總
+    （忽略缺值，全缺時為 None），用於像「應收帳款」需合併多個應收款項科目的情況。
+    """
+    wanted: set[str] = set()
+    for v in fields.values():
+        wanted.update(v if isinstance(v, list) else [v])
     by_q: dict[str, dict[str, float]] = {}
     for x in rows:
         t = x.get("type")
-        if t not in fields.values():
+        if t not in wanted:
             continue
         ql = q_label(x["date"])
         by_q.setdefault(ql, {})[t] = x.get("value")
     out: dict[str, list] = {}
     for key, fin_type in fields.items():
-        out[key] = [by_q.get(q, {}).get(fin_type) for q in quarters]
+        if isinstance(fin_type, list):
+            col = []
+            for q in quarters:
+                qd = by_q.get(q, {})
+                vals = [qd[t] for t in fin_type if qd.get(t) is not None]
+                col.append(sum(vals) if vals else None)
+            out[key] = col
+        else:
+            out[key] = [by_q.get(q, {}).get(fin_type) for q in quarters]
     return out
 
 
@@ -270,20 +318,26 @@ def build_stock(cfg_stock: dict, cfg: dict, token: str | None, info_map: dict) -
         "income": income,
         "cashflow": cashflow,
         "month_rev": {"months": months, "values": month_values},
+        "fetched_at": datetime.now(TZ).isoformat(timespec="seconds"),
     }
 
 
 def main() -> int:
     token = os.environ.get("FINMIND_TOKEN")
     full = "--full" in sys.argv
+    refresh = "--refresh" in sys.argv
     cfg = json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
     stocks_cfg = cfg["stocks"]
     existing = {} if full else load_existing()
 
-    mode = "全量" if full else "增量"
+    # 接續全量（--refresh）：以「今日台北 00:00」為界，當天已重抓過者沿用，其餘一律重抓，
+    # 讓額度有限的 token 能分多個小時逐批把全部個股刷新完。
+    cutoff = datetime.now(TZ).replace(hour=0, minute=0, second=0, microsecond=0) if refresh else None
+
+    mode = "全量" if full else ("接續全量" if refresh else "增量")
     print(f"開始{mode}更新 {len(stocks_cfg)} 檔（token={'有' if token else '無/guest'}，既有 {len(existing)} 檔）...", flush=True)
 
-    need_fetch = full or any(not (sid in existing and has_data(existing[sid])) for sid in [s["id"] for s in stocks_cfg])
+    need_fetch = full or any(not (sid in existing and is_fresh(existing[sid], cutoff)) for sid in [s["id"] for s in stocks_cfg])
     info_map = fetch_info_map(token) if need_fetch else {}
 
     results: dict[str, dict] = {}
@@ -292,8 +346,8 @@ def main() -> int:
     n = len(stocks_cfg)
     for i, s in enumerate(stocks_cfg, 1):
         sid = s["id"]
-        # 既有且有資料 -> 直接沿用（只更新名稱/主題）
-        if not full and sid in existing and has_data(existing[sid]):
+        # 既有且可沿用 -> 直接沿用（只更新名稱/主題）
+        if not full and sid in existing and is_fresh(existing[sid], cutoff):
             st = existing[sid]
             st["name"] = s.get("name") or st.get("name")
             st["theme"] = s.get("theme", "其他")
