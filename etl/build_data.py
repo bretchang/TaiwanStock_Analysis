@@ -247,6 +247,27 @@ def collect_quarters(*row_sets: list[dict], limit: int) -> list[str]:
     return sorted(qs)[-limit:]
 
 
+def compute_gross_margin(gross: list, revenue: list) -> list:
+    """毛利率（小數）：營業毛利 ÷ 季營收，對齊 quarters。"""
+    return [
+        (g / r) if (g is not None and r is not None and r != 0) else None
+        for g, r in zip(gross, revenue)
+    ]
+
+
+def backfill_gross_margin(stock: dict) -> None:
+    """舊版 data.js 若無 gross_margin，由既有 gross/revenue 補算。"""
+    income = stock.get("income")
+    if not income:
+        return
+    gm = income.get("gross_margin")
+    if gm and any(v is not None for v in gm):
+        return
+    income["gross_margin"] = compute_gross_margin(
+        income.get("gross", []), income.get("revenue", [])
+    )
+
+
 def de_cumulate(cum: list, quarters: list[str]) -> list:
     """把年度累計序列還原成單季：Q1=累計值；Q2~Q4=本期累計−上期累計。"""
     out = []
@@ -286,6 +307,7 @@ def build_stock(cfg_stock: dict, cfg: dict, token: str | None, info_map: dict) -
     quarters = collect_quarters(bs, fs, cf, limit=quarters_back + 4)
     balance = pivot_quarterly(bs, BALANCE_FIELDS, quarters)
     income = pivot_quarterly(fs, INCOME_FIELDS, quarters)
+    income["gross_margin"] = compute_gross_margin(income["gross"], income["revenue"])
     # 現金流量：原始為年度累計 -> 還原為單季
     cf_cum = pivot_quarterly(cf, CASHFLOW_FIELDS, quarters)
     cashflow = {k: de_cumulate(cf_cum[k], quarters) for k in CASHFLOW_FIELDS}
@@ -351,6 +373,7 @@ def main() -> int:
             st = existing[sid]
             st["name"] = s.get("name") or st.get("name")
             st["theme"] = s.get("theme", "其他")
+            backfill_gross_margin(st)
             results[sid] = st
             reused += 1
             print(f"  [{i}/{n}] {sid} {s.get('name','')}  > 沿用既有", flush=True)

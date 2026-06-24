@@ -1405,7 +1405,7 @@
   .card-heat-note { font-size: 9px; line-height: 1.4; margin-bottom: 6px; }
   .card-heat .heat {
     display: grid;
-    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-columns: repeat(6, minmax(0, 1fr));
     gap: 4px;
     width: 100%;
   }
@@ -1520,6 +1520,16 @@
     .group-head h2 { font-size: 13px; letter-spacing: 1px; flex-wrap: wrap; word-break: break-word; }
     .cell { min-width: 0; }
     .heat { flex-wrap: wrap; }
+    .card-heat .heat {
+      grid-template-columns: repeat(6, minmax(0, 1fr));
+      gap: 2px;
+    }
+    .card-heat .heat-labeled .heat-item {
+      min-height: 34px;
+      padding: 3px 0;
+    }
+    .card-heat .heat-k { font-size: 7px; }
+    .card-heat .heat-v { font-size: 8px; }
 
     .modal-overlay { padding: 2vh 10px; }
     .modal { width: 100%; max-width: 100%; }
@@ -1560,7 +1570,7 @@
   <header class="topbar">
     <div class="brand">
       <h1>FINMETRICS // 台股財務監測</h1>
-      <span class="sub">應收帳款 · 存貨 · 合約負債 · 營收 · 獲利 ＜AI 供應鏈基本面雷達＞</span>
+      <span class="sub">應收 · 存貨 · 應付 · 營收 · 毛利% · 淨利 ＜AI 供應鏈基本面雷達＞</span>
     </div>
     <div class="topbar-meta">
       <div class="updated" id="updatedBox">資料載入中…</div>
@@ -1600,6 +1610,7 @@
           <option value="revenue" selected>季營收</option>
           <option value="cogs">營業成本</option>
           <option value="gross">營業毛利</option>
+          <option value="gross_margin">毛利率</option>
           <option value="op_exp">營業費用</option>
           <option value="op_income">營業利益</option>
           <option value="nonop">營業外收支</option>
@@ -1642,6 +1653,13 @@
       </select>
     </div>
     <div class="ctl">
+      <label>六指標變動</label>
+      <select id="heatRateSel">
+        <option value="yoy">YoY 年增率</option>
+        <option value="qoq">QoQ 季增率</option>
+      </select>
+    </div>
+    <div class="ctl">
       <label>搜尋</label>
       <input type="text" id="searchBox" placeholder="代號 / 名稱" />
     </div>
@@ -1674,7 +1692,7 @@
     <span><span class="sw lv-dn3"></span>強烈↓</span>
     <span class="legend-hint legend-hint-table">｜ 點任一列可展開近 8 季明細</span>
     <span class="legend-hint legend-hint-card">｜ 點卡片可展開近 8 季明細</span>
-    <span class="legend-hint legend-hint-card legend-heat-keys">｜ 五指標：應收·存貨·合約·營收·淨利</span>
+    <span class="legend-hint legend-hint-card legend-heat-keys" id="heatKeysHint">｜ 六指標：應收·存貨·應付·營收·毛利%·淨利</span>
   </div>
 
   <main id="content"></main>
@@ -1739,7 +1757,7 @@
       </div>
 
       <div class="def-sec"><div class="def-tag mark">變動標記與排序</div>
-        <p>每檔顯示五大指標的 YoY（年增率）熱力色塊：上升暖色（洋紅）、下降冷色（青綠），色越深變動越大。等級：強烈 ±50%、顯著 30%、留意 15%。可依 YoY / <span id="sortPeriodHelp">QoQ</span> / 絕對值 / 訊號嚴重度排序。基期過小者自動降權，避免假訊號。</p>
+        <p>每檔顯示六大指標的 <span id="heatRateHelp">YoY</span> / QoQ 熱力色塊（可於上方「六指標變動」切換）：上升暖色（洋紅）、下降冷色（青綠），色越深變動越大。等級：強烈 ±50%、顯著 30%、留意 15%（<b>毛利%</b> 以百分點 pp 計：±5 / 3 / 1.5pp）。焦點指標可依 YoY / <span id="sortPeriodHelp">QoQ</span> / 絕對值 / 訊號嚴重度排序。基期過小者自動降權，避免假訊號。</p>
         <p><b>趨勢欄</b>＝你在上方「焦點指標」選的那個指標，<b id="trendWindowHelp">最近 8 季（約兩年）的數值走勢迷你圖</b>，末端圓點為最新一期。線形顏色僅比較「最新一期 vs 最早一期」：收高為暖色（洋紅，整體上升）、收低為冷色（青綠，整體下降）。<span class="warn-txt">顏色只看頭尾，中間先跌後漲等轉折要看線形本身。</span>數值會正規化到圖框高度，看的是「形狀」而非絕對金額。</p>
       </div>
 
@@ -1750,6 +1768,11 @@
           <div class="sig-row"><span class="tag warn">存貨↑營收↓</span><span>存貨 YoY ≥ 15% 但營收 YoY ≤ 0。<span class="warn-txt">貨越積越多、銷售卻沒跟上 → 可能滯銷或需求轉弱（警示）。</span></span></div>
           <div class="sig-row"><span class="tag info">備貨迎需求</span><span>存貨與營收同步成長（皆 YoY ≥ 15%）。增加庫存是為了接單出貨，<span style="color:var(--cyan)">屬中性偏正。</span></span></div>
           <div class="sig-row"><span class="tag warn">應收&gt;營收增速</span><span>應收帳款 YoY 明顯高於營收 YoY（高出 10 個百分點以上）。<span class="warn-txt">收款速度跟不上認列營收 → 收款品質惡化或塞貨疑慮（警示）。</span></span></div>
+          <div class="sig-row"><span class="tag warn">獲利背離營收</span><span>季營收 YoY ≥ 15% 但營業利益 YoY ≤ 0。<span class="warn-txt">有量沒利，可能降價搶單或成本上升（警示）。</span></span></div>
+          <div class="sig-row"><span class="tag warn">獲利虛胖</span><span>稅後淨利 YoY ≥ 15% 但營業現金流 YoY ≤ 0，或營業現金流低於淨利。<span class="warn-txt">帳面獲利未轉為現金（警示）。</span></span></div>
+          <div class="sig-row"><span class="tag info">應付&gt;營收增速</span><span>應付帳款 YoY 明顯高於營收 YoY（高出 10 個百分點以上）。<span style="color:var(--cyan)">可能延遲付款或囤料，中性偏留意。</span></span></div>
+          <div class="sig-row"><span class="tag good">月營收領先走強</span><span>月營收 YoY 明顯優於季營收 YoY（領先 ≥ 20pp 或方向背離）。<span class="good-txt">需求可能加速，領先季報轉折。</span></span></div>
+          <div class="sig-row"><span class="tag warn">月營收領先轉弱</span><span>月營收 YoY 明顯落後季營收 YoY（落後 ≥ 20pp 或方向背離）。<span class="warn-txt">需求可能放緩，領先季報轉折（警示）。</span></span></div>
         </div>
         <p class="muted" style="font-size:11px;margin-top:6px;">※ 沒有任何訊號時該欄顯示「—」，代表目前無明顯交叉警訊或亮點。</p>
       </div>
@@ -1798,16 +1821,17 @@ const METRIC_LABELS = {
   total_assets: '總資產', total_liab: '總負債', equity: '股東權益',
   cash: '現金及約當現金', current_assets: '流動資產', current_liab: '流動負債',
   ap: '應付帳款', st_borrow: '短期借款', noncurrent_liab: '非流動負債', ppe: '不動產廠房設備',
-  revenue: '季營收', cogs: '營業成本', gross: '營業毛利', op_exp: '營業費用',
+  revenue: '季營收', cogs: '營業成本', gross: '營業毛利', gross_margin: '毛利率', op_exp: '營業費用',
   op_income: '營業利益', nonop: '營業外收支',
   pre_tax: '稅前淨利', net: '稅後淨利', eps: 'EPS',
   op_cf: '營業現金流', inv_cf: '投資現金流', fin_cf: '籌資現金流',
   capex: '資本支出', fcf: '自由現金流',
   month_rev: '月營收'
 };
-// 五大指標 heatmap 顯示順序
-const HEAT_METRICS = ['ar', 'inventory', 'contract_liab', 'revenue', 'net'];
-const HEAT_SHORT = { ar: '應收', inventory: '存貨', contract_liab: '合約', revenue: '營收', net: '淨利' };
+// 六大指標 heatmap 顯示順序（毛利% 以百分點 pp 變動著色）
+const HEAT_METRICS = ['ar', 'inventory', 'ap', 'revenue', 'gross_margin', 'net'];
+const HEAT_SHORT = { ar: '應收', inventory: '存貨', ap: '應付', revenue: '營收', gross_margin: '毛利%', net: '淨利' };
+const TH_MARGIN = { strong: 0.05, notable: 0.03, watch: 0.015 };
 const TOP_N_OPTIONS = [10, 25, 50, 100];
 
 let DATA = window.SEED_DATA || { stocks: [], config: {} };
@@ -1817,6 +1841,7 @@ const state = {
   group: 'theme',
   metric: 'revenue',
   sort: 'yoy',
+  heatRate: 'yoy',
   search: '',
   warnOnly: false,
   strongOnly: false,
@@ -1845,6 +1870,27 @@ function fmtPct(x) {
   return (x >= 0 ? '+' : '') + (x * 100).toFixed(1) + '%';
 }
 function fmtEps(v) { return isNum(v) ? v.toFixed(2) : '—'; }
+function fmtMargin(v) {
+  if (!isNum(v)) return '—';
+  return (v * 100).toFixed(1) + '%';
+}
+function fmtPp(pp) {
+  if (!isNum(pp)) return '—';
+  return (pp >= 0 ? '+' : '') + (pp * 100).toFixed(1) + 'pp';
+}
+
+function ensureGrossMargin(stock) {
+  const income = stock.income;
+  if (!income) return;
+  const gm = income.gross_margin;
+  if (gm && gm.some(isNum)) return;
+  const gross = income.gross || [];
+  const revenue = income.revenue || [];
+  income.gross_margin = gross.map((g, i) => {
+    const r = revenue[i];
+    return (isNum(g) && isNum(r) && r !== 0) ? g / r : null;
+  });
+}
 
 function groupField() {
   if (state.group === 'theme') return 'theme';
@@ -1903,6 +1949,12 @@ function metricSeries(stock, key) {
     periods = stock.month_rev ? stock.month_rev.months : [];
     return analyzeSeries(arr, periods, 12); // 月：YoY 比 12 期前
   }
+  if (key === 'gross_margin') {
+    ensureGrossMargin(stock);
+    arr = stock.income ? stock.income.gross_margin : null;
+    periods = stock.quarters || [];
+    return analyzeMarginSeries(arr || [], periods, 4);
+  }
   let src;
   if (key in BALANCE_FIELDS) src = stock.balance;
   else if (key in CASHFLOW_FIELDS || key === 'fcf') src = stock.cashflow;
@@ -1910,6 +1962,15 @@ function metricSeries(stock, key) {
   arr = src ? src[key] : null;
   periods = stock.quarters || [];
   return analyzeSeries(arr || [], periods, 4); // 季：YoY 比 4 期前
+}
+
+function analyzeMarginSeries(arr, periods, yoyLag) {
+  let i = -1;
+  for (let k = arr.length - 1; k >= 0; k--) { if (isNum(arr[k])) { i = k; break; } }
+  if (i < 0) return { latest: null, period: null, qoq: null, yoy: null, arr, periods, isMargin: true };
+  const qoq = i >= 1 && isNum(arr[i - 1]) ? arr[i] - arr[i - 1] : null;
+  const yoy = i >= yoyLag && isNum(arr[i - yoyLag]) ? arr[i] - arr[i - yoyLag] : null;
+  return { latest: arr[i], period: periods[i] || null, qoq, yoy, idx: i, arr, periods, isMargin: true };
 }
 
 function analyzeSeries(arr, periods, yoyLag) {
@@ -1933,12 +1994,28 @@ function levelOf(yoy, base) {
   return { lvl, dir, cls: lvl === 0 ? 'lv-0' : `lv-${dir}${lvl}` };
 }
 
+function levelOfMargin(pp) {
+  if (!isNum(pp)) return { lvl: -1, cls: 'empty' };
+  const a = Math.abs(pp);
+  let lvl = 0;
+  if (a >= TH_MARGIN.strong) lvl = 3;
+  else if (a >= TH_MARGIN.notable) lvl = 2;
+  else if (a >= TH_MARGIN.watch) lvl = 1;
+  const dir = pp >= 0 ? 'up' : 'dn';
+  return { lvl, dir, cls: lvl === 0 ? 'lv-0' : `lv-${dir}${lvl}` };
+}
+
 /* ---------------- 交叉訊號（plan §5.3） ---------------- */
 function computeSignals(stock) {
   const rev = metricSeries(stock, 'revenue');
   const inv = metricSeries(stock, 'inventory');
   const ar = metricSeries(stock, 'ar');
+  const ap = metricSeries(stock, 'ap');
   const cl = metricSeries(stock, 'contract_liab');
+  const op = metricSeries(stock, 'op_income');
+  const net = metricSeries(stock, 'net');
+  const opCf = metricSeries(stock, 'op_cf');
+  const mr = metricSeries(stock, 'month_rev');
   const sig = [];
   if (isNum(cl.yoy) && cl.yoy >= TH.notable && (!isNum(cl.latest) || Math.abs(cl.latest) >= TH.small_base)) {
     sig.push({ t: '合約負債暴增', c: 'good', sev: 2, hint: '在手訂單/預收增加，營收領先指標' });
@@ -1949,6 +2026,26 @@ function computeSignals(stock) {
   }
   if (isNum(ar.yoy) && isNum(rev.yoy) && ar.yoy > rev.yoy + 0.10 && ar.yoy >= TH.watch) {
     sig.push({ t: '應收>營收增速', c: 'warn', sev: 2, hint: '收款品質惡化或塞貨疑慮' });
+  }
+  if (isNum(rev.yoy) && rev.yoy >= TH.watch && isNum(op.yoy) && op.yoy <= 0) {
+    sig.push({ t: '獲利背離營收', c: 'warn', sev: 2, hint: '營收成長但營業利益未跟上，可能降價或成本上升' });
+  }
+  if (isNum(net.yoy) && net.yoy >= TH.watch) {
+    const cfWeak = isNum(opCf.yoy) && opCf.yoy <= 0;
+    const cfBelow = isNum(opCf.latest) && isNum(net.latest) && opCf.latest < net.latest;
+    if (cfWeak || cfBelow) sig.push({ t: '獲利虛胖', c: 'warn', sev: 3, hint: '淨利成長但營業現金流未跟上' });
+  }
+  if (isNum(ap.yoy) && isNum(rev.yoy) && ap.yoy > rev.yoy + 0.10 && ap.yoy >= TH.watch) {
+    sig.push({ t: '應付>營收增速', c: 'info', sev: 1, hint: '應付增速快於營收，可能延遲付款或囤料' });
+  }
+  if (isNum(mr.yoy) && isNum(rev.yoy)) {
+    const gap = mr.yoy - rev.yoy;
+    const diverge = (mr.yoy > 0 && rev.yoy < 0) || (mr.yoy < 0 && rev.yoy > 0);
+    if (gap >= 0.20 || (diverge && mr.yoy >= TH.watch)) {
+      sig.push({ t: '月營收領先走強', c: 'good', sev: 2, hint: `月營收 YoY ${fmtPct(mr.yoy)} vs 季營收 ${fmtPct(rev.yoy)}` });
+    } else if (gap <= -0.20 || (diverge && rev.yoy >= TH.watch)) {
+      sig.push({ t: '月營收領先轉弱', c: 'warn', sev: 2, hint: `月營收 YoY ${fmtPct(mr.yoy)} vs 季營收 ${fmtPct(rev.yoy)}` });
+    }
   }
   return sig;
 }
@@ -1989,6 +2086,7 @@ function isMonthMetric() { return state.metric === 'month_rev'; }
 function periodChangeLabel() { return isMonthMetric() ? 'MoM' : 'QoQ'; }
 function periodChangeSortText() { return isMonthMetric() ? 'MoM 月增率' : 'QoQ 季增率'; }
 function trendWindowText() { return isMonthMetric() ? '最近 8 個月' : '最近 8 季（約兩年）'; }
+function heatRateLabel() { return state.heatRate === 'qoq' ? 'QoQ' : 'YoY'; }
 
 function syncMetricUi() {
   const qoqOpt = $('#sortSel')?.querySelector('option[value="qoq"]');
@@ -1997,6 +2095,10 @@ function syncMetricUi() {
   if (trendHelp) trendHelp.textContent = trendWindowText() + '的數值走勢迷你圖';
   const sortHelp = $('#sortPeriodHelp');
   if (sortHelp) sortHelp.textContent = periodChangeLabel();
+  const heatSel = $('#heatRateSel');
+  if (heatSel) heatSel.value = state.heatRate;
+  const heatHelp = $('#heatRateHelp');
+  if (heatHelp) heatHelp.textContent = heatRateLabel();
 }
 
 function buildRows(stocks) {
@@ -2028,7 +2130,9 @@ function passFilters(r) {
   }
   if (state.warnOnly && !r.sigs.some((s) => s.c === 'warn')) return false;
   if (state.strongOnly) {
-    const lv = levelOf(r.f.yoy, r.f.latest);
+    const lv = state.metric === 'gross_margin'
+      ? levelOfMargin(r.f.yoy)
+      : levelOf(r.f.yoy, r.f.latest);
     if (lv.lvl < 3) return false;
   }
   return true;
@@ -2036,35 +2140,47 @@ function passFilters(r) {
 
 function heatCells(stock, opts) {
   const labeled = opts && opts.labeled;
+  const rateKey = state.heatRate === 'qoq' ? 'qoq' : 'yoy';
+  const rateLbl = heatRateLabel();
   return '<span class="heat' + (labeled ? ' heat-labeled' : '') + '">' + HEAT_METRICS.map((m) => {
     const an = metricSeries(stock, m);
     const lbl = HEAT_SHORT[m];
-    if (!isNum(an.yoy)) {
+    const isMargin = m === 'gross_margin';
+    const rate = an[rateKey];
+    if (!isNum(rate)) {
       if (labeled) return `<span class="cell empty heat-item" title="${lbl}：無資料"><span class="heat-k">${lbl}</span><span class="heat-v">—</span></span>`;
       return `<span class="cell empty" title="${lbl}：無資料">${lbl}</span>`;
     }
-    const lv = levelOf(an.yoy, an.latest);
-    const pct = fmtPct(an.yoy).replace('%', '');
+    const lv = isMargin ? levelOfMargin(rate) : levelOf(rate, an.latest);
+    const disp = isMargin ? fmtPp(rate).replace('pp', '') : fmtPct(rate).replace('%', '');
+    const lvlNote = isMargin && isNum(an.latest) ? ` 現值 ${fmtMargin(an.latest)}` : '';
+    const title = isMargin
+      ? `${lbl} ${rateLbl} ${fmtPp(rate)}${lvlNote}（${an.period || ''}）`
+      : `${lbl} ${rateLbl} ${fmtPct(rate)}（${an.period || ''}）`;
     if (labeled) {
-      return `<span class="cell ${lv.cls} heat-item" title="${lbl} YoY ${fmtPct(an.yoy)}（${an.period || ''}）"><span class="heat-k">${lbl}</span><span class="heat-v">${pct}</span></span>`;
+      return `<span class="cell ${lv.cls} heat-item" title="${title}"><span class="heat-k">${lbl}</span><span class="heat-v">${disp}</span></span>`;
     }
-    return `<span class="cell ${lv.cls}" title="${lbl} YoY ${fmtPct(an.yoy)}（${an.period || ''}）">${pct}</span>`;
+    return `<span class="cell ${lv.cls}" title="${title}">${disp}</span>`;
   }).join('') + '</span>';
 }
 
 function rowHtml(r) {
   const s = r.stock, f = r.f;
-  const lv = levelOf(f.yoy, f.latest);
+  const isMarginFocus = state.metric === 'gross_margin';
+  const lv = isMarginFocus ? levelOfMargin(f.yoy) : levelOf(f.yoy, f.latest);
+  const fmtChg = isMarginFocus ? fmtPp : fmtPct;
   const strong = lv.lvl >= 3 ? ' row-strong' : '';
-  const valStr = state.metric === 'eps' ? fmtEps(f.latest) : fmtMoney(f.latest);
+  const valStr = state.metric === 'eps' ? fmtEps(f.latest)
+    : state.metric === 'gross_margin' ? fmtMargin(f.latest)
+    : fmtMoney(f.latest);
   const tags = r.sigs.map((g) => `<span class="tag ${g.c}" title="${g.hint}">${g.t}</span>`).join('');
   const sparkArr = metricSeries(s, state.metric).arr || [];
   return `<tr data-id="${s.id}" class="${strong}">
     <td class="l sid">${s.id}</td>
     <td class="l sname">${s.name || ''}<div class="muted" style="font-size:10px">${s.theme || ''}</div></td>
     <td>${valStr}<div class="muted" style="font-size:10px">${f.period || ''}</div></td>
-    <td class="pct ${isNum(f.qoq) ? (f.qoq >= 0 ? 'up' : 'dn') : 'muted'}">${fmtPct(f.qoq)}</td>
-    <td class="pct ${isNum(f.yoy) ? (f.yoy >= 0 ? 'up' : 'dn') : 'muted'}">${fmtPct(f.yoy)}</td>
+    <td class="pct ${isNum(f.qoq) ? (f.qoq >= 0 ? 'up' : 'dn') : 'muted'}">${fmtChg(f.qoq)}</td>
+    <td class="pct ${isNum(f.yoy) ? (f.yoy >= 0 ? 'up' : 'dn') : 'muted'}">${fmtChg(f.yoy)}</td>
     <td>${sparkline(sparkArr, lv.dir)}</td>
     <td>${heatCells(s)}</td>
     <td><div class="tags">${tags || '<span class="muted">—</span>'}</div></td>
@@ -2082,18 +2198,22 @@ function miniBlock(stock, m, count) {
   const periods = an.periods.slice(-n);
   const vals = an.arr.slice(-n);
   if (!vals.some(isNum)) return '';
+  const isMargin = m === 'gross_margin';
   const qoqLabel = (m === 'month_rev') ? 'MoM' : 'QoQ';
-  const rows = periods.map((p, k) => {
-    const v = vals[k];
-    return `<tr><td class="per">${p}</td><td>${m === 'eps' ? fmtEps(v) : fmtMoney(v)}</td></tr>`;
-  }).join('');
-  return `<div class="mini"><h4>${METRIC_LABELS[m]}<span class="kq">YoY ${pctSpan(an.yoy)} ｜ ${qoqLabel} ${pctSpan(an.qoq)}</span></h4>
+  const fmtVal = (v) => {
+    if (m === 'eps') return fmtEps(v);
+    if (isMargin) return fmtMargin(v);
+    return fmtMoney(v);
+  };
+  const fmtChg = (x) => isMargin ? fmtPp(x) : fmtPct(x);
+  const rows = periods.map((p, k) => `<tr><td class="per">${p}</td><td>${fmtVal(vals[k])}</td></tr>`).join('');
+  return `<div class="mini"><h4>${METRIC_LABELS[m]}<span class="kq">${heatRateLabel()} ${fmtChg(an.yoy)} ｜ ${qoqLabel} ${fmtChg(an.qoq)}</span></h4>
     <table>${rows}</table></div>`;
 }
 
 function detailHtml(stock) {
   const groups = [
-    ['綜合損益', ['revenue', 'cogs', 'gross', 'op_exp', 'op_income', 'nonop', 'pre_tax', 'net', 'eps', 'month_rev']],
+    ['綜合損益', ['revenue', 'cogs', 'gross', 'gross_margin', 'op_exp', 'op_income', 'nonop', 'pre_tax', 'net', 'eps', 'month_rev']],
     ['資產負債', ['ar', 'inventory', 'contract_liab', 'ap', 'cash', 'current_assets', 'current_liab', 'st_borrow', 'noncurrent_liab', 'ppe', 'total_assets', 'total_liab', 'equity']],
     ['現金流量（單季）', ['op_cf', 'inv_cf', 'fin_cf', 'capex', 'fcf']],
   ];
@@ -2109,13 +2229,13 @@ function tableHtml(rows) {
   const cols = [
     ['l', '', '代號'], ['l', '', '名稱'],
     ['', 'value', focusLabel()], ['', 'qoq', periodChangeLabel()], ['', 'yoy', 'YoY'],
-    ['', '', '趨勢'], ['', '', '五指標 YoY'], ['', '', '訊號'],
+    ['', '', '趨勢'], ['', '', `六指標 ${heatRateLabel()}`], ['', '', '訊號'],
   ];
   const head = cols.map(([cls, key, label]) => {
     const active = (key === 'value' && state.sort === 'value') || (key && key === state.sort);
     return `<th ${key ? `data-sort="${key === 'value' ? 'value' : key}"` : ''}>${label}${active ? ' <span class="arrow">▼</span>' : ''}</th>`;
   }).join('');
-  const widths = ['7%', '15%', '13%', '9%', '9%', '12%', '23%', '12%'];
+  const widths = ['7%', '14%', '12%', '8%', '8%', '11%', '28%', '12%'];
   const colgroup = '<colgroup>' + widths.map((w) => `<col style="width:${w}">`).join('') + '</colgroup>';
   let body = '';
   rows.forEach((r) => {
@@ -2141,10 +2261,14 @@ function placeThemeCtl() {
 
 function cardHtml(r) {
   const s = r.stock, f = r.f;
-  const lv = levelOf(f.yoy, f.latest);
+  const isMarginFocus = state.metric === 'gross_margin';
+  const lv = isMarginFocus ? levelOfMargin(f.yoy) : levelOf(f.yoy, f.latest);
+  const fmtChg = isMarginFocus ? fmtPp : fmtPct;
   const strong = lv.lvl >= 3 ? ' row-strong' : '';
   const expanded = state.expanded.has(s.id);
-  const valStr = state.metric === 'eps' ? fmtEps(f.latest) : fmtMoney(f.latest);
+  const valStr = state.metric === 'eps' ? fmtEps(f.latest)
+    : state.metric === 'gross_margin' ? fmtMargin(f.latest)
+    : fmtMoney(f.latest);
   const tags = r.sigs.map((g) => `<span class="tag ${g.c}" title="${g.hint}">${g.t}</span>`).join('');
   const sparkArr = metricSeries(s, state.metric).arr || [];
   const qoqCls = isNum(f.qoq) ? (f.qoq >= 0 ? 'up' : 'dn') : 'muted';
@@ -2164,12 +2288,12 @@ function cardHtml(r) {
       ${f.period ? `<span class="card-period muted">${f.period}</span>` : ''}
     </div>
     <div class="card-rates">
-      <div class="card-rate"><span class="card-lbl">${periodChangeLabel()}</span><span class="pct ${qoqCls}">${fmtPct(f.qoq)}</span></div>
-      <div class="card-rate"><span class="card-lbl">YoY</span><span class="pct ${yoyCls}">${fmtPct(f.yoy)}</span></div>
+      <div class="card-rate"><span class="card-lbl">${periodChangeLabel()}</span><span class="pct ${qoqCls}">${fmtChg(f.qoq)}</span></div>
+      <div class="card-rate"><span class="card-lbl">YoY</span><span class="pct ${yoyCls}">${fmtChg(f.yoy)}</span></div>
     </div>
     <div class="card-heat">
-      <span class="card-lbl">五指標 YoY</span>
-      <div class="card-heat-note muted">應收 · 存貨 · 合約負債 · 營收 · 淨利</div>
+      <span class="card-lbl">六指標 ${heatRateLabel()}</span>
+      <div class="card-heat-note muted">應收 · 存貨 · 應付 · 營收 · 毛利% · 淨利</div>
       ${heatCells(s, { labeled: true })}
     </div>
     ${expanded ? `<div class="card-detail">${detailHtml(s)}</div>` : ''}
@@ -2305,6 +2429,7 @@ function bindControls() {
   };
   $('#metricSel').onchange = (e) => { state.metric = e.target.value; syncMetricUi(); render(); };
   $('#sortSel').onchange = (e) => { state.sort = e.target.value; render(); };
+  $('#heatRateSel').onchange = (e) => { state.heatRate = e.target.value; syncMetricUi(); render(); };
   $('#searchBox').oninput = (e) => { state.search = e.target.value.trim(); render(); };
   $('#warnChip').onclick = (e) => { state.warnOnly = !state.warnOnly; e.target.classList.toggle('on'); render(); };
   $('#strongChip').onclick = (e) => { state.strongOnly = !state.strongOnly; e.target.classList.toggle('on'); render(); };
@@ -2320,6 +2445,8 @@ function bindControls() {
 function init() {
   if (!window.SEED_DATA) {
     $('#content').innerHTML = '<div class="empty-state">找不到 data/data.js。<br>請先執行 <code>python etl/build_data.py</code> 產生資料，或等待 GitHub Actions 排程更新。</div>';
+  } else {
+    (DATA.stocks || []).forEach(ensureGrossMargin);
   }
   const exId = new URLSearchParams(location.search).get('expand');
   if (exId) { state.expanded.add(exId); state.search = exId; }
