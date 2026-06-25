@@ -8,6 +8,7 @@
     python etl/build_data.py            # 增量更新：保留既有資料，只抓「新增/缺資料」的個股
     python etl/build_data.py --refresh  # 接續全量：當天已刷新過的沿用，其餘（含舊資料）重抓，可分多小時接續
     python etl/build_data.py --full     # 全量重抓所有個股（清空既有，逐次從頭抓）
+    python etl/build_data.py --quotes-only  # 僅更新收盤價（沿用既有財報，不打三表 API）
     set FINMIND_TOKEN=xxx && python etl/build_data.py   # 帶 token 提高額度（避免 guest 額度限制）
 
 增量快取（plan §9）：FinMind guest 有每小時請求上限。本程式預設只抓 data/data.js
@@ -189,6 +190,7 @@ def empty_stock(cfg_stock: dict) -> dict:
         "income": {k: [] for k in INCOME_FIELDS},
         "cashflow": {**{k: [] for k in CASHFLOW_FIELDS}, "fcf": []},
         "month_rev": {"months": [], "values": []},
+        "quote": None,
     }
 
 
@@ -285,6 +287,69 @@ def de_cumulate(cum: list, quarters: list[str]) -> list:
     return out
 
 
+PE_LABEL_MISSING = "EPS有缺漏"
+PE_LABEL_NEGATIVE = "本益比為負"
+
+
+def resolve_pe_ttm(close: float | None, eps_arr: list | None) -> tuple[float | None, str | None]:
+    """回傳 (pe_ttm, pe_ttm_label)。label 僅在無法算出數值、但有收盤價時使用。"""
+    if close is None or close <= 0:
+        return None, None
+    arr = eps_arr or []
+    if len(arr) < 4:
+        return None, PE_LABEL_MISSING
+    tail = arr[-4:]
+    if any(v is None for v in tail):
+        return None, PE_LABEL_MISSING
+    ttm = sum(tail)
+    if ttm <= 0:
+        return None, PE_LABEL_NEGATIVE
+    return round(close / ttm, 1), None
+
+
+def enrich_quote_pe(stock: dict) -> None:
+    """依既有收盤價與 EPS 序列補算 quote.pe_ttm / quote.pe_ttm_label。"""
+    q = stock.get("quote")
+    if not q:
+        return
+    pe, label = resolve_pe_ttm(q.get("close"), (stock.get("income") or {}).get("eps"))
+    q.pop("pe_ttm", None)
+    q.pop("pe_ttm_label", None)
+    if pe is not None:
+        q["pe_ttm"] = pe
+    elif label:
+        q["pe_ttm_label"] = label
+
+
+def fetch_latest_quote(sid: str, token: str | None) -> dict | None:
+    """最近一個交易日收盤價（FinMind TaiwanStockPrice）。"""
+    start = (datetime.now(TZ) - timedelta(days=14)).strftime("%Y-%m-%d")
+    rows = fetch("TaiwanStockPrice", sid, start, token)
+    valid = [r for r in rows if r.get("close") is not None]
+    if not valid:
+        return None
+    valid.sort(key=lambda x: x["date"], reverse=True)
+    r = valid[0]
+    spread = r.get("spread")
+    return {
+        "close": r["close"],
+        "date": r["date"],
+        "spread": spread if spread is not None else None,
+    }
+
+
+def attach_quote(stock: dict, token: str | None) -> bool:
+    """更新個股 quote；若觸發額度限制回傳 False。"""
+    try:
+        q = fetch_latest_quote(stock["id"], token)
+        if q:
+            stock["quote"] = q
+        enrich_quote_pe(stock)
+        return True
+    except RateLimited:
+        return False
+
+
 def build_stock(cfg_stock: dict, cfg: dict, token: str | None, info_map: dict) -> dict:
     sid = cfg_stock["id"]
     quarters_back = cfg.get("quarters_back", 9)
@@ -329,7 +394,7 @@ def build_stock(cfg_stock: dict, cfg: dict, token: str | None, info_map: dict) -
 
     has_cl = any(v is not None for v in balance["contract_liab"])
 
-    return {
+    stock = {
         "id": sid,
         "name": name,
         "industry": industry,
@@ -341,16 +406,102 @@ def build_stock(cfg_stock: dict, cfg: dict, token: str | None, info_map: dict) -
         "cashflow": cashflow,
         "month_rev": {"months": months, "values": month_values},
         "fetched_at": datetime.now(TZ).isoformat(timespec="seconds"),
+        "quote": None,
     }
+    if not attach_quote(stock, token):
+        raise RateLimited("TaiwanStockPrice")
+    return stock
+
+
+def run_quotes_only(cfg: dict, stocks_cfg: list, existing: dict[str, dict], token: str | None) -> int:
+    """僅刷新 TaiwanStockPrice 收盤價，財報三表全部沿用。"""
+    n = len(stocks_cfg)
+    print(f"開始僅更新收盤價 {n} 檔（token={'有' if token else '無/guest'}，既有 {len(existing)} 檔）...", flush=True)
+    results: dict[str, dict] = {}
+    limited = False
+    updated = skipped = 0
+    for i, s in enumerate(stocks_cfg, 1):
+        sid = s["id"]
+        if limited:
+            st = existing.get(sid) or empty_stock(s)
+            results[sid] = st
+            skipped += 1
+            print(f"  [{i}/{n}] {sid} {s.get('name','')}  > 略過（額度限制）", flush=True)
+            continue
+        st = existing.get(sid) or empty_stock(s)
+        st["name"] = s.get("name") or st.get("name")
+        st["theme"] = s.get("theme", "其他")
+        backfill_gross_margin(st)
+        if attach_quote(st, token):
+            updated += 1
+            q = st.get("quote") or {}
+            close = q.get("close")
+            qd = q.get("date") or "—"
+            print(f"  [{i}/{n}] {sid} {s.get('name','')}  > {close} ({qd})", flush=True)
+        else:
+            limited = True
+            skipped += 1
+            print(f"  !! 觸發 FinMind 額度限制：保留已完成資料。", flush=True)
+        enrich_quote_pe(st)
+        results[sid] = st
+        time.sleep(0.15)
+    return _write_payload(cfg, stocks_cfg, results, 0, 0, skipped, limited)
+
+
+def _write_payload(
+    cfg: dict,
+    stocks_cfg: list,
+    results: dict[str, dict],
+    fetched: int,
+    reused: int,
+    skipped: int,
+    limited: bool,
+) -> int:
+    stocks = [results[s["id"]] for s in stocks_cfg]
+    for st in stocks:
+        enrich_quote_pe(st)
+    payload = {
+        "updated_at": datetime.now(TZ).isoformat(timespec="seconds"),
+        "source": "FinMind",
+        "config": {
+            "thresholds": cfg.get("thresholds", {}),
+            "quarters_back": cfg.get("quarters_back", 9),
+            "months_back": cfg.get("months_back", 14),
+            "stocks": [{"id": s["id"], "name": s.get("name", ""), "theme": s.get("theme", "其他")} for s in stocks_cfg],
+        },
+        "stocks": stocks,
+    }
+    OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
+    js = "// 由 etl/build_data.py 自動產生，請勿手動編輯。\n"
+    js += "window.SEED_DATA = " + json.dumps(payload, ensure_ascii=False, indent=1) + ";\n"
+    OUT_PATH.write_text(js, encoding="utf-8")
+    VERSION_PATH.write_text(
+        "// 由 etl/build_data.py 自動產生，供 index.html 快取破壞用。\n"
+        f'window.__SEED_V = "{payload["updated_at"]}";\n',
+        encoding="utf-8",
+    )
+    ok = sum(1 for s in stocks if has_data(s))
+    with_quote = sum(1 for s in stocks if (s.get("quote") or {}).get("close") is not None)
+    print(f"\n完成！已寫出 {OUT_PATH}", flush=True)
+    print(f"  股價更新 {with_quote} 檔、新抓財報 {fetched}、沿用 {reused}、略過 {skipped}", flush=True)
+    print(f"  目前有財報資料 {ok}/{len(stocks)} 檔", flush=True)
+    if limited or ok < len(stocks):
+        print("  [!] 部分個股尚無資料或股價未更新（多因額度）。稍後再跑即可補齊。", flush=True)
+    print(f"  更新時間 {payload['updated_at']}", flush=True)
+    return 0 if ok == len(stocks) and not limited else 2
 
 
 def main() -> int:
     token = os.environ.get("FINMIND_TOKEN")
     full = "--full" in sys.argv
     refresh = "--refresh" in sys.argv
+    quotes_only = "--quotes-only" in sys.argv
     cfg = json.loads(CONFIG_PATH.read_text(encoding="utf-8"))
     stocks_cfg = cfg["stocks"]
     existing = {} if full else load_existing()
+
+    if quotes_only:
+        return run_quotes_only(cfg, stocks_cfg, existing, token)
 
     # 接續全量（--refresh）：以「今日台北 00:00」為界，當天已重抓過者沿用，其餘一律重抓，
     # 讓額度有限的 token 能分多個小時逐批把全部個股刷新完。
@@ -374,9 +525,13 @@ def main() -> int:
             st["name"] = s.get("name") or st.get("name")
             st["theme"] = s.get("theme", "其他")
             backfill_gross_margin(st)
+            if not limited and not attach_quote(st, token):
+                limited = True
+            enrich_quote_pe(st)
             results[sid] = st
             reused += 1
             print(f"  [{i}/{n}] {sid} {s.get('name','')}  > 沿用既有", flush=True)
+            time.sleep(0.15)
             continue
         if limited:  # 已觸發額度，後續不再打 API
             results[sid] = existing.get(sid) or empty_stock(s)
@@ -395,34 +550,7 @@ def main() -> int:
 
     stocks = [results[s["id"]] for s in stocks_cfg]
 
-    payload = {
-        "updated_at": datetime.now(TZ).isoformat(timespec="seconds"),
-        "source": "FinMind",
-        "config": {
-            "thresholds": cfg.get("thresholds", {}),
-            "quarters_back": cfg.get("quarters_back", 9),
-            "months_back": cfg.get("months_back", 14),
-            "stocks": [{"id": s["id"], "name": s.get("name", ""), "theme": s.get("theme", "其他")} for s in stocks_cfg],
-        },
-        "stocks": stocks,
-    }
-
-    OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-    js = "// 由 etl/build_data.py 自動產生，請勿手動編輯。\n"
-    js += "window.SEED_DATA = " + json.dumps(payload, ensure_ascii=False, indent=1) + ";\n"
-    OUT_PATH.write_text(js, encoding="utf-8")
-    VERSION_PATH.write_text(
-        "// 由 etl/build_data.py 自動產生，供 index.html 快取破壞用。\n"
-        f'window.__SEED_V = "{payload["updated_at"]}";\n',
-        encoding="utf-8",
-    )
-    ok = sum(1 for s in stocks if has_data(s))
-    print(f"\n完成！已寫出 {OUT_PATH}", flush=True)
-    print(f"  新抓 {fetched}、沿用 {reused}、略過 {skipped}；目前有資料 {ok}/{len(stocks)} 檔", flush=True)
-    if limited or ok < len(stocks):
-        print("  [!] 部分個股尚無資料（多半因 guest 額度）。等額度恢復或設 FINMIND_TOKEN 後再跑一次即可補齊。", flush=True)
-    print(f"  更新時間 {payload['updated_at']}", flush=True)
-    return 0 if ok == len(stocks) else 2  # 0=全部有資料；2=仍有缺漏（多因額度）
+    return _write_payload(cfg, stocks_cfg, results, fetched, reused, skipped, limited)
 
 
 if __name__ == "__main__":
