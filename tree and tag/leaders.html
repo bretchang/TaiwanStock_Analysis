@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>台股細產業龍頭對照 // GLOBAL LEADERS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700;900&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700;800&family=Archivo+Black&family=Space+Mono:wght@400;700&family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet" />
+
+<!-- ============ 風格 1：賽博霓虹 FINMETRICS ============ -->
+<style id="theme-finmetrics" media="all">
+  :root {
+    --bg: #060912; --bg2: #0b1120;
+    --panel: rgba(13, 21, 38, 0.72);
+    --cyan: #00f0ff; --magenta: #ff2d95; --lime: #a6ff00; --amber: #ffb000; --violet: #b14dff;
+    --txt: #d8e6f2; --dim: #6f86a3; --line: rgba(0, 240, 255, 0.16);
+    --co-page: linear-gradient(180deg, var(--bg2), var(--bg));
+    --co-surface: var(--panel);
+    --co-surface2: rgba(255,255,255,0.03);
+    --co-radius: 12px; --co-shadow: none;
+    --co-border: 1px solid var(--line);
+    --co-accent: var(--cyan); --co-accent2: var(--magenta); --co-good: var(--lime);
+    --co-font: 'JetBrains Mono','Consolas',monospace;
+    --co-title-font: 'Orbitron', sans-serif;
+  }
+  body {
+    font-family: 'JetBrains Mono', 'Consolas', 'Courier New', monospace; color: var(--txt);
+    background:
+      radial-gradient(1200px 700px at 12% -10%, rgba(177, 77, 255, 0.10), transparent 60%),
+      radial-gradient(1000px 600px at 100% 0%, rgba(0, 240, 255, 0.10), transparent 55%),
+      linear-gradient(180deg, var(--bg2), var(--bg));
+    background-attachment: fixed; min-height: 100vh;
+  }
+  .brand h1 { font-family:'Orbitron',sans-serif; background:linear-gradient(90deg,var(--cyan),var(--magenta)); -webkit-background-clip:text; background-clip:text; color:transparent; }
+</style>
+
+<!-- ============ 風格 2：霧面玻璃 GLASS ============ -->
+<style id="theme-glass" media="not all">
+  :root {
+    --txt: #f3f5fb; --dim: rgba(233, 238, 250, 0.62); --line: rgba(255, 255, 255, 0.16);
+    --glass: rgba(255, 255, 255, 0.09); --glass-2: rgba(255, 255, 255, 0.055);
+    --accent: #7cf7ff; --accent2: #ff8fc8; --violet: #c4a6ff; --lime: #8af7c8; --amber: #ffd98a;
+    --magenta: #ff9ecb; --cyan: #7cf7ff;
+    --co-page: #1a1438;
+    --co-surface: var(--glass); --co-surface2: var(--glass-2);
+    --co-radius: 16px; --co-shadow: 0 8px 30px rgba(0,0,0,0.25);
+    --co-border: 1px solid var(--line);
+    --co-accent: var(--accent); --co-accent2: var(--accent2); --co-good: var(--lime);
+  }
+  body { font-family: 'Noto Sans TC', 'Sora', system-ui, sans-serif; color: var(--txt); background: #1a1438; min-height: 100vh; }
+  .brand h1 { font-family:'Sora',sans-serif; font-weight:800; color:#fff; }
+  .card { backdrop-filter: blur(8px); }
+</style>
+
+<!-- ============ 風格 3：簡約明亮 CLEAN ============ -->
+<style id="theme-clean" media="not all">
+  :root {
+    --bg: #f4f6fb; --bg2: #eef1f8; --panel: #ffffff;
+    --txt: #1c2333; --txt2: #3b4458; --dim: #8a93a8; --line: #e6e9f1; --line2: #eef1f7;
+    --accent: #4f46e5; --accent-soft: #eef0ff; --teal: #0d9488; --amber: #d97706;
+    --magenta: #e11d48; --lime: #16a34a; --cyan: #2563eb;
+    --co-page: linear-gradient(180deg, var(--bg), var(--bg2));
+    --co-surface: #ffffff; --co-surface2: #fafbfd;
+    --co-radius: 14px; --co-shadow: 0 1px 2px rgba(20,28,54,0.04), 0 8px 24px rgba(20,28,54,0.06);
+    --co-border: 1px solid var(--line);
+    --co-accent: var(--accent); --co-accent2: var(--magenta); --co-good: var(--lime);
+  }
+  body { font-family: 'Noto Sans TC', 'Inter', system-ui, sans-serif; color: var(--txt);
+    background: linear-gradient(180deg, var(--bg), var(--bg2)); background-attachment: fixed; min-height: 100vh; -webkit-font-smoothing: antialiased; }
+  .brand h1 { font-family:'Inter',sans-serif; font-weight:800; color: var(--txt); }
+</style>
+
+<!-- ============ 風格 4：便當格 BENTO ============ -->
+<style id="theme-bento" media="not all">
+  :root {
+    --bg: #eef1f6; --bg2: #e7ebf2; --card: #ffffff;
+    --txt: #1b2333; --dim: #6b7585; --line: #e4e8ef; --line2: #eceff4;
+    --accent: #4f46e5; --accent2: #ec4899; --magenta: #f43f5e; --lime: #0d9488; --cyan: #4f46e5;
+    --co-page: linear-gradient(180deg, var(--bg), var(--bg2));
+    --co-surface: var(--card); --co-surface2: #f7f9fc;
+    --co-radius: 18px; --co-shadow: 0 6px 22px rgba(28, 38, 60, 0.07), 0 1px 3px rgba(28, 38, 60, 0.05);
+    --co-border: 1px solid var(--line);
+    --co-accent: var(--accent); --co-accent2: var(--accent2); --co-good: var(--lime);
+  }
+  body { font-family: 'Noto Sans TC', 'Space Grotesk', system-ui, sans-serif; color: var(--txt);
+    background: linear-gradient(180deg, var(--bg), var(--bg2)); background-attachment: fixed; min-height: 100vh; }
+  .brand h1 { font-family:'Space Grotesk',sans-serif; font-weight:700; color: var(--txt); }
+</style>
+
+<!-- ============ 風格 5：新粗獷 NEUBRUTALISM ============ -->
+<style id="theme-neu" media="not all">
+  :root {
+    --ink: #111111; --paper: #fef6e4; --panel: #ffffff;
+    --txt: #111111; --dim: #5b5b5b; --line: #111111;
+    --yellow: #ffd23f; --pink: #ff7ac6; --cyanb: #5ce1e6; --green: #7be07b;
+    --accent: #4d5bf9; --accent2: #ff5470; --magenta: #ff2e63; --lime: #0bb36b; --cyan: #4d5bf9;
+    --co-page: var(--paper);
+    --co-surface: #ffffff; --co-surface2: #ffffff;
+    --co-radius: 0px; --co-shadow: 4px 4px 0 var(--ink);
+    --co-border: 2px solid var(--ink);
+    --co-accent: var(--accent); --co-accent2: var(--accent2); --co-good: #0a8f56;
+  }
+  body { font-family: 'Noto Sans TC', 'Space Mono', system-ui, sans-serif; color: var(--txt);
+    background: var(--paper);
+    background-image: linear-gradient(rgba(17,17,17,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(17,17,17,0.05) 1px, transparent 1px);
+    background-size: 32px 32px; min-height: 100vh; }
+  .brand h1 { font-family:'Archivo Black',sans-serif; color: var(--ink); text-transform: uppercase; }
+  .card { box-shadow: var(--co-shadow); }
+  .seg button.active, .chip.on, .btn { box-shadow: 2px 2px 0 var(--ink); }
+</style>
+
+<!-- ============ 共用版面元件（全風格共用，使用 CSS 變數） ============ -->
+<style id="layout-shared" media="all">
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  html { overflow-x: clip; }
+  body { overflow-x: clip; max-width: 100%; }
+  a { color: inherit; }
+
+  .wrap { position: relative; z-index: 1; max-width: 1500px; margin: 0 auto; padding: 18px 18px 80px; }
+
+  header.topbar { display: flex; align-items: flex-start; gap: 14px; flex-wrap: wrap; padding: 14px 4px 18px; border-bottom: var(--co-border); margin-bottom: 16px; }
+  .brand { display: flex; flex-direction: column; gap: 4px; margin-right: auto; }
+  .brand h1 { margin: 0; font-size: 22px; letter-spacing: .5px; line-height: 1.2; }
+  .brand .sub { font-size: 12px; color: var(--dim); letter-spacing: .3px; line-height: 1.5; }
+
+  .controls { display: flex; flex-wrap: wrap; gap: 12px; align-items: flex-end; margin-bottom: 14px; }
+  .ctl { display: flex; flex-direction: column; gap: 5px; min-width: 0; }
+  .ctl label { font-size: 10px; color: var(--dim); letter-spacing: 1px; text-transform: uppercase; }
+  select, input[type="text"] {
+    background: var(--co-surface2); color: var(--txt); border: var(--co-border); border-radius: 8px;
+    padding: 8px 10px; font-size: 13px; font-family: inherit; max-width: 100%;
+  }
+  select:focus, input:focus { outline: none; border-color: var(--co-accent); }
+  .theme-ctl { margin-left: auto; }
+
+  .stat { font-size: 12px; color: var(--dim); }
+  .stat b { color: var(--co-accent); }
+
+  .legend { display: flex; flex-wrap: wrap; gap: 14px; font-size: 11px; color: var(--dim); margin: 4px 2px 18px; align-items: center; }
+  .legend .flag { font-size: 14px; }
+
+  /* group section */
+  .group { margin-bottom: 26px; }
+  .group-head { display: flex; align-items: center; gap: 12px; margin: 0 2px 12px; }
+  .group-head h2 { font-family: var(--co-title-font, inherit); font-size: 15px; font-weight: 700; margin: 0; color: var(--txt); letter-spacing: .5px; }
+  .group-head .bar { flex: 1; height: 1px; background: linear-gradient(90deg, var(--line), transparent); }
+  .group-head .count { font-size: 11px; color: var(--dim); }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 14px; }
+
+  .card { background: var(--co-surface); border: var(--co-border); border-radius: var(--co-radius); box-shadow: var(--co-shadow); padding: 14px 16px; overflow: hidden; }
+  .card-top { display: flex; align-items: flex-start; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+  .card-sub { font-size: 16px; font-weight: 700; color: var(--txt); margin-right: auto; }
+  .card-cat { font-size: 10px; color: var(--dim); letter-spacing: 1px; }
+
+  .tag { font-size: 10px; padding: 2px 8px; border-radius: 999px; border: 1px solid; white-space: nowrap; }
+  .tag.lead { color: var(--co-accent2); border-color: var(--co-accent2); }
+  .tag.tw { color: var(--co-good); border-color: var(--co-good); }
+
+  table.peers { width: 100%; border-collapse: collapse; font-size: 12px; margin: 4px 0 10px; }
+  table.peers td { padding: 5px 6px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  table.peers tr:last-child td { border-bottom: none; }
+  .reg { white-space: nowrap; font-weight: 700; width: 64px; }
+  .reg .flag { font-size: 13px; margin-right: 3px; }
+  .co { color: var(--txt); font-weight: 600; }
+  .co .tic { color: var(--dim); font-weight: 400; font-size: 11px; margin-left: 4px; }
+  .co .crown { color: var(--amber, #ffb000); margin-left: 4px; }
+  .co-biz { display: block; color: var(--dim); font-weight: 400; font-size: 11px; margin-top: 2px; }
+  .none { color: var(--dim); font-style: italic; }
+
+  .kv { font-size: 12px; line-height: 1.55; margin: 6px 0 0; }
+  .kv .k { color: var(--co-accent); font-weight: 700; margin-right: 6px; }
+  .kv .rel { color: var(--txt); }
+  .kv.rel-row { border-top: 1px dashed var(--line); padding-top: 8px; margin-top: 8px; }
+  .kv .k.warn { color: var(--co-accent2); }
+
+  .empty-state { text-align: center; color: var(--dim); padding: 60px 20px; }
+
+  @media (max-width: 720px) {
+    .brand h1 { font-size: 18px; }
+    .grid { grid-template-columns: 1fr; }
+    .theme-ctl { margin-left: 0; width: 100%; }
+    .theme-ctl select { width: 100%; }
+  }
+</style>
+
+<script>
+  // 啟動前先套用使用者上次選的風格，避免閃爍
+  (function () {
+    try {
+      var ids = { finmetrics: 'theme-finmetrics', glass: 'theme-glass', clean: 'theme-clean', bento: 'theme-bento', neu: 'theme-neu' };
+      var t = localStorage.getItem('finmetrics_theme') || 'finmetrics';
+      if (!ids[t]) t = 'finmetrics';
+      Object.keys(ids).forEach(function (n) {
+        var el = document.getElementById(ids[n]);
+        if (el) el.media = (n === t ? 'all' : 'not all');
+      });
+    } catch (e) {}
+  })();
+</script>
+</head>
+<body>
+<div class="wrap">
+  <header class="topbar">
+    <div class="brand">
+      <h1>細產業龍頭對照 // GLOBAL LEADERS</h1>
+      <span class="sub">台股各細分次產業的龍頭股 × 美 / 日 / 韓 對應個股 × 是否全球龍頭 × 業務客戶與台股關係</span>
+    </div>
+    <div class="theme-ctl ctl" id="themeCtl">
+      <label>介面風格</label>
+      <select id="themeSel">
+        <option value="finmetrics">賽博霓虹</option>
+        <option value="glass">霧面玻璃</option>
+        <option value="clean">簡約明亮</option>
+        <option value="bento">便當格</option>
+        <option value="neu">新粗獷</option>
+      </select>
+    </div>
+  </header>
+
+  <section class="controls">
+    <div class="ctl">
+      <label>產業大類</label>
+      <select id="catSel"><option value="">全部</option></select>
+    </div>
+    <div class="ctl">
+      <label>全球龍頭地區</label>
+      <select id="leadSel">
+        <option value="">全部</option>
+        <option value="tw">🇹🇼 台灣</option>
+        <option value="us">🇺🇸 美國</option>
+        <option value="jp">🇯🇵 日本</option>
+        <option value="kr">🇰🇷 韓國</option>
+        <option value="other">🌐 其他(中/歐)</option>
+      </select>
+    </div>
+    <div class="ctl">
+      <label>搜尋</label>
+      <input type="text" id="searchBox" placeholder="細產業 / 個股 / 代號" />
+    </div>
+    <div class="ctl">
+      <label>統計</label>
+      <div class="stat" id="statBox"></div>
+    </div>
+  </section>
+
+  <div class="legend">
+    <span><span class="flag">🇹🇼</span>台股龍頭</span>
+    <span><span class="flag">🇺🇸</span>美</span>
+    <span><span class="flag">🇯🇵</span>日</span>
+    <span><span class="flag">🇰🇷</span>韓</span>
+    <span><span class="crown" style="color:#ffb000">★</span> = 該細產業的全球龍頭</span>
+    <span class="stat">資料為產業常識整理，僅供研究參考，非投資建議</span>
+  </div>
+
+  <main id="content"></main>
+</div>
+
+<script>
+/* =========================================================================
+ * 資料：細產業 → 台股龍頭 + 美/日/韓對應 + 業務/客戶/關係
+ * lead 欄位：標示該細產業「全球龍頭」所在地區（tw/us/jp/kr/other）
+ * 每個地區個股的 lead:true 代表它就是全球龍頭（顯示 ★）
+ * ========================================================================= */
+const DATA = [
+  /* ---------------- 半導體 ---------------- */
+  { cat:'半導體', sub:'晶圓代工', lead:'tw',
+    tw:{id:'2330', name:'台積電', lead:true, biz:'先進製程晶圓代工，全球市占逾 6 成'},
+    us:{name:'GlobalFoundries / Intel Foundry', tic:'GFS / INTC', biz:'成熟製程與美系代工'},
+    jp:{name:'Rapidus（籌建中）', tic:'未上市', biz:'2nm 量產計畫'},
+    kr:{name:'三星電子(代工)', tic:'005930.KS', biz:'先進製程，台積最大對手'},
+    rel:'台積全球先進製程獨大；三星為主要競爭者，Intel 切入代工。台廠 5347 世界先進、6770 力積電專攻成熟/特殊製程，與台積互補。' },
+
+  { cat:'半導體', sub:'封測 OSAT', lead:'tw',
+    tw:{id:'3711', name:'日月光投控', lead:true, biz:'全球最大專業封測（含矽品），CoWoS 先進封裝要角'},
+    us:{name:'Amkor', tic:'AMKR', biz:'全球第二大 OSAT'},
+    jp:null,
+    kr:{name:'SFA 半導體', tic:'036540.KQ', biz:'記憶體封測為主，規模較小'},
+    rel:'台廠囊括前段封測前段；AI 先進封裝由台積 + 日月光 + 矽品合攻。Amkor 在美設廠承接地緣轉單，與日月光既競爭又分工。' },
+
+  { cat:'半導體', sub:'晶圓測試', lead:'tw',
+    tw:{id:'2449', name:'京元電', lead:true, biz:'全球最大專業 IC 測試代工'},
+    us:{name:'(多由 IDM 自測)', tic:'—', biz:'測試多內製'},
+    jp:null, kr:null,
+    rel:'專業測試以台廠為主，京元電承接 NVIDIA、聯發科等測試外包，3264 欣銓、6147 頎邦（驅動 IC 測試）跟進。' },
+
+  { cat:'半導體', sub:'記憶體', lead:'kr',
+    tw:{id:'2408', name:'南亞科 / 旺宏(2337)', biz:'利基型 DRAM、NOR Flash/ROM'},
+    us:{name:'美光 Micron', tic:'MU', biz:'DRAM/NAND 三強之一'},
+    jp:{name:'鎧俠 Kioxia', tic:'285A.T', biz:'NAND Flash 發明者'},
+    kr:{name:'三星 / SK 海力士', tic:'005930 / 000660', lead:true, biz:'DRAM/HBM 全球龍頭'},
+    rel:'主流 DRAM/NAND 由韓美日主導，HBM 由 SK 海力士領先供 NVIDIA。台廠走利基市場，南亞科、旺宏規模相對小。' },
+
+  { cat:'半導體', sub:'記憶體模組', lead:'us',
+    tw:{id:'3260', name:'威剛 / 創見(2451)', biz:'DRAM/SSD 模組與品牌'},
+    us:{name:'金士頓 Kingston', tic:'未上市', lead:true, biz:'全球最大記憶體模組廠'},
+    jp:null, kr:null,
+    rel:'金士頓（美、未上市）為全球第一；台廠威剛、創見、宇瞻(8271) 主攻工控/品牌通路，向三星、美光採購顆粒。' },
+
+  { cat:'半導體', sub:'矽晶圓', lead:'jp',
+    tw:{id:'6488', name:'環球晶', biz:'全球第三大半導體矽晶圓廠'},
+    us:null,
+    jp:{name:'信越 / SUMCO', tic:'4063 / 3436', lead:true, biz:'矽晶圓全球雙雄'},
+    kr:{name:'SK Siltron', tic:'(SK 集團)', biz:'全球第四'},
+    rel:'日商信越、SUMCO 主導全球半導體矽晶圓；環球晶併購德商 Siltronic 受阻後居全球第三，5483 中美晶為其母公司。' },
+
+  { cat:'半導體', sub:'化合物半導體', lead:'tw',
+    tw:{id:'3105', name:'穩懋', lead:true, biz:'全球最大 GaAs 砷化鎵代工'},
+    us:{name:'Qorvo / Skyworks', tic:'QRVO / SWKS', biz:'射頻 IDM/設計大廠'},
+    jp:{name:'住友電工', tic:'5802.T', biz:'化合物基板'},
+    kr:null,
+    rel:'穩懋為 GaAs 代工全球第一，美系 Qorvo、Skyworks 既是客戶也自有產線；3016 嘉晨(嘉晶)、5347 等切入 SiC/GaN 第三代半導體。' },
+
+  { cat:'半導體', sub:'功率半導體', lead:'other',
+    tw:{id:'2481', name:'強茂 / 富鼎(8261)', biz:'二極體、MOSFET'},
+    us:{name:'onsemi', tic:'ON', biz:'車用 SiC 功率大廠'},
+    jp:{name:'羅姆 / 三菱電機', tic:'6963 / 6503', biz:'SiC、IGBT'},
+    kr:null,
+    rel:'全球龍頭為德商 Infineon（非美日韓）；台廠強茂、富鼎做中低壓 MOSFET/二極體，向車用、工控供貨，技術落後歐美日大廠。' },
+
+  { cat:'半導體', sub:'IC 設計', lead:'us',
+    tw:{id:'2454', name:'聯發科', biz:'手機 SoC，全球前五大 IC 設計'},
+    us:{name:'NVIDIA / 高通 / 博通', tic:'NVDA / QCOM / AVGO', lead:true, biz:'AI/手機/網通龍頭'},
+    jp:{name:'瑞薩 Renesas', tic:'6723.T', biz:'車用 MCU'},
+    kr:{name:'(三星 LSI)', tic:'005930', biz:'Exynos SoC'},
+    rel:'NVIDIA 為 AI 晶片龍頭。手機 SoC 聯發科與高通正面競爭；聯發科、瑞昱(2379)、聯詠(3034) 全數委由台積代工，形成台廠設計-代工生態。' },
+
+  { cat:'半導體', sub:'矽智財 / IP', lead:'other',
+    tw:{id:'3529', name:'力旺', lead:true, biz:'全球 NVM（非揮發記憶體）IP 龍頭'},
+    us:{name:'新思 / 益華', tic:'SNPS / CDNS', biz:'EDA 與介面 IP'},
+    jp:null, kr:null,
+    rel:'CPU 架構龍頭為英商 Arm；力旺在 NVM IP 利基市場全球第一，世芯-KY(3661)、創意(3443) 為 ASIC 設計服務，與新思/益華(美) 互補。' },
+
+  { cat:'半導體', sub:'光罩', lead:'us',
+    tw:{id:'2338', name:'光罩', biz:'半導體光罩製造'},
+    us:{name:'Photronics', tic:'PLAB', lead:true, biz:'全球最大獨立光罩廠'},
+    jp:{name:'凸版 / 大日本印刷', tic:'7911 / 7912', biz:'高階光罩'},
+    kr:null,
+    rel:'獨立光罩龍頭為美商 Photronics；先進光罩多由台積、三星自製。台廠光罩(2338) 規模小，供應成熟製程。' },
+
+  { cat:'半導體', sub:'半導體設備', lead:'other',
+    tw:{id:'3413', name:'京鼎 / 帆宣(6196)', biz:'設備模組代工、廠務系統'},
+    us:{name:'應材 / 科林 / 科磊', tic:'AMAT / LRCX / KLAC', biz:'沉積/蝕刻/檢測龍頭'},
+    jp:{name:'東京威力 TEL', tic:'8035.T', biz:'塗布顯影/蝕刻'},
+    kr:null,
+    rel:'微影龍頭為荷商 ASML（全球唯一 EUV）。台廠多為設備代工(京鼎為 AMAT 代工)、廠務(帆宣)、零組件(3680 家登)，客戶為台積電。' },
+
+  { cat:'半導體', sub:'半導體材料', lead:'jp',
+    tw:{id:'1785', name:'光洋科 / 台虹(8039)', biz:'靶材、貴金屬回收、軟板材料'},
+    us:{name:'Entegris / Dupont', tic:'ENTG / DD', biz:'過濾、CMP 材料'},
+    jp:{name:'信越 / JSR / 東京應化', tic:'4063 / 4185 / 4186', lead:true, biz:'光阻劑全球領先'},
+    kr:null,
+    rel:'先進光阻、特用化學由日商主導。台廠光洋科做靶材/回收，崇越(4737) 為信越在台代理通路，4763 материал 等切入耗材。' },
+
+  /* ---------------- PCB / 被動 / 連接 ---------------- */
+  { cat:'PCB / 被動 / 連接', sub:'PCB 板廠 / 載板', lead:'tw',
+    tw:{id:'3037', name:'欣興', lead:true, biz:'ABF 載板全球前三，供 AI/HPC'},
+    us:null,
+    jp:{name:'Ibiden / 新光電氣', tic:'4062 / 6967', biz:'ABF 載板雙雄'},
+    kr:{name:'三星電機', tic:'009150.KS', biz:'載板與 MLCC'},
+    rel:'ABF 載板由台(欣興、南電 8046、景碩 3189)、日(Ibiden、Shinko) 主導，供 AMD/Intel/NVIDIA。一般 PCB 台廠 2316 楠梓電、4958 臻鼎(臻鼎為軟板全球第一)。' },
+
+  { cat:'PCB / 被動 / 連接', sub:'CCL / PCB 材料', lead:'tw',
+    tw:{id:'2383', name:'台光電', lead:true, biz:'高速高頻 CCL 銅箔基板，AI 伺服器'},
+    us:{name:'Rogers / AGC', tic:'ROG / AGC.T', biz:'高頻特用基材'},
+    jp:{name:'松下 Panasonic', tic:'6752.T', biz:'高階 CCL'},
+    kr:null,
+    rel:'台光電在 AI 伺服器用高速 CCL 領先，供應 NVIDIA 板材，與聯茂(6213)、台燿(6274) 競爭；Rogers 主攻車用毫米波高頻。' },
+
+  { cat:'PCB / 被動 / 連接', sub:'連接器 / 線材', lead:'us',
+    tw:{id:'3533', name:'嘉澤', biz:'伺服器 CPU 插槽，全球領先'},
+    us:{name:'Amphenol / TE Connectivity', tic:'APH / TEL', lead:true, biz:'連接器全球龍頭'},
+    jp:{name:'Hirose / JAE', tic:'6806 / 6807', biz:'高密度連接器'},
+    kr:null,
+    rel:'全球龍頭為美商 Amphenol、TE。嘉澤在伺服器 CPU Socket 領先供 Intel/AMD，正崴(2392)、鴻海集團做消費性連接器。' },
+
+  { cat:'PCB / 被動 / 連接', sub:'被動元件', lead:'jp',
+    tw:{id:'2327', name:'國巨', biz:'MLCC/晶片電阻/鉭電，全球前三'},
+    us:{name:'Vishay / KEMET', tic:'VSH / (被 Yageo 併)', biz:'電阻/電容'},
+    jp:{name:'村田 Murata / TDK', tic:'6981 / 6762', lead:true, biz:'MLCC 全球龍頭'},
+    kr:{name:'三星電機', tic:'009150.KS', biz:'MLCC 第二'},
+    rel:'高階 MLCC 由日商村田、太陽誘電主導；國巨併購基美(KEMET)、普思躍居全球前三，華新科(2492)、信昌電(6173) 跟進中低階。' },
+
+  /* ---------------- 散熱 / 電源 / 機構 ---------------- */
+  { cat:'散熱 / 電源 / 機構', sub:'散熱', lead:'tw',
+    tw:{id:'3017', name:'奇鋐 / 雙鴻(3324)', lead:true, biz:'AI 伺服器散熱模組/均熱板/水冷'},
+    us:{name:'Vertiv', tic:'VRT', biz:'資料中心熱管理/液冷'},
+    jp:null, kr:null,
+    rel:'AI GPU 散熱模組由台廠主導，奇鋐、雙鴻、建準(2421) 供 NVIDIA；系統級液冷與 Vertiv（美）形成上下游，台達(2308) 亦切入。' },
+
+  { cat:'散熱 / 電源 / 機構', sub:'電源供應器', lead:'tw',
+    tw:{id:'2308', name:'台達電', lead:true, biz:'全球最大交換式電源，伺服器/車用'},
+    us:{name:'Vicor', tic:'VICR', biz:'高密度電源模組'},
+    jp:null, kr:null,
+    rel:'台達電為全球交換式電源龍頭，光寶科(2301)、群電(6412) 跟進；AI 伺服器電源、800V HVDC 由台廠主導，供 NVIDIA/超微。' },
+
+  { cat:'散熱 / 電源 / 機構', sub:'機殼 / 機構件', lead:'tw',
+    tw:{id:'2059', name:'川湖 / 可成(2474)', lead:true, biz:'伺服器滑軌全球領先、金屬機殼'},
+    us:null, jp:null, kr:null,
+    rel:'川湖伺服器滑軌全球領先供雲端大廠；可成、勤誠(8210) 做伺服器/消費電子機殼，鴻準(2354) 散熱機構，多為蘋果/雲端供應鏈。' },
+
+  /* ---------------- 光電 / 顯示 ---------------- */
+  { cat:'光電 / 顯示', sub:'面板', lead:'other',
+    tw:{id:'2409', name:'友達 / 群創(3481)', biz:'TFT-LCD，轉利基/車用'},
+    us:null,
+    jp:{name:'JDI / Sharp', tic:'6740 / 6753', biz:'中小尺寸/OLED'},
+    kr:{name:'三星顯示 / LG Display', tic:'(005930) / 034220', biz:'OLED 全球龍頭'},
+    rel:'大尺寸 LCD 全球龍頭為中國京東方(BOE)；OLED 由韓廠三星、LGD 主導。台廠友達、群創轉攻車載、Mini-LED 等利基。' },
+
+  { cat:'光電 / 顯示', sub:'光學鏡頭', lead:'tw',
+    tw:{id:'3008', name:'大立光', lead:true, biz:'全球最大手機塑膠鏡頭'},
+    us:null,
+    jp:{name:'(主要對手：中國舜宇)', tic:'2382.HK', biz:'舜宇光學手機/車載鏡頭'},
+    kr:null,
+    rel:'大立光手機鏡頭全球第一，主供蘋果；主要競爭者為中國舜宇光學，玉晶光(3406)、亞光(3019) 為台廠第二梯隊。' },
+
+  { cat:'光電 / 顯示', sub:'LED', lead:'jp',
+    tw:{id:'2393', name:'億光 / 晶電(2448)', biz:'LED 封裝、磊晶'},
+    us:null,
+    jp:{name:'日亞 Nichia / 豐田合成', tic:'未上市 / 7282', lead:true, biz:'白光 LED 專利龍頭'},
+    kr:{name:'三星 LED', tic:'005930', biz:'LED 元件'},
+    rel:'白光 LED 專利與高階由日商日亞主導；台廠億光做封裝、晶電(隆達)做磊晶，轉 Mini/Micro LED 顯示應用。' },
+
+  { cat:'光電 / 顯示', sub:'影像感測 CIS', lead:'jp',
+    tw:{id:'4961', name:'天鈺 / 同欣電(6271)', biz:'面板驅動 IC、CIS 封裝'},
+    us:{name:'OmniVision(豪威)', tic:'(韋爾 603501)', biz:'手機 CIS 第三'},
+    jp:{name:'索尼 Sony', tic:'6758.T', lead:true, biz:'CMOS 影像感測全球龍頭'},
+    kr:{name:'三星 LSI', tic:'005930', biz:'CIS 第二'},
+    rel:'CMOS 影像感測由日商索尼領先供蘋果；台廠多在 CIS 封測(同欣電、精材 3374)、驅動 IC，未做高階感測設計。' },
+
+  { cat:'光電 / 顯示', sub:'背光模組', lead:'tw',
+    tw:{id:'6176', name:'瑞儀', lead:true, biz:'背光模組全球領先，供蘋果'},
+    us:null, jp:null,
+    kr:{name:'(韓系面板自製)', tic:'—', biz:'垂直整合'},
+    rel:'瑞儀為背光模組全球領先供蘋果 iPad/NB，中光電(5371)、達運(6120) 跟進，與 Mini-LED 背光趨勢結合。' },
+
+  { cat:'光電 / 顯示', sub:'太陽能', lead:'other',
+    tw:{id:'6443', name:'元晶 / 聯合再生(3576)', biz:'太陽能電池/模組'},
+    us:{name:'First Solar', tic:'FSLR', biz:'薄膜模組龍頭'},
+    jp:null, kr:{name:'韓華 Qcells', tic:'(韓華集團)', biz:'模組'},
+    rel:'全球龍頭為中國隆基、晶科；台廠元晶、聯合再生規模小、主攻內需與美國反傾銷轉單，First Solar 走差異化薄膜。' },
+
+  /* ---------------- 電腦 / 網通 / 伺服器 ---------------- */
+  { cat:'電腦 / 網通 / 伺服器', sub:'網通設備', lead:'us',
+    tw:{id:'2345', name:'智邦', biz:'白牌交換器全球領先'},
+    us:{name:'思科 / Arista', tic:'CSCO / ANET', lead:true, biz:'網通品牌龍頭'},
+    jp:null, kr:null,
+    rel:'品牌龍頭為思科、Arista。智邦為雲端白牌交換器 ODM，部分取代品牌機；中磊(5388)、明泰(3380) 做寬頻/企業網通。' },
+
+  { cat:'電腦 / 網通 / 伺服器', sub:'光通訊 / CPO', lead:'us',
+    tw:{id:'4979', name:'華星光 / 光環(3234)', biz:'光收發模組、光纖元件'},
+    us:{name:'Coherent / Lumentum', tic:'COHR / LITE', lead:true, biz:'光元件全球龍頭'},
+    jp:null, kr:null,
+    rel:'高階雷射/光元件由美商 Coherent、Lumentum 主導；台廠華星光、光環、聯亞(3081) 做光收發模組，搭 CPO 矽光子題材。' },
+
+  { cat:'電腦 / 網通 / 伺服器', sub:'伺服器 / NB 代工', lead:'tw',
+    tw:{id:'2382', name:'廣達 / 緯創(3231)', lead:true, biz:'全球 AI 伺服器代工主力'},
+    us:{name:'美超微 / Dell / HPE', tic:'SMCI / DELL / HPE', biz:'伺服器品牌'},
+    jp:null, kr:null,
+    rel:'全球 AI 伺服器幾乎由台廠代工：廣達、鴻海、緯創/緯穎(6669)、英業達(2356)。美超微等品牌仍需台廠 ODM 組裝，互為上下游。' },
+
+  { cat:'電腦 / 網通 / 伺服器', sub:'EMS / 組裝', lead:'tw',
+    tw:{id:'2317', name:'鴻海', lead:true, biz:'全球最大 EMS，蘋果最大組裝'},
+    us:{name:'Jabil / Flex', tic:'JBL / FLEX', biz:'美系 EMS'},
+    jp:null, kr:null,
+    rel:'鴻海為全球 EMS 第一，和碩(4938)、廣達、緯創跟進；蘋果 iPhone 組裝由鴻海主導，與美系 Jabil、Flex 在伺服器/車用競爭。' },
+
+  { cat:'電腦 / 網通 / 伺服器', sub:'工業電腦 IPC', lead:'tw',
+    tw:{id:'2395', name:'研華', lead:true, biz:'全球工業電腦龍頭'},
+    us:null, jp:null, kr:null,
+    rel:'研華為全球 IPC 龍頭；研揚(6579)、樺漢(6414)、凌華(6166) 跟進，下游為工廠自動化、醫療、零售，邊緣 AI 受惠。' },
+
+  { cat:'電腦 / 網通 / 伺服器', sub:'電子通路', lead:'us',
+    tw:{id:'3702', name:'大聯大', biz:'亞太最大半導體通路'},
+    us:{name:'Arrow / Avnet', tic:'ARW / AVT', lead:true, biz:'全球通路龍頭'},
+    jp:null, kr:null,
+    rel:'全球通路龍頭為美商 Arrow、Avnet；大聯大、文曄(3036) 為亞太最大，代理三星/瑞昱等晶片，2024 文曄併購 Future 躍居全球前列。' },
+
+  /* ---------------- 設備 / 工程 / 重電 ---------------- */
+  { cat:'設備 / 工程 / 重電', sub:'無塵室工程', lead:'tw',
+    tw:{id:'2404', name:'漢唐 / 帆宣(6196)', lead:true, biz:'晶圓廠無塵室與廠務系統'},
+    us:null, jp:null, kr:null,
+    rel:'漢唐、帆宣、聖暉(5536) 為台積、美光擴廠主要無塵室/機電承包商，受惠全球晶圓廠資本支出，屬台積上游工程鏈。' },
+
+  { cat:'設備 / 工程 / 重電', sub:'重電', lead:'other',
+    tw:{id:'1503', name:'士電 / 華城(1519)', biz:'變壓器、配電盤'},
+    us:{name:'Eaton / GE Vernova', tic:'ETN / GEV', biz:'電力設備'},
+    jp:{name:'日立 / 三菱電機', tic:'6501 / 6503', biz:'重電系統'},
+    kr:{name:'HD 現代電氣', tic:'267260.KS', biz:'變壓器'},
+    rel:'全球龍頭為歐商 ABB、Siemens。AI 資料中心電力需求帶動，台廠士電、華城、中興電(1513) 出口變壓器到美國，與 Eaton 同享缺貨財。' },
+
+  { cat:'設備 / 工程 / 重電', sub:'傳動 / 自動化', lead:'jp',
+    tw:{id:'2049', name:'上銀', biz:'線性傳動全球前三'},
+    us:null,
+    jp:{name:'THK / NSK', tic:'6481 / 6471', lead:true, biz:'線性導軌/滾珠螺桿龍頭'},
+    kr:null,
+    rel:'線性傳動全球龍頭為日商 THK；上銀為全球前三、亞洲領先，全球(8092)、直得(1597) 跟進，下游為工具機、自動化、機器人。' },
+
+  { cat:'設備 / 工程 / 重電', sub:'工具機', lead:'jp',
+    tw:{id:'1583', name:'程泰 / 東台(4526)', biz:'車床、綜合加工機'},
+    us:{name:'Haas', tic:'未上市', biz:'CNC 工具機'},
+    jp:{name:'山崎馬扎克 / DMG森精機', tic:'未上市 / 6141', lead:true, biz:'工具機全球龍頭'},
+    kr:{name:'DN Solutions', tic:'(斗山系)', biz:'CNC'},
+    rel:'全球龍頭為日商 Mazak、DMG 森精機與德商 Trumpf；台廠程泰、東台、亞崴(1530) 中價位市場具競爭力，主供出口。' },
+
+  { cat:'設備 / 工程 / 重電', sub:'氣動元件', lead:'jp',
+    tw:{id:'1590', name:'亞德客-KY', biz:'氣動元件，亞洲龍頭'},
+    us:null,
+    jp:{name:'SMC', tic:'6273.T', lead:true, biz:'氣動元件全球龍頭'},
+    kr:null,
+    rel:'全球龍頭為日商 SMC（與德商 Festo）。亞德客為亞洲氣動龍頭、中國市占第一，下游為自動化產線、半導體設備。' },
+
+  /* ---------------- 傳產 / 其他 ---------------- */
+  { cat:'傳產 / 其他', sub:'自行車', lead:'tw',
+    tw:{id:'9921', name:'巨大', lead:true, biz:'捷安特，全球最大自行車廠'},
+    us:{name:'(Trek)', tic:'未上市', biz:'高階品牌'},
+    jp:{name:'禧瑪諾 Shimano', tic:'7309.T', biz:'變速系統全球壟斷'},
+    kr:null,
+    rel:'巨大(捷安特)、美利達(9914) 為全球前二整車廠；關鍵變速零件由日商 Shimano 近乎壟斷，台廠整車與日廠零件互為上下游。' },
+
+  { cat:'傳產 / 其他', sub:'製鞋代工', lead:'tw',
+    tw:{id:'9910', name:'豐泰 / 寶成(9904)', lead:true, biz:'Nike/adidas 全球最大代工之一'},
+    us:null, jp:null, kr:null,
+    rel:'豐泰為 Nike 最大代工廠之一，寶成代工 Nike/adidas/PUMA。品牌端為美 Nike、德 adidas，台廠掌握全球運動鞋製造（基地在越南/印尼）。' },
+
+  { cat:'傳產 / 其他', sub:'租賃', lead:'tw',
+    tw:{id:'5871', name:'中租-KY', lead:true, biz:'台灣最大租賃，兩岸/東協布局'},
+    us:null, jp:null, kr:null,
+    rel:'中租、裕融(9941) 為台灣租賃雙雄，業務涵蓋中小企業設備融資、車貸、太陽能電廠，與銀行體系互補。' },
+
+  { cat:'傳產 / 其他', sub:'塑化 / 化工', lead:'other',
+    tw:{id:'1301', name:'台塑 / 台化(1326)', biz:'石化、塑膠原料一條龍'},
+    us:{name:'Dow / DuPont', tic:'DOW / DD', biz:'化工巨頭'},
+    jp:{name:'三菱化學', tic:'4188.T', biz:'綜合化學'},
+    kr:{name:'LG 化學', tic:'051910.KS', biz:'石化/電池材料'},
+    rel:'全球龍頭為美 Dow、德 BASF。台塑四寶（台塑、南亞、台化、台塑化 6505）為台灣最大石化集團，景氣受中國產能與油價影響。' },
+];
+
+/* ---------------- 工具 / 渲染 ---------------- */
+const $ = (s) => document.querySelector(s);
+const FLAG = { tw:'🇹🇼', us:'🇺🇸', jp:'🇯🇵', kr:'🇰🇷' };
+const REGION_LABEL = { tw:'台灣', us:'美國', jp:'日本', kr:'韓國', other:'其他' };
+
+const state = { cat:'', lead:'', q:'' };
+
+function esc(s){ return String(s==null?'':s).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+
+function peerRow(region, info){
+  if (!info) {
+    return `<tr><td class="reg"><span class="flag">${FLAG[region]}</span>${REGION_LABEL[region]}</td><td class="none">—（無對應/不適用）</td></tr>`;
+  }
+  const crown = info.lead ? '<span class="crown" title="該細產業全球龍頭">★</span>' : '';
+  const id = info.id ? `${esc(info.id)} ` : '';
+  const tic = info.tic ? `<span class="tic">${esc(info.tic)}</span>` : '';
+  return `<tr>
+    <td class="reg"><span class="flag">${FLAG[region]}</span>${REGION_LABEL[region]}</td>
+    <td><span class="co">${id}${esc(info.name)}${tic}${crown}</span><span class="co-biz">${esc(info.biz||'')}</span></td>
+  </tr>`;
+}
+
+function cardHtml(d){
+  const leadName = REGION_LABEL[d.lead] || d.lead;
+  const leadTag = `<span class="tag lead">全球龍頭：${FLAG[d.lead]||'🌐'} ${esc(leadName)}</span>`;
+  const twTag = d.lead==='tw' ? '<span class="tag tw">台股＝全球龍頭</span>' : '';
+  return `<div class="card">
+    <div class="card-top">
+      <span class="card-sub">${esc(d.sub)}</span>
+      <span class="card-cat">${esc(d.cat)}</span>
+    </div>
+    <div class="card-top" style="margin-top:-4px;gap:6px;">${leadTag}${twTag}</div>
+    <table class="peers">
+      ${peerRow('tw', d.tw)}
+      ${peerRow('us', d.us)}
+      ${peerRow('jp', d.jp)}
+      ${peerRow('kr', d.kr)}
+    </table>
+    <div class="kv rel-row"><span class="k warn">關係</span><span class="rel">${esc(d.rel)}</span></div>
+  </div>`;
+}
+
+function passFilter(d){
+  if (state.cat && d.cat !== state.cat) return false;
+  if (state.lead && d.lead !== state.lead) return false;
+  if (state.q) {
+    const q = state.q.toLowerCase();
+    const hay = [d.cat, d.sub, d.rel, d.tw&&d.tw.name, d.tw&&d.tw.id, d.us&&d.us.name, d.jp&&d.jp.name, d.kr&&d.kr.name]
+      .filter(Boolean).join(' ').toLowerCase();
+    if (!hay.includes(q)) return false;
+  }
+  return true;
+}
+
+function render(){
+  const rows = DATA.filter(passFilter);
+  const content = $('#content');
+  if (!rows.length){
+    content.innerHTML = '<div class="empty-state">查無符合條件的細產業。</div>';
+    $('#statBox').innerHTML = `共 <b>0</b> 項`;
+    return;
+  }
+  // group by cat
+  const cats = [];
+  const map = {};
+  rows.forEach(d => { if(!map[d.cat]){ map[d.cat]=[]; cats.push(d.cat);} map[d.cat].push(d); });
+  let html = '';
+  cats.forEach(c => {
+    const list = map[c];
+    html += `<section class="group">
+      <div class="group-head"><h2>${esc(c)}</h2><div class="bar"></div><span class="count">${list.length} 項</span></div>
+      <div class="grid">${list.map(cardHtml).join('')}</div>
+    </section>`;
+  });
+  content.innerHTML = html;
+  const twLead = DATA.filter(d=>d.lead==='tw').length;
+  $('#statBox').innerHTML = `顯示 <b>${rows.length}</b> / ${DATA.length} 項　台股稱霸 <b>${twLead}</b> 項`;
+}
+
+/* ---------------- 介面風格切換 ---------------- */
+const THEME_STYLE_IDS = { finmetrics:'theme-finmetrics', glass:'theme-glass', clean:'theme-clean', bento:'theme-bento', neu:'theme-neu' };
+function applyTheme(name){
+  if (!THEME_STYLE_IDS[name]) name = 'finmetrics';
+  Object.keys(THEME_STYLE_IDS).forEach(n => {
+    const el = document.getElementById(THEME_STYLE_IDS[n]);
+    if (el) el.media = (n === name ? 'all' : 'not all');
+  });
+  const sel = $('#themeSel'); if (sel) sel.value = name;
+  try { localStorage.setItem('finmetrics_theme', name); } catch(e){}
+}
+function initTheme(){
+  let saved = 'finmetrics';
+  try { saved = localStorage.getItem('finmetrics_theme') || 'finmetrics'; } catch(e){}
+  applyTheme(saved);
+}
+
+/* ---------------- 控制項 ---------------- */
+function fillCats(){
+  const sel = $('#catSel');
+  const cats = [];
+  DATA.forEach(d => { if(!cats.includes(d.cat)) cats.push(d.cat); });
+  cats.forEach(c => { const o=document.createElement('option'); o.value=c; o.textContent=c; sel.appendChild(o); });
+}
+function bindControls(){
+  $('#catSel').addEventListener('change', e => { state.cat = e.target.value; render(); });
+  $('#leadSel').addEventListener('change', e => { state.lead = e.target.value; render(); });
+  $('#searchBox').addEventListener('input', e => { state.q = e.target.value.trim(); render(); });
+  $('#themeSel').addEventListener('change', e => applyTheme(e.target.value));
+}
+
+function init(){
+  initTheme();
+  fillCats();
+  bindControls();
+  render();
+}
+init();
+</script>
+</body>
+</html>
