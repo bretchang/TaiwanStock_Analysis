@@ -1359,77 +1359,6 @@
   .ctl { min-width: 0; max-width: 100%; }
   .theme-ctl { margin-left: auto; }
 
-  .stock-tags { margin-top: 3px; gap: 3px; }
-  .stock-tags .tag { font-size: 9px; padding: 1px 6px; }
-  /* ---- view 切換 ---- */
-  .viewnav { display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin:0 0 14px; }
-  .viewseg button { font-size:13px; padding:9px 16px; }
-  .leaders-link { cursor:pointer; font-size:11px; color:var(--cyan, var(--accent, #4f46e5)); border:1px solid currentColor; border-radius:999px; padding:1px 8px; margin-left:6px; white-space:nowrap; }
-  .leaders-link:hover { filter:brightness(1.25); }
-  /* ---- 全球龍頭 view（scoped；用 fallback 變數對應各風格） ---- */
-  #leadersView {
-    --lv-surface: var(--panel, var(--card, var(--co-surface, var(--glass, rgba(255,255,255,0.04)))));
-    --lv-border: var(--line, var(--co-border, rgba(128,128,128,0.25)));
-    --lv-accent: var(--cyan, var(--accent, #4f46e5));
-    --lv-accent2: var(--magenta, var(--accent2, #e11d48));
-    --lv-good: var(--lime, #16a34a);
-    --lv-amber: var(--amber, var(--yellow, #d97706));
-  }
-  .leaders-legend .lflag { font-size:14px; margin-right:3px; }
-  #leadersContent .lgrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(360px,1fr)); gap:14px; }
-  #leadersContent .lgroup { margin-bottom:24px; }
-  #leadersContent .lgroup-head { display:flex; align-items:center; gap:12px; margin:0 2px 12px; }
-  #leadersContent .lgroup-head h2 { font-size:15px; font-weight:700; margin:0; color:var(--txt); }
-  #leadersContent .lgroup-head .bar { flex:1; height:1px; background:linear-gradient(90deg,var(--lv-border),transparent); }
-  #leadersContent .lgroup-head .count { font-size:11px; color:var(--dim); }
-  #leadersContent .lcard { background:var(--lv-surface); border:1px solid var(--lv-border); border-radius:12px; padding:14px 16px; overflow:hidden; }
-  #leadersContent .lcard-top { display:flex; align-items:flex-start; gap:8px; flex-wrap:wrap; margin-bottom:8px; }
-  #leadersContent .lcard-sub { font-size:16px; font-weight:700; color:var(--txt); margin-right:auto; }
-  #leadersContent .lcard-cat { font-size:10px; color:var(--dim); letter-spacing:1px; }
-  #leadersView .tag.lead { color:var(--lv-accent2); border-color:var(--lv-accent2); }
-  #leadersView .tag.tw { color:var(--lv-good); border-color:var(--lv-good); }
-  #leadersView .tag.rank { font-weight:700; }
-  #leadersView .tag.rank.rank-s { color:var(--lv-good); border-color:var(--lv-good); }
-  #leadersView .tag.rank.rank-a { color:var(--lv-accent); border-color:var(--lv-accent); }
-  #leadersView .tag.rank.rank-b { color:var(--dim); border-color:var(--lv-border); }
-  #leadersContent table.peers { width:100%; border-collapse:collapse; font-size:12px; margin:4px 0 10px; }
-  #leadersContent table.peers td { padding:5px 6px; border-bottom:1px solid var(--lv-border); vertical-align:top; }
-  #leadersContent table.peers tr:last-child td { border-bottom:none; }
-  #leadersContent .reg { white-space:nowrap; font-weight:700; width:64px; }
-  #leadersContent .reg .flag { font-size:13px; margin-right:3px; }
-  #leadersContent .co { color:var(--txt); font-weight:600; }
-  #leadersContent .co .tic { color:var(--dim); font-weight:400; font-size:11px; margin-left:4px; }
-  #leadersContent .co .crown { color:var(--lv-amber); margin-left:4px; }
-  #leadersContent .co-biz { display:block; color:var(--dim); font-weight:400; font-size:11px; margin-top:2px; }
-  #leadersContent .none { color:var(--dim); font-style:italic; }
-  #leadersContent .lrel { font-size:12px; line-height:1.55; border-top:1px dashed var(--lv-border); padding-top:8px; margin-top:8px; color:var(--txt); }
-  #leadersContent .lrel .k { color:var(--lv-accent2); font-weight:700; margin-right:6px; }
-  #leadersContent .lcard-foot { display:flex; flex-wrap:wrap; gap:6px; align-items:center; margin-top:10px; padding-top:8px; border-top:1px dashed var(--lv-border); }
-  #leadersContent .lcard-foot .flabel { font-size:11px; color:var(--dim); margin-right:2px; }
-  #leadersContent .idchip, #leadersContent .lgo { cursor:pointer; font-size:11px; padding:2px 8px; border-radius:999px; border:1px solid var(--lv-accent); color:var(--lv-accent); background:transparent; }
-  #leadersContent .idchip:hover, #leadersContent .lgo:hover { filter:brightness(1.25); }
-  #leadersContent .lempty { text-align:center; color:var(--dim); padding:50px 20px; }
-  /* ---- P2 個股明細內嵌全球定位 + 徽章全域樣式 ---- */
-  .tag.rank { font-weight:700; }
-  .tag.rank.rank-s { color:var(--lime,#16a34a); border-color:var(--lime,#16a34a); }
-  .tag.rank.rank-a { color:var(--cyan,var(--accent,#4f46e5)); border-color:var(--cyan,var(--accent,#4f46e5)); }
-  .tag.rank.rank-b { color:var(--dim); border-color:var(--line); }
-  .mini.lpos { text-align:left; }
-  .mini.lpos h4 { text-align:left; display:flex; gap:6px; align-items:center; flex-wrap:wrap; justify-content:flex-start; }
-  .lpos-lead { font-size:11px; color:var(--dim); margin:2px 0 4px; }
-  .lpos-peers { font-size:11px; line-height:1.7; color:var(--txt); }
-  .lpos-peers .pf { color:var(--dim); margin-right:2px; }
-  .lpos-crown { color:var(--amber,#ffb000); margin-left:2px; }
-  .lpos-rel { font-size:11px; color:var(--dim); line-height:1.5; margin-top:6px; border-top:1px dashed var(--line); padding-top:6px; }
-  .lpos-act { margin-top:6px; }
-  /* ---- P3 行動版：view 切換與龍頭控制列 ---- */
-  @media (max-width: 720px) {
-    .viewseg { display:flex; width:100%; }
-    .viewseg button { flex:1; padding:10px 6px; min-height:40px; }
-    #leadersContent .lgrid { grid-template-columns:1fr; }
-    #leadersControls .ctl { width:100%; }
-    #leadersControls .ctl select, #leadersControls .ctl input[type="text"] { width:100%; min-height:40px; font-size:16px; }
-  }
   .cardlist {
     display: flex; flex-direction: column; gap: 10px;
     width: 100%; max-width: 100%;
@@ -1706,21 +1635,12 @@
     <button class="btn btn-ghost" id="helpBtn">？ 指標說明</button>
   </header>
 
-  <div class="viewnav" id="viewNav">
-    <div class="seg viewseg" id="viewSeg">
-      <button data-v="finance" class="active">📊 財務監測</button>
-      <button data-v="leaders">🌐 全球龍頭</button>
-    </div>
-  </div>
-
-  <div id="financeView">
   <section class="controls">
     <div class="ctl">
       <label>分組方式</label>
       <div class="seg" id="groupSeg">
         <button data-g="theme" class="active">細產業</button>
         <button data-g="industry">官方產業別</button>
-        <button data-g="tag">標籤</button>
         <button data-g="global">全市場 Top</button>
       </div>
     </div>
@@ -1833,47 +1753,6 @@
   <div class="legend-sub legend-hint-table">六指標：應收 · 存貨 · 應付 · 營收 · 毛利% · EPS</div>
 
   <main id="content"></main>
-  </div><!-- /financeView -->
-
-  <div id="leadersView" style="display:none;">
-    <section class="controls" id="leadersControls">
-      <div class="ctl">
-        <label>產業大類</label>
-        <select id="leadersCat"><option value="">全部</option></select>
-      </div>
-      <div class="ctl">
-        <label>全球龍頭地區</label>
-        <select id="leadersLead">
-          <option value="">全部</option>
-          <option value="tw">🇹🇼 台灣</option>
-          <option value="us">🇺🇸 美國</option>
-          <option value="jp">🇯🇵 日本</option>
-          <option value="kr">🇰🇷 韓國</option>
-          <option value="other">🌐 其他(中/歐)</option>
-        </select>
-      </div>
-      <div class="ctl">
-        <label>搜尋</label>
-        <input type="text" id="leadersSearch" placeholder="細產業 / 個股 / 代號" />
-      </div>
-      <div class="ctl">
-        <label>統計</label>
-        <div class="stat" id="leadersStat"></div>
-      </div>
-    </section>
-    <div class="legend leaders-legend">
-      <span><span class="lflag">🇹🇼</span>台</span>
-      <span><span class="lflag">🇺🇸</span>美</span>
-      <span><span class="lflag">🇯🇵</span>日</span>
-      <span><span class="lflag">🇰🇷</span>韓</span>
-      <span><span class="lflag">🇨🇳</span>中</span>
-      <span class="tag rank rank-s" style="pointer-events:none">★ 全球龍頭</span>
-      <span class="tag rank rank-a" style="pointer-events:none">◆ 全球前段</span>
-      <span class="tag rank rank-b" style="pointer-events:none">○ 利基/區域</span>
-      <span class="stat" id="leadersFilterNote"></span>
-    </div>
-    <main id="leadersContent"></main>
-  </div><!-- /leadersView -->
 </div>
 
 <div id="helpModal" class="modal-overlay">
@@ -1954,11 +1833,6 @@
         </div>
         <p class="muted" style="font-size:11px;margin-top:6px;">※ 沒有任何訊號時該欄顯示「—」，代表目前無明顯交叉警訊或亮點。</p>
       </div>
-      <div class="def-sec">
-        <span class="def-tag sig">視圖 · 全球龍頭</span>
-        <p>頂部可切換 <b>📊 財務監測</b> 與 <b>🌐 全球龍頭</b>。全球龍頭列出每個細產業的台/美/日/韓/中對照與台股全球地位徽章：<span class="tag rank rank-s" style="pointer-events:none">★ 全球龍頭</span> <span class="tag rank rank-a" style="pointer-events:none">◆ 全球前段</span> <span class="tag rank rank-b" style="pointer-events:none">○ 利基/區域</span>。</p>
-        <p class="muted" style="font-size:11px;margin-top:4px;">互跳：龍頭卡片點台股代號→看該股財務；點「📊 看成分股」→財務標籤分群。財務「標籤」分群的群組標題點「🌐 全球對照」→回龍頭視圖。個股展開明細底部會內嵌「全球競爭定位」迷你卡。</p>
-      </div>
       <p class="modal-foot">※ 資料延遲：財報每季更新（5/15、8/14、11/14、隔年 3/31），月營收每月一次。合約負債非每家公司都有，缺值顯示「—」。跨產業僅比變動率，不比絕對水準。</p>
     </div>
   </div>
@@ -1966,8 +1840,6 @@
 
 
 <script src="data/version.js"></script>
-<script src="config/tag.js"></script>
-<script src="config/leaders.js"></script>
 <script>
   // 以資料更新時間為版本參數，同日多次更新也能載入最新 data.js
   (function () {
@@ -2020,13 +1892,6 @@ const TH_MARGIN = { strong: 0.05, notable: 0.03, watch: 0.015 };
 const TOP_N_OPTIONS = [10, 25, 50, 100];
 
 let DATA = window.SEED_DATA || { stocks: [], config: {} };
-// 多標籤合併：config/tag.js 定義 window.TAG_DATA.tags（stock_id -> [tag,...]），未標記者為空陣列
-(function applyTagData(){
-  try {
-    const TAGS = (window.TAG_DATA && window.TAG_DATA.tags) || {};
-    (DATA.stocks || []).forEach((s) => { s.tags = Array.isArray(TAGS[s.id]) ? TAGS[s.id] : []; });
-  } catch (e) {}
-})();
 let TH = Object.assign({ strong: 0.5, notable: 0.3, watch: 0.15, small_base: 100000000 }, (DATA.config || {}).thresholds || {});
 
 const state = {
@@ -2140,7 +2005,6 @@ function ensureGrossMargin(stock) {
 function groupField() {
   if (state.group === 'theme') return 'theme';
   if (state.group === 'industry') return 'industry';
-  if (state.group === 'tag') return 'tag';
   return null;
 }
 
@@ -2148,7 +2012,6 @@ function collectGroupNames(stocks) {
   const field = groupField();
   if (!field) return [];
   const set = new Set();
-  if (field === 'tag') { stocks.forEach((s) => (s.tags || []).forEach((t) => set.add(t))); return Array.from(set).sort((a, b) => a.localeCompare(b, 'zh-Hant')); }
   stocks.forEach((s) => set.add(s[field] || '其他'));
   return Array.from(set).sort((a, b) => a.localeCompare(b, 'zh-Hant'));
 }
@@ -2165,7 +2028,7 @@ function syncGroupFilter() {
     return;
   }
   ctl.style.display = '';
-  label.textContent = state.group === 'theme' ? '細產業' : (state.group === 'tag' ? '標籤' : '官方產業別');
+  label.textContent = state.group === 'theme' ? '細產業' : '官方產業別';
   const names = collectGroupNames(DATA.stocks || []);
   const cur = state.groupFilter;
   sel.innerHTML = '<option value="">全部</option>' + names.map((n) => {
@@ -2428,15 +2291,6 @@ function heatCells(stock, opts) {
   }).join('') + '</span>';
 }
 
-function stockTagChips(s, limit) {
-  const ts = (s && s.tags) || [];
-  if (!ts.length) return '';
-  const show = (limit && ts.length > limit) ? ts.slice(0, limit) : ts;
-  let inner = show.map((t) => `<span class="tag info" data-tag="${t}" title="${t}">${t}</span>`).join('');
-  if (limit && ts.length > limit) inner += `<span class="tag info" title="${ts.join(' · ')}">+${ts.length - limit}</span>`;
-  return `<div class="tags stock-tags">${inner}</div>`;
-}
-
 function rowHtml(r) {
   const s = r.stock, f = r.f;
   const isMarginFocus = state.metric === 'gross_margin';
@@ -2450,7 +2304,7 @@ function rowHtml(r) {
   const sparkArr = metricSeries(s, state.metric).arr || [];
   return `<tr data-id="${s.id}" class="${strong}">
     <td class="l sid">${s.id}</td>
-    <td class="l sname">${s.name || ''}<div class="muted" style="font-size:10px">${s.theme || ''}</div>${stockTagChips(s, 3)}</td>
+    <td class="l sname">${s.name || ''}<div class="muted" style="font-size:10px">${s.theme || ''}</div></td>
     <td>${quoteCellHtml(s)}</td>
     <td>${valStr}<div class="muted" style="font-size:10px">${f.period || ''}</div></td>
     <td class="pct ${isNum(f.qoq) ? (f.qoq >= 0 ? 'up' : 'dn') : 'muted'}">${fmtChg(f.qoq)}</td>
@@ -2496,7 +2350,6 @@ function detailHtml(stock) {
     const blocks = metrics.map((m) => miniBlock(stock, m, m === 'month_rev' ? 12 : 8)).filter(Boolean).join('');
     if (blocks) html += `<div class="detail-group"><div class="dg-title">${title}</div><div class="detail-inner">${blocks}</div></div>`;
   });
-  if (window.LEADERS) html += LEADERS.positioningHtml(stock);
   return html;
 }
 
@@ -2537,8 +2390,11 @@ function useCardLayout() { return MOBILE_MQ.matches; }
 
 function placeThemeCtl() {
   const ctl = $('#themeCtl');
-  const nav = $('#viewNav');
-  if (ctl && nav) { ctl.style.marginLeft = 'auto'; nav.appendChild(ctl); }
+  const helpBtn = $('#helpBtn');
+  const controls = document.querySelector('.controls');
+  if (!ctl || !helpBtn || !controls) return;
+  if (useCardLayout()) helpBtn.insertAdjacentElement('afterend', ctl);
+  else controls.appendChild(ctl);
 }
 
 function cardHtml(r) {
@@ -2561,7 +2417,6 @@ function cardHtml(r) {
       <div class="card-title">
         <span class="sid">${s.id}</span><span class="sname">${s.name || ''}</span>
         ${s.theme ? `<span class="card-theme muted">${s.theme}</span>` : ''}
-        ${stockTagChips(s)}
       </div>
       <div class="card-quote">${quoteCardHtml(s)}</div>
     </div>
@@ -2609,36 +2464,20 @@ function render() {
     rows = sortRows(rows).slice(0, state.topN);
     html += `<div class="group"><div class="group-head"><h2>全市場 // ${focusLabel()} 變動 TOP ${state.topN}</h2><div class="bar"></div><span class="count">${rows.length} 檔</span></div>${listHtml(rows)}</div>`;
   } else {
+    const keyName = state.group === 'theme' ? 'theme' : 'industry';
     const groups = {};
-    if (state.group === 'tag') {
-      stocks.forEach((s) => { (s.tags || []).forEach((t) => { (groups[t] = groups[t] || []).push(s); }); });
-    } else {
-      const keyName = state.group === 'theme' ? 'theme' : 'industry';
-      stocks.forEach((s) => { const k = s[keyName] || '其他'; (groups[k] = groups[k] || []).push(s); });
-    }
+    stocks.forEach((s) => { const k = s[keyName] || '其他'; (groups[k] = groups[k] || []).push(s); });
     const names = Object.keys(groups).sort().filter((n) => !state.groupFilter || n === state.groupFilter);
     names.forEach((name) => {
       let rows = buildRows(groups[name]).filter(passFilters);
       if (!rows.length) return;
       rows = sortRows(rows);
-      const gLink = (state.group === 'tag' && window.LEADERS && LEADERS.hasTag(name)) ? `<span class="leaders-link" data-goleaders="${name}">🌐 全球對照</span>` : '';
-      html += `<div class="group"><div class="group-head"><h2>${name}</h2>${gLink}<div class="bar"></div><span class="count">${rows.length} 檔</span></div>${listHtml(rows)}</div>`;
+      html += `<div class="group"><div class="group-head"><h2>${name}</h2><div class="bar"></div><span class="count">${rows.length} 檔</span></div>${listHtml(rows)}</div>`;
     });
     if (!html) html = '<div class="empty-state">沒有符合篩選條件的個股。</div>';
   }
   content.innerHTML = html;
   bindListEvents();
-}
-
-function setTagFilter(t) {
-  state.group = 'tag';
-  state.groupFilter = t;
-  const seg = $('#groupSeg');
-  if (seg) seg.querySelectorAll('button').forEach((x) => x.classList.toggle('active', x.dataset.g === 'tag'));
-  syncGroupFilter();
-  const gf = $('#groupFilter'); if (gf) gf.value = t;
-  render();
-  try { window.scrollTo({ top: 0, behavior: 'smooth' }); } catch (e) {}
 }
 
 function bindListEvents() {
@@ -2654,14 +2493,7 @@ function bindListEvents() {
     };
   });
   document.querySelectorAll('.tags .tag').forEach((tag) => {
-    tag.onclick = (e) => {
-      e.stopPropagation();
-      const t = tag.getAttribute('data-tag');
-      if (t) { setTagFilter(t); } else { openHelp(true); }
-    };
-  });
-  document.querySelectorAll('.leaders-link[data-goleaders]').forEach((el) => {
-    el.onclick = (e) => { e.stopPropagation(); gotoLeadersTag(el.getAttribute('data-goleaders')); };
+    tag.onclick = (e) => { e.stopPropagation(); openHelp(true); };
   });
 }
 
@@ -2754,148 +2586,6 @@ function bindControls() {
 }
 
 /* ---------------- 啟動 ---------------- */
-/* ================= 全球龍頭 view（整合自 leaders.html，共用 config/leaders.js） ================= */
-const LEADERS = (function () {
-  const rows0 = (window.LEADERS_DATA && window.LEADERS_DATA.data) || [];
-  const FLAG = { tw:'🇹🇼', us:'🇺🇸', jp:'🇯🇵', kr:'🇰🇷', cn:'🇨🇳' };
-  const RLBL = { tw:'台灣', us:'美國', jp:'日本', kr:'韓國', cn:'中國', other:'其他' };
-  const st = { cat:'', lead:'', q:'', tag:'' };
-  let filled = false;
-  const tagSet = new Set();
-  rows0.forEach((d) => (d.tags || []).forEach((t) => tagSet.add(t)));
-  function e(x){ return String(x==null?'':x).replace(/[&<>"]/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
-  function ids(x){ return (String(x||'').match(/\d{4,6}/g) || []); }
-  function rankBadge(r){
-    const m = { '★':['s','全球龍頭'], '◆':['a','全球前段'], '○':['b','利基/區域'] }[r];
-    return m ? `<span class="tag rank rank-${m[0]}" title="台股全球地位">${r} ${m[1]}</span>` : '';
-  }
-  function peerRow(region, info){
-    if (!info) return `<tr><td class="reg"><span class="flag">${FLAG[region]}</span>${RLBL[region]}</td><td class="none">—（無對應/不適用）</td></tr>`;
-    const crown = info.lead ? '<span class="crown" title="該細產業全球龍頭">★</span>' : '';
-    const id = info.id ? `${e(info.id)} ` : '';
-    const tic = info.tic ? `<span class="tic">${e(info.tic)}</span>` : '';
-    return `<tr><td class="reg"><span class="flag">${FLAG[region]}</span>${RLBL[region]}</td><td><span class="co">${id}${e(info.name)}${tic}${crown}</span><span class="co-biz">${e(info.biz||'')}</span></td></tr>`;
-  }
-  function cardHtml(d){
-    const leadText = d.leadText || `${FLAG[d.lead]||'🌐'} ${e(RLBL[d.lead]||d.lead)}`;
-    const leadTag = `<span class="tag lead">全球龍頭：${leadText}</span>`;
-    const twTag = d.lead==='tw' ? '<span class="tag tw">台股＝全球龍頭</span>' : '';
-    const cnRow = ('cn' in d) ? peerRow('cn', d.cn) : '';
-    const sid = ids(d.tw && d.tw.id);
-    const idChips = sid.map((x) => `<span class="idchip" data-goid="${x}" title="看 ${x} 財務監測">${x}</span>`).join('');
-    const goStocks = (d.tags && d.tags.length) ? `<span class="lgo" data-gotag="${e(d.tags[0])}">📊 看成分股</span>` : '';
-    const foot = (idChips || goStocks) ? `<div class="lcard-foot"><span class="flabel">台股</span>${idChips}${goStocks}</div>` : '';
-    return `<div class="lcard">
-      <div class="lcard-top"><span class="lcard-sub">${e(d.sub)}</span><span class="lcard-cat">${e(d.cat)}</span></div>
-      <div class="lcard-top" style="margin-top:-2px;gap:6px;">${rankBadge(d.twRank)}${leadTag}${twTag}</div>
-      <table class="peers">${peerRow('tw',d.tw)}${peerRow('us',d.us)}${peerRow('jp',d.jp)}${peerRow('kr',d.kr)}${cnRow}</table>
-      <div class="lrel"><span class="k">關係</span>${e(d.rel)}</div>
-      ${foot}
-    </div>`;
-  }
-  function pass(d){
-    if (st.cat && d.cat !== st.cat) return false;
-    if (st.lead && d.lead !== st.lead) return false;
-    if (st.tag && !(d.tags || []).includes(st.tag)) return false;
-    if (st.q){
-      const q = st.q.toLowerCase();
-      const hay = [d.cat,d.sub,d.rel,d.tw&&d.tw.name,d.tw&&d.tw.id,d.us&&d.us.name,d.jp&&d.jp.name,d.kr&&d.kr.name,d.cn&&d.cn.name].filter(Boolean).join(' ').toLowerCase();
-      if (!hay.includes(q)) return false;
-    }
-    return true;
-  }
-  function setStat(n){
-    const b = $('#leadersStat'); if (!b) return;
-    const twLead = rows0.filter((d) => d.lead==='tw').length;
-    b.innerHTML = `顯示 <b>${n}</b> / ${rows0.length} 項　台股稱霸 <b>${twLead}</b> 項`;
-  }
-  function bindClear(){ const c = $('#lClearTag'); if (c) c.onclick = () => { st.tag=''; render(); }; }
-  function bindCards(){
-    document.querySelectorAll('#leadersContent .idchip[data-goid]').forEach((el) => { el.onclick = () => gotoFinanceStock(el.getAttribute('data-goid')); });
-    document.querySelectorAll('#leadersContent .lgo[data-gotag]').forEach((el) => { el.onclick = () => gotoFinanceTag(el.getAttribute('data-gotag')); });
-  }
-  function render(){
-    const box = $('#leadersContent');
-    const note = $('#leadersFilterNote');
-    if (note) note.innerHTML = st.tag ? `標籤：<b>${e(st.tag)}</b> <span class="leaders-link" id="lClearTag">清除</span>` : '';
-    if (!box) return;
-    const rows = rows0.filter(pass);
-    if (!rows.length){ box.innerHTML = '<div class="lempty">查無符合條件的細產業。</div>'; setStat(0); bindClear(); return; }
-    const cats = []; const map = {};
-    rows.forEach((d) => { if(!map[d.cat]){ map[d.cat]=[]; cats.push(d.cat);} map[d.cat].push(d); });
-    let html = '';
-    cats.forEach((c) => {
-      const list = map[c];
-      html += `<section class="lgroup"><div class="lgroup-head"><h2>${e(c)}</h2><div class="bar"></div><span class="count">${list.length} 項</span></div><div class="lgrid">${list.map(cardHtml).join('')}</div></section>`;
-    });
-    box.innerHTML = html;
-    setStat(rows.length); bindCards(); bindClear();
-  }
-  function fillCats(){
-    const sel = $('#leadersCat'); if (!sel || sel.dataset.filled) return;
-    const cats = []; rows0.forEach((d) => { if (!cats.includes(d.cat)) cats.push(d.cat); });
-    sel.innerHTML = '<option value="">全部</option>' + cats.map((c) => `<option value="${e(c)}">${e(c)}</option>`).join('');
-    sel.dataset.filled = '1';
-  }
-  function bind(){
-    const cat = $('#leadersCat'); if (cat) cat.onchange = (ev) => { st.cat = ev.target.value; st.tag=''; render(); };
-    const lead = $('#leadersLead'); if (lead) lead.onchange = (ev) => { st.lead = ev.target.value; st.tag=''; render(); };
-    const sb = $('#leadersSearch'); if (sb) sb.oninput = (ev) => { st.q = ev.target.value.trim(); st.tag=''; render(); };
-  }
-  function ensure(){ if (!filled) { fillCats(); bind(); filled = true; } render(); }
-  function showTag(tag){ st.cat=''; st.lead=''; st.q=''; st.tag = tag || ''; const sb=$('#leadersSearch'); if (sb) sb.value=''; const cs=$('#leadersCat'); if(cs) cs.value=''; const ls=$('#leadersLead'); if(ls) ls.value=''; ensure(); }
-  function hasTag(tag){ return tagSet.has(tag); }
-  function pn(info){ return info ? `${e(info.name)}${info.lead ? '<span class="lpos-crown">★</span>' : ''}` : '—'; }
-  function miniPosCard(d){
-    const leadText = d.leadText || `${FLAG[d.lead]||'🌐'} ${e(RLBL[d.lead]||d.lead)}`;
-    const cn = d.cn ? ` ｜ <span class="pf">中</span> ${pn(d.cn)}` : '';
-    const go = (d.tags && d.tags.length) ? `<span class="leaders-link" data-goleaders="${e(d.tags[0])}">🌐 完整對照</span>` : '';
-    return `<div class="mini lpos">
-      <h4>${e(d.sub)} ${rankBadge(d.twRank)}</h4>
-      <div class="lpos-lead">全球龍頭：${leadText}</div>
-      <div class="lpos-peers"><span class="pf">台</span> ${pn(d.tw)}　<span class="pf">美</span> ${pn(d.us)}<br><span class="pf">日</span> ${pn(d.jp)}　<span class="pf">韓</span> ${pn(d.kr)}${cn}</div>
-      <div class="lpos-rel">${e(d.rel)}</div>
-      <div class="lpos-act">${go}</div>
-    </div>`;
-  }
-  function positioningHtml(stock){
-    const tags = (stock && stock.tags) || [];
-    if (!tags.length) return '';
-    const seen = new Set(); const picks = [];
-    tags.forEach((t) => rows0.forEach((d) => { if ((d.tags||[]).includes(t) && !seen.has(d.sub)) { seen.add(d.sub); picks.push(d); } }));
-    if (!picks.length) return '';
-    const cards = picks.slice(0, 4).map(miniPosCard).join('');
-    return `<div class="detail-group"><div class="dg-title">全球競爭定位</div><div class="detail-inner">${cards}</div></div>`;
-  }
-  return { ensure, render, showTag, hasTag, positioningHtml };
-})();
-window.LEADERS = LEADERS;
-
-let currentView = 'finance';
-function setView(v){
-  currentView = v;
-  const fin = $('#financeView'), led = $('#leadersView');
-  if (fin) fin.style.display = (v === 'leaders') ? 'none' : '';
-  if (led) led.style.display = (v === 'leaders') ? '' : 'none';
-  const seg = $('#viewSeg');
-  if (seg) seg.querySelectorAll('button').forEach((b) => b.classList.toggle('active', b.dataset.v === v));
-  if (v === 'leaders') LEADERS.ensure();
-}
-function bindViewNav(){
-  const seg = $('#viewSeg');
-  if (seg) seg.querySelectorAll('button').forEach((b) => { b.onclick = () => setView(b.dataset.v); });
-}
-function gotoFinanceStock(id){
-  setView('finance');
-  state.expanded.add(id);
-  state.search = id;
-  const sb = $('#searchBox'); if (sb) sb.value = id;
-  render();
-  try { window.scrollTo({ top: 0, behavior: 'smooth' }); } catch (e) {}
-}
-function gotoFinanceTag(tag){ setView('finance'); setTagFilter(tag); }
-function gotoLeadersTag(tag){ setView('leaders'); LEADERS.showTag(tag); try { window.scrollTo({ top: 0, behavior: 'smooth' }); } catch (e) {} }
-
 function init() {
   if (!window.SEED_DATA) {
     $('#content').innerHTML = '<div class="empty-state">找不到 data/data.js。<br>請先執行 <code>python etl/build_data.py</code> 產生資料，或等待 GitHub Actions 排程更新。</div>';
@@ -2914,9 +2604,7 @@ function init() {
   renderUpdated();
   trackVisitor();
   placeThemeCtl();
-  bindViewNav();
   render();
-  if (new URLSearchParams(location.search).get('view') === 'leaders') setView('leaders');
   MOBILE_MQ.addEventListener('change', () => { placeThemeCtl(); render(); });
 }
 init();
