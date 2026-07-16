@@ -1,6 +1,6 @@
 // 由 etl/build_data.py 自動產生，請勿手動編輯。
 window.SEED_DATA = {
- "updated_at": "2026-07-16T20:25:43+08:00",
+ "updated_at": "2026-07-16T23:03:53+08:00",
  "source": "FinMind",
  "config": {
   "thresholds": {
@@ -153338,12 +153338,12 @@ window.SEED_DATA = {
      203955000
     ]
    },
-   "fetched_at": "2026-07-15T20:18:52+08:00",
+   "fetched_at": "2026-07-16T23:00:48+08:00",
    "quote": {
-    "close": 27.6,
-    "date": "2026-07-15",
-    "spread": 0.75,
-    "pe_ttm": 460.0
+    "close": 26.75,
+    "date": "2026-07-16",
+    "spread": -0.85,
+    "pe_ttm": 445.8
    }
   },
   {
@@ -153851,18 +153851,18 @@ window.SEED_DATA = {
      1028086000
     ]
    },
-   "fetched_at": "2026-07-15T22:47:40+08:00",
+   "fetched_at": "2026-07-16T23:00:51+08:00",
    "quote": {
-    "close": 40.25,
-    "date": "2026-07-15",
-    "spread": 0.15,
+    "close": 39.3,
+    "date": "2026-07-16",
+    "spread": -0.95,
     "pe_ttm_label": "本益比為負"
    }
   },
   {
    "id": "2476",
    "name": "鉅祥",
-   "industry": "電子工業",
+   "industry": "電子零組件業",
    "theme": "連接器/線材",
    "has_contract_liab": true,
    "quarters": [
@@ -154364,12 +154364,12 @@ window.SEED_DATA = {
      915039000
     ]
    },
-   "fetched_at": "2026-07-15T22:47:43+08:00",
+   "fetched_at": "2026-07-16T23:00:54+08:00",
    "quote": {
-    "close": 129.5,
-    "date": "2026-07-15",
-    "spread": 7.5,
-    "pe_ttm": 29.2
+    "close": 131.5,
+    "date": "2026-07-16",
+    "spread": 2.0,
+    "pe_ttm": 29.7
    }
   },
   {
@@ -154877,12 +154877,12 @@ window.SEED_DATA = {
      229132000
     ]
    },
-   "fetched_at": "2026-07-15T22:47:46+08:00",
+   "fetched_at": "2026-07-16T23:00:56+08:00",
    "quote": {
-    "close": 238.5,
-    "date": "2026-07-15",
-    "spread": 1.5,
-    "pe_ttm": 48.4
+    "close": 250.0,
+    "date": "2026-07-16",
+    "spread": 11.5,
+    "pe_ttm": 50.7
    }
   },
   {
@@ -155390,12 +155390,12 @@ window.SEED_DATA = {
      1365750000
     ]
    },
-   "fetched_at": "2026-07-15T22:47:48+08:00",
+   "fetched_at": "2026-07-16T23:00:59+08:00",
    "quote": {
-    "close": 47.7,
-    "date": "2026-07-15",
-    "spread": 0.5,
-    "pe_ttm": 28.1
+    "close": 46.6,
+    "date": "2026-07-16",
+    "spread": -1.1,
+    "pe_ttm": 27.4
    }
   },
   {
@@ -155903,18 +155903,18 @@ window.SEED_DATA = {
      355108000
     ]
    },
-   "fetched_at": "2026-07-15T22:47:54+08:00",
+   "fetched_at": "2026-07-16T23:01:01+08:00",
    "quote": {
-    "close": 712.0,
-    "date": "2026-07-15",
-    "spread": 44.0,
-    "pe_ttm": 46.9
+    "close": 701.0,
+    "date": "2026-07-16",
+    "spread": -11.0,
+    "pe_ttm": 46.2
    }
   },
   {
    "id": "3592",
    "name": "瑞鼎",
-   "industry": "半導體業",
+   "industry": "電子工業",
    "theme": "IC設計",
    "has_contract_liab": true,
    "quarters": [
@@ -156416,12 +156416,12 @@ window.SEED_DATA = {
      2230464000
     ]
    },
-   "fetched_at": "2026-07-15T22:47:58+08:00",
+   "fetched_at": "2026-07-16T23:01:04+08:00",
    "quote": {
-    "close": 249.5,
-    "date": "2026-07-15",
-    "spread": -3.0,
-    "pe_ttm": 15.6
+    "close": 246.0,
+    "date": "2026-07-16",
+    "spread": -3.5,
+    "pe_ttm": 15.4
    }
   },
   {
@@ -156929,11 +156929,11 @@ window.SEED_DATA = {
      63441000
     ]
    },
-   "fetched_at": "2026-07-15T22:48:00+08:00",
+   "fetched_at": "2026-07-16T23:01:07+08:00",
    "quote": {
-    "close": 128.5,
-    "date": "2026-07-15",
-    "spread": 2.5,
+    "close": 122.0,
+    "date": "2026-07-16",
+    "spread": -6.5,
     "pe_ttm_label": "本益比為負"
    }
   },
@@ -157442,12 +157442,12 @@ window.SEED_DATA = {
      320550000
     ]
    },
-   "fetched_at": "2026-07-15T22:48:03+08:00",
+   "fetched_at": "2026-07-16T23:01:10+08:00",
    "quote": {
-    "close": 178.5,
-    "date": "2026-07-15",
-    "spread": -5.5,
-    "pe_ttm": 11.6
+    "close": 177.0,
+    "date": "2026-07-16",
+    "spread": -1.5,
+    "pe_ttm": 11.5
    }
   },
   {
@@ -157955,18 +157955,18 @@ window.SEED_DATA = {
      1824556000
     ]
    },
-   "fetched_at": "2026-07-15T22:48:08+08:00",
+   "fetched_at": "2026-07-16T23:01:12+08:00",
    "quote": {
-    "close": 242.0,
-    "date": "2026-07-15",
-    "spread": 1.0,
-    "pe_ttm": 36.9
+    "close": 231.5,
+    "date": "2026-07-16",
+    "spread": -10.5,
+    "pe_ttm": 35.3
    }
   },
   {
    "id": "6202",
    "name": "盛群",
-   "industry": "電子工業",
+   "industry": "半導體業",
    "theme": "IC設計",
    "has_contract_liab": false,
    "quarters": [
@@ -158468,12 +158468,12 @@ window.SEED_DATA = {
      351976000
     ]
    },
-   "fetched_at": "2026-07-15T22:48:12+08:00",
+   "fetched_at": "2026-07-16T23:01:15+08:00",
    "quote": {
-    "close": 70.9,
-    "date": "2026-07-15",
-    "spread": 3.2,
-    "pe_ttm": 107.4
+    "close": 64.1,
+    "date": "2026-07-16",
+    "spread": -6.8,
+    "pe_ttm": 97.1
    }
   },
   {
@@ -158981,12 +158981,12 @@ window.SEED_DATA = {
      3074967000
     ]
    },
-   "fetched_at": "2026-07-15T22:48:15+08:00",
+   "fetched_at": "2026-07-16T23:01:17+08:00",
    "quote": {
-    "close": 16.7,
-    "date": "2026-07-15",
-    "spread": -0.35,
-    "pe_ttm": 25.7
+    "close": 16.2,
+    "date": "2026-07-16",
+    "spread": -0.5,
+    "pe_ttm": 24.9
    }
   },
   {
@@ -159494,11 +159494,11 @@ window.SEED_DATA = {
      2093401000
     ]
    },
-   "fetched_at": "2026-07-15T22:48:18+08:00",
+   "fetched_at": "2026-07-16T23:01:20+08:00",
    "quote": {
-    "close": 337.5,
-    "date": "2026-07-15",
-    "spread": 1.0,
+    "close": 339.0,
+    "date": "2026-07-16",
+    "spread": 1.5,
     "pe_ttm": 16.3
    }
   },
@@ -160007,12 +160007,12 @@ window.SEED_DATA = {
      4412069000
     ]
    },
-   "fetched_at": "2026-07-15T22:48:21+08:00",
+   "fetched_at": "2026-07-16T23:01:22+08:00",
    "quote": {
-    "close": 25.95,
-    "date": "2026-07-15",
-    "spread": 0.45,
-    "pe_ttm": 21.4
+    "close": 26.15,
+    "date": "2026-07-16",
+    "spread": 0.2,
+    "pe_ttm": 21.6
    }
   },
   {
@@ -160520,11 +160520,11 @@ window.SEED_DATA = {
      4439630000
     ]
    },
-   "fetched_at": "2026-07-15T22:48:25+08:00",
+   "fetched_at": "2026-07-16T23:01:25+08:00",
    "quote": {
-    "close": 753.0,
-    "date": "2026-07-15",
-    "spread": 48.0,
+    "close": 754.0,
+    "date": "2026-07-16",
+    "spread": 1.0,
     "pe_ttm": 27.9
    }
   },
@@ -161033,11 +161033,11 @@ window.SEED_DATA = {
      7888735000
     ]
    },
-   "fetched_at": "2026-07-15T22:48:28+08:00",
+   "fetched_at": "2026-07-16T23:01:28+08:00",
    "quote": {
     "close": 105.5,
-    "date": "2026-07-15",
-    "spread": 1.0,
+    "date": "2026-07-16",
+    "spread": 0.0,
     "pe_ttm": 11.9
    }
   },
@@ -161546,12 +161546,12 @@ window.SEED_DATA = {
      72968000
     ]
    },
-   "fetched_at": "2026-07-15T22:48:31+08:00",
+   "fetched_at": "2026-07-16T23:01:30+08:00",
    "quote": {
-    "close": 100.5,
-    "date": "2026-07-15",
-    "spread": 0.6,
-    "pe_ttm": 245.1
+    "close": 97.1,
+    "date": "2026-07-16",
+    "spread": -3.4,
+    "pe_ttm": 236.8
    }
   },
   {
@@ -162059,11 +162059,11 @@ window.SEED_DATA = {
      3410725000
     ]
    },
-   "fetched_at": "2026-07-15T22:48:34+08:00",
+   "fetched_at": "2026-07-16T23:01:33+08:00",
    "quote": {
-    "close": 70.9,
-    "date": "2026-07-15",
-    "spread": 1.4,
+    "close": 69.7,
+    "date": "2026-07-16",
+    "spread": -1.2,
     "pe_ttm_label": "本益比為負"
    }
   },
@@ -162572,12 +162572,12 @@ window.SEED_DATA = {
      612837000
     ]
    },
-   "fetched_at": "2026-07-15T22:48:37+08:00",
+   "fetched_at": "2026-07-16T23:01:36+08:00",
    "quote": {
-    "close": 134.0,
-    "date": "2026-07-15",
-    "spread": -1.5,
-    "pe_ttm": 14.1
+    "close": 131.5,
+    "date": "2026-07-16",
+    "spread": -2.5,
+    "pe_ttm": 13.8
    }
   },
   {
@@ -163085,18 +163085,18 @@ window.SEED_DATA = {
      805136000
     ]
    },
-   "fetched_at": "2026-07-15T22:48:40+08:00",
+   "fetched_at": "2026-07-16T23:01:38+08:00",
    "quote": {
-    "close": 35.0,
-    "date": "2026-07-15",
-    "spread": 0.15,
+    "close": 33.95,
+    "date": "2026-07-16",
+    "spread": -1.05,
     "pe_ttm_label": "本益比為負"
    }
   },
   {
    "id": "6414",
    "name": "樺漢",
-   "industry": "電子工業",
+   "industry": "電腦及週邊設備業",
    "theme": "工業電腦",
    "has_contract_liab": true,
    "quarters": [
@@ -163598,12 +163598,12 @@ window.SEED_DATA = {
      17661254000
     ]
    },
-   "fetched_at": "2026-07-15T22:48:43+08:00",
+   "fetched_at": "2026-07-16T23:01:41+08:00",
    "quote": {
-    "close": 394.5,
-    "date": "2026-07-15",
-    "spread": 17.0,
-    "pe_ttm": 17.6
+    "close": 400.0,
+    "date": "2026-07-16",
+    "spread": 5.5,
+    "pe_ttm": 17.9
    }
   },
   {
@@ -164111,12 +164111,12 @@ window.SEED_DATA = {
      1714892000
     ]
    },
-   "fetched_at": "2026-07-15T22:48:47+08:00",
+   "fetched_at": "2026-07-16T23:01:44+08:00",
    "quote": {
-    "close": 64.2,
-    "date": "2026-07-15",
-    "spread": 1.7,
-    "pe_ttm": 12.3
+    "close": 63.6,
+    "date": "2026-07-16",
+    "spread": -0.6,
+    "pe_ttm": 12.2
    }
   },
   {
@@ -164624,12 +164624,12 @@ window.SEED_DATA = {
      3099991000
     ]
    },
-   "fetched_at": "2026-07-15T22:48:50+08:00",
+   "fetched_at": "2026-07-16T23:01:46+08:00",
    "quote": {
-    "close": 85.7,
-    "date": "2026-07-15",
-    "spread": 1.0,
-    "pe_ttm": 16.5
+    "close": 83.5,
+    "date": "2026-07-16",
+    "spread": -2.2,
+    "pe_ttm": 16.1
    }
   },
   {
@@ -165137,12 +165137,12 @@ window.SEED_DATA = {
      1040999000
     ]
    },
-   "fetched_at": "2026-07-15T22:48:55+08:00",
+   "fetched_at": "2026-07-16T23:01:49+08:00",
    "quote": {
-    "close": 892.0,
-    "date": "2026-07-15",
-    "spread": 22.0,
-    "pe_ttm": 86.6
+    "close": 851.0,
+    "date": "2026-07-16",
+    "spread": -41.0,
+    "pe_ttm": 82.6
    }
   },
   {
@@ -165650,11 +165650,11 @@ window.SEED_DATA = {
      5292568000
     ]
    },
-   "fetched_at": "2026-07-15T22:48:58+08:00",
+   "fetched_at": "2026-07-16T23:01:52+08:00",
    "quote": {
-    "close": 27.25,
-    "date": "2026-07-15",
-    "spread": 0.05,
+    "close": 27.1,
+    "date": "2026-07-16",
+    "spread": -0.15,
     "pe_ttm_label": "本益比為負"
    }
   },
@@ -166163,12 +166163,12 @@ window.SEED_DATA = {
      7781396000
     ]
    },
-   "fetched_at": "2026-07-15T22:49:02+08:00",
+   "fetched_at": "2026-07-16T23:01:55+08:00",
    "quote": {
-    "close": 120.5,
-    "date": "2026-07-15",
-    "spread": 5.0,
-    "pe_ttm": 12.9
+    "close": 117.5,
+    "date": "2026-07-16",
+    "spread": -3.0,
+    "pe_ttm": 12.5
    }
   },
   {
@@ -166676,12 +166676,12 @@ window.SEED_DATA = {
      76417552000
     ]
    },
-   "fetched_at": "2026-07-15T22:49:05+08:00",
+   "fetched_at": "2026-07-16T23:01:58+08:00",
    "quote": {
-    "close": 87.2,
-    "date": "2026-07-15",
-    "spread": 4.1,
-    "pe_ttm": 15.1
+    "close": 87.3,
+    "date": "2026-07-16",
+    "spread": 0.1,
+    "pe_ttm": 15.2
    }
   },
   {
@@ -167189,12 +167189,12 @@ window.SEED_DATA = {
      63683339000
     ]
    },
-   "fetched_at": "2026-07-15T22:49:08+08:00",
+   "fetched_at": "2026-07-16T23:02:01+08:00",
    "quote": {
-    "close": 72.8,
-    "date": "2026-07-15",
-    "spread": 6.6,
-    "pe_ttm": 26.1
+    "close": 80.0,
+    "date": "2026-07-16",
+    "spread": 7.2,
+    "pe_ttm": 28.7
    }
   },
   {
@@ -167702,18 +167702,18 @@ window.SEED_DATA = {
      131722000
     ]
    },
-   "fetched_at": "2026-07-15T22:49:12+08:00",
+   "fetched_at": "2026-07-16T23:02:04+08:00",
    "quote": {
-    "close": 45.05,
-    "date": "2026-07-15",
-    "spread": 0.3,
-    "pe_ttm": 39.9
+    "close": 42.6,
+    "date": "2026-07-16",
+    "spread": -2.45,
+    "pe_ttm": 37.7
    }
   },
   {
    "id": "3094",
    "name": "聯傑",
-   "industry": "半導體業",
+   "industry": "電子工業",
    "theme": "IC設計",
    "has_contract_liab": true,
    "quarters": [
@@ -168215,18 +168215,18 @@ window.SEED_DATA = {
      24418000
     ]
    },
-   "fetched_at": "2026-07-15T22:49:15+08:00",
+   "fetched_at": "2026-07-16T23:02:06+08:00",
    "quote": {
-    "close": 40.45,
-    "date": "2026-07-15",
-    "spread": 3.65,
-    "pe_ttm": 149.8
+    "close": 40.95,
+    "date": "2026-07-16",
+    "spread": 0.5,
+    "pe_ttm": 151.7
    }
   },
   {
    "id": "6443",
    "name": "元晶",
-   "industry": "電子工業",
+   "industry": "光電業",
    "theme": "太陽能",
    "has_contract_liab": true,
    "quarters": [
@@ -168728,11 +168728,11 @@ window.SEED_DATA = {
      79986000
     ]
    },
-   "fetched_at": "2026-07-15T22:49:18+08:00",
+   "fetched_at": "2026-07-16T23:02:10+08:00",
    "quote": {
-    "close": 30.4,
-    "date": "2026-07-15",
-    "spread": 0.5,
+    "close": 29.85,
+    "date": "2026-07-16",
+    "spread": -0.55,
     "pe_ttm_label": "本益比為負"
    }
   },
@@ -169241,12 +169241,12 @@ window.SEED_DATA = {
      1162478000
     ]
    },
-   "fetched_at": "2026-07-15T22:49:21+08:00",
+   "fetched_at": "2026-07-16T23:02:13+08:00",
    "quote": {
-    "close": 99.0,
-    "date": "2026-07-15",
-    "spread": 6.1,
-    "pe_ttm": 20.3
+    "close": 96.0,
+    "date": "2026-07-16",
+    "spread": -3.0,
+    "pe_ttm": 19.7
    }
   },
   {
@@ -169754,12 +169754,12 @@ window.SEED_DATA = {
      2426437000
     ]
    },
-   "fetched_at": "2026-07-15T22:49:24+08:00",
+   "fetched_at": "2026-07-16T23:02:15+08:00",
    "quote": {
-    "close": 262.5,
-    "date": "2026-07-15",
-    "spread": 2.5,
-    "pe_ttm": 12.7
+    "close": 263.0,
+    "date": "2026-07-16",
+    "spread": 0.5,
+    "pe_ttm": 12.8
    }
   },
   {
@@ -170267,18 +170267,18 @@ window.SEED_DATA = {
      4737570000
     ]
    },
-   "fetched_at": "2026-07-15T22:49:28+08:00",
+   "fetched_at": "2026-07-16T23:02:18+08:00",
    "quote": {
-    "close": 191.0,
-    "date": "2026-07-15",
-    "spread": 1.5,
-    "pe_ttm": 15.1
+    "close": 189.0,
+    "date": "2026-07-16",
+    "spread": -2.0,
+    "pe_ttm": 15.0
    }
   },
   {
    "id": "6962",
    "name": "奕力-KY",
-   "industry": "電子工業",
+   "industry": "半導體業",
    "theme": "IC設計",
    "has_contract_liab": true,
    "quarters": [
@@ -170743,12 +170743,12 @@ window.SEED_DATA = {
      1511201000
     ]
    },
-   "fetched_at": "2026-07-15T22:49:31+08:00",
+   "fetched_at": "2026-07-16T23:02:20+08:00",
    "quote": {
-    "close": 35.05,
-    "date": "2026-07-15",
-    "spread": 1.15,
-    "pe_ttm": 23.4
+    "close": 34.3,
+    "date": "2026-07-16",
+    "spread": -0.75,
+    "pe_ttm": 22.9
    }
   },
   {
@@ -171256,12 +171256,12 @@ window.SEED_DATA = {
      2718045000
     ]
    },
-   "fetched_at": "2026-07-15T22:49:35+08:00",
+   "fetched_at": "2026-07-16T23:02:23+08:00",
    "quote": {
-    "close": 352.0,
-    "date": "2026-07-15",
-    "spread": -12.0,
-    "pe_ttm": 15.9
+    "close": 358.5,
+    "date": "2026-07-16",
+    "spread": 6.5,
+    "pe_ttm": 16.2
    }
   },
   {
@@ -171769,18 +171769,18 @@ window.SEED_DATA = {
      608458000
     ]
    },
-   "fetched_at": "2026-07-15T22:49:38+08:00",
+   "fetched_at": "2026-07-16T23:02:26+08:00",
    "quote": {
-    "close": 26.45,
-    "date": "2026-07-15",
-    "spread": 0.4,
+    "close": 27.0,
+    "date": "2026-07-16",
+    "spread": 0.55,
     "pe_ttm_label": "本益比為負"
    }
   },
   {
    "id": "8104",
    "name": "錸寶",
-   "industry": "光電業",
+   "industry": "電子工業",
    "theme": "LED",
    "has_contract_liab": true,
    "quarters": [
@@ -172282,11 +172282,11 @@ window.SEED_DATA = {
      232910000
     ]
    },
-   "fetched_at": "2026-07-15T22:49:41+08:00",
+   "fetched_at": "2026-07-16T23:02:29+08:00",
    "quote": {
-    "close": 38.55,
-    "date": "2026-07-15",
-    "spread": -0.1,
+    "close": 37.1,
+    "date": "2026-07-16",
+    "spread": -1.45,
     "pe_ttm_label": "本益比為負"
    }
   },
@@ -172795,12 +172795,12 @@ window.SEED_DATA = {
      1048813000
     ]
    },
-   "fetched_at": "2026-07-15T22:49:44+08:00",
+   "fetched_at": "2026-07-16T23:02:32+08:00",
    "quote": {
-    "close": 72.8,
-    "date": "2026-07-15",
-    "spread": 0.5,
-    "pe_ttm": 24.7
+    "close": 72.0,
+    "date": "2026-07-16",
+    "spread": -0.8,
+    "pe_ttm": 24.4
    }
   },
   {
@@ -173308,11 +173308,11 @@ window.SEED_DATA = {
      245781000
     ]
    },
-   "fetched_at": "2026-07-15T22:49:47+08:00",
+   "fetched_at": "2026-07-16T23:02:34+08:00",
    "quote": {
-    "close": 69.2,
-    "date": "2026-07-15",
-    "spread": -2.0,
+    "close": 69.6,
+    "date": "2026-07-16",
+    "spread": 0.4,
     "pe_ttm_label": "本益比為負"
    }
   },
@@ -173821,11 +173821,11 @@ window.SEED_DATA = {
      1040669000
     ]
    },
-   "fetched_at": "2026-07-15T22:49:51+08:00",
+   "fetched_at": "2026-07-16T23:02:38+08:00",
    "quote": {
-    "close": 8.86,
-    "date": "2026-07-15",
-    "spread": 0.12,
+    "close": 9.06,
+    "date": "2026-07-16",
+    "spread": 0.2,
     "pe_ttm_label": "本益比為負"
    }
   },
@@ -174334,12 +174334,12 @@ window.SEED_DATA = {
      284710000
     ]
    },
-   "fetched_at": "2026-07-15T22:49:55+08:00",
+   "fetched_at": "2026-07-16T23:02:41+08:00",
    "quote": {
-    "close": 236.5,
-    "date": "2026-07-15",
-    "spread": 9.5,
-    "pe_ttm": 37.8
+    "close": 229.5,
+    "date": "2026-07-16",
+    "spread": -7.0,
+    "pe_ttm": 36.7
    }
   },
   {
@@ -174847,12 +174847,12 @@ window.SEED_DATA = {
      6839306000
     ]
    },
-   "fetched_at": "2026-07-15T22:49:58+08:00",
+   "fetched_at": "2026-07-16T23:02:44+08:00",
    "quote": {
-    "close": 66.8,
-    "date": "2026-07-15",
-    "spread": -0.1,
-    "pe_ttm": 14.5
+    "close": 67.8,
+    "date": "2026-07-16",
+    "spread": 1.0,
+    "pe_ttm": 14.7
    }
   },
   {
@@ -175360,18 +175360,18 @@ window.SEED_DATA = {
      224640000
     ]
    },
-   "fetched_at": "2026-07-15T22:50:00+08:00",
+   "fetched_at": "2026-07-16T23:02:47+08:00",
    "quote": {
-    "close": 101.5,
-    "date": "2026-07-15",
-    "spread": 2.2,
-    "pe_ttm": 7.9
+    "close": 103.0,
+    "date": "2026-07-16",
+    "spread": 1.5,
+    "pe_ttm": 8.0
    }
   },
   {
    "id": "3059",
    "name": "華晶科",
-   "industry": "電子工業",
+   "industry": "光電業",
    "theme": "影像感測",
    "has_contract_liab": true,
    "quarters": [
@@ -175873,18 +175873,18 @@ window.SEED_DATA = {
      795387000
     ]
    },
-   "fetched_at": "2026-07-15T22:50:04+08:00",
+   "fetched_at": "2026-07-16T23:02:50+08:00",
    "quote": {
-    "close": 45.5,
-    "date": "2026-07-15",
-    "spread": 0.85,
-    "pe_ttm": 36.7
+    "close": 44.25,
+    "date": "2026-07-16",
+    "spread": -1.25,
+    "pe_ttm": 35.7
    }
   },
   {
    "id": "4976",
    "name": "佳凌",
-   "industry": "光電業",
+   "industry": "電子工業",
    "theme": "光學鏡頭",
    "has_contract_liab": true,
    "quarters": [
@@ -176386,18 +176386,18 @@ window.SEED_DATA = {
      95702000
     ]
    },
-   "fetched_at": "2026-07-15T22:50:08+08:00",
+   "fetched_at": "2026-07-16T23:02:53+08:00",
    "quote": {
-    "close": 35.45,
-    "date": "2026-07-15",
-    "spread": -0.65,
+    "close": 35.3,
+    "date": "2026-07-16",
+    "spread": -0.15,
     "pe_ttm_label": "本益比為負"
    }
   },
   {
    "id": "6405",
    "name": "悅城",
-   "industry": "電子工業",
+   "industry": "光電業",
    "theme": "光電業",
    "has_contract_liab": false,
    "quarters": [
@@ -176899,11 +176899,11 @@ window.SEED_DATA = {
      6000
     ]
    },
-   "fetched_at": "2026-07-15T22:50:11+08:00",
+   "fetched_at": "2026-07-16T23:02:56+08:00",
    "quote": {
-    "close": 50.0,
-    "date": "2026-07-15",
-    "spread": -0.7,
+    "close": 48.4,
+    "date": "2026-07-16",
+    "spread": -1.6,
     "pe_ttm_label": "本益比為負"
    }
   },
@@ -177412,12 +177412,12 @@ window.SEED_DATA = {
      514154000
     ]
    },
-   "fetched_at": "2026-07-15T22:50:15+08:00",
+   "fetched_at": "2026-07-16T23:02:59+08:00",
    "quote": {
-    "close": 156.0,
-    "date": "2026-07-15",
-    "spread": -1.5,
-    "pe_ttm": 21.7
+    "close": 146.0,
+    "date": "2026-07-16",
+    "spread": -10.0,
+    "pe_ttm": 20.3
    }
   },
   {
@@ -177925,12 +177925,12 @@ window.SEED_DATA = {
      7270836000
     ]
    },
-   "fetched_at": "2026-07-15T22:50:19+08:00",
+   "fetched_at": "2026-07-16T23:03:01+08:00",
    "quote": {
-    "close": 89.4,
-    "date": "2026-07-15",
-    "spread": 3.7,
-    "pe_ttm": 22.2
+    "close": 86.6,
+    "date": "2026-07-16",
+    "spread": -2.8,
+    "pe_ttm": 21.5
    }
   },
   {
@@ -178438,12 +178438,12 @@ window.SEED_DATA = {
      580287000
     ]
    },
-   "fetched_at": "2026-07-15T22:50:21+08:00",
+   "fetched_at": "2026-07-16T23:03:04+08:00",
    "quote": {
-    "close": 144.0,
-    "date": "2026-07-15",
-    "spread": 1.5,
-    "pe_ttm": 74.6
+    "close": 147.0,
+    "date": "2026-07-16",
+    "spread": 3.0,
+    "pe_ttm": 76.2
    }
   },
   {
@@ -178951,11 +178951,11 @@ window.SEED_DATA = {
      508943000
     ]
    },
-   "fetched_at": "2026-07-15T22:50:24+08:00",
+   "fetched_at": "2026-07-16T23:03:07+08:00",
    "quote": {
-    "close": 48.1,
-    "date": "2026-07-15",
-    "spread": -0.85,
+    "close": 48.0,
+    "date": "2026-07-16",
+    "spread": -0.1,
     "pe_ttm_label": "本益比為負"
    }
   },
@@ -179464,18 +179464,18 @@ window.SEED_DATA = {
      96393000
     ]
    },
-   "fetched_at": "2026-07-15T22:50:27+08:00",
+   "fetched_at": "2026-07-16T23:03:13+08:00",
    "quote": {
-    "close": 40.3,
-    "date": "2026-07-15",
-    "spread": 1.0,
+    "close": 38.95,
+    "date": "2026-07-16",
+    "spread": -1.35,
     "pe_ttm_label": "本益比為負"
    }
   },
   {
    "id": "3605",
    "name": "宏致",
-   "industry": "電子零組件業",
+   "industry": "電子工業",
    "theme": "連接器/線材",
    "has_contract_liab": false,
    "quarters": [
@@ -179977,12 +179977,12 @@ window.SEED_DATA = {
      1117512000
     ]
    },
-   "fetched_at": "2026-07-15T22:50:31+08:00",
+   "fetched_at": "2026-07-16T23:03:15+08:00",
    "quote": {
-    "close": 85.8,
-    "date": "2026-07-15",
-    "spread": -0.6,
-    "pe_ttm": 23.5
+    "close": 84.9,
+    "date": "2026-07-16",
+    "spread": -0.9,
+    "pe_ttm": 23.3
    }
   },
   {
@@ -180490,12 +180490,12 @@ window.SEED_DATA = {
      4541485000
     ]
    },
-   "fetched_at": "2026-07-15T22:50:34+08:00",
+   "fetched_at": "2026-07-16T23:03:18+08:00",
    "quote": {
-    "close": 26.4,
-    "date": "2026-07-15",
-    "spread": 0.55,
-    "pe_ttm": 7.2
+    "close": 26.85,
+    "date": "2026-07-16",
+    "spread": 0.45,
+    "pe_ttm": 7.3
    }
   },
   {
@@ -181003,11 +181003,11 @@ window.SEED_DATA = {
      208221000
     ]
    },
-   "fetched_at": "2026-07-15T22:50:37+08:00",
+   "fetched_at": "2026-07-16T23:03:21+08:00",
    "quote": {
     "close": 17.7,
-    "date": "2026-07-15",
-    "spread": 0.2,
+    "date": "2026-07-16",
+    "spread": 0.0,
     "pe_ttm": 42.1
    }
   },
@@ -181516,12 +181516,12 @@ window.SEED_DATA = {
      2503589000
     ]
    },
-   "fetched_at": "2026-07-15T22:50:41+08:00",
+   "fetched_at": "2026-07-16T23:03:24+08:00",
    "quote": {
-    "close": 46.9,
-    "date": "2026-07-15",
-    "spread": 0.9,
-    "pe_ttm": 6.2
+    "close": 48.0,
+    "date": "2026-07-16",
+    "spread": 1.1,
+    "pe_ttm": 6.4
    }
   },
   {
@@ -182029,18 +182029,18 @@ window.SEED_DATA = {
      9824825000
     ]
    },
-   "fetched_at": "2026-07-15T22:50:44+08:00",
+   "fetched_at": "2026-07-16T23:03:28+08:00",
    "quote": {
-    "close": 266.0,
-    "date": "2026-07-15",
-    "spread": 3.5,
-    "pe_ttm": 25.1
+    "close": 267.5,
+    "date": "2026-07-16",
+    "spread": 1.5,
+    "pe_ttm": 25.2
    }
   },
   {
    "id": "8261",
    "name": "富鼎",
-   "industry": "半導體業",
+   "industry": "電子工業",
    "theme": "功率半導體",
    "has_contract_liab": false,
    "quarters": [
@@ -182542,12 +182542,12 @@ window.SEED_DATA = {
      296036000
     ]
    },
-   "fetched_at": "2026-07-15T22:50:47+08:00",
+   "fetched_at": "2026-07-16T23:03:31+08:00",
    "quote": {
-    "close": 304.0,
-    "date": "2026-07-15",
-    "spread": -3.0,
-    "pe_ttm": 52.0
+    "close": 278.5,
+    "date": "2026-07-16",
+    "spread": -25.5,
+    "pe_ttm": 47.6
    }
   },
   {
@@ -183055,12 +183055,12 @@ window.SEED_DATA = {
      3414007000
     ]
    },
-   "fetched_at": "2026-07-15T22:50:50+08:00",
+   "fetched_at": "2026-07-16T23:03:35+08:00",
    "quote": {
-    "close": 34.1,
-    "date": "2026-07-15",
-    "spread": -0.1,
-    "pe_ttm": 11.4
+    "close": 34.55,
+    "date": "2026-07-16",
+    "spread": 0.45,
+    "pe_ttm": 11.6
    }
   },
   {
@@ -183568,18 +183568,18 @@ window.SEED_DATA = {
      197699000
     ]
    },
-   "fetched_at": "2026-07-15T22:50:54+08:00",
+   "fetched_at": "2026-07-16T23:03:39+08:00",
    "quote": {
-    "close": 51.0,
-    "date": "2026-07-15",
-    "spread": -4.1,
-    "pe_ttm": 55.4
+    "close": 48.3,
+    "date": "2026-07-16",
+    "spread": -2.7,
+    "pe_ttm": 52.5
    }
   },
   {
    "id": "2328",
    "name": "廣宇",
-   "industry": "電子零組件業",
+   "industry": "電子工業",
    "theme": "連接器/線材",
    "has_contract_liab": true,
    "quarters": [
@@ -184081,12 +184081,12 @@ window.SEED_DATA = {
      1958965000
     ]
    },
-   "fetched_at": "2026-07-15T22:50:57+08:00",
+   "fetched_at": "2026-07-16T23:03:42+08:00",
    "quote": {
-    "close": 50.1,
-    "date": "2026-07-15",
-    "spread": 2.65,
-    "pe_ttm": 51.1
+    "close": 49.35,
+    "date": "2026-07-16",
+    "spread": -0.75,
+    "pe_ttm": 50.4
    }
   },
   {
@@ -184594,12 +184594,12 @@ window.SEED_DATA = {
      6289319000
     ]
    },
-   "fetched_at": "2026-07-15T22:51:00+08:00",
+   "fetched_at": "2026-07-16T23:03:48+08:00",
    "quote": {
-    "close": 67.5,
-    "date": "2026-07-15",
-    "spread": 0.1,
-    "pe_ttm": 12.5
+    "close": 66.9,
+    "date": "2026-07-16",
+    "spread": -0.6,
+    "pe_ttm": 12.4
    }
   },
   {
@@ -185107,12 +185107,12 @@ window.SEED_DATA = {
      131807000
     ]
    },
-   "fetched_at": "2026-07-14T21:29:09+08:00",
+   "fetched_at": "2026-07-16T23:03:51+08:00",
    "quote": {
-    "close": 133.5,
-    "date": "2026-07-14",
-    "spread": -6.5,
-    "pe_ttm": 112.2
+    "close": 138.5,
+    "date": "2026-07-16",
+    "spread": 0.5,
+    "pe_ttm": 116.4
    }
   },
   {
