@@ -1,6 +1,6 @@
 // 由 etl/build_data.py 自動產生，請勿手動編輯。
 window.SEED_DATA = {
- "updated_at": "2026-08-18T14:41:01+08:00",
+ "updated_at": "2026-08-18T15:33:19+08:00",
  "source": "FinMind",
  "config": {
   "thresholds": {
