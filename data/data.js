@@ -1,6 +1,6 @@
 // 由 etl/build_data.py 自動產生，請勿手動編輯。
 window.SEED_DATA = {
- "updated_at": "2026-10-07T02:50:20+08:00",
+ "updated_at": "2026-10-07T20:37:02+08:00",
  "source": "FinMind",
  "config": {
   "thresholds": {
@@ -3038,8 +3038,8 @@ window.SEED_DATA = {
    "fetched_at": "2026-10-07T02:44:25+08:00",
    "quote": {
     "close": 2585.0,
-    "date": "2026-10-06",
-    "spread": 10.0,
+    "date": "2026-10-07",
+    "spread": 0.0,
     "pe_ttm": 30.0
    }
   },
@@ -3550,10 +3550,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:44:28+08:00",
    "quote": {
-    "close": 147.5,
-    "date": "2026-10-06",
-    "spread": -5.0,
-    "pe_ttm": 22.1
+    "close": 148.5,
+    "date": "2026-10-07",
+    "spread": 1.0,
+    "pe_ttm": 22.2
    }
   },
   {
@@ -4063,10 +4063,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:44:31+08:00",
    "quote": {
-    "close": 74.3,
-    "date": "2026-10-06",
-    "spread": -1.5,
-    "pe_ttm": 22.4
+    "close": 72.6,
+    "date": "2026-10-07",
+    "spread": -1.7,
+    "pe_ttm": 21.9
    }
   },
   {
@@ -4576,10 +4576,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:44:33+08:00",
    "quote": {
-    "close": 4920.0,
-    "date": "2026-10-06",
-    "spread": -245.0,
-    "pe_ttm": 81.1
+    "close": 4835.0,
+    "date": "2026-10-07",
+    "spread": -85.0,
+    "pe_ttm": 79.7
    }
   },
   {
@@ -5089,10 +5089,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:44:36+08:00",
    "quote": {
-    "close": 537.0,
-    "date": "2026-10-06",
-    "spread": -6.0,
-    "pe_ttm": 18.7
+    "close": 529.0,
+    "date": "2026-10-07",
+    "spread": -8.0,
+    "pe_ttm": 18.5
    }
   },
   {
@@ -5602,10 +5602,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:44:39+08:00",
    "quote": {
-    "close": 4180.0,
-    "date": "2026-10-06",
-    "spread": 230.0,
-    "pe_ttm": 57.9
+    "close": 4190.0,
+    "date": "2026-10-07",
+    "spread": 10.0,
+    "pe_ttm": 58.0
    }
   },
   {
@@ -6115,10 +6115,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:44:42+08:00",
    "quote": {
-    "close": 8375.0,
-    "date": "2026-10-06",
-    "spread": -225.0,
-    "pe_ttm": 214.7
+    "close": 8460.0,
+    "date": "2026-10-07",
+    "spread": 85.0,
+    "pe_ttm": 216.9
    }
   },
   {
@@ -6628,10 +6628,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:44:44+08:00",
    "quote": {
-    "close": 563.0,
-    "date": "2026-10-06",
-    "spread": -11.0,
-    "pe_ttm": 17.7
+    "close": 568.0,
+    "date": "2026-10-07",
+    "spread": 5.0,
+    "pe_ttm": 17.9
    }
   },
   {
@@ -7141,10 +7141,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:44:47+08:00",
    "quote": {
-    "close": 755.0,
-    "date": "2026-10-06",
-    "spread": 0.0,
-    "pe_ttm": 27.2
+    "close": 741.0,
+    "date": "2026-10-07",
+    "spread": -14.0,
+    "pe_ttm": 26.7
    }
   },
   {
@@ -7654,10 +7654,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:44:50+08:00",
    "quote": {
-    "close": 1470.0,
-    "date": "2026-10-06",
-    "spread": -5.0,
-    "pe_ttm": 15.7
+    "close": 1455.0,
+    "date": "2026-10-07",
+    "spread": -15.0,
+    "pe_ttm": 15.6
    }
   },
   {
@@ -8167,10 +8167,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:44:53+08:00",
    "quote": {
-    "close": 210.5,
-    "date": "2026-10-06",
-    "spread": -5.5,
-    "pe_ttm": 82.9
+    "close": 209.0,
+    "date": "2026-10-07",
+    "spread": -1.5,
+    "pe_ttm": 82.3
    }
   },
   {
@@ -8680,9 +8680,9 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:44:55+08:00",
    "quote": {
-    "close": 345.0,
-    "date": "2026-10-06",
-    "spread": 9.0,
+    "close": 347.0,
+    "date": "2026-10-07",
+    "spread": 2.0,
     "pe_ttm_label": "本益比為負"
    }
   },
@@ -9193,10 +9193,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:44:58+08:00",
    "quote": {
-    "close": 508.0,
-    "date": "2026-10-06",
-    "spread": 0.0,
-    "pe_ttm": 529.2
+    "close": 498.0,
+    "date": "2026-10-07",
+    "spread": -10.0,
+    "pe_ttm": 518.8
    }
   },
   {
@@ -9706,10 +9706,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:45:01+08:00",
    "quote": {
-    "close": 177.5,
-    "date": "2026-10-06",
-    "spread": -3.5,
-    "pe_ttm": 19.6
+    "close": 179.5,
+    "date": "2026-10-07",
+    "spread": 2.0,
+    "pe_ttm": 19.8
    }
   },
   {
@@ -10219,10 +10219,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:45:06+08:00",
    "quote": {
-    "close": 525.0,
-    "date": "2026-10-06",
-    "spread": -5.0,
-    "pe_ttm": 19.3
+    "close": 514.0,
+    "date": "2026-10-07",
+    "spread": -11.0,
+    "pe_ttm": 18.9
    }
   },
   {
@@ -10732,10 +10732,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:45:09+08:00",
    "quote": {
-    "close": 2090.0,
-    "date": "2026-10-06",
-    "spread": -10.0,
-    "pe_ttm": 9.5
+    "close": 2060.0,
+    "date": "2026-10-07",
+    "spread": -30.0,
+    "pe_ttm": 9.4
    }
   },
   {
@@ -11245,9 +11245,9 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:45:13+08:00",
    "quote": {
-    "close": 267.0,
-    "date": "2026-10-06",
-    "spread": -2.5,
+    "close": 265.0,
+    "date": "2026-10-07",
+    "spread": -2.0,
     "pe_ttm": 4.1
    }
   },
@@ -11758,9 +11758,9 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:45:16+08:00",
    "quote": {
-    "close": 1265.0,
-    "date": "2026-10-06",
-    "spread": -30.0,
+    "close": 1260.0,
+    "date": "2026-10-07",
+    "spread": -5.0,
     "pe_ttm": 6.9
    }
   },
@@ -12271,10 +12271,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:45:18+08:00",
    "quote": {
-    "close": 625.0,
-    "date": "2026-10-06",
-    "spread": -1.0,
-    "pe_ttm": 42.0
+    "close": 647.0,
+    "date": "2026-10-07",
+    "spread": 22.0,
+    "pe_ttm": 43.5
    }
   },
   {
@@ -12784,10 +12784,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:45:21+08:00",
    "quote": {
-    "close": 204.5,
-    "date": "2026-10-06",
-    "spread": -17.5,
-    "pe_ttm": 35.4
+    "close": 210.5,
+    "date": "2026-10-07",
+    "spread": 6.0,
+    "pe_ttm": 36.4
    }
   },
   {
@@ -13297,10 +13297,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:45:24+08:00",
    "quote": {
-    "close": 389.5,
-    "date": "2026-10-06",
-    "spread": 21.0,
-    "pe_ttm": 43.8
+    "close": 428.0,
+    "date": "2026-10-07",
+    "spread": 38.5,
+    "pe_ttm": 48.1
    }
   },
   {
@@ -13810,10 +13810,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:45:27+08:00",
    "quote": {
-    "close": 80.4,
-    "date": "2026-10-06",
-    "spread": -6.0,
-    "pe_ttm": 57.4
+    "close": 87.1,
+    "date": "2026-10-07",
+    "spread": 6.7,
+    "pe_ttm": 62.2
    }
   },
   {
@@ -14323,10 +14323,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:45:30+08:00",
    "quote": {
-    "close": 5995.0,
-    "date": "2026-10-06",
-    "spread": 295.0,
-    "pe_ttm": 93.6
+    "close": 5950.0,
+    "date": "2026-10-07",
+    "spread": -45.0,
+    "pe_ttm": 92.9
    }
   },
   {
@@ -14836,10 +14836,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:45:32+08:00",
    "quote": {
-    "close": 1755.0,
-    "date": "2026-10-06",
-    "spread": -25.0,
-    "pe_ttm": 89.0
+    "close": 1720.0,
+    "date": "2026-10-07",
+    "spread": -35.0,
+    "pe_ttm": 87.2
    }
   },
   {
@@ -15349,10 +15349,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:45:35+08:00",
    "quote": {
-    "close": 551.0,
-    "date": "2026-10-06",
-    "spread": -19.0,
-    "pe_ttm": 82.0
+    "close": 549.0,
+    "date": "2026-10-07",
+    "spread": -2.0,
+    "pe_ttm": 81.7
    }
   },
   {
@@ -15862,10 +15862,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:45:38+08:00",
    "quote": {
-    "close": 787.0,
-    "date": "2026-10-06",
-    "spread": 36.0,
-    "pe_ttm": 121.8
+    "close": 796.0,
+    "date": "2026-10-07",
+    "spread": 9.0,
+    "pe_ttm": 123.2
    }
   },
   {
@@ -16375,10 +16375,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:45:41+08:00",
    "quote": {
-    "close": 46.8,
-    "date": "2026-10-06",
-    "spread": 0.45,
-    "pe_ttm": 11.2
+    "close": 46.35,
+    "date": "2026-10-07",
+    "spread": -0.45,
+    "pe_ttm": 11.1
    }
   },
   {
@@ -16888,10 +16888,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:45:43+08:00",
    "quote": {
-    "close": 1310.0,
-    "date": "2026-10-06",
-    "spread": -15.0,
-    "pe_ttm": 84.6
+    "close": 1305.0,
+    "date": "2026-10-07",
+    "spread": -5.0,
+    "pe_ttm": 84.2
    }
   },
   {
@@ -17401,10 +17401,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:45:46+08:00",
    "quote": {
-    "close": 1505.0,
-    "date": "2026-10-06",
-    "spread": 10.0,
-    "pe_ttm": 176.9
+    "close": 1480.0,
+    "date": "2026-10-07",
+    "spread": -25.0,
+    "pe_ttm": 173.9
    }
   },
   {
@@ -17914,10 +17914,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:45:49+08:00",
    "quote": {
-    "close": 1070.0,
-    "date": "2026-10-06",
-    "spread": -25.0,
-    "pe_ttm": 181.4
+    "close": 1100.0,
+    "date": "2026-10-07",
+    "spread": 30.0,
+    "pe_ttm": 186.4
    }
   },
   {
@@ -18427,10 +18427,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:45:52+08:00",
    "quote": {
-    "close": 1260.0,
-    "date": "2026-10-06",
-    "spread": 45.0,
-    "pe_ttm": 44.2
+    "close": 1245.0,
+    "date": "2026-10-07",
+    "spread": -15.0,
+    "pe_ttm": 43.7
    }
   },
   {
@@ -18940,10 +18940,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:45:55+08:00",
    "quote": {
-    "close": 579.0,
-    "date": "2026-10-06",
-    "spread": 22.0,
-    "pe_ttm": 24.8
+    "close": 582.0,
+    "date": "2026-10-07",
+    "spread": 3.0,
+    "pe_ttm": 24.9
    }
   },
   {
@@ -19453,10 +19453,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:45:58+08:00",
    "quote": {
-    "close": 252.0,
-    "date": "2026-10-06",
-    "spread": 3.5,
-    "pe_ttm": 40.6
+    "close": 246.0,
+    "date": "2026-10-07",
+    "spread": -6.0,
+    "pe_ttm": 39.6
    }
   },
   {
@@ -19966,10 +19966,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:46:01+08:00",
    "quote": {
-    "close": 3685.0,
-    "date": "2026-10-06",
-    "spread": 100.0,
-    "pe_ttm": 49.0
+    "close": 3545.0,
+    "date": "2026-10-07",
+    "spread": -140.0,
+    "pe_ttm": 47.2
    }
   },
   {
@@ -20479,10 +20479,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:46:04+08:00",
    "quote": {
-    "close": 1530.0,
-    "date": "2026-10-06",
-    "spread": -20.0,
-    "pe_ttm": 34.9
+    "close": 1525.0,
+    "date": "2026-10-07",
+    "spread": -5.0,
+    "pe_ttm": 34.8
    }
   },
   {
@@ -20992,10 +20992,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:46:07+08:00",
    "quote": {
-    "close": 7080.0,
-    "date": "2026-10-06",
-    "spread": -125.0,
-    "pe_ttm": 158.6
+    "close": 6805.0,
+    "date": "2026-10-07",
+    "spread": -275.0,
+    "pe_ttm": 152.4
    }
   },
   {
@@ -21505,9 +21505,9 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:46:10+08:00",
    "quote": {
-    "close": 114.0,
-    "date": "2026-10-06",
-    "spread": 1.0,
+    "close": 115.5,
+    "date": "2026-10-07",
+    "spread": 1.5,
     "pe_ttm_label": "本益比為負"
    }
   },
@@ -22018,10 +22018,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:46:12+08:00",
    "quote": {
-    "close": 568.0,
-    "date": "2026-10-06",
-    "spread": -30.0,
-    "pe_ttm": 92.4
+    "close": 579.0,
+    "date": "2026-10-07",
+    "spread": 11.0,
+    "pe_ttm": 94.1
    }
   },
   {
@@ -22531,10 +22531,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:46:15+08:00",
    "quote": {
-    "close": 173.5,
-    "date": "2026-10-06",
-    "spread": -1.5,
-    "pe_ttm": 50.3
+    "close": 175.0,
+    "date": "2026-10-07",
+    "spread": 1.5,
+    "pe_ttm": 50.7
    }
   },
   {
@@ -23044,10 +23044,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:46:18+08:00",
    "quote": {
-    "close": 2920.0,
-    "date": "2026-10-06",
-    "spread": -80.0,
-    "pe_ttm": 260.5
+    "close": 3140.0,
+    "date": "2026-10-07",
+    "spread": 220.0,
+    "pe_ttm": 280.1
    }
   },
   {
@@ -23557,10 +23557,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:46:21+08:00",
    "quote": {
-    "close": 531.0,
-    "date": "2026-10-06",
-    "spread": -17.0,
-    "pe_ttm": 107.9
+    "close": 535.0,
+    "date": "2026-10-07",
+    "spread": 4.0,
+    "pe_ttm": 108.7
    }
   },
   {
@@ -24070,10 +24070,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:46:24+08:00",
    "quote": {
-    "close": 2325.0,
-    "date": "2026-10-06",
-    "spread": -160.0,
-    "pe_ttm": 42.6
+    "close": 2315.0,
+    "date": "2026-10-07",
+    "spread": -10.0,
+    "pe_ttm": 42.5
    }
   },
   {
@@ -24583,10 +24583,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:46:27+08:00",
    "quote": {
-    "close": 317.0,
-    "date": "2026-10-06",
-    "spread": -5.5,
-    "pe_ttm": 23.7
+    "close": 323.0,
+    "date": "2026-10-07",
+    "spread": 6.0,
+    "pe_ttm": 24.2
    }
   },
   {
@@ -25096,10 +25096,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:46:30+08:00",
    "quote": {
-    "close": 41.15,
-    "date": "2026-10-06",
+    "close": 40.75,
+    "date": "2026-10-07",
     "spread": -0.4,
-    "pe_ttm": 5.3
+    "pe_ttm": 5.2
    }
   },
   {
@@ -25609,10 +25609,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:46:32+08:00",
    "quote": {
-    "close": 2050.0,
-    "date": "2026-10-06",
-    "spread": 45.0,
-    "pe_ttm": 65.2
+    "close": 1990.0,
+    "date": "2026-10-07",
+    "spread": -60.0,
+    "pe_ttm": 63.3
    }
   },
   {
@@ -26122,10 +26122,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:46:35+08:00",
    "quote": {
-    "close": 299.0,
-    "date": "2026-10-06",
+    "close": 300.0,
+    "date": "2026-10-07",
     "spread": 1.0,
-    "pe_ttm": 35.0
+    "pe_ttm": 35.1
    }
   },
   {
@@ -26635,10 +26635,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:46:38+08:00",
    "quote": {
-    "close": 54.1,
-    "date": "2026-10-06",
-    "spread": 0.3,
-    "pe_ttm": 21.3
+    "close": 52.6,
+    "date": "2026-10-07",
+    "spread": -1.5,
+    "pe_ttm": 20.7
    }
   },
   {
@@ -27148,10 +27148,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:46:41+08:00",
    "quote": {
-    "close": 256.0,
-    "date": "2026-10-06",
-    "spread": 2.0,
-    "pe_ttm": 16.8
+    "close": 252.0,
+    "date": "2026-10-07",
+    "spread": -4.0,
+    "pe_ttm": 16.6
    }
   },
   {
@@ -27661,10 +27661,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:46:43+08:00",
    "quote": {
-    "close": 2290.0,
-    "date": "2026-10-06",
-    "spread": 140.0,
-    "pe_ttm": 7.3
+    "close": 2240.0,
+    "date": "2026-10-07",
+    "spread": -50.0,
+    "pe_ttm": 7.1
    }
   },
   {
@@ -28174,10 +28174,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:46:46+08:00",
    "quote": {
-    "close": 333.5,
-    "date": "2026-10-06",
-    "spread": 2.5,
-    "pe_ttm": 14.5
+    "close": 335.0,
+    "date": "2026-10-07",
+    "spread": 1.5,
+    "pe_ttm": 14.6
    }
   },
   {
@@ -28687,10 +28687,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:46:49+08:00",
    "quote": {
-    "close": 189.5,
-    "date": "2026-10-06",
-    "spread": 0.0,
-    "pe_ttm": 14.9
+    "close": 185.0,
+    "date": "2026-10-07",
+    "spread": -4.5,
+    "pe_ttm": 14.5
    }
   },
   {
@@ -29201,8 +29201,8 @@ window.SEED_DATA = {
    "fetched_at": "2026-10-07T02:46:52+08:00",
    "quote": {
     "close": 90.0,
-    "date": "2026-10-06",
-    "spread": 1.3,
+    "date": "2026-10-07",
+    "spread": 0.0,
     "pe_ttm": 15.2
    }
   },
@@ -29713,10 +29713,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:46:55+08:00",
    "quote": {
-    "close": 380.0,
-    "date": "2026-10-06",
-    "spread": -8.5,
-    "pe_ttm": 14.2
+    "close": 365.5,
+    "date": "2026-10-07",
+    "spread": -14.5,
+    "pe_ttm": 13.7
    }
   },
   {
@@ -30226,10 +30226,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:46:59+08:00",
    "quote": {
-    "close": 1000.0,
-    "date": "2026-10-06",
-    "spread": 5.0,
-    "pe_ttm": 14.6
+    "close": 989.0,
+    "date": "2026-10-07",
+    "spread": -11.0,
+    "pe_ttm": 14.5
    }
   },
   {
@@ -30739,10 +30739,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:47:02+08:00",
    "quote": {
-    "close": 58.6,
-    "date": "2026-10-06",
-    "spread": 0.3,
-    "pe_ttm": 18.9
+    "close": 58.1,
+    "date": "2026-10-07",
+    "spread": -0.5,
+    "pe_ttm": 18.7
    }
   },
   {
@@ -31252,10 +31252,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:47:05+08:00",
    "quote": {
-    "close": 563.0,
-    "date": "2026-10-06",
-    "spread": 2.0,
-    "pe_ttm": 37.9
+    "close": 567.0,
+    "date": "2026-10-07",
+    "spread": 4.0,
+    "pe_ttm": 38.1
    }
   },
   {
@@ -31765,10 +31765,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:47:07+08:00",
    "quote": {
-    "close": 3055.0,
-    "date": "2026-10-06",
-    "spread": -50.0,
-    "pe_ttm": 71.8
+    "close": 3020.0,
+    "date": "2026-10-07",
+    "spread": -35.0,
+    "pe_ttm": 71.0
    }
   },
   {
@@ -32278,10 +32278,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:47:10+08:00",
    "quote": {
-    "close": 5670.0,
-    "date": "2026-10-06",
-    "spread": 150.0,
-    "pe_ttm": 120.1
+    "close": 5530.0,
+    "date": "2026-10-07",
+    "spread": -140.0,
+    "pe_ttm": 117.1
    }
   },
   {
@@ -32791,10 +32791,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:47:13+08:00",
    "quote": {
-    "close": 2350.0,
-    "date": "2026-10-06",
-    "spread": 25.0,
-    "pe_ttm": 59.8
+    "close": 2400.0,
+    "date": "2026-10-07",
+    "spread": 50.0,
+    "pe_ttm": 61.1
    }
   },
   {
@@ -33304,10 +33304,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:47:16+08:00",
    "quote": {
-    "close": 51.1,
-    "date": "2026-10-06",
-    "spread": -1.2,
-    "pe_ttm": 65.5
+    "close": 52.5,
+    "date": "2026-10-07",
+    "spread": 1.4,
+    "pe_ttm": 67.3
    }
   },
   {
@@ -33817,10 +33817,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:47:19+08:00",
    "quote": {
-    "close": 574.0,
-    "date": "2026-10-06",
-    "spread": -2.0,
-    "pe_ttm": 63.1
+    "close": 595.0,
+    "date": "2026-10-07",
+    "spread": 21.0,
+    "pe_ttm": 65.4
    }
   },
   {
@@ -34330,10 +34330,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:47:21+08:00",
    "quote": {
-    "close": 37.45,
-    "date": "2026-10-06",
-    "spread": -1.6,
-    "pe_ttm": 156.0
+    "close": 37.95,
+    "date": "2026-10-07",
+    "spread": 0.5,
+    "pe_ttm": 158.1
    }
   },
   {
@@ -34843,10 +34843,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:47:24+08:00",
    "quote": {
-    "close": 310.5,
-    "date": "2026-10-06",
-    "spread": 13.0,
-    "pe_ttm": 30.7
+    "close": 307.5,
+    "date": "2026-10-07",
+    "spread": -3.0,
+    "pe_ttm": 30.4
    }
   },
   {
@@ -35356,10 +35356,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:47:27+08:00",
    "quote": {
-    "close": 744.0,
-    "date": "2026-10-06",
-    "spread": 2.0,
-    "pe_ttm": 53.4
+    "close": 732.0,
+    "date": "2026-10-07",
+    "spread": -12.0,
+    "pe_ttm": 52.6
    }
   },
   {
@@ -35869,10 +35869,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:47:30+08:00",
    "quote": {
-    "close": 119.5,
-    "date": "2026-10-06",
-    "spread": -2.0,
-    "pe_ttm": 28.5
+    "close": 118.0,
+    "date": "2026-10-07",
+    "spread": -1.5,
+    "pe_ttm": 28.2
    }
   },
   {
@@ -36382,10 +36382,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:47:33+08:00",
    "quote": {
-    "close": 293.0,
-    "date": "2026-10-06",
-    "spread": 7.0,
-    "pe_ttm": 47.3
+    "close": 314.0,
+    "date": "2026-10-07",
+    "spread": 21.0,
+    "pe_ttm": 50.6
    }
   },
   {
@@ -36895,10 +36895,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:47:36+08:00",
    "quote": {
-    "close": 298.0,
-    "date": "2026-10-06",
-    "spread": 4.0,
-    "pe_ttm": 39.1
+    "close": 299.5,
+    "date": "2026-10-07",
+    "spread": 1.5,
+    "pe_ttm": 39.3
    }
   },
   {
@@ -37408,9 +37408,9 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:47:38+08:00",
    "quote": {
-    "close": 6855.0,
-    "date": "2026-10-06",
-    "spread": 125.0,
+    "close": 6845.0,
+    "date": "2026-10-07",
+    "spread": -10.0,
     "pe_ttm": 36.9
    }
   },
@@ -37921,10 +37921,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:47:41+08:00",
    "quote": {
-    "close": 592.0,
-    "date": "2026-10-06",
-    "spread": -23.0,
-    "pe_ttm": 69.6
+    "close": 588.0,
+    "date": "2026-10-07",
+    "spread": -4.0,
+    "pe_ttm": 69.1
    }
   },
   {
@@ -38434,10 +38434,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:47:44+08:00",
    "quote": {
-    "close": 567.0,
-    "date": "2026-10-06",
-    "spread": -39.0,
-    "pe_ttm": 137.6
+    "close": 559.0,
+    "date": "2026-10-07",
+    "spread": -8.0,
+    "pe_ttm": 135.7
    }
   },
   {
@@ -38947,10 +38947,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:47:47+08:00",
    "quote": {
-    "close": 2050.0,
-    "date": "2026-10-06",
-    "spread": -25.0,
-    "pe_ttm": 32.2
+    "close": 2015.0,
+    "date": "2026-10-07",
+    "spread": -35.0,
+    "pe_ttm": 31.7
    }
   },
   {
@@ -39460,10 +39460,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:47:50+08:00",
    "quote": {
-    "close": 128.0,
-    "date": "2026-10-06",
-    "spread": -3.5,
-    "pe_ttm": 556.5
+    "close": 135.0,
+    "date": "2026-10-07",
+    "spread": 7.0,
+    "pe_ttm": 587.0
    }
   },
   {
@@ -39973,10 +39973,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:47:52+08:00",
    "quote": {
-    "close": 68.6,
-    "date": "2026-10-06",
-    "spread": 0.1,
-    "pe_ttm": 41.8
+    "close": 75.4,
+    "date": "2026-10-07",
+    "spread": 6.8,
+    "pe_ttm": 46.0
    }
   },
   {
@@ -40486,10 +40486,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:47:55+08:00",
    "quote": {
-    "close": 1600.0,
-    "date": "2026-10-06",
-    "spread": 5.0,
-    "pe_ttm": 106.8
+    "close": 1645.0,
+    "date": "2026-10-07",
+    "spread": 45.0,
+    "pe_ttm": 109.8
    }
   },
   {
@@ -40999,10 +40999,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:47:58+08:00",
    "quote": {
-    "close": 59.8,
-    "date": "2026-10-06",
-    "spread": 0.5,
-    "pe_ttm": 68.7
+    "close": 65.7,
+    "date": "2026-10-07",
+    "spread": 5.9,
+    "pe_ttm": 75.5
    }
   },
   {
@@ -41512,10 +41512,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:48:01+08:00",
    "quote": {
-    "close": 128.5,
-    "date": "2026-10-06",
-    "spread": 2.0,
-    "pe_ttm": 26.4
+    "close": 134.5,
+    "date": "2026-10-07",
+    "spread": 6.0,
+    "pe_ttm": 27.6
    }
   },
   {
@@ -42025,10 +42025,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:48:04+08:00",
    "quote": {
-    "close": 173.0,
-    "date": "2026-10-06",
-    "spread": 0.0,
-    "pe_ttm": 21.2
+    "close": 174.0,
+    "date": "2026-10-07",
+    "spread": 1.0,
+    "pe_ttm": 21.3
    }
   },
   {
@@ -42538,10 +42538,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:48:06+08:00",
    "quote": {
-    "close": 127.5,
-    "date": "2026-10-06",
-    "spread": 3.5,
-    "pe_ttm": 39.7
+    "close": 128.5,
+    "date": "2026-10-07",
+    "spread": 1.0,
+    "pe_ttm": 40.0
    }
   },
   {
@@ -43052,8 +43052,8 @@ window.SEED_DATA = {
    "fetched_at": "2026-10-07T02:48:09+08:00",
    "quote": {
     "close": 18.95,
-    "date": "2026-10-06",
-    "spread": 0.05,
+    "date": "2026-10-07",
+    "spread": 0.0,
     "pe_ttm_label": "本益比為負"
    }
   },
@@ -43564,10 +43564,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:48:12+08:00",
    "quote": {
-    "close": 228.0,
-    "date": "2026-10-06",
-    "spread": 1.0,
-    "pe_ttm": 23.2
+    "close": 243.5,
+    "date": "2026-10-07",
+    "spread": 15.5,
+    "pe_ttm": 24.8
    }
   },
   {
@@ -44077,10 +44077,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:48:15+08:00",
    "quote": {
-    "close": 370.0,
-    "date": "2026-10-06",
-    "spread": -8.0,
-    "pe_ttm": 4.6
+    "close": 365.0,
+    "date": "2026-10-07",
+    "spread": -5.0,
+    "pe_ttm": 4.5
    }
   },
   {
@@ -44590,9 +44590,9 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:48:18+08:00",
    "quote": {
-    "close": 15.45,
-    "date": "2026-10-06",
-    "spread": -0.45,
+    "close": 15.5,
+    "date": "2026-10-07",
+    "spread": 0.05,
     "pe_ttm_label": "本益比為負"
    }
   },
@@ -45103,10 +45103,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:48:20+08:00",
    "quote": {
-    "close": 138.5,
-    "date": "2026-10-06",
-    "spread": -2.0,
-    "pe_ttm": 33.5
+    "close": 145.0,
+    "date": "2026-10-07",
+    "spread": 6.5,
+    "pe_ttm": 35.0
    }
   },
   {
@@ -45616,10 +45616,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:48:23+08:00",
    "quote": {
-    "close": 127.0,
-    "date": "2026-10-06",
-    "spread": -1.5,
-    "pe_ttm": 35.2
+    "close": 132.5,
+    "date": "2026-10-07",
+    "spread": 5.5,
+    "pe_ttm": 36.7
    }
   },
   {
@@ -46129,10 +46129,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:48:26+08:00",
    "quote": {
-    "close": 1045.0,
-    "date": "2026-10-06",
-    "spread": -10.0,
-    "pe_ttm": 60.1
+    "close": 1000.0,
+    "date": "2026-10-07",
+    "spread": -45.0,
+    "pe_ttm": 57.5
    }
   },
   {
@@ -46642,10 +46642,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:48:29+08:00",
    "quote": {
-    "close": 113.0,
-    "date": "2026-10-06",
-    "spread": -1.0,
-    "pe_ttm": 17.5
+    "close": 114.5,
+    "date": "2026-10-07",
+    "spread": 1.5,
+    "pe_ttm": 17.7
    }
   },
   {
@@ -47155,10 +47155,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:48:32+08:00",
    "quote": {
-    "close": 110.5,
-    "date": "2026-10-06",
-    "spread": 8.0,
-    "pe_ttm": 16.5
+    "close": 107.0,
+    "date": "2026-10-07",
+    "spread": -3.5,
+    "pe_ttm": 16.0
    }
   },
   {
@@ -47668,10 +47668,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:48:34+08:00",
    "quote": {
-    "close": 1715.0,
-    "date": "2026-10-06",
-    "spread": 85.0,
-    "pe_ttm": 134.9
+    "close": 1705.0,
+    "date": "2026-10-07",
+    "spread": -10.0,
+    "pe_ttm": 134.1
    }
   },
   {
@@ -48181,10 +48181,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:48:37+08:00",
    "quote": {
-    "close": 104.5,
-    "date": "2026-10-06",
-    "spread": -1.0,
-    "pe_ttm": 25.4
+    "close": 106.0,
+    "date": "2026-10-07",
+    "spread": 1.5,
+    "pe_ttm": 25.7
    }
   },
   {
@@ -48694,10 +48694,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:48:40+08:00",
    "quote": {
-    "close": 18985.0,
-    "date": "2026-10-06",
-    "spread": -535.0,
-    "pe_ttm": 130.5
+    "close": 17750.0,
+    "date": "2026-10-07",
+    "spread": -1235.0,
+    "pe_ttm": 122.0
    }
   },
   {
@@ -49207,10 +49207,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:48:43+08:00",
    "quote": {
-    "close": 143.5,
-    "date": "2026-10-06",
-    "spread": -8.5,
-    "pe_ttm": 82.9
+    "close": 147.5,
+    "date": "2026-10-07",
+    "spread": 4.0,
+    "pe_ttm": 85.3
    }
   },
   {
@@ -49720,10 +49720,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:48:45+08:00",
    "quote": {
-    "close": 215.0,
-    "date": "2026-10-06",
-    "spread": 0.5,
-    "pe_ttm": 22.9
+    "close": 224.0,
+    "date": "2026-10-07",
+    "spread": 9.0,
+    "pe_ttm": 23.9
    }
   },
   {
@@ -50233,10 +50233,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:48:48+08:00",
    "quote": {
-    "close": 256.0,
-    "date": "2026-10-06",
-    "spread": 6.5,
-    "pe_ttm": 27.8
+    "close": 257.5,
+    "date": "2026-10-07",
+    "spread": 1.5,
+    "pe_ttm": 28.0
    }
   },
   {
@@ -50746,10 +50746,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:48:51+08:00",
    "quote": {
-    "close": 515.0,
-    "date": "2026-10-06",
-    "spread": 5.0,
-    "pe_ttm": 12.7
+    "close": 526.0,
+    "date": "2026-10-07",
+    "spread": 11.0,
+    "pe_ttm": 12.9
    }
   },
   {
@@ -51259,10 +51259,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:48:54+08:00",
    "quote": {
-    "close": 221.0,
-    "date": "2026-10-06",
-    "spread": 3.0,
-    "pe_ttm": 19.6
+    "close": 225.0,
+    "date": "2026-10-07",
+    "spread": 4.0,
+    "pe_ttm": 20.0
    }
   },
   {
@@ -51772,10 +51772,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:48:57+08:00",
    "quote": {
-    "close": 395.0,
-    "date": "2026-10-06",
-    "spread": -4.0,
-    "pe_ttm": 52.8
+    "close": 389.5,
+    "date": "2026-10-07",
+    "spread": -5.5,
+    "pe_ttm": 52.1
    }
   },
   {
@@ -52285,10 +52285,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:49:00+08:00",
    "quote": {
-    "close": 125.5,
-    "date": "2026-10-06",
-    "spread": -0.5,
-    "pe_ttm": 30.2
+    "close": 129.5,
+    "date": "2026-10-07",
+    "spread": 4.0,
+    "pe_ttm": 31.2
    }
   },
   {
@@ -52798,10 +52798,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:49:03+08:00",
    "quote": {
-    "close": 1335.0,
-    "date": "2026-10-06",
-    "spread": 25.0,
-    "pe_ttm": 20.1
+    "close": 1330.0,
+    "date": "2026-10-07",
+    "spread": -5.0,
+    "pe_ttm": 20.0
    }
   },
   {
@@ -53311,10 +53311,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:49:06+08:00",
    "quote": {
-    "close": 286.0,
-    "date": "2026-10-06",
-    "spread": 26.0,
-    "pe_ttm": 33.5
+    "close": 278.0,
+    "date": "2026-10-07",
+    "spread": -8.0,
+    "pe_ttm": 32.6
    }
   },
   {
@@ -53824,10 +53824,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:49:09+08:00",
    "quote": {
-    "close": 449.5,
-    "date": "2026-10-06",
-    "spread": 7.5,
-    "pe_ttm": 45.5
+    "close": 456.5,
+    "date": "2026-10-07",
+    "spread": 7.0,
+    "pe_ttm": 46.2
    }
   },
   {
@@ -54337,9 +54337,9 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:49:12+08:00",
    "quote": {
-    "close": 150.5,
-    "date": "2026-10-06",
-    "spread": -5.0,
+    "close": 159.5,
+    "date": "2026-10-07",
+    "spread": 9.0,
     "pe_ttm_label": "本益比為負"
    }
   },
@@ -54850,9 +54850,9 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:49:15+08:00",
    "quote": {
-    "close": 215.0,
-    "date": "2026-10-06",
-    "spread": 1.5,
+    "close": 215.5,
+    "date": "2026-10-07",
+    "spread": 0.5,
     "pe_ttm": 10.8
    }
   },
@@ -55363,10 +55363,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:49:18+08:00",
    "quote": {
-    "close": 246.0,
-    "date": "2026-10-06",
-    "spread": 4.5,
-    "pe_ttm": 31.0
+    "close": 250.0,
+    "date": "2026-10-07",
+    "spread": 4.0,
+    "pe_ttm": 31.5
    }
   },
   {
@@ -55876,10 +55876,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:49:20+08:00",
    "quote": {
-    "close": 1045.0,
-    "date": "2026-10-06",
-    "spread": -10.0,
-    "pe_ttm": 28.3
+    "close": 1085.0,
+    "date": "2026-10-07",
+    "spread": 40.0,
+    "pe_ttm": 29.4
    }
   },
   {
@@ -56389,10 +56389,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:49:23+08:00",
    "quote": {
-    "close": 182.5,
-    "date": "2026-10-06",
-    "spread": -8.5,
-    "pe_ttm": 445.1
+    "close": 193.0,
+    "date": "2026-10-07",
+    "spread": 10.5,
+    "pe_ttm": 470.7
    }
   },
   {
@@ -56902,10 +56902,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:49:26+08:00",
    "quote": {
-    "close": 273.5,
-    "date": "2026-10-06",
-    "spread": -8.5,
-    "pe_ttm": 8.8
+    "close": 270.5,
+    "date": "2026-10-07",
+    "spread": -3.0,
+    "pe_ttm": 8.7
    }
   },
   {
@@ -57415,10 +57415,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:49:29+08:00",
    "quote": {
-    "close": 135.5,
-    "date": "2026-10-06",
-    "spread": -1.0,
-    "pe_ttm": 50.2
+    "close": 136.0,
+    "date": "2026-10-07",
+    "spread": 0.5,
+    "pe_ttm": 50.4
    }
   },
   {
@@ -57928,10 +57928,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:49:32+08:00",
    "quote": {
-    "close": 696.0,
-    "date": "2026-10-06",
-    "spread": 5.0,
-    "pe_ttm": 45.5
+    "close": 702.0,
+    "date": "2026-10-07",
+    "spread": 6.0,
+    "pe_ttm": 45.9
    }
   },
   {
@@ -58441,10 +58441,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:49:35+08:00",
    "quote": {
-    "close": 105.5,
-    "date": "2026-10-06",
-    "spread": -8.5,
-    "pe_ttm": 1055.0
+    "close": 104.0,
+    "date": "2026-10-07",
+    "spread": -1.5,
+    "pe_ttm": 1040.0
    }
   },
   {
@@ -58954,10 +58954,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:49:39+08:00",
    "quote": {
-    "close": 236.5,
-    "date": "2026-10-06",
-    "spread": 2.0,
-    "pe_ttm": 9.4
+    "close": 232.5,
+    "date": "2026-10-07",
+    "spread": -4.0,
+    "pe_ttm": 9.2
    }
   },
   {
@@ -59467,10 +59467,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:49:42+08:00",
    "quote": {
-    "close": 167.0,
-    "date": "2026-10-06",
-    "spread": 0.5,
-    "pe_ttm": 18.8
+    "close": 168.0,
+    "date": "2026-10-07",
+    "spread": 1.0,
+    "pe_ttm": 18.9
    }
   },
   {
@@ -59980,10 +59980,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:49:45+08:00",
    "quote": {
-    "close": 191.0,
-    "date": "2026-10-06",
-    "spread": 7.0,
-    "pe_ttm": 40.5
+    "close": 190.0,
+    "date": "2026-10-07",
+    "spread": -1.0,
+    "pe_ttm": 40.3
    }
   },
   {
@@ -60493,10 +60493,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:49:47+08:00",
    "quote": {
-    "close": 13100.0,
-    "date": "2026-10-06",
-    "spread": -255.0,
-    "pe_ttm": 72.2
+    "close": 11790.0,
+    "date": "2026-10-07",
+    "spread": -1310.0,
+    "pe_ttm": 65.0
    }
   },
   {
@@ -61006,10 +61006,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:49:50+08:00",
    "quote": {
-    "close": 487.5,
-    "date": "2026-10-06",
-    "spread": -11.0,
-    "pe_ttm": 76.5
+    "close": 497.0,
+    "date": "2026-10-07",
+    "spread": 9.5,
+    "pe_ttm": 78.0
    }
   },
   {
@@ -61519,10 +61519,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:49:53+08:00",
    "quote": {
-    "close": 2530.0,
-    "date": "2026-10-06",
-    "spread": 0.0,
-    "pe_ttm": 44.4
+    "close": 2450.0,
+    "date": "2026-10-07",
+    "spread": -80.0,
+    "pe_ttm": 43.0
    }
   },
   {
@@ -62032,10 +62032,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:49:55+08:00",
    "quote": {
-    "close": 1175.0,
-    "date": "2026-10-06",
-    "spread": -15.0,
-    "pe_ttm": 59.1
+    "close": 1205.0,
+    "date": "2026-10-07",
+    "spread": 30.0,
+    "pe_ttm": 60.6
    }
   },
   {
@@ -62545,10 +62545,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:49:58+08:00",
    "quote": {
-    "close": 87.3,
-    "date": "2026-10-06",
-    "spread": -0.6,
-    "pe_ttm": 37.0
+    "close": 90.9,
+    "date": "2026-10-07",
+    "spread": 3.6,
+    "pe_ttm": 38.5
    }
   },
   {
@@ -63058,10 +63058,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:50:01+08:00",
    "quote": {
-    "close": 216.5,
-    "date": "2026-10-06",
-    "spread": 0.5,
-    "pe_ttm": 52.2
+    "close": 231.5,
+    "date": "2026-10-07",
+    "spread": 15.0,
+    "pe_ttm": 55.8
    }
   },
   {
@@ -63571,10 +63571,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:50:04+08:00",
    "quote": {
-    "close": 241.0,
-    "date": "2026-10-06",
-    "spread": -6.0,
-    "pe_ttm": 202.5
+    "close": 240.0,
+    "date": "2026-10-07",
+    "spread": -1.0,
+    "pe_ttm": 201.7
    }
   },
   {
@@ -64084,10 +64084,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:50:07+08:00",
    "quote": {
-    "close": 145.0,
-    "date": "2026-10-06",
-    "spread": -0.5,
-    "pe_ttm": 45.5
+    "close": 159.5,
+    "date": "2026-10-07",
+    "spread": 14.5,
+    "pe_ttm": 50.0
    }
   },
   {
@@ -64597,10 +64597,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:50:10+08:00",
    "quote": {
-    "close": 41.55,
-    "date": "2026-10-06",
-    "spread": -0.35,
-    "pe_ttm": 8.8
+    "close": 41.95,
+    "date": "2026-10-07",
+    "spread": 0.4,
+    "pe_ttm": 8.9
    }
   },
   {
@@ -65110,10 +65110,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:50:13+08:00",
    "quote": {
-    "close": 76.8,
-    "date": "2026-10-06",
-    "spread": 0.0,
-    "pe_ttm": 16.8
+    "close": 76.3,
+    "date": "2026-10-07",
+    "spread": -0.5,
+    "pe_ttm": 16.7
    }
   },
   {
@@ -65623,10 +65623,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:50:15+08:00",
    "quote": {
-    "close": 35.9,
-    "date": "2026-10-06",
-    "spread": 0.1,
-    "pe_ttm": 18.4
+    "close": 36.1,
+    "date": "2026-10-07",
+    "spread": 0.2,
+    "pe_ttm": 18.5
    }
   },
   {
@@ -66136,10 +66136,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-07T02:50:18+08:00",
    "quote": {
-    "close": 467.0,
-    "date": "2026-10-06",
-    "spread": -2.5,
-    "pe_ttm": 364.8
+    "close": 513.0,
+    "date": "2026-10-07",
+    "spread": 46.0,
+    "pe_ttm": 400.8
    }
   },
   {
@@ -66647,11 +66647,11 @@ window.SEED_DATA = {
      659489000
     ]
    },
-   "fetched_at": "2026-10-06T20:45:12+08:00",
+   "fetched_at": "2026-10-07T20:32:44+08:00",
    "quote": {
-    "close": 86.0,
-    "date": "2026-10-06",
-    "spread": 0.7,
+    "close": 89.9,
+    "date": "2026-10-07",
+    "spread": 3.9,
     "pe_ttm_label": "本益比為負"
    }
   },
@@ -67160,12 +67160,12 @@ window.SEED_DATA = {
      99782000
     ]
    },
-   "fetched_at": "2026-10-06T20:45:15+08:00",
+   "fetched_at": "2026-10-07T20:32:46+08:00",
    "quote": {
-    "close": 57.0,
-    "date": "2026-10-06",
-    "spread": -1.1,
-    "pe_ttm": 80.3
+    "close": 58.0,
+    "date": "2026-10-07",
+    "spread": 1.0,
+    "pe_ttm": 81.7
    }
   },
   {
@@ -67673,18 +67673,18 @@ window.SEED_DATA = {
      1326062000
     ]
    },
-   "fetched_at": "2026-10-06T20:45:18+08:00",
+   "fetched_at": "2026-10-07T20:32:49+08:00",
    "quote": {
-    "close": 218.5,
-    "date": "2026-10-06",
-    "spread": -3.5,
-    "pe_ttm": 53.4
+    "close": 218.0,
+    "date": "2026-10-07",
+    "spread": -0.5,
+    "pe_ttm": 53.3
    }
   },
   {
    "id": "3533",
    "name": "嘉澤",
-   "industry": "電子零組件業",
+   "industry": "電子工業",
    "theme": "連接器/線材",
    "has_contract_liab": true,
    "quarters": [
@@ -68186,12 +68186,12 @@ window.SEED_DATA = {
      3198344000
     ]
    },
-   "fetched_at": "2026-10-05T21:26:17+08:00",
+   "fetched_at": "2026-10-07T20:32:52+08:00",
    "quote": {
-    "close": 1875.0,
-    "date": "2026-10-05",
-    "spread": 20.0,
-    "pe_ttm": 22.8
+    "close": 1825.0,
+    "date": "2026-10-07",
+    "spread": -40.0,
+    "pe_ttm": 22.2
    }
   },
   {
@@ -68699,11 +68699,11 @@ window.SEED_DATA = {
      601864000
     ]
    },
-   "fetched_at": "2026-10-05T21:26:20+08:00",
+   "fetched_at": "2026-10-07T20:32:54+08:00",
    "quote": {
     "close": 134.0,
-    "date": "2026-10-05",
-    "spread": -4.0,
+    "date": "2026-10-07",
+    "spread": 1.0,
     "pe_ttm": 12.3
    }
   },
@@ -69212,11 +69212,11 @@ window.SEED_DATA = {
      419111000
     ]
    },
-   "fetched_at": "2026-10-05T21:26:23+08:00",
+   "fetched_at": "2026-10-07T20:32:57+08:00",
    "quote": {
-    "close": 178.0,
-    "date": "2026-10-05",
-    "spread": 0.5,
+    "close": 173.0,
+    "date": "2026-10-07",
+    "spread": -1.0,
     "pe_ttm_label": "本益比為負"
    }
   },
@@ -69725,12 +69725,12 @@ window.SEED_DATA = {
      1068346000
     ]
    },
-   "fetched_at": "2026-10-05T21:26:26+08:00",
+   "fetched_at": "2026-10-07T20:32:59+08:00",
    "quote": {
-    "close": 744.0,
-    "date": "2026-10-05",
-    "spread": 23.0,
-    "pe_ttm": 36.2
+    "close": 743.0,
+    "date": "2026-10-07",
+    "spread": -19.0,
+    "pe_ttm": 36.1
    }
   },
   {
@@ -70238,12 +70238,12 @@ window.SEED_DATA = {
      14428827000
     ]
    },
-   "fetched_at": "2026-10-05T21:26:30+08:00",
+   "fetched_at": "2026-10-07T20:33:02+08:00",
    "quote": {
-    "close": 38.4,
-    "date": "2026-10-05",
-    "spread": -0.35,
-    "pe_ttm": 11.6
+    "close": 39.9,
+    "date": "2026-10-07",
+    "spread": 1.15,
+    "pe_ttm": 12.1
    }
   },
   {
@@ -70751,18 +70751,18 @@ window.SEED_DATA = {
      11018647000
     ]
    },
-   "fetched_at": "2026-10-05T21:26:33+08:00",
+   "fetched_at": "2026-10-07T20:33:05+08:00",
    "quote": {
-    "close": 790.0,
-    "date": "2026-10-05",
-    "spread": 15.0,
-    "pe_ttm": 15.9
+    "close": 787.0,
+    "date": "2026-10-07",
+    "spread": -8.0,
+    "pe_ttm": 15.8
    }
   },
   {
    "id": "6451",
    "name": "訊芯-KY",
-   "industry": "半導體業",
+   "industry": "電子工業",
    "theme": "封測",
    "has_contract_liab": true,
    "quarters": [
@@ -71264,12 +71264,12 @@ window.SEED_DATA = {
      691843000
     ]
    },
-   "fetched_at": "2026-10-05T21:26:41+08:00",
+   "fetched_at": "2026-10-07T20:33:08+08:00",
    "quote": {
-    "close": 432.0,
-    "date": "2026-10-05",
-    "spread": 3.0,
-    "pe_ttm": 382.3
+    "close": 426.5,
+    "date": "2026-10-07",
+    "spread": 6.5,
+    "pe_ttm": 377.4
    }
   },
   {
@@ -71721,7 +71721,6 @@ window.SEED_DATA = {
    },
    "month_rev": {
     "months": [
-     "2024-07",
      "2024-08",
      "2024-09",
      "2024-10",
@@ -71746,10 +71745,10 @@ window.SEED_DATA = {
      "2026-05",
      "2026-06",
      "2026-07",
-     "2026-08"
+     "2026-08",
+     "2026-09"
     ],
     "values": [
-     289039000,
      306453000,
      326002000,
      331580000,
@@ -71774,15 +71773,16 @@ window.SEED_DATA = {
      443477000,
      463020000,
      505817000,
-     463542000
+     463542000,
+     507848000
     ]
    },
-   "fetched_at": "2026-10-05T21:26:44+08:00",
+   "fetched_at": "2026-10-07T20:33:10+08:00",
    "quote": {
-    "close": 227.0,
-    "date": "2026-10-05",
-    "spread": 2.5,
-    "pe_ttm": 24.5
+    "close": 261.5,
+    "date": "2026-10-07",
+    "spread": 23.5,
+    "pe_ttm": 28.2
    }
   },
   {
@@ -72290,12 +72290,12 @@ window.SEED_DATA = {
      142237739000
     ]
    },
-   "fetched_at": "2026-10-05T21:26:47+08:00",
+   "fetched_at": "2026-10-07T20:33:13+08:00",
    "quote": {
-    "close": 119.0,
-    "date": "2026-10-05",
-    "spread": 0.0,
-    "pe_ttm": 9.9
+    "close": 120.0,
+    "date": "2026-10-07",
+    "spread": 1.0,
+    "pe_ttm": 10.0
    }
   },
   {
@@ -72747,7 +72747,6 @@ window.SEED_DATA = {
    },
    "month_rev": {
     "months": [
-     "2024-07",
      "2024-08",
      "2024-09",
      "2024-10",
@@ -72772,10 +72771,10 @@ window.SEED_DATA = {
      "2026-05",
      "2026-06",
      "2026-07",
-     "2026-08"
+     "2026-08",
+     "2026-09"
     ],
     "values": [
-     220209000,
      159003000,
      170361000,
      161429000,
@@ -72800,15 +72799,16 @@ window.SEED_DATA = {
      415943000,
      394409000,
      449435000,
-     495100000
+     495100000,
+     424843000
     ]
    },
-   "fetched_at": "2026-10-05T21:26:50+08:00",
+   "fetched_at": "2026-10-07T20:33:15+08:00",
    "quote": {
-    "close": 250.0,
-    "date": "2026-10-05",
-    "spread": -2.0,
-    "pe_ttm": 41.9
+    "close": 252.5,
+    "date": "2026-10-07",
+    "spread": -6.0,
+    "pe_ttm": 42.3
    }
   },
   {
@@ -73316,18 +73316,18 @@ window.SEED_DATA = {
      21948463000
     ]
    },
-   "fetched_at": "2026-10-05T21:26:53+08:00",
+   "fetched_at": "2026-10-07T20:33:18+08:00",
    "quote": {
-    "close": 20.1,
-    "date": "2026-10-05",
-    "spread": -0.25,
-    "pe_ttm": 9.2
+    "close": 20.35,
+    "date": "2026-10-07",
+    "spread": 0.25,
+    "pe_ttm": 9.3
    }
   },
   {
    "id": "8028",
    "name": "昇陽半導體",
-   "industry": "半導體業",
+   "industry": "電子工業",
    "theme": "矽晶圓",
    "has_contract_liab": true,
    "quarters": [
@@ -73773,7 +73773,6 @@ window.SEED_DATA = {
    },
    "month_rev": {
     "months": [
-     "2024-07",
      "2024-08",
      "2024-09",
      "2024-10",
@@ -73798,10 +73797,10 @@ window.SEED_DATA = {
      "2026-05",
      "2026-06",
      "2026-07",
-     "2026-08"
+     "2026-08",
+     "2026-09"
     ],
     "values": [
-     314777000,
      310641000,
      312729000,
      344675000,
@@ -73826,21 +73825,22 @@ window.SEED_DATA = {
      478852000,
      482832000,
      514661000,
-     505365000
+     505365000,
+     512048000
     ]
    },
-   "fetched_at": "2026-10-05T21:26:56+08:00",
+   "fetched_at": "2026-10-07T20:33:21+08:00",
    "quote": {
-    "close": 281.5,
-    "date": "2026-10-05",
-    "spread": -2.0,
-    "pe_ttm": 48.7
+    "close": 285.0,
+    "date": "2026-10-07",
+    "spread": 5.0,
+    "pe_ttm": 49.3
    }
   },
   {
    "id": "6271",
    "name": "同欣電",
-   "industry": "半導體業",
+   "industry": "電子工業",
    "theme": "封測",
    "has_contract_liab": true,
    "quarters": [
@@ -74342,18 +74342,18 @@ window.SEED_DATA = {
      1173962000
     ]
    },
-   "fetched_at": "2026-10-05T21:26:59+08:00",
+   "fetched_at": "2026-10-07T20:33:23+08:00",
    "quote": {
-    "close": 238.5,
-    "date": "2026-10-05",
-    "spread": 4.0,
-    "pe_ttm": 26.8
+    "close": 241.5,
+    "date": "2026-10-07",
+    "spread": 3.0,
+    "pe_ttm": 27.2
    }
   },
   {
    "id": "6789",
    "name": "采鈺",
-   "industry": "電子工業",
+   "industry": "半導體業",
    "theme": "封測",
    "has_contract_liab": true,
    "quarters": [
@@ -74855,18 +74855,18 @@ window.SEED_DATA = {
      918686000
     ]
    },
-   "fetched_at": "2026-10-05T21:27:02+08:00",
+   "fetched_at": "2026-10-07T20:33:26+08:00",
    "quote": {
-    "close": 488.0,
-    "date": "2026-10-05",
-    "spread": -2.5,
-    "pe_ttm": 93.0
+    "close": 485.5,
+    "date": "2026-10-07",
+    "spread": 1.5,
+    "pe_ttm": 92.5
    }
   },
   {
    "id": "6155",
    "name": "鈞寶",
-   "industry": "電子零組件業",
+   "industry": "電子工業",
    "theme": "被動元件",
    "has_contract_liab": true,
    "quarters": [
@@ -75368,12 +75368,12 @@ window.SEED_DATA = {
      75032000
     ]
    },
-   "fetched_at": "2026-10-05T21:27:05+08:00",
+   "fetched_at": "2026-10-07T20:33:29+08:00",
    "quote": {
-    "close": 71.0,
-    "date": "2026-10-05",
-    "spread": -1.5,
-    "pe_ttm": 39.2
+    "close": 71.5,
+    "date": "2026-10-07",
+    "spread": 4.0,
+    "pe_ttm": 39.5
    }
   },
   {
@@ -75825,7 +75825,6 @@ window.SEED_DATA = {
    },
    "month_rev": {
     "months": [
-     "2024-07",
      "2024-08",
      "2024-09",
      "2024-10",
@@ -75850,10 +75849,10 @@ window.SEED_DATA = {
      "2026-05",
      "2026-06",
      "2026-07",
-     "2026-08"
+     "2026-08",
+     "2026-09"
     ],
     "values": [
-     5031253000,
      4967440000,
      4950809000,
      5534571000,
@@ -75878,15 +75877,16 @@ window.SEED_DATA = {
      7733828000,
      10122989000,
      11272216000,
-     10419341000
+     10419341000,
+     10748681000
     ]
    },
-   "fetched_at": "2026-10-05T21:27:08+08:00",
+   "fetched_at": "2026-10-07T20:33:31+08:00",
    "quote": {
-    "close": 740.0,
-    "date": "2026-10-05",
-    "spread": 24.0,
-    "pe_ttm": 46.7
+    "close": 733.0,
+    "date": "2026-10-07",
+    "spread": -5.0,
+    "pe_ttm": 46.3
    }
   },
   {
@@ -76394,12 +76394,12 @@ window.SEED_DATA = {
      4764363000
     ]
    },
-   "fetched_at": "2026-10-05T21:27:11+08:00",
+   "fetched_at": "2026-10-07T20:33:34+08:00",
    "quote": {
-    "close": 1180.0,
-    "date": "2026-10-05",
-    "spread": -10.0,
-    "pe_ttm": 57.3
+    "close": 1215.0,
+    "date": "2026-10-07",
+    "spread": 10.0,
+    "pe_ttm": 59.0
    }
   },
   {
@@ -76907,12 +76907,12 @@ window.SEED_DATA = {
      63101242000
     ]
    },
-   "fetched_at": "2026-10-05T21:27:14+08:00",
+   "fetched_at": "2026-10-07T20:33:36+08:00",
    "quote": {
-    "close": 72.7,
-    "date": "2026-10-05",
-    "spread": 0.0,
-    "pe_ttm": 17.6
+    "close": 75.5,
+    "date": "2026-10-07",
+    "spread": 1.8,
+    "pe_ttm": 18.2
    }
   },
   {
@@ -77420,12 +77420,12 @@ window.SEED_DATA = {
      923499000
     ]
    },
-   "fetched_at": "2026-10-05T21:27:17+08:00",
+   "fetched_at": "2026-10-07T20:33:39+08:00",
    "quote": {
-    "close": 71.8,
-    "date": "2026-10-05",
-    "spread": -1.4,
-    "pe_ttm": 45.2
+    "close": 71.5,
+    "date": "2026-10-07",
+    "spread": 0.9,
+    "pe_ttm": 45.0
    }
   },
   {
@@ -77933,12 +77933,12 @@ window.SEED_DATA = {
      7264099000
     ]
    },
-   "fetched_at": "2026-10-05T21:27:20+08:00",
+   "fetched_at": "2026-10-07T20:33:41+08:00",
    "quote": {
-    "close": 90.0,
-    "date": "2026-10-05",
-    "spread": 1.0,
-    "pe_ttm": 24.9
+    "close": 90.1,
+    "date": "2026-10-07",
+    "spread": 1.3,
+    "pe_ttm": 25.0
    }
   },
   {
@@ -78390,7 +78390,6 @@ window.SEED_DATA = {
    },
    "month_rev": {
     "months": [
-     "2024-07",
      "2024-08",
      "2024-09",
      "2024-10",
@@ -78415,10 +78414,10 @@ window.SEED_DATA = {
      "2026-05",
      "2026-06",
      "2026-07",
-     "2026-08"
+     "2026-08",
+     "2026-09"
     ],
     "values": [
-     1540270000,
      1620419000,
      1589090000,
      1407088000,
@@ -78443,14 +78442,15 @@ window.SEED_DATA = {
      2516224000,
      2289779000,
      2531248000,
-     2932061000
+     2932061000,
+     3226476000
     ]
    },
-   "fetched_at": "2026-10-05T21:27:23+08:00",
+   "fetched_at": "2026-10-07T20:33:44+08:00",
    "quote": {
-    "close": 133.0,
-    "date": "2026-10-05",
-    "spread": 3.5,
+    "close": 139.0,
+    "date": "2026-10-07",
+    "spread": 6.0,
     "pe_ttm_label": "本益比為負"
    }
   },
@@ -78959,12 +78959,12 @@ window.SEED_DATA = {
      974831000
     ]
    },
-   "fetched_at": "2026-10-05T21:27:27+08:00",
+   "fetched_at": "2026-10-07T20:33:46+08:00",
    "quote": {
-    "close": 281.5,
-    "date": "2026-10-05",
-    "spread": 4.5,
-    "pe_ttm": 29.3
+    "close": 284.5,
+    "date": "2026-10-07",
+    "spread": -5.5,
+    "pe_ttm": 29.6
    }
   },
   {
@@ -79472,12 +79472,12 @@ window.SEED_DATA = {
      2846465000
     ]
    },
-   "fetched_at": "2026-10-05T21:27:30+08:00",
+   "fetched_at": "2026-10-07T20:33:49+08:00",
    "quote": {
-    "close": 196.0,
-    "date": "2026-10-05",
-    "spread": -1.0,
-    "pe_ttm": 27.0
+    "close": 199.5,
+    "date": "2026-10-07",
+    "spread": 2.5,
+    "pe_ttm": 27.5
    }
   },
   {
@@ -79985,12 +79985,12 @@ window.SEED_DATA = {
      1376881000
     ]
    },
-   "fetched_at": "2026-10-05T21:27:33+08:00",
+   "fetched_at": "2026-10-07T20:33:52+08:00",
    "quote": {
-    "close": 180.5,
-    "date": "2026-10-05",
-    "spread": 6.0,
-    "pe_ttm": 48.0
+    "close": 178.5,
+    "date": "2026-10-07",
+    "spread": 2.5,
+    "pe_ttm": 47.5
    }
   },
   {
@@ -80442,7 +80442,6 @@ window.SEED_DATA = {
    },
    "month_rev": {
     "months": [
-     "2024-07",
      "2024-08",
      "2024-09",
      "2024-10",
@@ -80467,10 +80466,10 @@ window.SEED_DATA = {
      "2026-05",
      "2026-06",
      "2026-07",
-     "2026-08"
+     "2026-08",
+     "2026-09"
     ],
     "values": [
-     1291558000,
      1316086000,
      1252598000,
      1260888000,
@@ -80495,15 +80494,16 @@ window.SEED_DATA = {
      1744358000,
      1874548000,
      1998127000,
-     2043086000
+     2043086000,
+     1956811000
     ]
    },
-   "fetched_at": "2026-10-05T21:27:36+08:00",
+   "fetched_at": "2026-10-07T20:33:54+08:00",
    "quote": {
-    "close": 124.0,
-    "date": "2026-10-05",
-    "spread": -2.5,
-    "pe_ttm": 22.9
+    "close": 127.0,
+    "date": "2026-10-07",
+    "spread": 0.5,
+    "pe_ttm": 23.5
    }
   },
   {
@@ -80955,7 +80955,6 @@ window.SEED_DATA = {
    },
    "month_rev": {
     "months": [
-     "2024-07",
      "2024-08",
      "2024-09",
      "2024-10",
@@ -80980,10 +80979,10 @@ window.SEED_DATA = {
      "2026-05",
      "2026-06",
      "2026-07",
-     "2026-08"
+     "2026-08",
+     "2026-09"
     ],
     "values": [
-     593965000,
      625010000,
      711340000,
      648059000,
@@ -81008,15 +81007,16 @@ window.SEED_DATA = {
      1073481000,
      1460220000,
      1600351000,
-     1705663000
+     1705663000,
+     1250373000
     ]
    },
-   "fetched_at": "2026-10-05T21:27:39+08:00",
+   "fetched_at": "2026-10-07T20:33:57+08:00",
    "quote": {
-    "close": 6205.0,
-    "date": "2026-10-05",
-    "spread": 135.0,
-    "pe_ttm": 99.8
+    "close": 5520.0,
+    "date": "2026-10-07",
+    "spread": -610.0,
+    "pe_ttm": 88.7
    }
   },
   {
@@ -81524,11 +81524,11 @@ window.SEED_DATA = {
      8169021000
     ]
    },
-   "fetched_at": "2026-10-05T21:27:42+08:00",
+   "fetched_at": "2026-10-07T20:33:59+08:00",
    "quote": {
-    "close": 105.5,
-    "date": "2026-10-05",
-    "spread": -0.5,
+    "close": 106.0,
+    "date": "2026-10-07",
+    "spread": 1.0,
     "pe_ttm_label": "EPS有缺漏"
    }
   },
@@ -81981,7 +81981,6 @@ window.SEED_DATA = {
    },
    "month_rev": {
     "months": [
-     "2024-07",
      "2024-08",
      "2024-09",
      "2024-10",
@@ -82006,10 +82005,10 @@ window.SEED_DATA = {
      "2026-05",
      "2026-06",
      "2026-07",
-     "2026-08"
+     "2026-08",
+     "2026-09"
     ],
     "values": [
-     788630000,
      908747000,
      819543000,
      784582000,
@@ -82034,14 +82033,15 @@ window.SEED_DATA = {
      6297950000,
      5068218000,
      5195090000,
-     4837166000
+     4837166000,
+     6035203000
     ]
    },
-   "fetched_at": "2026-10-05T21:27:45+08:00",
+   "fetched_at": "2026-10-07T20:34:02+08:00",
    "quote": {
-    "close": 289.5,
-    "date": "2026-10-05",
-    "spread": -0.5,
+    "close": 287.0,
+    "date": "2026-10-07",
+    "spread": 8.0,
     "pe_ttm": 5.0
    }
   },
@@ -82550,12 +82550,12 @@ window.SEED_DATA = {
      21611483000
     ]
    },
-   "fetched_at": "2026-10-05T21:27:47+08:00",
+   "fetched_at": "2026-10-07T20:34:04+08:00",
    "quote": {
-    "close": 58.7,
-    "date": "2026-10-05",
-    "spread": -1.0,
-    "pe_ttm": 13.2
+    "close": 59.1,
+    "date": "2026-10-07",
+    "spread": -0.1,
+    "pe_ttm": 13.3
    }
   },
   {
@@ -83007,7 +83007,6 @@ window.SEED_DATA = {
    },
    "month_rev": {
     "months": [
-     "2024-07",
      "2024-08",
      "2024-09",
      "2024-10",
@@ -83032,10 +83031,10 @@ window.SEED_DATA = {
      "2026-05",
      "2026-06",
      "2026-07",
-     "2026-08"
+     "2026-08",
+     "2026-09"
     ],
     "values": [
-     351862000,
      318294000,
      334830000,
      344058000,
@@ -83060,15 +83059,16 @@ window.SEED_DATA = {
      530395000,
      573491000,
      665315000,
-     805877000
+     805877000,
+     1020897000
     ]
    },
-   "fetched_at": "2026-10-05T21:27:50+08:00",
+   "fetched_at": "2026-10-07T20:34:07+08:00",
    "quote": {
-    "close": 451.0,
-    "date": "2026-10-05",
-    "spread": 12.0,
-    "pe_ttm": 62.2
+    "close": 505.0,
+    "date": "2026-10-07",
+    "spread": 45.5,
+    "pe_ttm": 69.7
    }
   },
   {
@@ -83576,12 +83576,12 @@ window.SEED_DATA = {
      30558197000
     ]
    },
-   "fetched_at": "2026-10-05T21:27:53+08:00",
+   "fetched_at": "2026-10-07T20:34:09+08:00",
    "quote": {
-    "close": 71.6,
-    "date": "2026-10-05",
-    "spread": -0.1,
-    "pe_ttm": 30.3
+    "close": 75.8,
+    "date": "2026-10-07",
+    "spread": 2.8,
+    "pe_ttm": 32.1
    }
   },
   {
@@ -84089,12 +84089,12 @@ window.SEED_DATA = {
      3707549000
     ]
    },
-   "fetched_at": "2026-10-05T21:27:57+08:00",
+   "fetched_at": "2026-10-07T20:34:12+08:00",
    "quote": {
-    "close": 1180.0,
-    "date": "2026-10-05",
-    "spread": 0.0,
-    "pe_ttm": 22.7
+    "close": 1230.0,
+    "date": "2026-10-07",
+    "spread": 35.0,
+    "pe_ttm": 23.6
    }
   },
   {
@@ -84602,12 +84602,12 @@ window.SEED_DATA = {
      30180310000
     ]
    },
-   "fetched_at": "2026-10-05T21:28:00+08:00",
+   "fetched_at": "2026-10-07T20:34:15+08:00",
    "quote": {
-    "close": 31.4,
-    "date": "2026-10-05",
-    "spread": 0.0,
-    "pe_ttm": 18.7
+    "close": 31.3,
+    "date": "2026-10-07",
+    "spread": 0.25,
+    "pe_ttm": 18.6
    }
   },
   {
@@ -85059,7 +85059,6 @@ window.SEED_DATA = {
    },
    "month_rev": {
     "months": [
-     "2024-07",
      "2024-08",
      "2024-09",
      "2024-10",
@@ -85084,10 +85083,10 @@ window.SEED_DATA = {
      "2026-05",
      "2026-06",
      "2026-07",
-     "2026-08"
+     "2026-08",
+     "2026-09"
     ],
     "values": [
-     146094000,
      150049000,
      155208000,
      162223000,
@@ -85112,15 +85111,16 @@ window.SEED_DATA = {
      202710000,
      231316000,
      230193000,
-     233323000
+     233323000,
+     247115000
     ]
    },
-   "fetched_at": "2026-10-05T21:28:02+08:00",
+   "fetched_at": "2026-10-07T20:34:17+08:00",
    "quote": {
-    "close": 1440.0,
-    "date": "2026-10-05",
-    "spread": -50.0,
-    "pe_ttm": 63.5
+    "close": 1445.0,
+    "date": "2026-10-07",
+    "spread": -60.0,
+    "pe_ttm": 63.7
    }
   },
   {
@@ -85628,12 +85628,12 @@ window.SEED_DATA = {
      40741046000
     ]
    },
-   "fetched_at": "2026-10-05T21:28:05+08:00",
+   "fetched_at": "2026-10-07T20:34:20+08:00",
    "quote": {
-    "close": 84.1,
-    "date": "2026-10-05",
-    "spread": 0.0,
-    "pe_ttm": 6.1
+    "close": 83.7,
+    "date": "2026-10-07",
+    "spread": -0.3,
+    "pe_ttm": 6.0
    }
   },
   {
@@ -86141,12 +86141,12 @@ window.SEED_DATA = {
      267871000
     ]
    },
-   "fetched_at": "2026-10-05T21:28:08+08:00",
+   "fetched_at": "2026-10-07T20:34:23+08:00",
    "quote": {
-    "close": 196.5,
-    "date": "2026-10-05",
-    "spread": -7.0,
-    "pe_ttm": 63.4
+    "close": 206.5,
+    "date": "2026-10-07",
+    "spread": 7.5,
+    "pe_ttm": 66.6
    }
   },
   {
@@ -86654,12 +86654,12 @@ window.SEED_DATA = {
      17693552000
     ]
    },
-   "fetched_at": "2026-10-05T21:28:11+08:00",
+   "fetched_at": "2026-10-07T20:34:25+08:00",
    "quote": {
-    "close": 155.0,
-    "date": "2026-10-05",
-    "spread": 0.0,
-    "pe_ttm": 13.4
+    "close": 156.0,
+    "date": "2026-10-07",
+    "spread": 1.0,
+    "pe_ttm": 13.5
    }
   },
   {
@@ -87167,12 +87167,12 @@ window.SEED_DATA = {
      177406000
     ]
    },
-   "fetched_at": "2026-10-05T21:28:14+08:00",
+   "fetched_at": "2026-10-07T20:34:28+08:00",
    "quote": {
-    "close": 3155.0,
-    "date": "2026-10-05",
-    "spread": -15.0,
-    "pe_ttm": 105.8
+    "close": 3015.0,
+    "date": "2026-10-07",
+    "spread": -100.0,
+    "pe_ttm": 101.1
    }
   },
   {
@@ -87680,11 +87680,11 @@ window.SEED_DATA = {
      180687000
     ]
    },
-   "fetched_at": "2026-10-05T21:28:18+08:00",
+   "fetched_at": "2026-10-07T20:34:30+08:00",
    "quote": {
-    "close": 49.4,
-    "date": "2026-10-05",
-    "spread": -1.9,
+    "close": 50.1,
+    "date": "2026-10-07",
+    "spread": 0.6,
     "pe_ttm_label": "本益比為負"
    }
   },
@@ -88193,12 +88193,12 @@ window.SEED_DATA = {
      2456984000
     ]
    },
-   "fetched_at": "2026-10-05T21:28:21+08:00",
+   "fetched_at": "2026-10-07T20:34:33+08:00",
    "quote": {
-    "close": 890.0,
-    "date": "2026-10-05",
-    "spread": 49.0,
-    "pe_ttm": 23.1
+    "close": 872.0,
+    "date": "2026-10-07",
+    "spread": -13.0,
+    "pe_ttm": 22.7
    }
   },
   {
@@ -88650,7 +88650,6 @@ window.SEED_DATA = {
    },
    "month_rev": {
     "months": [
-     "2024-07",
      "2024-08",
      "2024-09",
      "2024-10",
@@ -88675,10 +88674,10 @@ window.SEED_DATA = {
      "2026-05",
      "2026-06",
      "2026-07",
-     "2026-08"
+     "2026-08",
+     "2026-09"
     ],
     "values": [
-     2121103000,
      2041260000,
      2164124000,
      2173193000,
@@ -88703,15 +88702,16 @@ window.SEED_DATA = {
      2480198000,
      2554057000,
      2681646000,
-     2708024000
+     2708024000,
+     2720090000
     ]
    },
-   "fetched_at": "2026-10-05T21:28:24+08:00",
+   "fetched_at": "2026-10-07T20:34:36+08:00",
    "quote": {
-    "close": 345.5,
-    "date": "2026-10-05",
-    "spread": 13.0,
-    "pe_ttm": 52.3
+    "close": 342.5,
+    "date": "2026-10-07",
+    "spread": 3.0,
+    "pe_ttm": 51.9
    }
   },
   {
@@ -89163,7 +89163,6 @@ window.SEED_DATA = {
    },
    "month_rev": {
     "months": [
-     "2024-07",
      "2024-08",
      "2024-09",
      "2024-10",
@@ -89188,10 +89187,10 @@ window.SEED_DATA = {
      "2026-05",
      "2026-06",
      "2026-07",
-     "2026-08"
+     "2026-08",
+     "2026-09"
     ],
     "values": [
-     615428000,
      601478000,
      771374000,
      910239000,
@@ -89216,15 +89215,16 @@ window.SEED_DATA = {
      1180335000,
      1206279000,
      1360035000,
-     1528275000
+     1528275000,
+     1613339000
     ]
    },
-   "fetched_at": "2026-10-05T21:28:27+08:00",
+   "fetched_at": "2026-10-07T20:34:38+08:00",
    "quote": {
-    "close": 2450.0,
-    "date": "2026-10-05",
-    "spread": 140.0,
-    "pe_ttm": 52.4
+    "close": 2455.0,
+    "date": "2026-10-07",
+    "spread": 40.0,
+    "pe_ttm": 52.5
    }
   },
   {
@@ -89732,12 +89732,12 @@ window.SEED_DATA = {
      31526751000
     ]
    },
-   "fetched_at": "2026-10-05T21:28:30+08:00",
+   "fetched_at": "2026-10-07T20:34:41+08:00",
    "quote": {
-    "close": 211.0,
-    "date": "2026-10-05",
-    "spread": 0.5,
-    "pe_ttm": 19.0
+    "close": 213.5,
+    "date": "2026-10-07",
+    "spread": 3.0,
+    "pe_ttm": 19.2
    }
   },
   {
@@ -90245,11 +90245,11 @@ window.SEED_DATA = {
      108640000
     ]
    },
-   "fetched_at": "2026-10-05T21:28:33+08:00",
+   "fetched_at": "2026-10-07T20:34:44+08:00",
    "quote": {
-    "close": 180.0,
-    "date": "2026-10-05",
-    "spread": -1.5,
+    "close": 191.0,
+    "date": "2026-10-07",
+    "spread": 15.0,
     "pe_ttm_label": "本益比為負"
    }
   },
@@ -90702,7 +90702,6 @@ window.SEED_DATA = {
    },
    "month_rev": {
     "months": [
-     "2024-07",
      "2024-08",
      "2024-09",
      "2024-10",
@@ -90727,10 +90726,10 @@ window.SEED_DATA = {
      "2026-05",
      "2026-06",
      "2026-07",
-     "2026-08"
+     "2026-08",
+     "2026-09"
     ],
     "values": [
-     645951000,
      648523000,
      591695000,
      554730000,
@@ -90755,15 +90754,16 @@ window.SEED_DATA = {
      808198000,
      894976000,
      834706000,
-     842399000
+     842399000,
+     907112000
     ]
    },
-   "fetched_at": "2026-10-05T21:28:36+08:00",
+   "fetched_at": "2026-10-07T20:34:46+08:00",
    "quote": {
-    "close": 345.0,
-    "date": "2026-10-05",
-    "spread": 5.5,
-    "pe_ttm": 28.9
+    "close": 371.0,
+    "date": "2026-10-07",
+    "spread": 6.0,
+    "pe_ttm": 31.0
    }
   },
   {
@@ -91215,7 +91215,6 @@ window.SEED_DATA = {
    },
    "month_rev": {
     "months": [
-     "2024-07",
      "2024-08",
      "2024-09",
      "2024-10",
@@ -91240,10 +91239,10 @@ window.SEED_DATA = {
      "2026-05",
      "2026-06",
      "2026-07",
-     "2026-08"
+     "2026-08",
+     "2026-09"
     ],
     "values": [
-     1991891000,
      1665219000,
      1463194000,
      1373292000,
@@ -91268,15 +91267,16 @@ window.SEED_DATA = {
      917843000,
      804738000,
      1056467000,
-     1003130000
+     1003130000,
+     1028108000
     ]
    },
-   "fetched_at": "2026-10-05T21:28:39+08:00",
+   "fetched_at": "2026-10-07T20:34:49+08:00",
    "quote": {
-    "close": 207.0,
-    "date": "2026-10-05",
-    "spread": 0.0,
-    "pe_ttm": 15.2
+    "close": 199.0,
+    "date": "2026-10-07",
+    "spread": -7.0,
+    "pe_ttm": 14.6
    }
   },
   {
@@ -91784,12 +91784,12 @@ window.SEED_DATA = {
      506698000
     ]
    },
-   "fetched_at": "2026-10-05T21:28:42+08:00",
+   "fetched_at": "2026-10-07T20:34:52+08:00",
    "quote": {
-    "close": 181.5,
-    "date": "2026-10-05",
-    "spread": 1.0,
-    "pe_ttm": 150.0
+    "close": 195.0,
+    "date": "2026-10-07",
+    "spread": 7.0,
+    "pe_ttm": 161.2
    }
   },
   {
@@ -92241,7 +92241,6 @@ window.SEED_DATA = {
    },
    "month_rev": {
     "months": [
-     "2024-07",
      "2024-08",
      "2024-09",
      "2024-10",
@@ -92266,10 +92265,10 @@ window.SEED_DATA = {
      "2026-05",
      "2026-06",
      "2026-07",
-     "2026-08"
+     "2026-08",
+     "2026-09"
     ],
     "values": [
-     1514827000,
      1601594000,
      1581696000,
      1680390000,
@@ -92294,15 +92293,16 @@ window.SEED_DATA = {
      2123837000,
      2166407000,
      2228833000,
-     2268408000
+     2268408000,
+     2249539000
     ]
    },
-   "fetched_at": "2026-10-05T21:28:45+08:00",
+   "fetched_at": "2026-10-07T20:34:54+08:00",
    "quote": {
-    "close": 794.0,
-    "date": "2026-10-05",
-    "spread": 3.0,
-    "pe_ttm": 18.3
+    "close": 780.0,
+    "date": "2026-10-07",
+    "spread": 0.0,
+    "pe_ttm": 18.0
    }
   },
   {
@@ -92810,12 +92810,12 @@ window.SEED_DATA = {
      1108737000
     ]
    },
-   "fetched_at": "2026-10-05T21:28:48+08:00",
+   "fetched_at": "2026-10-07T20:34:57+08:00",
    "quote": {
-    "close": 1490.0,
-    "date": "2026-10-05",
-    "spread": 135.0,
-    "pe_ttm": 76.0
+    "close": 1535.0,
+    "date": "2026-10-07",
+    "spread": 0.0,
+    "pe_ttm": 78.3
    }
   },
   {
@@ -93323,11 +93323,11 @@ window.SEED_DATA = {
      410463000
     ]
    },
-   "fetched_at": "2026-10-05T21:28:51+08:00",
+   "fetched_at": "2026-10-07T20:35:00+08:00",
    "quote": {
     "close": 224.0,
-    "date": "2026-10-05",
-    "spread": -6.0,
+    "date": "2026-10-07",
+    "spread": 4.0,
     "pe_ttm": 80.9
    }
   },
@@ -93836,11 +93836,11 @@ window.SEED_DATA = {
      2257992000
     ]
    },
-   "fetched_at": "2026-10-05T21:28:54+08:00",
+   "fetched_at": "2026-10-07T20:35:05+08:00",
    "quote": {
-    "close": 51.7,
-    "date": "2026-10-05",
-    "spread": -0.4,
+    "close": 51.5,
+    "date": "2026-10-07",
+    "spread": 0.3,
     "pe_ttm": 12.7
    }
   },
@@ -94349,11 +94349,11 @@ window.SEED_DATA = {
      1997131000
     ]
    },
-   "fetched_at": "2026-10-05T21:28:57+08:00",
+   "fetched_at": "2026-10-07T20:35:11+08:00",
    "quote": {
-    "close": 65.1,
-    "date": "2026-10-05",
-    "spread": -1.0,
+    "close": 65.3,
+    "date": "2026-10-07",
+    "spread": 0.5,
     "pe_ttm_label": "本益比為負"
    }
   },
@@ -94806,7 +94806,6 @@ window.SEED_DATA = {
    },
    "month_rev": {
     "months": [
-     "2024-07",
      "2024-08",
      "2024-09",
      "2024-10",
@@ -94831,10 +94830,10 @@ window.SEED_DATA = {
      "2026-05",
      "2026-06",
      "2026-07",
-     "2026-08"
+     "2026-08",
+     "2026-09"
     ],
     "values": [
-     1207011000,
      1096143000,
      1108042000,
      1080046000,
@@ -94859,15 +94858,16 @@ window.SEED_DATA = {
      1291187000,
      1378433000,
      1500937000,
-     1439761000
+     1439761000,
+     1597836000
     ]
    },
-   "fetched_at": "2026-10-05T21:29:00+08:00",
+   "fetched_at": "2026-10-07T20:35:13+08:00",
    "quote": {
-    "close": 817.0,
-    "date": "2026-10-05",
-    "spread": -18.0,
-    "pe_ttm": 79.8
+    "close": 839.0,
+    "date": "2026-10-07",
+    "spread": 43.0,
+    "pe_ttm": 81.9
    }
   },
   {
@@ -95375,11 +95375,11 @@ window.SEED_DATA = {
      23309496000
     ]
    },
-   "fetched_at": "2026-10-05T21:29:03+08:00",
+   "fetched_at": "2026-10-07T20:35:16+08:00",
    "quote": {
     "close": 145.5,
-    "date": "2026-10-05",
-    "spread": -0.5,
+    "date": "2026-10-07",
+    "spread": 0.0,
     "pe_ttm": 28.5
    }
   },
@@ -95888,12 +95888,12 @@ window.SEED_DATA = {
      135083000
     ]
    },
-   "fetched_at": "2026-10-05T21:29:06+08:00",
+   "fetched_at": "2026-10-07T20:35:18+08:00",
    "quote": {
-    "close": 49.85,
-    "date": "2026-10-05",
-    "spread": 3.35,
-    "pe_ttm": 46.6
+    "close": 48.3,
+    "date": "2026-10-07",
+    "spread": 1.9,
+    "pe_ttm": 45.1
    }
   },
   {
@@ -96401,11 +96401,11 @@ window.SEED_DATA = {
      244259000
     ]
    },
-   "fetched_at": "2026-10-05T21:29:09+08:00",
+   "fetched_at": "2026-10-07T20:35:21+08:00",
    "quote": {
-    "close": 191.0,
-    "date": "2026-10-05",
-    "spread": 15.5,
+    "close": 196.0,
+    "date": "2026-10-07",
+    "spread": 7.5,
     "pe_ttm_label": "本益比為負"
    }
   },
@@ -96914,12 +96914,12 @@ window.SEED_DATA = {
      161759000
     ]
    },
-   "fetched_at": "2026-10-05T21:29:12+08:00",
+   "fetched_at": "2026-10-07T20:35:24+08:00",
    "quote": {
-    "close": 531.0,
-    "date": "2026-10-05",
-    "spread": 15.0,
-    "pe_ttm": 49.7
+    "close": 526.0,
+    "date": "2026-10-07",
+    "spread": -2.0,
+    "pe_ttm": 49.3
    }
   },
   {
@@ -97371,7 +97371,6 @@ window.SEED_DATA = {
    },
    "month_rev": {
     "months": [
-     "2024-07",
      "2024-08",
      "2024-09",
      "2024-10",
@@ -97396,10 +97395,10 @@ window.SEED_DATA = {
      "2026-05",
      "2026-06",
      "2026-07",
-     "2026-08"
+     "2026-08",
+     "2026-09"
     ],
     "values": [
-     4681158000,
      4454245000,
      4368723000,
      4243665000,
@@ -97424,15 +97423,16 @@ window.SEED_DATA = {
      5685648000,
      5277164000,
      5528934000,
-     5408315000
+     5408315000,
+     5914588000
     ]
    },
-   "fetched_at": "2026-10-05T21:29:16+08:00",
+   "fetched_at": "2026-10-07T20:35:26+08:00",
    "quote": {
-    "close": 69.0,
-    "date": "2026-10-05",
-    "spread": -0.7,
-    "pe_ttm": 24.5
+    "close": 73.3,
+    "date": "2026-10-07",
+    "spread": 2.2,
+    "pe_ttm": 26.0
    }
   },
   {
@@ -97940,18 +97940,18 @@ window.SEED_DATA = {
      157754000
     ]
    },
-   "fetched_at": "2026-10-05T21:29:19+08:00",
+   "fetched_at": "2026-10-07T20:35:29+08:00",
    "quote": {
-    "close": 56.9,
-    "date": "2026-10-05",
-    "spread": -0.6,
-    "pe_ttm": 4.0
+    "close": 58.5,
+    "date": "2026-10-07",
+    "spread": 0.9,
+    "pe_ttm": 4.1
    }
   },
   {
    "id": "6781",
    "name": "AES-KY",
-   "industry": "電子工業",
+   "industry": "電子零組件業",
    "theme": "電池模組",
    "has_contract_liab": false,
    "quarters": [
@@ -98453,12 +98453,12 @@ window.SEED_DATA = {
      1760420000
     ]
    },
-   "fetched_at": "2026-10-05T21:29:22+08:00",
+   "fetched_at": "2026-10-07T20:35:32+08:00",
    "quote": {
-    "close": 1050.0,
-    "date": "2026-10-05",
-    "spread": 25.0,
-    "pe_ttm": 24.8
+    "close": 1025.0,
+    "date": "2026-10-07",
+    "spread": 0.0,
+    "pe_ttm": 24.2
    }
   },
   {
@@ -98910,7 +98910,6 @@ window.SEED_DATA = {
    },
    "month_rev": {
     "months": [
-     "2024-07",
      "2024-08",
      "2024-09",
      "2024-10",
@@ -98935,10 +98934,10 @@ window.SEED_DATA = {
      "2026-05",
      "2026-06",
      "2026-07",
-     "2026-08"
+     "2026-08",
+     "2026-09"
     ],
     "values": [
-     133715000,
      126641000,
      122342000,
      102062000,
@@ -98963,14 +98962,15 @@ window.SEED_DATA = {
      143800000,
      157445000,
      170843000,
-     204482000
+     204482000,
+     224257000
     ]
    },
-   "fetched_at": "2026-10-05T21:29:32+08:00",
+   "fetched_at": "2026-10-07T20:35:34+08:00",
    "quote": {
-    "close": 664.0,
-    "date": "2026-10-05",
-    "spread": -7.0,
+    "close": 679.0,
+    "date": "2026-10-07",
+    "spread": 29.0,
     "pe_ttm_label": "本益比為負"
    }
   },
@@ -99423,7 +99423,6 @@ window.SEED_DATA = {
    },
    "month_rev": {
     "months": [
-     "2024-07",
      "2024-08",
      "2024-09",
      "2024-10",
@@ -99448,10 +99447,10 @@ window.SEED_DATA = {
      "2026-05",
      "2026-06",
      "2026-07",
-     "2026-08"
+     "2026-08",
+     "2026-09"
     ],
     "values": [
-     2346202000,
      2622042000,
      2461537000,
      1881900000,
@@ -99476,15 +99475,16 @@ window.SEED_DATA = {
      2500299000,
      2509581000,
      2690629000,
-     2725433000
+     2725433000,
+     3445381000
     ]
    },
-   "fetched_at": "2026-10-05T21:29:35+08:00",
+   "fetched_at": "2026-10-07T20:35:37+08:00",
    "quote": {
-    "close": 40.4,
-    "date": "2026-10-05",
-    "spread": -0.75,
-    "pe_ttm": 29.7
+    "close": 41.4,
+    "date": "2026-10-07",
+    "spread": 2.0,
+    "pe_ttm": 30.4
    }
   },
   {
@@ -99992,12 +99992,12 @@ window.SEED_DATA = {
      205091000
     ]
    },
-   "fetched_at": "2026-10-05T21:29:38+08:00",
+   "fetched_at": "2026-10-07T20:35:39+08:00",
    "quote": {
-    "close": 709.0,
-    "date": "2026-10-05",
-    "spread": -4.0,
-    "pe_ttm": 73.5
+    "close": 702.0,
+    "date": "2026-10-07",
+    "spread": 13.0,
+    "pe_ttm": 72.8
    }
   },
   {
@@ -100505,12 +100505,12 @@ window.SEED_DATA = {
      3446142000
     ]
    },
-   "fetched_at": "2026-10-05T21:29:41+08:00",
+   "fetched_at": "2026-10-07T20:35:42+08:00",
    "quote": {
-    "close": 146.5,
-    "date": "2026-10-05",
-    "spread": 3.0,
-    "pe_ttm": 14.3
+    "close": 145.0,
+    "date": "2026-10-07",
+    "spread": -4.0,
+    "pe_ttm": 14.1
    }
   },
   {
@@ -100962,7 +100962,6 @@ window.SEED_DATA = {
    },
    "month_rev": {
     "months": [
-     "2024-07",
      "2024-08",
      "2024-09",
      "2024-10",
@@ -100987,10 +100986,10 @@ window.SEED_DATA = {
      "2026-05",
      "2026-06",
      "2026-07",
-     "2026-08"
+     "2026-08",
+     "2026-09"
     ],
     "values": [
-     2224952000,
      2417407000,
      2185365000,
      2063567000,
@@ -101015,21 +101014,22 @@ window.SEED_DATA = {
      2624000000,
      2914024000,
      2467266000,
-     2843905000
+     2843905000,
+     2534552000
     ]
    },
-   "fetched_at": "2026-10-05T21:29:44+08:00",
+   "fetched_at": "2026-10-07T20:35:45+08:00",
    "quote": {
-    "close": 141.5,
-    "date": "2026-10-05",
-    "spread": 2.5,
-    "pe_ttm": 23.9
+    "close": 138.0,
+    "date": "2026-10-07",
+    "spread": -3.0,
+    "pe_ttm": 23.3
    }
   },
   {
    "id": "6278",
    "name": "台表科",
-   "industry": "光電業",
+   "industry": "電子工業",
    "theme": "面板模組",
    "has_contract_liab": true,
    "quarters": [
@@ -101475,7 +101475,6 @@ window.SEED_DATA = {
    },
    "month_rev": {
     "months": [
-     "2024-07",
      "2024-08",
      "2024-09",
      "2024-10",
@@ -101500,10 +101499,10 @@ window.SEED_DATA = {
      "2026-05",
      "2026-06",
      "2026-07",
-     "2026-08"
+     "2026-08",
+     "2026-09"
     ],
     "values": [
-     3741938000,
      3702103000,
      3564916000,
      3737811000,
@@ -101528,15 +101527,16 @@ window.SEED_DATA = {
      4348041000,
      4376679000,
      4667997000,
-     4628384000
+     4628384000,
+     5162030000
     ]
    },
-   "fetched_at": "2026-10-05T21:29:47+08:00",
+   "fetched_at": "2026-10-07T20:35:47+08:00",
    "quote": {
-    "close": 220.0,
-    "date": "2026-10-05",
-    "spread": 3.0,
-    "pe_ttm": 22.4
+    "close": 250.5,
+    "date": "2026-10-07",
+    "spread": 16.5,
+    "pe_ttm": 25.6
    }
   },
   {
@@ -102044,12 +102044,12 @@ window.SEED_DATA = {
      1628177000
     ]
    },
-   "fetched_at": "2026-10-05T21:29:50+08:00",
+   "fetched_at": "2026-10-07T20:35:50+08:00",
    "quote": {
-    "close": 1705.0,
-    "date": "2026-10-05",
-    "spread": 80.0,
-    "pe_ttm": 47.8
+    "close": 1815.0,
+    "date": "2026-10-07",
+    "spread": 165.0,
+    "pe_ttm": 50.9
    }
   },
   {
@@ -102501,7 +102501,6 @@ window.SEED_DATA = {
    },
    "month_rev": {
     "months": [
-     "2024-07",
      "2024-08",
      "2024-09",
      "2024-10",
@@ -102526,10 +102525,10 @@ window.SEED_DATA = {
      "2026-05",
      "2026-06",
      "2026-07",
-     "2026-08"
+     "2026-08",
+     "2026-09"
     ],
     "values": [
-     399865000,
      373732000,
      351984000,
      343199000,
@@ -102554,15 +102553,16 @@ window.SEED_DATA = {
      472601000,
      485614000,
      474537000,
-     484052000
+     484052000,
+     478248000
     ]
    },
-   "fetched_at": "2026-10-05T21:29:53+08:00",
+   "fetched_at": "2026-10-07T20:35:53+08:00",
    "quote": {
-    "close": 75.2,
-    "date": "2026-10-05",
-    "spread": -1.5,
-    "pe_ttm": 23.9
+    "close": 77.0,
+    "date": "2026-10-07",
+    "spread": 1.0,
+    "pe_ttm": 24.5
    }
   },
   {
@@ -103070,18 +103070,18 @@ window.SEED_DATA = {
      31645000
     ]
    },
-   "fetched_at": "2026-10-05T21:29:56+08:00",
+   "fetched_at": "2026-10-07T20:35:55+08:00",
    "quote": {
-    "close": 60.2,
-    "date": "2026-10-05",
-    "spread": 2.5,
+    "close": 59.9,
+    "date": "2026-10-07",
+    "spread": 1.1,
     "pe_ttm_label": "本益比為負"
    }
   },
   {
    "id": "8081",
    "name": "致新",
-   "industry": "半導體業",
+   "industry": "電子工業",
    "theme": "電子工業",
    "has_contract_liab": true,
    "quarters": [
@@ -103527,7 +103527,6 @@ window.SEED_DATA = {
    },
    "month_rev": {
     "months": [
-     "2024-07",
      "2024-08",
      "2024-09",
      "2024-10",
@@ -103552,10 +103551,10 @@ window.SEED_DATA = {
      "2026-05",
      "2026-06",
      "2026-07",
-     "2026-08"
+     "2026-08",
+     "2026-09"
     ],
     "values": [
-     746288000,
      805873000,
      725827000,
      682469000,
@@ -103580,15 +103579,16 @@ window.SEED_DATA = {
      748704000,
      743410000,
      838544000,
-     804526000
+     804526000,
+     828391000
     ]
    },
-   "fetched_at": "2026-10-05T21:29:59+08:00",
+   "fetched_at": "2026-10-07T20:35:58+08:00",
    "quote": {
-    "close": 259.0,
-    "date": "2026-10-05",
-    "spread": 2.0,
-    "pe_ttm": 14.1
+    "close": 262.5,
+    "date": "2026-10-07",
+    "spread": 0.0,
+    "pe_ttm": 14.3
    }
   },
   {
@@ -104096,11 +104096,11 @@ window.SEED_DATA = {
      556411000
     ]
    },
-   "fetched_at": "2026-10-05T21:30:02+08:00",
+   "fetched_at": "2026-10-07T20:36:00+08:00",
    "quote": {
     "close": 53.1,
-    "date": "2026-10-05",
-    "spread": 0.8,
+    "date": "2026-10-07",
+    "spread": -0.1,
     "pe_ttm": 12.2
    }
   },
@@ -104553,7 +104553,6 @@ window.SEED_DATA = {
    },
    "month_rev": {
     "months": [
-     "2024-07",
      "2024-08",
      "2024-09",
      "2024-10",
@@ -104578,10 +104577,10 @@ window.SEED_DATA = {
      "2026-05",
      "2026-06",
      "2026-07",
-     "2026-08"
+     "2026-08",
+     "2026-09"
     ],
     "values": [
-     660316000,
      650842000,
      665600000,
      613409000,
@@ -104606,21 +104605,22 @@ window.SEED_DATA = {
      867735000,
      973436000,
      979022000,
-     942587000
+     942587000,
+     1008842000
     ]
    },
-   "fetched_at": "2026-10-05T21:30:05+08:00",
+   "fetched_at": "2026-10-07T20:36:03+08:00",
    "quote": {
-    "close": 262.0,
-    "date": "2026-10-05",
-    "spread": -1.0,
-    "pe_ttm": 18.6
+    "close": 267.0,
+    "date": "2026-10-07",
+    "spread": 4.5,
+    "pe_ttm": 19.0
    }
   },
   {
    "id": "6196",
    "name": "帆宣",
-   "industry": "其他電子業",
+   "industry": "電子工業",
    "theme": "無塵室工程",
    "has_contract_liab": true,
    "quarters": [
@@ -105122,18 +105122,18 @@ window.SEED_DATA = {
      7219605000
     ]
    },
-   "fetched_at": "2026-10-05T21:30:09+08:00",
+   "fetched_at": "2026-10-07T20:36:06+08:00",
    "quote": {
-    "close": 679.0,
-    "date": "2026-10-05",
-    "spread": 61.0,
-    "pe_ttm": 30.4
+    "close": 670.0,
+    "date": "2026-10-07",
+    "spread": 7.0,
+    "pe_ttm": 30.0
    }
   },
   {
    "id": "6282",
    "name": "康舒",
-   "industry": "電子零組件業",
+   "industry": "電子工業",
    "theme": "電源供應器",
    "has_contract_liab": false,
    "quarters": [
@@ -105635,18 +105635,18 @@ window.SEED_DATA = {
      3708827000
     ]
    },
-   "fetched_at": "2026-10-05T21:30:12+08:00",
+   "fetched_at": "2026-10-07T20:36:09+08:00",
    "quote": {
-    "close": 44.45,
-    "date": "2026-10-05",
+    "close": 44.05,
+    "date": "2026-10-07",
     "spread": 0.25,
-    "pe_ttm": 36.4
+    "pe_ttm": 36.1
    }
   },
   {
    "id": "6719",
    "name": "力智",
-   "industry": "電子工業",
+   "industry": "半導體業",
    "theme": "電源供應器",
    "has_contract_liab": true,
    "quarters": [
@@ -106148,12 +106148,12 @@ window.SEED_DATA = {
      353609000
     ]
    },
-   "fetched_at": "2026-10-05T21:30:17+08:00",
+   "fetched_at": "2026-10-07T20:36:11+08:00",
    "quote": {
-    "close": 191.5,
-    "date": "2026-10-05",
-    "spread": 2.0,
-    "pe_ttm": 21.5
+    "close": 189.5,
+    "date": "2026-10-07",
+    "spread": 0.5,
+    "pe_ttm": 21.3
    }
   },
   {
@@ -106605,7 +106605,6 @@ window.SEED_DATA = {
    },
    "month_rev": {
     "months": [
-     "2024-07",
      "2024-08",
      "2024-09",
      "2024-10",
@@ -106630,10 +106629,10 @@ window.SEED_DATA = {
      "2026-05",
      "2026-06",
      "2026-07",
-     "2026-08"
+     "2026-08",
+     "2026-09"
     ],
     "values": [
-     2292505000,
      2360264000,
      2038647000,
      1871093000,
@@ -106658,21 +106657,22 @@ window.SEED_DATA = {
      2089663000,
      2133834000,
      2388026000,
-     2171584000
+     2171584000,
+     2126893000
     ]
    },
-   "fetched_at": "2026-10-05T21:30:20+08:00",
+   "fetched_at": "2026-10-07T20:36:14+08:00",
    "quote": {
-    "close": 68.2,
-    "date": "2026-10-05",
-    "spread": -2.6,
+    "close": 67.4,
+    "date": "2026-10-07",
+    "spread": 0.4,
     "pe_ttm_label": "本益比為負"
    }
   },
   {
    "id": "2369",
    "name": "菱生",
-   "industry": "電子工業",
+   "industry": "半導體業",
    "theme": "電子工業",
    "has_contract_liab": false,
    "quarters": [
@@ -107174,18 +107174,18 @@ window.SEED_DATA = {
      641933000
     ]
    },
-   "fetched_at": "2026-10-05T21:30:23+08:00",
+   "fetched_at": "2026-10-07T20:36:16+08:00",
    "quote": {
-    "close": 31.6,
-    "date": "2026-10-05",
-    "spread": -0.35,
+    "close": 32.7,
+    "date": "2026-10-07",
+    "spread": 1.3,
     "pe_ttm_label": "本益比為負"
    }
   },
   {
    "id": "8110",
    "name": "華東",
-   "industry": "半導體業",
+   "industry": "電子工業",
    "theme": "電子工業",
    "has_contract_liab": true,
    "quarters": [
@@ -107687,12 +107687,12 @@ window.SEED_DATA = {
      798331000
     ]
    },
-   "fetched_at": "2026-10-05T21:30:27+08:00",
+   "fetched_at": "2026-10-07T20:36:19+08:00",
    "quote": {
-    "close": 49.2,
-    "date": "2026-10-05",
-    "spread": -0.75,
-    "pe_ttm": 8.9
+    "close": 49.5,
+    "date": "2026-10-07",
+    "spread": 0.7,
+    "pe_ttm": 9.0
    }
   },
   {
@@ -108200,11 +108200,11 @@ window.SEED_DATA = {
      13557215000
     ]
    },
-   "fetched_at": "2026-10-05T21:30:32+08:00",
+   "fetched_at": "2026-10-07T20:36:21+08:00",
    "quote": {
-    "close": 80.4,
-    "date": "2026-10-05",
-    "spread": -0.9,
+    "close": 80.9,
+    "date": "2026-10-07",
+    "spread": 0.6,
     "pe_ttm": 14.4
    }
   },
@@ -108657,7 +108657,6 @@ window.SEED_DATA = {
    },
    "month_rev": {
     "months": [
-     "2024-07",
      "2024-08",
      "2024-09",
      "2024-10",
@@ -108682,10 +108681,10 @@ window.SEED_DATA = {
      "2026-05",
      "2026-06",
      "2026-07",
-     "2026-08"
+     "2026-08",
+     "2026-09"
     ],
     "values": [
-     170343000,
      218497000,
      202054000,
      203926000,
@@ -108710,15 +108709,16 @@ window.SEED_DATA = {
      227219000,
      224411000,
      235237000,
-     256624000
+     256624000,
+     252718000
     ]
    },
-   "fetched_at": "2026-10-05T21:30:35+08:00",
+   "fetched_at": "2026-10-07T20:36:24+08:00",
    "quote": {
-    "close": 117.5,
-    "date": "2026-10-05",
-    "spread": -5.5,
-    "pe_ttm": 170.3
+    "close": 106.0,
+    "date": "2026-10-07",
+    "spread": 0.0,
+    "pe_ttm": 153.6
    }
   },
   {
@@ -109170,7 +109170,6 @@ window.SEED_DATA = {
    },
    "month_rev": {
     "months": [
-     "2024-07",
      "2024-08",
      "2024-09",
      "2024-10",
@@ -109195,10 +109194,10 @@ window.SEED_DATA = {
      "2026-05",
      "2026-06",
      "2026-07",
-     "2026-08"
+     "2026-08",
+     "2026-09"
     ],
     "values": [
-     2017106000,
      2127240000,
      2171105000,
      2260509000,
@@ -109223,15 +109222,16 @@ window.SEED_DATA = {
      1847625000,
      1806325000,
      2035775000,
-     1946454000
+     1946454000,
+     2098009000
     ]
    },
-   "fetched_at": "2026-10-05T21:30:39+08:00",
+   "fetched_at": "2026-10-07T20:36:27+08:00",
    "quote": {
-    "close": 77.8,
-    "date": "2026-10-05",
-    "spread": -0.3,
-    "pe_ttm": 12.6
+    "close": 80.0,
+    "date": "2026-10-07",
+    "spread": 1.9,
+    "pe_ttm": 13.0
    }
   },
   {
@@ -109683,7 +109683,6 @@ window.SEED_DATA = {
    },
    "month_rev": {
     "months": [
-     "2024-07",
      "2024-08",
      "2024-09",
      "2024-10",
@@ -109708,10 +109707,10 @@ window.SEED_DATA = {
      "2026-05",
      "2026-06",
      "2026-07",
-     "2026-08"
+     "2026-08",
+     "2026-09"
     ],
     "values": [
-     644057000,
      601443000,
      696218000,
      715808000,
@@ -109736,21 +109735,22 @@ window.SEED_DATA = {
      799732000,
      1177480000,
      894958000,
-     773622000
+     773622000,
+     980973000
     ]
    },
-   "fetched_at": "2026-10-05T21:30:43+08:00",
+   "fetched_at": "2026-10-07T20:36:29+08:00",
    "quote": {
-    "close": 102.0,
-    "date": "2026-10-05",
-    "spread": -0.5,
-    "pe_ttm": 28.0
+    "close": 103.5,
+    "date": "2026-10-07",
+    "spread": 0.0,
+    "pe_ttm": 28.4
    }
   },
   {
    "id": "8039",
    "name": "台虹",
-   "industry": "電子工業",
+   "industry": "電子零組件業",
    "theme": "半導體材料",
    "has_contract_liab": true,
    "quarters": [
@@ -110196,7 +110196,6 @@ window.SEED_DATA = {
    },
    "month_rev": {
     "months": [
-     "2024-07",
      "2024-08",
      "2024-09",
      "2024-10",
@@ -110221,10 +110220,10 @@ window.SEED_DATA = {
      "2026-05",
      "2026-06",
      "2026-07",
-     "2026-08"
+     "2026-08",
+     "2026-09"
     ],
     "values": [
-     1016215000,
      964565000,
      872939000,
      744555000,
@@ -110249,15 +110248,16 @@ window.SEED_DATA = {
      914405000,
      835178000,
      847235000,
-     806704000
+     806704000,
+     839825000
     ]
    },
-   "fetched_at": "2026-10-05T21:30:46+08:00",
+   "fetched_at": "2026-10-07T20:36:32+08:00",
    "quote": {
-    "close": 303.5,
-    "date": "2026-10-05",
-    "spread": 7.5,
-    "pe_ttm": 95.4
+    "close": 304.5,
+    "date": "2026-10-07",
+    "spread": 9.0,
+    "pe_ttm": 95.8
    }
   },
   {
@@ -110709,7 +110709,6 @@ window.SEED_DATA = {
    },
    "month_rev": {
     "months": [
-     "2024-07",
      "2024-08",
      "2024-09",
      "2024-10",
@@ -110734,10 +110733,10 @@ window.SEED_DATA = {
      "2026-05",
      "2026-06",
      "2026-07",
-     "2026-08"
+     "2026-08",
+     "2026-09"
     ],
     "values": [
-     319609000,
      320210000,
      322013000,
      315381000,
@@ -110762,21 +110761,22 @@ window.SEED_DATA = {
      620455000,
      680600000,
      730488000,
-     770701000
+     770701000,
+     829656000
     ]
    },
-   "fetched_at": "2026-10-05T21:30:49+08:00",
+   "fetched_at": "2026-10-07T20:36:34+08:00",
    "quote": {
-    "close": 560.0,
-    "date": "2026-10-05",
-    "spread": 7.0,
-    "pe_ttm": 110.2
+    "close": 556.0,
+    "date": "2026-10-07",
+    "spread": -5.0,
+    "pe_ttm": 109.4
    }
   },
   {
    "id": "6191",
    "name": "精成科",
-   "industry": "電子零組件業",
+   "industry": "電子工業",
    "theme": "PCB板廠",
    "has_contract_liab": false,
    "quarters": [
@@ -111278,18 +111278,18 @@ window.SEED_DATA = {
      3801319000
     ]
    },
-   "fetched_at": "2026-10-05T21:30:52+08:00",
+   "fetched_at": "2026-10-07T20:36:37+08:00",
    "quote": {
-    "close": 85.9,
-    "date": "2026-10-05",
-    "spread": 1.2,
-    "pe_ttm": 14.8
+    "close": 87.5,
+    "date": "2026-10-07",
+    "spread": 0.7,
+    "pe_ttm": 15.1
    }
   },
   {
    "id": "6525",
    "name": "捷敏-KY",
-   "industry": "電子工業",
+   "industry": "半導體業",
    "theme": "封測",
    "has_contract_liab": true,
    "quarters": [
@@ -111735,7 +111735,6 @@ window.SEED_DATA = {
    },
    "month_rev": {
     "months": [
-     "2024-07",
      "2024-08",
      "2024-09",
      "2024-10",
@@ -111760,10 +111759,10 @@ window.SEED_DATA = {
      "2026-05",
      "2026-06",
      "2026-07",
-     "2026-08"
+     "2026-08",
+     "2026-09"
     ],
     "values": [
-     403200000,
      395330000,
      395416000,
      401758000,
@@ -111788,15 +111787,16 @@ window.SEED_DATA = {
      548577000,
      562901000,
      614164000,
-     609229000
+     609229000,
+     595452000
     ]
    },
-   "fetched_at": "2026-10-05T21:30:55+08:00",
+   "fetched_at": "2026-10-07T20:36:39+08:00",
    "quote": {
-    "close": 140.0,
-    "date": "2026-10-05",
-    "spread": 0.5,
-    "pe_ttm": 19.5
+    "close": 142.0,
+    "date": "2026-10-07",
+    "spread": 0.0,
+    "pe_ttm": 19.7
    }
   },
   {
@@ -112304,18 +112304,18 @@ window.SEED_DATA = {
      1518838000
     ]
    },
-   "fetched_at": "2026-10-05T21:30:58+08:00",
+   "fetched_at": "2026-10-07T20:36:42+08:00",
    "quote": {
-    "close": 12.7,
-    "date": "2026-10-05",
-    "spread": -0.15,
+    "close": 12.9,
+    "date": "2026-10-07",
+    "spread": 0.25,
     "pe_ttm_label": "本益比為負"
    }
   },
   {
    "id": "8016",
    "name": "矽創",
-   "industry": "半導體業",
+   "industry": "電子工業",
    "theme": "IC設計",
    "has_contract_liab": false,
    "quarters": [
@@ -112817,18 +112817,18 @@ window.SEED_DATA = {
      1908016000
     ]
    },
-   "fetched_at": "2026-10-05T21:31:02+08:00",
+   "fetched_at": "2026-10-07T20:36:45+08:00",
    "quote": {
-    "close": 293.5,
-    "date": "2026-10-05",
-    "spread": 2.5,
-    "pe_ttm": 14.7
+    "close": 289.5,
+    "date": "2026-10-07",
+    "spread": -6.5,
+    "pe_ttm": 14.5
    }
   },
   {
    "id": "2498",
    "name": "宏達電",
-   "industry": "通信網路業",
+   "industry": "電子工業",
    "theme": "品牌電子",
    "has_contract_liab": false,
    "quarters": [
@@ -113274,7 +113274,6 @@ window.SEED_DATA = {
    },
    "month_rev": {
     "months": [
-     "2024-07",
      "2024-08",
      "2024-09",
      "2024-10",
@@ -113299,10 +113298,10 @@ window.SEED_DATA = {
      "2026-05",
      "2026-06",
      "2026-07",
-     "2026-08"
+     "2026-08",
+     "2026-09"
     ],
     "values": [
-     232519000,
      203561000,
      337794000,
      223407000,
@@ -113327,15 +113326,16 @@ window.SEED_DATA = {
      170433000,
      292394000,
      178710000,
-     246093000
+     246093000,
+     338824000
     ]
    },
-   "fetched_at": "2026-10-05T21:31:05+08:00",
+   "fetched_at": "2026-10-07T20:36:47+08:00",
    "quote": {
-    "close": 42.05,
-    "date": "2026-10-05",
-    "spread": -0.85,
-    "pe_ttm": 16.2
+    "close": 42.3,
+    "date": "2026-10-07",
+    "spread": 0.5,
+    "pe_ttm": 16.3
    }
   },
   {
@@ -113843,12 +113843,12 @@ window.SEED_DATA = {
      908501000
     ]
    },
-   "fetched_at": "2026-10-05T21:31:08+08:00",
+   "fetched_at": "2026-10-07T20:36:50+08:00",
    "quote": {
-    "close": 1040.0,
-    "date": "2026-10-05",
-    "spread": 25.0,
-    "pe_ttm": 87.2
+    "close": 1020.0,
+    "date": "2026-10-07",
+    "spread": -10.0,
+    "pe_ttm": 85.5
    }
   },
   {
@@ -114356,11 +114356,11 @@ window.SEED_DATA = {
      16782864000
     ]
    },
-   "fetched_at": "2026-10-05T21:31:11+08:00",
+   "fetched_at": "2026-10-07T20:36:52+08:00",
    "quote": {
     "close": 122.5,
-    "date": "2026-10-05",
-    "spread": 0.5,
+    "date": "2026-10-07",
+    "spread": -0.5,
     "pe_ttm": 23.0
    }
   },
@@ -114869,12 +114869,12 @@ window.SEED_DATA = {
      176140000
     ]
    },
-   "fetched_at": "2026-10-05T21:31:14+08:00",
+   "fetched_at": "2026-10-07T20:36:55+08:00",
    "quote": {
-    "close": 173.0,
-    "date": "2026-10-05",
-    "spread": -2.0,
-    "pe_ttm": 346.0
+    "close": 174.0,
+    "date": "2026-10-07",
+    "spread": 0.5,
+    "pe_ttm": 348.0
    }
   },
   {
@@ -115382,11 +115382,11 @@ window.SEED_DATA = {
      1459946000
     ]
    },
-   "fetched_at": "2026-10-05T21:31:17+08:00",
+   "fetched_at": "2026-10-07T20:36:57+08:00",
    "quote": {
-    "close": 49.65,
-    "date": "2026-10-05",
-    "spread": 4.5,
+    "close": 47.2,
+    "date": "2026-10-07",
+    "spread": -0.45,
     "pe_ttm_label": "本益比為負"
    }
   },
@@ -115895,12 +115895,12 @@ window.SEED_DATA = {
      13452420000
     ]
    },
-   "fetched_at": "2026-10-03T23:09:52+08:00",
+   "fetched_at": "2026-10-07T20:37:00+08:00",
    "quote": {
-    "close": 30.85,
-    "date": "2026-10-02",
-    "spread": -0.15,
-    "pe_ttm": 25.7
+    "close": 31.05,
+    "date": "2026-10-07",
+    "spread": 0.35,
+    "pe_ttm": 25.9
    }
   },
   {
