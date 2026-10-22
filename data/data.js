@@ -1,6 +1,6 @@
 // 由 etl/build_data.py 自動產生，請勿手動編輯。
 window.SEED_DATA = {
- "updated_at": "2026-10-22T00:34:39+08:00",
+ "updated_at": "2026-10-22T19:07:04+08:00",
  "source": "FinMind",
  "config": {
   "thresholds": {
@@ -3037,10 +3037,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:29:18+08:00",
    "quote": {
-    "close": 2420.0,
-    "date": "2026-10-21",
-    "spread": 15.0,
-    "pe_ttm": 28.0
+    "close": 2385.0,
+    "date": "2026-10-22",
+    "spread": -35.0,
+    "pe_ttm": 27.6
    }
   },
   {
@@ -3550,10 +3550,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:29:21+08:00",
    "quote": {
-    "close": 128.0,
-    "date": "2026-10-21",
-    "spread": 1.0,
-    "pe_ttm": 19.2
+    "close": 125.5,
+    "date": "2026-10-22",
+    "spread": -2.5,
+    "pe_ttm": 18.8
    }
   },
   {
@@ -4063,10 +4063,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:29:24+08:00",
    "quote": {
-    "close": 66.2,
-    "date": "2026-10-21",
-    "spread": 2.1,
-    "pe_ttm": 19.9
+    "close": 66.4,
+    "date": "2026-10-22",
+    "spread": 0.2,
+    "pe_ttm": 20.0
    }
   },
   {
@@ -4576,10 +4576,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:29:26+08:00",
    "quote": {
-    "close": 4140.0,
-    "date": "2026-10-21",
-    "spread": -10.0,
-    "pe_ttm": 68.2
+    "close": 4010.0,
+    "date": "2026-10-22",
+    "spread": -130.0,
+    "pe_ttm": 66.1
    }
   },
   {
@@ -5089,10 +5089,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:29:29+08:00",
    "quote": {
-    "close": 590.0,
-    "date": "2026-10-21",
-    "spread": 22.0,
-    "pe_ttm": 20.6
+    "close": 583.0,
+    "date": "2026-10-22",
+    "spread": -7.0,
+    "pe_ttm": 20.3
    }
   },
   {
@@ -5602,10 +5602,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:29:32+08:00",
    "quote": {
-    "close": 3710.0,
-    "date": "2026-10-21",
-    "spread": 70.0,
-    "pe_ttm": 51.3
+    "close": 3495.0,
+    "date": "2026-10-22",
+    "spread": -215.0,
+    "pe_ttm": 48.4
    }
   },
   {
@@ -6115,10 +6115,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:29:34+08:00",
    "quote": {
-    "close": 8000.0,
-    "date": "2026-10-21",
-    "spread": 255.0,
-    "pe_ttm": 205.1
+    "close": 7585.0,
+    "date": "2026-10-22",
+    "spread": -415.0,
+    "pe_ttm": 194.4
    }
   },
   {
@@ -6628,10 +6628,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:29:37+08:00",
    "quote": {
-    "close": 527.0,
-    "date": "2026-10-21",
-    "spread": 3.0,
-    "pe_ttm": 16.6
+    "close": 512.0,
+    "date": "2026-10-22",
+    "spread": -15.0,
+    "pe_ttm": 16.1
    }
   },
   {
@@ -7141,10 +7141,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:29:39+08:00",
    "quote": {
-    "close": 792.0,
-    "date": "2026-10-21",
-    "spread": 18.0,
-    "pe_ttm": 28.6
+    "close": 772.0,
+    "date": "2026-10-22",
+    "spread": -20.0,
+    "pe_ttm": 27.8
    }
   },
   {
@@ -7654,10 +7654,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:29:42+08:00",
    "quote": {
-    "close": 1485.0,
-    "date": "2026-10-21",
-    "spread": 15.0,
-    "pe_ttm": 15.9
+    "close": 1465.0,
+    "date": "2026-10-22",
+    "spread": -20.0,
+    "pe_ttm": 15.7
    }
   },
   {
@@ -8167,10 +8167,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:29:44+08:00",
    "quote": {
-    "close": 198.0,
-    "date": "2026-10-21",
-    "spread": 5.5,
-    "pe_ttm": 78.0
+    "close": 192.0,
+    "date": "2026-10-22",
+    "spread": -6.0,
+    "pe_ttm": 75.6
    }
   },
   {
@@ -8680,9 +8680,9 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:29:47+08:00",
    "quote": {
-    "close": 291.0,
-    "date": "2026-10-21",
-    "spread": 9.5,
+    "close": 282.5,
+    "date": "2026-10-22",
+    "spread": -8.5,
     "pe_ttm_label": "本益比為負"
    }
   },
@@ -9193,10 +9193,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:29:49+08:00",
    "quote": {
-    "close": 456.0,
-    "date": "2026-10-21",
-    "spread": 16.5,
-    "pe_ttm": 475.0
+    "close": 435.0,
+    "date": "2026-10-22",
+    "spread": -21.0,
+    "pe_ttm": 453.1
    }
   },
   {
@@ -9706,10 +9706,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:29:52+08:00",
    "quote": {
-    "close": 159.5,
-    "date": "2026-10-21",
-    "spread": 7.0,
-    "pe_ttm": 17.6
+    "close": 154.5,
+    "date": "2026-10-22",
+    "spread": -5.0,
+    "pe_ttm": 17.1
    }
   },
   {
@@ -10219,10 +10219,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:29:54+08:00",
    "quote": {
-    "close": 436.5,
-    "date": "2026-10-21",
-    "spread": 14.5,
-    "pe_ttm": 16.1
+    "close": 414.0,
+    "date": "2026-10-22",
+    "spread": -22.5,
+    "pe_ttm": 15.2
    }
   },
   {
@@ -10732,10 +10732,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:29:57+08:00",
    "quote": {
-    "close": 1930.0,
-    "date": "2026-10-21",
-    "spread": 85.0,
-    "pe_ttm": 8.8
+    "close": 1880.0,
+    "date": "2026-10-22",
+    "spread": -50.0,
+    "pe_ttm": 8.5
    }
   },
   {
@@ -11245,9 +11245,9 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:29:59+08:00",
    "quote": {
-    "close": 249.0,
-    "date": "2026-10-21",
-    "spread": 0.5,
+    "close": 250.0,
+    "date": "2026-10-22",
+    "spread": 1.0,
     "pe_ttm": 3.8
    }
   },
@@ -11758,10 +11758,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:30:02+08:00",
    "quote": {
-    "close": 1095.0,
-    "date": "2026-10-21",
-    "spread": -5.0,
-    "pe_ttm": 6.0
+    "close": 1065.0,
+    "date": "2026-10-22",
+    "spread": -30.0,
+    "pe_ttm": 5.8
    }
   },
   {
@@ -12271,10 +12271,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:30:07+08:00",
    "quote": {
-    "close": 542.0,
-    "date": "2026-10-21",
-    "spread": 19.0,
-    "pe_ttm": 36.4
+    "close": 507.0,
+    "date": "2026-10-22",
+    "spread": -35.0,
+    "pe_ttm": 34.1
    }
   },
   {
@@ -12784,10 +12784,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:30:10+08:00",
    "quote": {
-    "close": 182.5,
-    "date": "2026-10-21",
-    "spread": 3.0,
-    "pe_ttm": 31.6
+    "close": 169.5,
+    "date": "2026-10-22",
+    "spread": -13.0,
+    "pe_ttm": 29.3
    }
   },
   {
@@ -13297,10 +13297,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:30:13+08:00",
    "quote": {
-    "close": 405.5,
-    "date": "2026-10-21",
-    "spread": 36.5,
-    "pe_ttm": 45.6
+    "close": 368.0,
+    "date": "2026-10-22",
+    "spread": -37.5,
+    "pe_ttm": 41.3
    }
   },
   {
@@ -13810,10 +13810,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:30:15+08:00",
    "quote": {
-    "close": 82.4,
-    "date": "2026-10-21",
-    "spread": 0.4,
-    "pe_ttm": 58.9
+    "close": 76.7,
+    "date": "2026-10-22",
+    "spread": -5.7,
+    "pe_ttm": 54.8
    }
   },
   {
@@ -14323,10 +14323,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:30:18+08:00",
    "quote": {
-    "close": 4990.0,
-    "date": "2026-10-21",
-    "spread": 45.0,
-    "pe_ttm": 77.9
+    "close": 5070.0,
+    "date": "2026-10-22",
+    "spread": 80.0,
+    "pe_ttm": 79.1
    }
   },
   {
@@ -14836,10 +14836,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:30:20+08:00",
    "quote": {
-    "close": 1500.0,
-    "date": "2026-10-21",
-    "spread": -50.0,
-    "pe_ttm": 76.1
+    "close": 1420.0,
+    "date": "2026-10-22",
+    "spread": -80.0,
+    "pe_ttm": 72.0
    }
   },
   {
@@ -15349,10 +15349,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:30:23+08:00",
    "quote": {
-    "close": 482.0,
-    "date": "2026-10-21",
-    "spread": 12.5,
-    "pe_ttm": 71.7
+    "close": 438.5,
+    "date": "2026-10-22",
+    "spread": -43.5,
+    "pe_ttm": 65.3
    }
   },
   {
@@ -15862,10 +15862,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:30:26+08:00",
    "quote": {
-    "close": 823.0,
-    "date": "2026-10-21",
-    "spread": 74.0,
-    "pe_ttm": 127.4
+    "close": 777.0,
+    "date": "2026-10-22",
+    "spread": -46.0,
+    "pe_ttm": 120.3
    }
   },
   {
@@ -16375,10 +16375,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:30:28+08:00",
    "quote": {
-    "close": 46.65,
-    "date": "2026-10-21",
-    "spread": 0.95,
-    "pe_ttm": 11.2
+    "close": 45.9,
+    "date": "2026-10-22",
+    "spread": -0.75,
+    "pe_ttm": 11.0
    }
   },
   {
@@ -16888,10 +16888,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:30:31+08:00",
    "quote": {
-    "close": 1100.0,
-    "date": "2026-10-21",
-    "spread": 45.0,
-    "pe_ttm": 71.0
+    "close": 1085.0,
+    "date": "2026-10-22",
+    "spread": -15.0,
+    "pe_ttm": 70.0
    }
   },
   {
@@ -17401,10 +17401,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:30:33+08:00",
    "quote": {
-    "close": 1340.0,
-    "date": "2026-10-21",
-    "spread": 35.0,
-    "pe_ttm": 157.5
+    "close": 1265.0,
+    "date": "2026-10-22",
+    "spread": -75.0,
+    "pe_ttm": 148.6
    }
   },
   {
@@ -17914,10 +17914,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:30:36+08:00",
    "quote": {
-    "close": 1010.0,
-    "date": "2026-10-21",
-    "spread": 65.0,
-    "pe_ttm": 171.2
+    "close": 986.0,
+    "date": "2026-10-22",
+    "spread": -24.0,
+    "pe_ttm": 167.1
    }
   },
   {
@@ -18427,10 +18427,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:30:38+08:00",
    "quote": {
-    "close": 1195.0,
-    "date": "2026-10-21",
-    "spread": 10.0,
-    "pe_ttm": 41.9
+    "close": 1115.0,
+    "date": "2026-10-22",
+    "spread": -80.0,
+    "pe_ttm": 39.1
    }
   },
   {
@@ -18940,10 +18940,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:30:41+08:00",
    "quote": {
-    "close": 583.0,
-    "date": "2026-10-21",
-    "spread": 16.0,
-    "pe_ttm": 25.0
+    "close": 556.0,
+    "date": "2026-10-22",
+    "spread": -27.0,
+    "pe_ttm": 23.8
    }
   },
   {
@@ -19453,10 +19453,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:30:43+08:00",
    "quote": {
-    "close": 240.5,
-    "date": "2026-10-21",
-    "spread": -3.0,
-    "pe_ttm": 38.7
+    "close": 224.5,
+    "date": "2026-10-22",
+    "spread": -16.0,
+    "pe_ttm": 36.2
    }
   },
   {
@@ -19966,10 +19966,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:30:46+08:00",
    "quote": {
-    "close": 3235.0,
-    "date": "2026-10-21",
+    "close": 3145.0,
+    "date": "2026-10-22",
     "spread": -90.0,
-    "pe_ttm": 43.1
+    "pe_ttm": 41.9
    }
   },
   {
@@ -20479,10 +20479,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:30:48+08:00",
    "quote": {
-    "close": 1375.0,
-    "date": "2026-10-21",
-    "spread": -20.0,
-    "pe_ttm": 31.4
+    "close": 1360.0,
+    "date": "2026-10-22",
+    "spread": -15.0,
+    "pe_ttm": 31.0
    }
   },
   {
@@ -20992,10 +20992,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:30:51+08:00",
    "quote": {
-    "close": 6535.0,
-    "date": "2026-10-21",
-    "spread": -115.0,
-    "pe_ttm": 146.4
+    "close": 6070.0,
+    "date": "2026-10-22",
+    "spread": -465.0,
+    "pe_ttm": 135.9
    }
   },
   {
@@ -21505,9 +21505,9 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:30:55+08:00",
    "quote": {
-    "close": 111.0,
-    "date": "2026-10-21",
-    "spread": 2.5,
+    "close": 108.0,
+    "date": "2026-10-22",
+    "spread": -3.0,
     "pe_ttm_label": "本益比為負"
    }
   },
@@ -22018,10 +22018,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:30:58+08:00",
    "quote": {
-    "close": 488.0,
-    "date": "2026-10-21",
-    "spread": 18.0,
-    "pe_ttm": 79.3
+    "close": 450.0,
+    "date": "2026-10-22",
+    "spread": -38.0,
+    "pe_ttm": 73.2
    }
   },
   {
@@ -22531,10 +22531,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:31:00+08:00",
    "quote": {
-    "close": 180.5,
-    "date": "2026-10-21",
-    "spread": 9.5,
-    "pe_ttm": 52.3
+    "close": 165.0,
+    "date": "2026-10-22",
+    "spread": -15.5,
+    "pe_ttm": 47.8
    }
   },
   {
@@ -23044,10 +23044,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:31:03+08:00",
    "quote": {
-    "close": 2625.0,
-    "date": "2026-10-21",
-    "spread": 135.0,
-    "pe_ttm": 234.2
+    "close": 2375.0,
+    "date": "2026-10-22",
+    "spread": -250.0,
+    "pe_ttm": 211.9
    }
   },
   {
@@ -23557,10 +23557,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:31:06+08:00",
    "quote": {
-    "close": 450.0,
-    "date": "2026-10-21",
-    "spread": 19.5,
-    "pe_ttm": 91.5
+    "close": 424.0,
+    "date": "2026-10-22",
+    "spread": -26.0,
+    "pe_ttm": 86.2
    }
   },
   {
@@ -24070,10 +24070,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:31:08+08:00",
    "quote": {
-    "close": 1950.0,
-    "date": "2026-10-21",
-    "spread": 25.0,
-    "pe_ttm": 35.8
+    "close": 1875.0,
+    "date": "2026-10-22",
+    "spread": -75.0,
+    "pe_ttm": 34.4
    }
   },
   {
@@ -24583,10 +24583,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:31:11+08:00",
    "quote": {
-    "close": 308.0,
-    "date": "2026-10-21",
-    "spread": 2.5,
-    "pe_ttm": 23.0
+    "close": 298.0,
+    "date": "2026-10-22",
+    "spread": -10.0,
+    "pe_ttm": 22.3
    }
   },
   {
@@ -25096,9 +25096,9 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:31:14+08:00",
    "quote": {
-    "close": 39.8,
-    "date": "2026-10-21",
-    "spread": 0.3,
+    "close": 39.75,
+    "date": "2026-10-22",
+    "spread": -0.05,
     "pe_ttm": 5.1
    }
   },
@@ -25609,10 +25609,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:31:17+08:00",
    "quote": {
-    "close": 1625.0,
-    "date": "2026-10-21",
-    "spread": 20.0,
-    "pe_ttm": 51.7
+    "close": 1560.0,
+    "date": "2026-10-22",
+    "spread": -65.0,
+    "pe_ttm": 49.6
    }
   },
   {
@@ -26122,10 +26122,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:31:19+08:00",
    "quote": {
-    "close": 263.5,
-    "date": "2026-10-21",
-    "spread": 1.5,
-    "pe_ttm": 30.8
+    "close": 255.5,
+    "date": "2026-10-22",
+    "spread": -8.0,
+    "pe_ttm": 29.9
    }
   },
   {
@@ -26635,10 +26635,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:31:22+08:00",
    "quote": {
-    "close": 50.9,
-    "date": "2026-10-21",
-    "spread": 0.2,
-    "pe_ttm": 20.0
+    "close": 50.0,
+    "date": "2026-10-22",
+    "spread": -0.9,
+    "pe_ttm": 19.7
    }
   },
   {
@@ -27148,10 +27148,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:31:24+08:00",
    "quote": {
-    "close": 250.0,
-    "date": "2026-10-21",
-    "spread": 8.5,
-    "pe_ttm": 16.4
+    "close": 245.0,
+    "date": "2026-10-22",
+    "spread": -5.0,
+    "pe_ttm": 16.1
    }
   },
   {
@@ -27661,10 +27661,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:31:27+08:00",
    "quote": {
-    "close": 1880.0,
-    "date": "2026-10-21",
-    "spread": -45.0,
-    "pe_ttm": 6.0
+    "close": 1840.0,
+    "date": "2026-10-22",
+    "spread": -40.0,
+    "pe_ttm": 5.9
    }
   },
   {
@@ -28174,10 +28174,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:31:29+08:00",
    "quote": {
-    "close": 328.5,
-    "date": "2026-10-21",
-    "spread": 8.0,
-    "pe_ttm": 14.3
+    "close": 322.0,
+    "date": "2026-10-22",
+    "spread": -6.5,
+    "pe_ttm": 14.0
    }
   },
   {
@@ -28687,10 +28687,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:31:32+08:00",
    "quote": {
-    "close": 195.0,
-    "date": "2026-10-21",
-    "spread": 6.0,
-    "pe_ttm": 15.3
+    "close": 190.0,
+    "date": "2026-10-22",
+    "spread": -5.0,
+    "pe_ttm": 14.9
    }
   },
   {
@@ -29200,10 +29200,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:31:34+08:00",
    "quote": {
-    "close": 105.0,
-    "date": "2026-10-21",
-    "spread": 0.0,
-    "pe_ttm": 17.7
+    "close": 103.5,
+    "date": "2026-10-22",
+    "spread": -1.5,
+    "pe_ttm": 17.5
    }
   },
   {
@@ -29713,10 +29713,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:31:37+08:00",
    "quote": {
-    "close": 358.5,
-    "date": "2026-10-21",
-    "spread": 3.5,
-    "pe_ttm": 13.4
+    "close": 349.0,
+    "date": "2026-10-22",
+    "spread": -9.5,
+    "pe_ttm": 13.1
    }
   },
   {
@@ -30226,10 +30226,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:31:39+08:00",
    "quote": {
-    "close": 982.0,
-    "date": "2026-10-21",
-    "spread": 1.0,
-    "pe_ttm": 14.4
+    "close": 946.0,
+    "date": "2026-10-22",
+    "spread": -36.0,
+    "pe_ttm": 13.8
    }
   },
   {
@@ -30739,10 +30739,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:31:42+08:00",
    "quote": {
-    "close": 61.3,
-    "date": "2026-10-21",
-    "spread": 1.3,
-    "pe_ttm": 19.8
+    "close": 60.5,
+    "date": "2026-10-22",
+    "spread": -0.8,
+    "pe_ttm": 19.5
    }
   },
   {
@@ -31252,10 +31252,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:31:45+08:00",
    "quote": {
-    "close": 521.0,
-    "date": "2026-10-21",
-    "spread": 14.0,
-    "pe_ttm": 35.0
+    "close": 503.0,
+    "date": "2026-10-22",
+    "spread": -18.0,
+    "pe_ttm": 33.8
    }
   },
   {
@@ -31765,10 +31765,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:31:47+08:00",
    "quote": {
-    "close": 3230.0,
-    "date": "2026-10-21",
-    "spread": 135.0,
-    "pe_ttm": 75.9
+    "close": 3065.0,
+    "date": "2026-10-22",
+    "spread": -165.0,
+    "pe_ttm": 72.0
    }
   },
   {
@@ -32278,10 +32278,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:31:49+08:00",
    "quote": {
-    "close": 5005.0,
-    "date": "2026-10-21",
-    "spread": 105.0,
-    "pe_ttm": 106.0
+    "close": 4890.0,
+    "date": "2026-10-22",
+    "spread": -115.0,
+    "pe_ttm": 103.6
    }
   },
   {
@@ -32791,10 +32791,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:31:53+08:00",
    "quote": {
-    "close": 2010.0,
-    "date": "2026-10-21",
-    "spread": 10.0,
-    "pe_ttm": 51.2
+    "close": 1980.0,
+    "date": "2026-10-22",
+    "spread": -30.0,
+    "pe_ttm": 50.4
    }
   },
   {
@@ -33304,10 +33304,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:31:55+08:00",
    "quote": {
-    "close": 48.5,
-    "date": "2026-10-21",
-    "spread": 1.7,
-    "pe_ttm": 62.2
+    "close": 46.75,
+    "date": "2026-10-22",
+    "spread": -1.75,
+    "pe_ttm": 59.9
    }
   },
   {
@@ -33817,10 +33817,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:31:58+08:00",
    "quote": {
-    "close": 578.0,
-    "date": "2026-10-21",
-    "spread": 31.0,
-    "pe_ttm": 63.5
+    "close": 567.0,
+    "date": "2026-10-22",
+    "spread": -11.0,
+    "pe_ttm": 62.3
    }
   },
   {
@@ -34330,10 +34330,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:32:00+08:00",
    "quote": {
-    "close": 37.25,
-    "date": "2026-10-21",
-    "spread": 1.5,
-    "pe_ttm": 155.2
+    "close": 35.4,
+    "date": "2026-10-22",
+    "spread": -1.85,
+    "pe_ttm": 147.5
    }
   },
   {
@@ -34843,10 +34843,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:32:03+08:00",
    "quote": {
-    "close": 266.0,
-    "date": "2026-10-21",
-    "spread": 10.0,
-    "pe_ttm": 26.3
+    "close": 248.0,
+    "date": "2026-10-22",
+    "spread": -18.0,
+    "pe_ttm": 24.6
    }
   },
   {
@@ -35356,10 +35356,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:32:06+08:00",
    "quote": {
-    "close": 684.0,
-    "date": "2026-10-21",
-    "spread": 24.0,
-    "pe_ttm": 49.1
+    "close": 654.0,
+    "date": "2026-10-22",
+    "spread": -30.0,
+    "pe_ttm": 47.0
    }
   },
   {
@@ -35869,10 +35869,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:32:08+08:00",
    "quote": {
-    "close": 103.0,
-    "date": "2026-10-21",
-    "spread": 3.0,
-    "pe_ttm": 24.6
+    "close": 99.5,
+    "date": "2026-10-22",
+    "spread": -3.5,
+    "pe_ttm": 23.7
    }
   },
   {
@@ -36382,10 +36382,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:32:11+08:00",
    "quote": {
-    "close": 320.5,
-    "date": "2026-10-21",
-    "spread": 24.5,
-    "pe_ttm": 51.7
+    "close": 301.0,
+    "date": "2026-10-22",
+    "spread": -19.5,
+    "pe_ttm": 48.5
    }
   },
   {
@@ -36895,10 +36895,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:32:13+08:00",
    "quote": {
-    "close": 278.0,
-    "date": "2026-10-21",
-    "spread": 18.5,
-    "pe_ttm": 36.4
+    "close": 262.5,
+    "date": "2026-10-22",
+    "spread": -15.5,
+    "pe_ttm": 34.4
    }
   },
   {
@@ -37408,9 +37408,9 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:32:16+08:00",
    "quote": {
-    "close": 6170.0,
-    "date": "2026-10-21",
-    "spread": 195.0,
+    "close": 6175.0,
+    "date": "2026-10-22",
+    "spread": 5.0,
     "pe_ttm": 33.2
    }
   },
@@ -37921,10 +37921,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:32:18+08:00",
    "quote": {
-    "close": 512.0,
-    "date": "2026-10-21",
-    "spread": 37.0,
-    "pe_ttm": 60.2
+    "close": 486.0,
+    "date": "2026-10-22",
+    "spread": -26.0,
+    "pe_ttm": 57.1
    }
   },
   {
@@ -38434,10 +38434,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:32:21+08:00",
    "quote": {
-    "close": 490.5,
-    "date": "2026-10-21",
-    "spread": 5.0,
-    "pe_ttm": 119.1
+    "close": 467.0,
+    "date": "2026-10-22",
+    "spread": -23.5,
+    "pe_ttm": 113.3
    }
   },
   {
@@ -38947,10 +38947,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:32:23+08:00",
    "quote": {
-    "close": 1815.0,
-    "date": "2026-10-21",
-    "spread": -155.0,
-    "pe_ttm": 28.5
+    "close": 1775.0,
+    "date": "2026-10-22",
+    "spread": -40.0,
+    "pe_ttm": 27.9
    }
   },
   {
@@ -39460,10 +39460,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:32:26+08:00",
    "quote": {
-    "close": 111.0,
-    "date": "2026-10-21",
-    "spread": 6.0,
-    "pe_ttm": 482.6
+    "close": 104.5,
+    "date": "2026-10-22",
+    "spread": -6.5,
+    "pe_ttm": 454.3
    }
   },
   {
@@ -39973,10 +39973,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:32:28+08:00",
    "quote": {
-    "close": 77.0,
-    "date": "2026-10-21",
-    "spread": 2.1,
-    "pe_ttm": 47.0
+    "close": 73.8,
+    "date": "2026-10-22",
+    "spread": -3.2,
+    "pe_ttm": 45.0
    }
   },
   {
@@ -40486,10 +40486,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:32:31+08:00",
    "quote": {
-    "close": 1660.0,
-    "date": "2026-10-21",
-    "spread": 115.0,
-    "pe_ttm": 110.8
+    "close": 1560.0,
+    "date": "2026-10-22",
+    "spread": -100.0,
+    "pe_ttm": 104.1
    }
   },
   {
@@ -40999,10 +40999,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:32:33+08:00",
    "quote": {
-    "close": 67.2,
-    "date": "2026-10-21",
-    "spread": -0.2,
-    "pe_ttm": 77.2
+    "close": 67.1,
+    "date": "2026-10-22",
+    "spread": -0.1,
+    "pe_ttm": 77.1
    }
   },
   {
@@ -41512,10 +41512,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:32:36+08:00",
    "quote": {
-    "close": 126.5,
-    "date": "2026-10-21",
-    "spread": 6.5,
-    "pe_ttm": 26.0
+    "close": 118.5,
+    "date": "2026-10-22",
+    "spread": -8.0,
+    "pe_ttm": 24.3
    }
   },
   {
@@ -42025,10 +42025,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:32:39+08:00",
    "quote": {
-    "close": 164.0,
-    "date": "2026-10-21",
-    "spread": 7.0,
-    "pe_ttm": 20.1
+    "close": 156.5,
+    "date": "2026-10-22",
+    "spread": -7.5,
+    "pe_ttm": 19.2
    }
   },
   {
@@ -42538,10 +42538,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:32:41+08:00",
    "quote": {
-    "close": 102.5,
-    "date": "2026-10-21",
-    "spread": 3.4,
-    "pe_ttm": 31.9
+    "close": 95.9,
+    "date": "2026-10-22",
+    "spread": -6.6,
+    "pe_ttm": 29.9
    }
   },
   {
@@ -43051,9 +43051,9 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:32:44+08:00",
    "quote": {
-    "close": 19.6,
-    "date": "2026-10-21",
-    "spread": 0.0,
+    "close": 19.55,
+    "date": "2026-10-22",
+    "spread": -0.05,
     "pe_ttm_label": "本益比為負"
    }
   },
@@ -43564,10 +43564,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:32:46+08:00",
    "quote": {
-    "close": 219.5,
-    "date": "2026-10-21",
-    "spread": 7.0,
-    "pe_ttm": 22.4
+    "close": 202.5,
+    "date": "2026-10-22",
+    "spread": -17.0,
+    "pe_ttm": 20.6
    }
   },
   {
@@ -44077,10 +44077,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:32:49+08:00",
    "quote": {
-    "close": 332.5,
-    "date": "2026-10-21",
-    "spread": -3.0,
-    "pe_ttm": 4.1
+    "close": 328.0,
+    "date": "2026-10-22",
+    "spread": -4.5,
+    "pe_ttm": 4.0
    }
   },
   {
@@ -44590,9 +44590,9 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:32:51+08:00",
    "quote": {
-    "close": 14.7,
-    "date": "2026-10-21",
-    "spread": 0.1,
+    "close": 14.4,
+    "date": "2026-10-22",
+    "spread": -0.3,
     "pe_ttm_label": "本益比為負"
    }
   },
@@ -45103,10 +45103,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:32:54+08:00",
    "quote": {
-    "close": 136.0,
-    "date": "2026-10-21",
-    "spread": 2.5,
-    "pe_ttm": 32.9
+    "close": 132.0,
+    "date": "2026-10-22",
+    "spread": -4.0,
+    "pe_ttm": 31.9
    }
   },
   {
@@ -45616,10 +45616,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:32:57+08:00",
    "quote": {
-    "close": 147.0,
-    "date": "2026-10-21",
-    "spread": -7.0,
-    "pe_ttm": 40.7
+    "close": 139.0,
+    "date": "2026-10-22",
+    "spread": -8.0,
+    "pe_ttm": 38.5
    }
   },
   {
@@ -46129,10 +46129,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:32:59+08:00",
    "quote": {
-    "close": 831.0,
-    "date": "2026-10-21",
-    "spread": 31.0,
-    "pe_ttm": 47.8
+    "close": 795.0,
+    "date": "2026-10-22",
+    "spread": -36.0,
+    "pe_ttm": 45.7
    }
   },
   {
@@ -46642,10 +46642,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:33:02+08:00",
    "quote": {
-    "close": 104.0,
-    "date": "2026-10-21",
-    "spread": 3.5,
-    "pe_ttm": 16.1
+    "close": 100.0,
+    "date": "2026-10-22",
+    "spread": -4.0,
+    "pe_ttm": 15.5
    }
   },
   {
@@ -47155,10 +47155,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:33:04+08:00",
    "quote": {
-    "close": 96.0,
-    "date": "2026-10-21",
-    "spread": 0.5,
-    "pe_ttm": 14.3
+    "close": 91.2,
+    "date": "2026-10-22",
+    "spread": -4.8,
+    "pe_ttm": 13.6
    }
   },
   {
@@ -47668,10 +47668,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:33:07+08:00",
    "quote": {
-    "close": 1430.0,
-    "date": "2026-10-21",
-    "spread": 100.0,
-    "pe_ttm": 112.5
+    "close": 1320.0,
+    "date": "2026-10-22",
+    "spread": -110.0,
+    "pe_ttm": 103.9
    }
   },
   {
@@ -48181,10 +48181,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:33:10+08:00",
    "quote": {
-    "close": 112.0,
-    "date": "2026-10-21",
-    "spread": 0.0,
-    "pe_ttm": 27.2
+    "close": 115.0,
+    "date": "2026-10-22",
+    "spread": 3.0,
+    "pe_ttm": 27.9
    }
   },
   {
@@ -48694,10 +48694,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:33:12+08:00",
    "quote": {
-    "close": 16515.0,
-    "date": "2026-10-21",
-    "spread": 615.0,
-    "pe_ttm": 113.5
+    "close": 16010.0,
+    "date": "2026-10-22",
+    "spread": -505.0,
+    "pe_ttm": 110.0
    }
   },
   {
@@ -49207,10 +49207,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:33:15+08:00",
    "quote": {
-    "close": 140.5,
-    "date": "2026-10-21",
-    "spread": 5.5,
-    "pe_ttm": 81.2
+    "close": 131.5,
+    "date": "2026-10-22",
+    "spread": -9.0,
+    "pe_ttm": 76.0
    }
   },
   {
@@ -49720,10 +49720,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:33:17+08:00",
    "quote": {
-    "close": 199.0,
-    "date": "2026-10-21",
-    "spread": 7.5,
-    "pe_ttm": 21.2
+    "close": 186.0,
+    "date": "2026-10-22",
+    "spread": -13.0,
+    "pe_ttm": 19.9
    }
   },
   {
@@ -50233,10 +50233,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:33:20+08:00",
    "quote": {
-    "close": 246.5,
-    "date": "2026-10-21",
-    "spread": -1.0,
-    "pe_ttm": 26.8
+    "close": 230.0,
+    "date": "2026-10-22",
+    "spread": -16.5,
+    "pe_ttm": 25.0
    }
   },
   {
@@ -50746,10 +50746,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:33:22+08:00",
    "quote": {
-    "close": 526.0,
-    "date": "2026-10-21",
-    "spread": -6.0,
-    "pe_ttm": 12.9
+    "close": 530.0,
+    "date": "2026-10-22",
+    "spread": 4.0,
+    "pe_ttm": 13.0
    }
   },
   {
@@ -51259,10 +51259,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:33:25+08:00",
    "quote": {
-    "close": 204.0,
-    "date": "2026-10-21",
-    "spread": 7.5,
-    "pe_ttm": 18.1
+    "close": 193.0,
+    "date": "2026-10-22",
+    "spread": -11.0,
+    "pe_ttm": 17.1
    }
   },
   {
@@ -51772,10 +51772,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:33:27+08:00",
    "quote": {
-    "close": 338.0,
-    "date": "2026-10-21",
-    "spread": -4.5,
-    "pe_ttm": 45.2
+    "close": 320.0,
+    "date": "2026-10-22",
+    "spread": -18.0,
+    "pe_ttm": 42.8
    }
   },
   {
@@ -52285,10 +52285,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:33:30+08:00",
    "quote": {
-    "close": 122.0,
-    "date": "2026-10-21",
-    "spread": 3.0,
-    "pe_ttm": 29.4
+    "close": 115.5,
+    "date": "2026-10-22",
+    "spread": -6.5,
+    "pe_ttm": 27.8
    }
   },
   {
@@ -52798,10 +52798,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:33:33+08:00",
    "quote": {
-    "close": 1105.0,
-    "date": "2026-10-21",
-    "spread": 15.0,
-    "pe_ttm": 16.7
+    "close": 1090.0,
+    "date": "2026-10-22",
+    "spread": -15.0,
+    "pe_ttm": 16.4
    }
   },
   {
@@ -53311,10 +53311,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:33:36+08:00",
    "quote": {
-    "close": 248.0,
-    "date": "2026-10-21",
-    "spread": 10.0,
-    "pe_ttm": 29.1
+    "close": 232.0,
+    "date": "2026-10-22",
+    "spread": -16.0,
+    "pe_ttm": 27.2
    }
   },
   {
@@ -53824,10 +53824,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:33:38+08:00",
    "quote": {
-    "close": 490.0,
-    "date": "2026-10-21",
-    "spread": 27.5,
-    "pe_ttm": 49.6
+    "close": 472.0,
+    "date": "2026-10-22",
+    "spread": -18.0,
+    "pe_ttm": 47.8
    }
   },
   {
@@ -54337,9 +54337,9 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:33:41+08:00",
    "quote": {
-    "close": 143.5,
-    "date": "2026-10-21",
-    "spread": 9.5,
+    "close": 134.5,
+    "date": "2026-10-22",
+    "spread": -9.0,
     "pe_ttm_label": "本益比為負"
    }
   },
@@ -54850,9 +54850,9 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:33:43+08:00",
    "quote": {
-    "close": 212.5,
-    "date": "2026-10-21",
-    "spread": 5.0,
+    "close": 213.0,
+    "date": "2026-10-22",
+    "spread": 0.5,
     "pe_ttm": 10.7
    }
   },
@@ -55363,10 +55363,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:33:46+08:00",
    "quote": {
-    "close": 265.0,
-    "date": "2026-10-21",
-    "spread": 18.0,
-    "pe_ttm": 33.4
+    "close": 246.5,
+    "date": "2026-10-22",
+    "spread": -18.5,
+    "pe_ttm": 31.1
    }
   },
   {
@@ -55876,10 +55876,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:33:49+08:00",
    "quote": {
-    "close": 1140.0,
-    "date": "2026-10-21",
-    "spread": 100.0,
-    "pe_ttm": 30.8
+    "close": 1160.0,
+    "date": "2026-10-22",
+    "spread": 20.0,
+    "pe_ttm": 31.4
    }
   },
   {
@@ -56389,10 +56389,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:33:51+08:00",
    "quote": {
-    "close": 170.0,
-    "date": "2026-10-21",
-    "spread": -1.0,
-    "pe_ttm": 414.6
+    "close": 161.0,
+    "date": "2026-10-22",
+    "spread": -9.0,
+    "pe_ttm": 392.7
    }
   },
   {
@@ -56902,10 +56902,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:33:54+08:00",
    "quote": {
-    "close": 246.0,
-    "date": "2026-10-21",
-    "spread": 14.5,
-    "pe_ttm": 7.9
+    "close": 234.0,
+    "date": "2026-10-22",
+    "spread": -12.0,
+    "pe_ttm": 7.5
    }
   },
   {
@@ -57415,10 +57415,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:33:56+08:00",
    "quote": {
-    "close": 124.5,
-    "date": "2026-10-21",
-    "spread": 11.0,
-    "pe_ttm": 46.1
+    "close": 117.0,
+    "date": "2026-10-22",
+    "spread": -7.5,
+    "pe_ttm": 43.3
    }
   },
   {
@@ -57928,10 +57928,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:33:59+08:00",
    "quote": {
-    "close": 626.0,
-    "date": "2026-10-21",
-    "spread": -5.0,
-    "pe_ttm": 41.0
+    "close": 615.0,
+    "date": "2026-10-22",
+    "spread": -11.0,
+    "pe_ttm": 40.2
    }
   },
   {
@@ -58441,10 +58441,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:34:02+08:00",
    "quote": {
-    "close": 91.9,
-    "date": "2026-10-21",
-    "spread": 2.1,
-    "pe_ttm": 919.0
+    "close": 86.7,
+    "date": "2026-10-22",
+    "spread": -5.2,
+    "pe_ttm": 867.0
    }
   },
   {
@@ -58954,10 +58954,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:34:04+08:00",
    "quote": {
-    "close": 257.5,
-    "date": "2026-10-21",
-    "spread": -2.0,
-    "pe_ttm": 10.2
+    "close": 260.0,
+    "date": "2026-10-22",
+    "spread": 2.5,
+    "pe_ttm": 10.3
    }
   },
   {
@@ -59467,10 +59467,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:34:07+08:00",
    "quote": {
-    "close": 162.0,
-    "date": "2026-10-21",
-    "spread": 1.0,
-    "pe_ttm": 18.2
+    "close": 160.0,
+    "date": "2026-10-22",
+    "spread": -2.0,
+    "pe_ttm": 18.0
    }
   },
   {
@@ -59980,10 +59980,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:34:09+08:00",
    "quote": {
-    "close": 166.5,
-    "date": "2026-10-21",
-    "spread": 6.5,
-    "pe_ttm": 35.3
+    "close": 161.0,
+    "date": "2026-10-22",
+    "spread": -5.5,
+    "pe_ttm": 34.1
    }
   },
   {
@@ -60493,10 +60493,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:34:12+08:00",
    "quote": {
-    "close": 10080.0,
-    "date": "2026-10-21",
-    "spread": -20.0,
-    "pe_ttm": 55.6
+    "close": 9755.0,
+    "date": "2026-10-22",
+    "spread": -325.0,
+    "pe_ttm": 53.8
    }
   },
   {
@@ -61006,10 +61006,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:34:15+08:00",
    "quote": {
-    "close": 470.5,
-    "date": "2026-10-21",
-    "spread": 42.5,
-    "pe_ttm": 73.9
+    "close": 463.5,
+    "date": "2026-10-22",
+    "spread": -7.0,
+    "pe_ttm": 72.8
    }
   },
   {
@@ -61519,10 +61519,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:34:17+08:00",
    "quote": {
-    "close": 2100.0,
-    "date": "2026-10-21",
-    "spread": -20.0,
-    "pe_ttm": 36.9
+    "close": 1985.0,
+    "date": "2026-10-22",
+    "spread": -115.0,
+    "pe_ttm": 34.8
    }
   },
   {
@@ -62032,10 +62032,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:34:20+08:00",
    "quote": {
-    "close": 1175.0,
-    "date": "2026-10-21",
-    "spread": 20.0,
-    "pe_ttm": 59.1
+    "close": 1160.0,
+    "date": "2026-10-22",
+    "spread": -15.0,
+    "pe_ttm": 58.3
    }
   },
   {
@@ -62545,10 +62545,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:34:22+08:00",
    "quote": {
-    "close": 110.0,
-    "date": "2026-10-21",
-    "spread": -2.0,
-    "pe_ttm": 46.6
+    "close": 99.0,
+    "date": "2026-10-22",
+    "spread": -11.0,
+    "pe_ttm": 41.9
    }
   },
   {
@@ -63058,10 +63058,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:34:25+08:00",
    "quote": {
-    "close": 213.5,
-    "date": "2026-10-21",
-    "spread": 11.0,
-    "pe_ttm": 51.4
+    "close": 203.0,
+    "date": "2026-10-22",
+    "spread": -10.5,
+    "pe_ttm": 48.9
    }
   },
   {
@@ -63571,10 +63571,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:34:28+08:00",
    "quote": {
-    "close": 212.0,
-    "date": "2026-10-21",
-    "spread": 4.0,
-    "pe_ttm": 178.2
+    "close": 201.0,
+    "date": "2026-10-22",
+    "spread": -11.0,
+    "pe_ttm": 168.9
    }
   },
   {
@@ -64084,10 +64084,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:34:33+08:00",
    "quote": {
-    "close": 150.0,
-    "date": "2026-10-21",
-    "spread": 13.5,
-    "pe_ttm": 47.0
+    "close": 135.0,
+    "date": "2026-10-22",
+    "spread": -15.0,
+    "pe_ttm": 42.3
    }
   },
   {
@@ -64597,9 +64597,9 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:34:35+08:00",
    "quote": {
-    "close": 42.05,
-    "date": "2026-10-21",
-    "spread": -0.3,
+    "close": 42.2,
+    "date": "2026-10-22",
+    "spread": 0.15,
     "pe_ttm": 8.9
    }
   },
@@ -65110,10 +65110,10 @@ window.SEED_DATA = {
    },
    "fetched_at": "2026-10-22T00:34:38+08:00",
    "quote": {
-    "close": 75.8,
-    "date": "2026-10-21",
-    "spread": 3.4,
-    "pe_ttm": 16.6
+    "close": 73.0,
+    "date": "2026-10-22",
+    "spread": -2.8,
+    "pe_ttm": 15.9
    }
   },
   {
@@ -65621,12 +65621,12 @@ window.SEED_DATA = {
      94434113000
     ]
    },
-   "fetched_at": "2026-10-21T19:08:06+08:00",
+   "fetched_at": "2026-10-22T19:02:29+08:00",
    "quote": {
-    "close": 37.7,
-    "date": "2026-10-21",
-    "spread": 0.8,
-    "pe_ttm": 19.3
+    "close": 37.3,
+    "date": "2026-10-22",
+    "spread": -0.4,
+    "pe_ttm": 19.1
    }
   },
   {
@@ -66134,12 +66134,12 @@ window.SEED_DATA = {
      1349479000
     ]
    },
-   "fetched_at": "2026-10-21T19:08:09+08:00",
+   "fetched_at": "2026-10-22T19:02:31+08:00",
    "quote": {
-    "close": 428.0,
-    "date": "2026-10-21",
-    "spread": 38.5,
-    "pe_ttm": 334.4
+    "close": 406.0,
+    "date": "2026-10-22",
+    "spread": -22.0,
+    "pe_ttm": 317.2
    }
   },
   {
@@ -66647,11 +66647,11 @@ window.SEED_DATA = {
      663106000
     ]
    },
-   "fetched_at": "2026-10-21T19:08:11+08:00",
+   "fetched_at": "2026-10-22T19:02:35+08:00",
    "quote": {
-    "close": 74.3,
-    "date": "2026-10-21",
-    "spread": 1.4,
+    "close": 70.4,
+    "date": "2026-10-22",
+    "spread": -3.9,
     "pe_ttm_label": "本益比為負"
    }
   },
@@ -67160,12 +67160,12 @@ window.SEED_DATA = {
      87592000
     ]
    },
-   "fetched_at": "2026-10-20T18:51:51+08:00",
+   "fetched_at": "2026-10-22T19:02:39+08:00",
    "quote": {
-    "close": 52.2,
-    "date": "2026-10-20",
-    "spread": -0.1,
-    "pe_ttm": 73.5
+    "close": 50.1,
+    "date": "2026-10-22",
+    "spread": -2.7,
+    "pe_ttm": 70.6
    }
   },
   {
@@ -67400,7 +67400,7 @@ window.SEED_DATA = {
      2542664000.0,
      2583750000.0,
      2805040000.0,
-     6364416000.0
+     3559376000.0
     ],
     "cogs": [
      2385454000.0,
@@ -67415,7 +67415,7 @@ window.SEED_DATA = {
      2226549000.0,
      2175406000.0,
      2268612000.0,
-     5090557000.0
+     2821945000.0
     ],
     "gross": [
      438634000.0,
@@ -67430,7 +67430,7 @@ window.SEED_DATA = {
      316115000.0,
      408344000.0,
      536428000.0,
-     1273859000.0
+     737431000.0
     ],
     "op_exp": [
      208902000.0,
@@ -67445,7 +67445,7 @@ window.SEED_DATA = {
      212508000.0,
      231264000.0,
      264609000.0,
-     585181000.0
+     320572000.0
     ],
     "op_income": [
      229732000.0,
@@ -67460,7 +67460,7 @@ window.SEED_DATA = {
      103607000.0,
      177080000.0,
      271819000.0,
-     688678000.0
+     416859000.0
     ],
     "nonop": [
      53514000.0,
@@ -67475,7 +67475,7 @@ window.SEED_DATA = {
      23482000.0,
      21365000.0,
      20097000.0,
-     17531000.0
+     -2566000.0
     ],
     "pre_tax": [
      283246000.0,
@@ -67490,7 +67490,7 @@ window.SEED_DATA = {
      127089000.0,
      198445000.0,
      291916000.0,
-     706209000.0
+     414293000.0
     ],
     "net": [
      209110000.0,
@@ -67505,7 +67505,7 @@ window.SEED_DATA = {
      100389000.0,
      160439000.0,
      232644000.0,
-     554866000.0
+     322222000.0
     ],
     "eps": [
      1.11,
@@ -67535,7 +67535,7 @@ window.SEED_DATA = {
      0.12432433070197242,
      0.15804315432994678,
      0.19123720160853322,
-     0.20015332121596074
+     0.20717985399688035
     ]
    },
    "cashflow": {
@@ -67673,12 +67673,12 @@ window.SEED_DATA = {
      1371923000
     ]
    },
-   "fetched_at": "2026-10-20T18:51:54+08:00",
+   "fetched_at": "2026-10-22T19:02:41+08:00",
    "quote": {
-    "close": 195.5,
-    "date": "2026-10-20",
-    "spread": -6.0,
-    "pe_ttm": 47.8
+    "close": 196.0,
+    "date": "2026-10-22",
+    "spread": -10.0,
+    "pe_ttm": 47.9
    }
   },
   {
@@ -67913,7 +67913,7 @@ window.SEED_DATA = {
      8421594000.0,
      9259886000.0,
      9327579000.0,
-     18896408000.0
+     9568829000.0
     ],
     "cogs": [
      3132865000.0,
@@ -67928,7 +67928,7 @@ window.SEED_DATA = {
      4108707000.0,
      4487110000.0,
      4705995000.0,
-     9924040000.0
+     5218045000.0
     ],
     "gross": [
      2589265000.0,
@@ -67943,7 +67943,7 @@ window.SEED_DATA = {
      4312887000.0,
      4772776000.0,
      4621584000.0,
-     8972368000.0
+     4350784000.0
     ],
     "op_exp": [
      1088891000.0,
@@ -67958,7 +67958,7 @@ window.SEED_DATA = {
      1788309000.0,
      2002167000.0,
      1913118000.0,
-     4161174000.0
+     2248056000.0
     ],
     "op_income": [
      1500374000.0,
@@ -67973,7 +67973,7 @@ window.SEED_DATA = {
      2524578000.0,
      2770609000.0,
      2708466000.0,
-     4811194000.0
+     2102728000.0
     ],
     "nonop": [
      425307000.0,
@@ -67988,7 +67988,7 @@ window.SEED_DATA = {
      357184000.0,
      447399000.0,
      294757000.0,
-     789916000.0
+     495159000.0
     ],
     "pre_tax": [
      1925681000.0,
@@ -68003,7 +68003,7 @@ window.SEED_DATA = {
      2881762000.0,
      3218008000.0,
      3003223000.0,
-     5601110000.0
+     2597887000.0
     ],
     "net": [
      1312667000.0,
@@ -68018,7 +68018,7 @@ window.SEED_DATA = {
      2316338000.0,
      2568899000.0,
      2431334000.0,
-     4404897000.0
+     1973563000.0
     ],
     "eps": [
      11.56,
@@ -68048,7 +68048,7 @@ window.SEED_DATA = {
      0.5121224081806841,
      0.5154249199180206,
      0.4954751924373945,
-     0.4748187062853427
+     0.4546830129371107
     ]
    },
    "cashflow": {
@@ -68186,18 +68186,18 @@ window.SEED_DATA = {
      3356708000
     ]
    },
-   "fetched_at": "2026-10-20T18:51:57+08:00",
+   "fetched_at": "2026-10-22T19:02:45+08:00",
    "quote": {
-    "close": 1805.0,
-    "date": "2026-10-20",
-    "spread": -10.0,
-    "pe_ttm": 21.9
+    "close": 1795.0,
+    "date": "2026-10-22",
+    "spread": -25.0,
+    "pe_ttm": 21.8
    }
   },
   {
    "id": "2458",
    "name": "義隆",
-   "industry": "半導體業",
+   "industry": "電子工業",
    "theme": "IC設計",
    "has_contract_liab": false,
    "quarters": [
@@ -68426,7 +68426,7 @@ window.SEED_DATA = {
      3315975000.0,
      2859775000.0,
      3224766000.0,
-     6429625000.0
+     3204859000.0
     ],
     "cogs": [
      1699813000.0,
@@ -68441,7 +68441,7 @@ window.SEED_DATA = {
      1748668000.0,
      1450321000.0,
      1688895000.0,
-     3374074000.0
+     1685179000.0
     ],
     "gross": [
      1341609000.0,
@@ -68456,7 +68456,7 @@ window.SEED_DATA = {
      1567307000.0,
      1409454000.0,
      1535871000.0,
-     3055551000.0
+     1519680000.0
     ],
     "op_exp": [
      781107000.0,
@@ -68471,7 +68471,7 @@ window.SEED_DATA = {
      774267000.0,
      748478000.0,
      757752000.0,
-     1580046000.0
+     822294000.0
     ],
     "op_income": [
      561425000.0,
@@ -68486,7 +68486,7 @@ window.SEED_DATA = {
      791773000.0,
      661166000.0,
      778771000.0,
-     1475668000.0
+     696897000.0
     ],
     "nonop": [
      16149000.0,
@@ -68501,7 +68501,7 @@ window.SEED_DATA = {
      151392000.0,
      106395000.0,
      61130000.0,
-     355548000.0
+     294418000.0
     ],
     "pre_tax": [
      577574000.0,
@@ -68516,7 +68516,7 @@ window.SEED_DATA = {
      943165000.0,
      767561000.0,
      839901000.0,
-     1831216000.0
+     991315000.0
     ],
     "net": [
      451852000.0,
@@ -68531,7 +68531,7 @@ window.SEED_DATA = {
      770118000.0,
      712200000.0,
      675874000.0,
-     1521655000.0
+     845781000.0
     ],
     "eps": [
      1.74,
@@ -68561,7 +68561,7 @@ window.SEED_DATA = {
      0.4726534428033987,
      0.49285485746256263,
      0.47627362729574796,
-     0.475230048408733
+     0.47417998732549543
     ]
    },
    "cashflow": {
@@ -68699,11 +68699,11 @@ window.SEED_DATA = {
      601864000
     ]
    },
-   "fetched_at": "2026-10-20T18:52:00+08:00",
+   "fetched_at": "2026-10-22T19:02:48+08:00",
    "quote": {
     "close": 130.0,
-    "date": "2026-10-20",
-    "spread": -4.5,
+    "date": "2026-10-22",
+    "spread": -0.5,
     "pe_ttm": 11.9
    }
   },
@@ -69212,11 +69212,11 @@ window.SEED_DATA = {
      351684000
     ]
    },
-   "fetched_at": "2026-10-20T18:52:04+08:00",
+   "fetched_at": "2026-10-22T19:02:50+08:00",
    "quote": {
-    "close": 171.5,
-    "date": "2026-10-20",
-    "spread": -5.5,
+    "close": 159.0,
+    "date": "2026-10-22",
+    "spread": -12.0,
     "pe_ttm_label": "本益比為負"
    }
   },
@@ -69452,7 +69452,7 @@ window.SEED_DATA = {
      2831280000.0,
      2814485000.0,
      3120325000.0,
-     6115365000.0
+     2995040000.0
     ],
     "cogs": [
      1154056000.0,
@@ -69467,7 +69467,7 @@ window.SEED_DATA = {
      1922072000.0,
      1770142000.0,
      2072382000.0,
-     3861812000.0
+     1789430000.0
     ],
     "gross": [
      457230000.0,
@@ -69482,7 +69482,7 @@ window.SEED_DATA = {
      909208000.0,
      1044343000.0,
      1047943000.0,
-     2253553000.0
+     1205610000.0
     ],
     "op_exp": [
      356192000.0,
@@ -69497,7 +69497,7 @@ window.SEED_DATA = {
      580558000.0,
      619498000.0,
      645108000.0,
-     1348693000.0
+     703585000.0
     ],
     "op_income": [
      98305000.0,
@@ -69512,7 +69512,7 @@ window.SEED_DATA = {
      330018000.0,
      426213000.0,
      404203000.0,
-     907596000.0
+     503393000.0
     ],
     "nonop": [
      94691000.0,
@@ -69527,7 +69527,7 @@ window.SEED_DATA = {
      92619000.0,
      40770000.0,
      37004000.0,
-     50136000.0
+     13132000.0
     ],
     "pre_tax": [
      192996000.0,
@@ -69542,7 +69542,7 @@ window.SEED_DATA = {
      422637000.0,
      466983000.0,
      441207000.0,
-     957732000.0
+     516525000.0
     ],
     "net": [
      154364000.0,
@@ -69557,7 +69557,7 @@ window.SEED_DATA = {
      301694000.0,
      343356000.0,
      343045000.0,
-     758935000.0
+     415890000.0
     ],
     "eps": [
      1.92,
@@ -69587,7 +69587,7 @@ window.SEED_DATA = {
      0.3211296657342262,
      0.37106006960420823,
      0.3358441828976148,
-     0.3685067040152141
+     0.402535525401998
     ]
    },
    "cashflow": {
@@ -69725,12 +69725,12 @@ window.SEED_DATA = {
      1040662000
     ]
    },
-   "fetched_at": "2026-10-20T18:52:07+08:00",
+   "fetched_at": "2026-10-22T19:02:53+08:00",
    "quote": {
-    "close": 614.0,
-    "date": "2026-10-20",
-    "spread": -20.0,
-    "pe_ttm": 29.8
+    "close": 594.0,
+    "date": "2026-10-22",
+    "spread": -26.0,
+    "pe_ttm": 28.9
    }
   },
   {
@@ -69965,7 +69965,7 @@ window.SEED_DATA = {
      41108612000.0,
      41860205000.0,
      41070352000.0,
-     90718081000.0
+     49647729000.0
     ],
     "cogs": [
      45772291000.0,
@@ -69980,7 +69980,7 @@ window.SEED_DATA = {
      39150548000.0,
      39807492000.0,
      37877563000.0,
-     83772208000.0
+     45894645000.0
     ],
     "gross": [
      3674669000.0,
@@ -69995,7 +69995,7 @@ window.SEED_DATA = {
      1958064000.0,
      2052713000.0,
      3192789000.0,
-     6945873000.0
+     3753084000.0
     ],
     "op_exp": [
      2009587000.0,
@@ -70010,7 +70010,7 @@ window.SEED_DATA = {
      2598485000.0,
      2841184000.0,
      2645468000.0,
-     5672410000.0
+     3026942000.0
     ],
     "op_income": [
      1665082000.0,
@@ -70025,7 +70025,7 @@ window.SEED_DATA = {
      -640421000.0,
      -788471000.0,
      547321000.0,
-     1273463000.0
+     726142000.0
     ],
     "nonop": [
      493305000.0,
@@ -70040,7 +70040,7 @@ window.SEED_DATA = {
      873030000.0,
      1066438000.0,
      3512706000.0,
-     11899503000.0
+     8386797000.0
     ],
     "pre_tax": [
      2158387000.0,
@@ -70055,7 +70055,7 @@ window.SEED_DATA = {
      232609000.0,
      277967000.0,
      4060027000.0,
-     13172966000.0
+     9112939000.0
     ],
     "net": [
      1333825000.0,
@@ -70070,7 +70070,7 @@ window.SEED_DATA = {
      670798000.0,
      694399000.0,
      3498015000.0,
-     12501350000.0
+     9003335000.0
     ],
     "eps": [
      0.27,
@@ -70100,7 +70100,7 @@ window.SEED_DATA = {
      0.04763147926278805,
      0.04903733749034435,
      0.07773950902587833,
-     0.07656547540947212
+     0.07559427340573825
     ]
    },
    "cashflow": {
@@ -70238,11 +70238,11 @@ window.SEED_DATA = {
      15891435000
     ]
    },
-   "fetched_at": "2026-10-20T18:52:10+08:00",
+   "fetched_at": "2026-10-22T19:02:56+08:00",
    "quote": {
     "close": 37.0,
-    "date": "2026-10-20",
-    "spread": -0.55,
+    "date": "2026-10-22",
+    "spread": -0.3,
     "pe_ttm": 11.2
    }
   },
@@ -70478,7 +70478,7 @@ window.SEED_DATA = {
      24512243000.0,
      25861156000.0,
      20346268000.0,
-     45982606000.0
+     25636338000.0
     ],
     "cogs": [
      9038395000.0,
@@ -70493,7 +70493,7 @@ window.SEED_DATA = {
      20096487000.0,
      20791098000.0,
      16535380000.0,
-     36710734000.0
+     20175354000.0
     ],
     "gross": [
      977713000.0,
@@ -70508,7 +70508,7 @@ window.SEED_DATA = {
      4415756000.0,
      5070058000.0,
      3810888000.0,
-     9271872000.0
+     5460984000.0
     ],
     "op_exp": [
      361292000.0,
@@ -70523,7 +70523,7 @@ window.SEED_DATA = {
      654883000.0,
      977364000.0,
      310197000.0,
-     909471000.0
+     599274000.0
     ],
     "op_income": [
      616421000.0,
@@ -70538,7 +70538,7 @@ window.SEED_DATA = {
      3760873000.0,
      4092694000.0,
      3500691000.0,
-     8362401000.0
+     4861710000.0
     ],
     "nonop": [
      136821000.0,
@@ -70553,7 +70553,7 @@ window.SEED_DATA = {
      268256000.0,
      1221084000.0,
      255068000.0,
-     1548484000.0
+     1293416000.0
     ],
     "pre_tax": [
      753242000.0,
@@ -70568,7 +70568,7 @@ window.SEED_DATA = {
      4029129000.0,
      5313778000.0,
      3755759000.0,
-     9910885000.0
+     6155126000.0
     ],
     "net": [
      564251000.0,
@@ -70583,7 +70583,7 @@ window.SEED_DATA = {
      3111608000.0,
      4166389000.0,
      2984270000.0,
-     7942680000.0
+     4958410000.0
     ],
     "eps": [
      2.07,
@@ -70613,7 +70613,7 @@ window.SEED_DATA = {
      0.18014491778659342,
      0.19604916346353582,
      0.18730157294694044,
-     0.20163868050453687
+     0.2130173194002981
     ]
    },
    "cashflow": {
@@ -70751,18 +70751,18 @@ window.SEED_DATA = {
      10696772000
     ]
    },
-   "fetched_at": "2026-10-20T18:52:15+08:00",
+   "fetched_at": "2026-10-22T19:03:00+08:00",
    "quote": {
-    "close": 646.0,
-    "date": "2026-10-20",
-    "spread": -17.0,
-    "pe_ttm": 13.0
+    "close": 640.0,
+    "date": "2026-10-22",
+    "spread": -19.0,
+    "pe_ttm": 12.9
    }
   },
   {
    "id": "6451",
    "name": "訊芯-KY",
-   "industry": "半導體業",
+   "industry": "電子工業",
    "theme": "封測",
    "has_contract_liab": true,
    "quarters": [
@@ -70991,7 +70991,7 @@ window.SEED_DATA = {
      1697442000.0,
      2069525000.0,
      1553381000.0,
-     3568630000.0
+     2015249000.0
     ],
     "cogs": [
      959265000.0,
@@ -71006,7 +71006,7 @@ window.SEED_DATA = {
      1292116000.0,
      1638817000.0,
      1367610000.0,
-     3043779000.0
+     1676169000.0
     ],
     "gross": [
      237156000.0,
@@ -71021,7 +71021,7 @@ window.SEED_DATA = {
      405326000.0,
      430708000.0,
      185771000.0,
-     524851000.0
+     339080000.0
     ],
     "op_exp": [
      206427000.0,
@@ -71036,7 +71036,7 @@ window.SEED_DATA = {
      276139000.0,
      243275000.0,
      266190000.0,
-     553058000.0
+     286868000.0
     ],
     "op_income": [
      30729000.0,
@@ -71051,7 +71051,7 @@ window.SEED_DATA = {
      129187000.0,
      187433000.0,
      -80419000.0,
-     -28207000.0
+     52212000.0
     ],
     "nonop": [
      70701000.0,
@@ -71066,7 +71066,7 @@ window.SEED_DATA = {
      59293000.0,
      98297000.0,
      -4405000.0,
-     201336000.0
+     205741000.0
     ],
     "pre_tax": [
      101430000.0,
@@ -71081,7 +71081,7 @@ window.SEED_DATA = {
      188480000.0,
      285730000.0,
      -84824000.0,
-     173129000.0
+     257953000.0
     ],
     "net": [
      65775000.0,
@@ -71096,7 +71096,7 @@ window.SEED_DATA = {
      136715000.0,
      116732000.0,
      -147212000.0,
-     -71754000.0
+     75458000.0
     ],
     "eps": [
      0.76,
@@ -71126,7 +71126,7 @@ window.SEED_DATA = {
      0.23878636206715753,
      0.20811925441828438,
      0.11959139451300099,
-     0.14707352681561273
+     0.16825712356140607
     ]
    },
    "cashflow": {
@@ -71264,12 +71264,12 @@ window.SEED_DATA = {
      716714000
     ]
    },
-   "fetched_at": "2026-10-20T18:52:18+08:00",
+   "fetched_at": "2026-10-22T19:03:02+08:00",
    "quote": {
-    "close": 352.5,
-    "date": "2026-10-20",
-    "spread": -13.5,
-    "pe_ttm": 311.9
+    "close": 351.0,
+    "date": "2026-10-22",
+    "spread": -22.5,
+    "pe_ttm": 310.6
    }
   },
   {
@@ -71504,7 +71504,7 @@ window.SEED_DATA = {
      1162347000.0,
      1269686000.0,
      1128235000.0,
-     2498324000.0
+     1370089000.0
     ],
     "cogs": [
      514735000.0,
@@ -71519,7 +71519,7 @@ window.SEED_DATA = {
      769527000.0,
      811053000.0,
      713112000.0,
-     1612390000.0
+     899278000.0
     ],
     "gross": [
      188403000.0,
@@ -71534,7 +71534,7 @@ window.SEED_DATA = {
      392820000.0,
      458633000.0,
      415123000.0,
-     885934000.0
+     470811000.0
     ],
     "op_exp": [
      97789000.0,
@@ -71549,7 +71549,7 @@ window.SEED_DATA = {
      194809000.0,
      215008000.0,
      198431000.0,
-     453082000.0
+     254651000.0
     ],
     "op_income": [
      90614000.0,
@@ -71564,7 +71564,7 @@ window.SEED_DATA = {
      198011000.0,
      243625000.0,
      216692000.0,
-     432852000.0
+     216160000.0
     ],
     "nonop": [
      49630000.0,
@@ -71579,7 +71579,7 @@ window.SEED_DATA = {
      58541000.0,
      43805000.0,
      23427000.0,
-     51362000.0
+     27935000.0
     ],
     "pre_tax": [
      140244000.0,
@@ -71594,7 +71594,7 @@ window.SEED_DATA = {
      256552000.0,
      287430000.0,
      240119000.0,
-     484214000.0
+     244095000.0
     ],
     "net": [
      109913000.0,
@@ -71609,7 +71609,7 @@ window.SEED_DATA = {
      194993000.0,
      218430000.0,
      181656000.0,
-     367220000.0
+     185564000.0
     ],
     "eps": [
      1.25,
@@ -71639,7 +71639,7 @@ window.SEED_DATA = {
      0.33795415654705524,
      0.3612176553888127,
      0.3679401897654301,
-     0.35461133143659507
+     0.34363534047788136
     ]
    },
    "cashflow": {
@@ -71777,18 +71777,18 @@ window.SEED_DATA = {
      507848000
     ]
    },
-   "fetched_at": "2026-10-20T18:52:21+08:00",
+   "fetched_at": "2026-10-22T19:03:05+08:00",
    "quote": {
-    "close": 236.0,
-    "date": "2026-10-20",
-    "spread": -3.0,
-    "pe_ttm": 25.5
+    "close": 222.0,
+    "date": "2026-10-22",
+    "spread": -23.0,
+    "pe_ttm": 23.9
    }
   },
   {
    "id": "3702",
    "name": "大聯大",
-   "industry": "電子通路業",
+   "industry": "電子工業",
    "theme": "電子通路業",
    "has_contract_liab": true,
    "quarters": [
@@ -72017,7 +72017,7 @@ window.SEED_DATA = {
      244467107000.0,
      255356391000.0,
      316500457000.0,
-     772711078000.0
+     456210621000.0
     ],
     "cogs": [
      150603076000.0,
@@ -72032,7 +72032,7 @@ window.SEED_DATA = {
      234611724000.0,
      244485097000.0,
      302297279000.0,
-     738311086000.0
+     436013807000.0
     ],
     "gross": [
      6086552000.0,
@@ -72047,7 +72047,7 @@ window.SEED_DATA = {
      9855383000.0,
      10871294000.0,
      14203178000.0,
-     34399992000.0
+     20196814000.0
     ],
     "op_exp": [
      3620268000.0,
@@ -72062,7 +72062,7 @@ window.SEED_DATA = {
      4505066000.0,
      5440934000.0,
      5732553000.0,
-     13975474000.0
+     8242921000.0
     ],
     "op_income": [
      2466284000.0,
@@ -72077,7 +72077,7 @@ window.SEED_DATA = {
      5350317000.0,
      5430360000.0,
      8470625000.0,
-     20424518000.0
+     11953893000.0
     ],
     "nonop": [
      1135208000.0,
@@ -72092,7 +72092,7 @@ window.SEED_DATA = {
      -1311040000.0,
      -1521222000.0,
      -1264664000.0,
-     -1922802000.0
+     -658138000.0
     ],
     "pre_tax": [
      3601492000.0,
@@ -72107,7 +72107,7 @@ window.SEED_DATA = {
      4039277000.0,
      3909138000.0,
      7205961000.0,
-     18501716000.0
+     11295755000.0
     ],
     "net": [
      2333108000.0,
@@ -72122,7 +72122,7 @@ window.SEED_DATA = {
      3257855000.0,
      3031084000.0,
      5750788000.0,
-     14526635000.0
+     8775847000.0
     ],
     "eps": [
      1.14,
@@ -72152,7 +72152,7 @@ window.SEED_DATA = {
      0.04031373840407904,
      0.04257302492969522,
      0.044875695076800476,
-     0.044518569720829085
+     0.04427081060876923
     ]
    },
    "cashflow": {
@@ -72290,11 +72290,11 @@ window.SEED_DATA = {
      219594834000
     ]
    },
-   "fetched_at": "2026-10-20T18:52:24+08:00",
+   "fetched_at": "2026-10-22T19:03:09+08:00",
    "quote": {
-    "close": 113.5,
-    "date": "2026-10-20",
-    "spread": -1.0,
+    "close": 114.5,
+    "date": "2026-10-22",
+    "spread": -0.5,
     "pe_ttm": 9.5
    }
   },
@@ -72803,12 +72803,12 @@ window.SEED_DATA = {
      424843000
     ]
    },
-   "fetched_at": "2026-10-20T18:52:27+08:00",
+   "fetched_at": "2026-10-22T19:03:12+08:00",
    "quote": {
-    "close": 208.0,
-    "date": "2026-10-20",
-    "spread": -2.5,
-    "pe_ttm": 34.8
+    "close": 200.0,
+    "date": "2026-10-22",
+    "spread": -13.0,
+    "pe_ttm": 33.5
    }
   },
   {
@@ -73043,7 +73043,7 @@ window.SEED_DATA = {
      50872120000.0,
      54162060000.0,
      56997031000.0,
-     120815551000.0
+     63818520000.0
     ],
     "cogs": [
      39186788000.0,
@@ -73058,7 +73058,7 @@ window.SEED_DATA = {
      42632658000.0,
      44377254000.0,
      45256107000.0,
-     101972191000.0
+     56716084000.0
     ],
     "gross": [
      8006309000.0,
@@ -73073,7 +73073,7 @@ window.SEED_DATA = {
      8239462000.0,
      9784806000.0,
      11740924000.0,
-     18843360000.0
+     7102436000.0
     ],
     "op_exp": [
      3239504000.0,
@@ -73088,7 +73088,7 @@ window.SEED_DATA = {
      3942906000.0,
      4713267000.0,
      5304888000.0,
-     9742049000.0
+     4437161000.0
     ],
     "op_income": [
      4766805000.0,
@@ -73103,7 +73103,7 @@ window.SEED_DATA = {
      4296556000.0,
      5071539000.0,
      6436036000.0,
-     9101311000.0
+     2665275000.0
     ],
     "nonop": [
      -556904000.0,
@@ -73118,7 +73118,7 @@ window.SEED_DATA = {
      -237944000.0,
      -158364000.0,
      585673000.0,
-     220353000.0
+     -365320000.0
     ],
     "pre_tax": [
      4209901000.0,
@@ -73133,7 +73133,7 @@ window.SEED_DATA = {
      4058612000.0,
      4913175000.0,
      7021709000.0,
-     9321664000.0
+     2299955000.0
     ],
     "net": [
      3464501000.0,
@@ -73148,7 +73148,7 @@ window.SEED_DATA = {
      3344873000.0,
      3922887000.0,
      5848163000.0,
-     7695303000.0
+     1847140000.0
     ],
     "eps": [
      0.55,
@@ -73178,7 +73178,7 @@ window.SEED_DATA = {
      0.1619641957127008,
      0.1806579365703594,
      0.20599185245280582,
-     0.15596800117229942
+     0.11129114244579787
     ]
    },
    "cashflow": {
@@ -73316,11 +73316,11 @@ window.SEED_DATA = {
      20933415000
     ]
    },
-   "fetched_at": "2026-10-20T18:52:30+08:00",
+   "fetched_at": "2026-10-22T19:03:14+08:00",
    "quote": {
-    "close": 20.4,
-    "date": "2026-10-20",
-    "spread": -0.15,
+    "close": 20.5,
+    "date": "2026-10-22",
+    "spread": 0.15,
     "pe_ttm": 9.4
    }
   },
@@ -73556,7 +73556,7 @@ window.SEED_DATA = {
      1163869000.0,
      1219293000.0,
      1303393000.0,
-     2730311000.0
+     1426918000.0
     ],
     "cogs": [
      679989000.0,
@@ -73571,7 +73571,7 @@ window.SEED_DATA = {
      774751000.0,
      811814000.0,
      813639000.0,
-     1699959000.0
+     886320000.0
     ],
     "gross": [
      254093000.0,
@@ -73586,7 +73586,7 @@ window.SEED_DATA = {
      389118000.0,
      407479000.0,
      489754000.0,
-     1030352000.0
+     540598000.0
     ],
     "op_exp": [
      153963000.0,
@@ -73601,7 +73601,7 @@ window.SEED_DATA = {
      146289000.0,
      145437000.0,
      157373000.0,
-     327864000.0
+     170491000.0
     ],
     "op_income": [
      100130000.0,
@@ -73616,7 +73616,7 @@ window.SEED_DATA = {
      242829000.0,
      262042000.0,
      332381000.0,
-     702488000.0
+     370107000.0
     ],
     "nonop": [
      61843000.0,
@@ -73631,7 +73631,7 @@ window.SEED_DATA = {
      -2708000.0,
      4892000.0,
      17000.0,
-     -11469000.0
+     -11486000.0
     ],
     "pre_tax": [
      161973000.0,
@@ -73646,7 +73646,7 @@ window.SEED_DATA = {
      240121000.0,
      266934000.0,
      332398000.0,
-     691019000.0
+     358621000.0
     ],
     "net": [
      132706000.0,
@@ -73661,7 +73661,7 @@ window.SEED_DATA = {
      201538000.0,
      224658000.0,
      286345000.0,
-     594721000.0
+     308376000.0
     ],
     "eps": [
      0.87,
@@ -73691,7 +73691,7 @@ window.SEED_DATA = {
      0.33433144108142754,
      0.3341928478224676,
      0.3757531304832848,
-     0.3773753246425041
+     0.37885708919503436
     ]
    },
    "cashflow": {
@@ -73829,12 +73829,12 @@ window.SEED_DATA = {
      512048000
     ]
    },
-   "fetched_at": "2026-10-20T18:52:33+08:00",
+   "fetched_at": "2026-10-22T19:03:17+08:00",
    "quote": {
-    "close": 252.0,
-    "date": "2026-10-20",
-    "spread": -8.0,
-    "pe_ttm": 43.6
+    "close": 246.5,
+    "date": "2026-10-22",
+    "spread": -11.5,
+    "pe_ttm": 42.6
    }
   },
   {
@@ -74069,7 +74069,7 @@ window.SEED_DATA = {
      2850034000.0,
      2817964000.0,
      2819237000.0,
-     5972201000.0
+     3152964000.0
     ],
     "cogs": [
      2358756000.0,
@@ -74084,7 +74084,7 @@ window.SEED_DATA = {
      2073803000.0,
      2003951000.0,
      2030694000.0,
-     4203418000.0
+     2172724000.0
     ],
     "gross": [
      485007000.0,
@@ -74099,7 +74099,7 @@ window.SEED_DATA = {
      776231000.0,
      814013000.0,
      788543000.0,
-     1768783000.0
+     980240000.0
     ],
     "op_exp": [
      318357000.0,
@@ -74114,7 +74114,7 @@ window.SEED_DATA = {
      394467000.0,
      410745000.0,
      395044000.0,
-     803486000.0
+     408442000.0
     ],
     "op_income": [
      166650000.0,
@@ -74129,7 +74129,7 @@ window.SEED_DATA = {
      381764000.0,
      403268000.0,
      393499000.0,
-     965297000.0
+     571798000.0
     ],
     "nonop": [
      -148368000.0,
@@ -74144,7 +74144,7 @@ window.SEED_DATA = {
      161536000.0,
      127932000.0,
      72241000.0,
-     152255000.0
+     80014000.0
     ],
     "pre_tax": [
      18282000.0,
@@ -74159,7 +74159,7 @@ window.SEED_DATA = {
      543300000.0,
      531200000.0,
      465740000.0,
-     1117552000.0
+     651812000.0
     ],
     "net": [
      12322000.0,
@@ -74174,7 +74174,7 @@ window.SEED_DATA = {
      478906000.0,
      467779000.0,
      394697000.0,
-     915829000.0
+     521132000.0
     ],
     "eps": [
      0.08,
@@ -74204,7 +74204,7 @@ window.SEED_DATA = {
      0.2723585051967801,
      0.2888656490998466,
      0.2797008552313977,
-     0.29616936871347765
+     0.3108947644184964
     ]
    },
    "cashflow": {
@@ -74342,12 +74342,12 @@ window.SEED_DATA = {
      1188100000
     ]
    },
-   "fetched_at": "2026-10-20T18:52:36+08:00",
+   "fetched_at": "2026-10-22T19:03:19+08:00",
    "quote": {
-    "close": 219.0,
-    "date": "2026-10-20",
-    "spread": -6.5,
-    "pe_ttm": 24.6
+    "close": 215.0,
+    "date": "2026-10-22",
+    "spread": -17.0,
+    "pe_ttm": 24.2
    }
   },
   {
@@ -74582,7 +74582,7 @@ window.SEED_DATA = {
      2255879000.0,
      2288804000.0,
      2348443000.0,
-     4790531000.0
+     2442088000.0
     ],
     "cogs": [
      1569808000.0,
@@ -74597,7 +74597,7 @@ window.SEED_DATA = {
      1696183000.0,
      1679889000.0,
      1591323000.0,
-     3287962000.0
+     1696639000.0
     ],
     "gross": [
      367066000.0,
@@ -74612,7 +74612,7 @@ window.SEED_DATA = {
      559696000.0,
      608915000.0,
      757120000.0,
-     1502569000.0
+     745449000.0
     ],
     "op_exp": [
      225397000.0,
@@ -74627,7 +74627,7 @@ window.SEED_DATA = {
      321307000.0,
      336240000.0,
      359235000.0,
-     742297000.0
+     383062000.0
     ],
     "op_income": [
      154341000.0,
@@ -74642,7 +74642,7 @@ window.SEED_DATA = {
      345791000.0,
      425575000.0,
      536079000.0,
-     1007959000.0
+     471880000.0
     ],
     "nonop": [
      7091000.0,
@@ -74657,7 +74657,7 @@ window.SEED_DATA = {
      31569000.0,
      35049000.0,
      36782000.0,
-     76053000.0
+     39271000.0
     ],
     "pre_tax": [
      161432000.0,
@@ -74672,7 +74672,7 @@ window.SEED_DATA = {
      377360000.0,
      460624000.0,
      572861000.0,
-     1084012000.0
+     511151000.0
     ],
     "net": [
      179467000.0,
@@ -74687,7 +74687,7 @@ window.SEED_DATA = {
      346344000.0,
      385105000.0,
      475899000.0,
-     936147000.0
+     460248000.0
     ],
     "eps": [
      0.57,
@@ -74717,7 +74717,7 @@ window.SEED_DATA = {
      0.24810550565876982,
      0.2660406919945963,
      0.32239232546840607,
-     0.31365395610632724
+     0.30525067073750006
     ]
    },
    "cashflow": {
@@ -74855,12 +74855,12 @@ window.SEED_DATA = {
      877415000
     ]
    },
-   "fetched_at": "2026-10-20T18:52:41+08:00",
+   "fetched_at": "2026-10-22T19:03:22+08:00",
    "quote": {
-    "close": 428.0,
-    "date": "2026-10-20",
-    "spread": -7.0,
-    "pe_ttm": 81.5
+    "close": 438.0,
+    "date": "2026-10-22",
+    "spread": -31.0,
+    "pe_ttm": 83.4
    }
   },
   {
@@ -75095,7 +75095,7 @@ window.SEED_DATA = {
      163631000.0,
      156132000.0,
      163900000.0,
-     373725000.0
+     209825000.0
     ],
     "cogs": [
      117138000.0,
@@ -75110,7 +75110,7 @@ window.SEED_DATA = {
      125931000.0,
      119355000.0,
      120010000.0,
-     272985000.0
+     152975000.0
     ],
     "gross": [
      27742000.0,
@@ -75125,7 +75125,7 @@ window.SEED_DATA = {
      37700000.0,
      36777000.0,
      43890000.0,
-     100740000.0
+     56850000.0
     ],
     "op_exp": [
      29956000.0,
@@ -75140,7 +75140,7 @@ window.SEED_DATA = {
      33036000.0,
      32594000.0,
      32073000.0,
-     67542000.0
+     35469000.0
     ],
     "op_income": [
      -2214000.0,
@@ -75155,7 +75155,7 @@ window.SEED_DATA = {
      4664000.0,
      4183000.0,
      11817000.0,
-     33198000.0
+     21381000.0
     ],
     "nonop": [
      40660000.0,
@@ -75170,7 +75170,7 @@ window.SEED_DATA = {
      64002000.0,
      27134000.0,
      8465000.0,
-     47661000.0
+     39196000.0
     ],
     "pre_tax": [
      38446000.0,
@@ -75185,7 +75185,7 @@ window.SEED_DATA = {
      68666000.0,
      31317000.0,
      20282000.0,
-     80859000.0
+     60577000.0
     ],
     "net": [
      31669000.0,
@@ -75200,7 +75200,7 @@ window.SEED_DATA = {
      57928000.0,
      28656000.0,
      15851000.0,
-     71875000.0
+     56024000.0
     ],
     "eps": [
      0.36,
@@ -75230,7 +75230,7 @@ window.SEED_DATA = {
      0.23039644077222532,
      0.23555068787948658,
      0.2677852348993289,
-     0.2695564920730484
+     0.27094006910520674
     ]
    },
    "cashflow": {
@@ -75368,12 +75368,12 @@ window.SEED_DATA = {
      82761000
     ]
    },
-   "fetched_at": "2026-10-20T18:52:44+08:00",
+   "fetched_at": "2026-10-22T19:03:24+08:00",
    "quote": {
-    "close": 65.2,
-    "date": "2026-10-20",
-    "spread": -0.8,
-    "pe_ttm": 36.0
+    "close": 69.5,
+    "date": "2026-10-22",
+    "spread": -2.2,
+    "pe_ttm": 38.4
    }
   },
   {
@@ -75608,7 +75608,7 @@ window.SEED_DATA = {
      17773911000.0,
      17921409000.0,
      20385264000.0,
-     46511554000.0
+     26126290000.0
     ],
     "cogs": [
      10013834000.0,
@@ -75623,7 +75623,7 @@ window.SEED_DATA = {
      10866007000.0,
      10792362000.0,
      12405441000.0,
-     28686490000.0
+     16281049000.0
     ],
     "gross": [
      7014301000.0,
@@ -75638,7 +75638,7 @@ window.SEED_DATA = {
      6907904000.0,
      7129047000.0,
      7979823000.0,
-     17825064000.0
+     9845241000.0
     ],
     "op_exp": [
      3584545000.0,
@@ -75653,7 +75653,7 @@ window.SEED_DATA = {
      4199447000.0,
      4317859000.0,
      4251337000.0,
-     8969289000.0
+     4717952000.0
     ],
     "op_income": [
      3429756000.0,
@@ -75668,7 +75668,7 @@ window.SEED_DATA = {
      2708457000.0,
      2811188000.0,
      3728486000.0,
-     8855775000.0
+     5127289000.0
     ],
     "nonop": [
      339253000.0,
@@ -75683,7 +75683,7 @@ window.SEED_DATA = {
      567860000.0,
      869545000.0,
      339801000.0,
-     802495000.0
+     462694000.0
     ],
     "pre_tax": [
      3769009000.0,
@@ -75698,7 +75698,7 @@ window.SEED_DATA = {
      3276317000.0,
      3680733000.0,
      4068287000.0,
-     9658270000.0
+     5589983000.0
     ],
     "net": [
      3005793000.0,
@@ -75713,7 +75713,7 @@ window.SEED_DATA = {
      2745735000.0,
      3093653000.0,
      3318280000.0,
-     7821490000.0
+     4503210000.0
     ],
     "eps": [
      3.51,
@@ -75743,7 +75743,7 @@ window.SEED_DATA = {
      0.38865413470338633,
      0.39779500596186385,
      0.39145055958068536,
-     0.3832394849675416
+     0.3768327229009553
     ]
    },
    "cashflow": {
@@ -75881,12 +75881,12 @@ window.SEED_DATA = {
      10748681000
     ]
    },
-   "fetched_at": "2026-10-20T18:52:47+08:00",
+   "fetched_at": "2026-10-22T19:03:27+08:00",
    "quote": {
-    "close": 684.0,
-    "date": "2026-10-20",
-    "spread": 5.0,
-    "pe_ttm": 43.2
+    "close": 670.0,
+    "date": "2026-10-22",
+    "spread": -13.0,
+    "pe_ttm": 42.3
    }
   },
   {
@@ -76394,12 +76394,12 @@ window.SEED_DATA = {
      5128632000
     ]
    },
-   "fetched_at": "2026-10-20T18:52:50+08:00",
+   "fetched_at": "2026-10-22T19:03:29+08:00",
    "quote": {
-    "close": 844.0,
-    "date": "2026-10-20",
-    "spread": -38.0,
-    "pe_ttm": 41.0
+    "close": 826.0,
+    "date": "2026-10-22",
+    "spread": -54.0,
+    "pe_ttm": 40.1
    }
   },
   {
@@ -76634,7 +76634,7 @@ window.SEED_DATA = {
      176326132000.0,
      157699923000.0,
      175017371000.0,
-     349938252000.0
+     174920881000.0
     ],
     "cogs": [
      91774273000.0,
@@ -76649,7 +76649,7 @@ window.SEED_DATA = {
      117244052000.0,
      107658334000.0,
      115892133000.0,
-     231366231000.0
+     115474098000.0
     ],
     "gross": [
      45624225000.0,
@@ -76664,7 +76664,7 @@ window.SEED_DATA = {
      59082080000.0,
      50041589000.0,
      59125238000.0,
-     118572021000.0
+     59446783000.0
     ],
     "op_exp": [
      37767359000.0,
@@ -76679,7 +76679,7 @@ window.SEED_DATA = {
      48605287000.0,
      45956828000.0,
      48872186000.0,
-     98062130000.0
+     49189944000.0
     ],
     "op_income": [
      7856866000.0,
@@ -76694,7 +76694,7 @@ window.SEED_DATA = {
      10476793000.0,
      4084761000.0,
      10253052000.0,
-     20509891000.0
+     10256839000.0
     ],
     "nonop": [
      13096229000.0,
@@ -76709,7 +76709,7 @@ window.SEED_DATA = {
      2041178000.0,
      1616816000.0,
      3033138000.0,
-     7295825000.0
+     4262687000.0
     ],
     "pre_tax": [
      20953095000.0,
@@ -76724,7 +76724,7 @@ window.SEED_DATA = {
      12517971000.0,
      5701577000.0,
      13286190000.0,
-     27805716000.0
+     14519526000.0
     ],
     "net": [
      10560295000.0,
@@ -76739,7 +76739,7 @@ window.SEED_DATA = {
      9216211000.0,
      4963353000.0,
      9763840000.0,
-     21022083000.0
+     11258243000.0
     ],
     "eps": [
      1.09,
@@ -76769,7 +76769,7 @@ window.SEED_DATA = {
      0.3350727389630483,
      0.3173215816979188,
      0.33782496938546747,
-     0.33883698144551516
+     0.3398495517524863
     ]
    },
    "cashflow": {
@@ -76907,12 +76907,12 @@ window.SEED_DATA = {
      61805124000
     ]
    },
-   "fetched_at": "2026-10-20T18:52:53+08:00",
+   "fetched_at": "2026-10-22T19:03:32+08:00",
    "quote": {
-    "close": 78.4,
-    "date": "2026-10-20",
-    "spread": -1.2,
-    "pe_ttm": 18.9
+    "close": 79.6,
+    "date": "2026-10-22",
+    "spread": 1.1,
+    "pe_ttm": 19.2
    }
   },
   {
@@ -77147,7 +77147,7 @@ window.SEED_DATA = {
      2320963000.0,
      3048533000.0,
      2141087000.0,
-     5607361000.0
+     3466274000.0
     ],
     "cogs": [
      2259629000.0,
@@ -77162,7 +77162,7 @@ window.SEED_DATA = {
      1890097000.0,
      2419166000.0,
      1628336000.0,
-     4341980000.0
+     2713644000.0
     ],
     "gross": [
      891150000.0,
@@ -77177,7 +77177,7 @@ window.SEED_DATA = {
      430866000.0,
      629367000.0,
      512751000.0,
-     1265381000.0
+     752630000.0
     ],
     "op_exp": [
      863928000.0,
@@ -77192,7 +77192,7 @@ window.SEED_DATA = {
      786798000.0,
      878426000.0,
      1027119000.0,
-     2118102000.0
+     1090983000.0
     ],
     "op_income": [
      27222000.0,
@@ -77207,7 +77207,7 @@ window.SEED_DATA = {
      -355932000.0,
      -249059000.0,
      -514368000.0,
-     -852721000.0
+     -338353000.0
     ],
     "nonop": [
      191888000.0,
@@ -77222,7 +77222,7 @@ window.SEED_DATA = {
      388467000.0,
      977954000.0,
      538891000.0,
-     1012359000.0
+     473468000.0
     ],
     "pre_tax": [
      219110000.0,
@@ -77237,7 +77237,7 @@ window.SEED_DATA = {
      32535000.0,
      728895000.0,
      24523000.0,
-     159638000.0
+     135115000.0
     ],
     "net": [
      131744000.0,
@@ -77252,7 +77252,7 @@ window.SEED_DATA = {
      22921000.0,
      691077000.0,
      4647000.0,
-     123896000.0
+     119249000.0
     ],
     "eps": [
      0.2,
@@ -77282,7 +77282,7 @@ window.SEED_DATA = {
      0.18564104641047702,
      0.20644913471495963,
      0.23948162778999638,
-     0.22566426523992303
+     0.21712940177262385
     ]
    },
    "cashflow": {
@@ -77420,12 +77420,12 @@ window.SEED_DATA = {
      939975000
     ]
    },
-   "fetched_at": "2026-10-20T18:52:56+08:00",
+   "fetched_at": "2026-10-22T19:03:35+08:00",
    "quote": {
-    "close": 65.2,
-    "date": "2026-10-20",
-    "spread": 0.0,
-    "pe_ttm": 41.0
+    "close": 66.0,
+    "date": "2026-10-22",
+    "spread": -1.2,
+    "pe_ttm": 41.5
    }
   },
   {
@@ -77933,12 +77933,12 @@ window.SEED_DATA = {
      9203812000
     ]
    },
-   "fetched_at": "2026-10-20T18:52:59+08:00",
+   "fetched_at": "2026-10-22T19:03:37+08:00",
    "quote": {
-    "close": 83.4,
-    "date": "2026-10-20",
-    "spread": -1.7,
-    "pe_ttm": 23.1
+    "close": 81.3,
+    "date": "2026-10-22",
+    "spread": -3.5,
+    "pe_ttm": 22.5
    }
   },
   {
@@ -78173,7 +78173,7 @@ window.SEED_DATA = {
      4840283000.0,
      5427845000.0,
      5631562000.0,
-     12500258000.0
+     6868696000.0
     ],
     "cogs": [
      2924653000.0,
@@ -78188,7 +78188,7 @@ window.SEED_DATA = {
      3901665000.0,
      4463856000.0,
      4723793000.0,
-     10629670000.0
+     5905877000.0
     ],
     "gross": [
      729343000.0,
@@ -78203,7 +78203,7 @@ window.SEED_DATA = {
      938618000.0,
      963989000.0,
      907769000.0,
-     1870588000.0
+     962819000.0
     ],
     "op_exp": [
      513297000.0,
@@ -78218,7 +78218,7 @@ window.SEED_DATA = {
      608528000.0,
      778304000.0,
      777386000.0,
-     1672509000.0
+     895123000.0
     ],
     "op_income": [
      216046000.0,
@@ -78233,7 +78233,7 @@ window.SEED_DATA = {
      330090000.0,
      185685000.0,
      130383000.0,
-     198079000.0
+     67696000.0
     ],
     "nonop": [
      106196000.0,
@@ -78248,7 +78248,7 @@ window.SEED_DATA = {
      -94687000.0,
      -86433000.0,
      -546489000.0,
-     -935887000.0
+     -389398000.0
     ],
     "pre_tax": [
      322242000.0,
@@ -78263,7 +78263,7 @@ window.SEED_DATA = {
      235403000.0,
      99252000.0,
      -416106000.0,
-     -737808000.0
+     -321702000.0
     ],
     "net": [
      243822000.0,
@@ -78278,7 +78278,7 @@ window.SEED_DATA = {
      146248000.0,
      92960000.0,
      -252911000.0,
-     -542248000.0
+     -289337000.0
     ],
     "eps": [
      0.85,
@@ -78308,7 +78308,7 @@ window.SEED_DATA = {
      0.19391800024915898,
      0.17760068682875063,
      0.16119311125403574,
-     0.14964395134884417
+     0.14017493276744233
     ]
    },
    "cashflow": {
@@ -78446,11 +78446,11 @@ window.SEED_DATA = {
      3226476000
     ]
    },
-   "fetched_at": "2026-10-20T18:53:03+08:00",
+   "fetched_at": "2026-10-22T19:03:40+08:00",
    "quote": {
-    "close": 129.5,
-    "date": "2026-10-20",
-    "spread": -4.5,
+    "close": 134.5,
+    "date": "2026-10-22",
+    "spread": -0.5,
     "pe_ttm_label": "本益比為負"
    }
   },
@@ -78959,12 +78959,12 @@ window.SEED_DATA = {
      1058517000
     ]
    },
-   "fetched_at": "2026-10-20T18:53:06+08:00",
+   "fetched_at": "2026-10-22T19:03:42+08:00",
    "quote": {
-    "close": 252.5,
-    "date": "2026-10-20",
-    "spread": -7.0,
-    "pe_ttm": 26.3
+    "close": 241.0,
+    "date": "2026-10-22",
+    "spread": -12.5,
+    "pe_ttm": 25.1
    }
   },
   {
@@ -79199,7 +79199,7 @@ window.SEED_DATA = {
      8339249000.0,
      9684111000.0,
      11558778000.0,
-     21121523000.0
+     9562745000.0
     ],
     "cogs": [
      6436141000.0,
@@ -79214,7 +79214,7 @@ window.SEED_DATA = {
      6688437000.0,
      8018272000.0,
      8811059000.0,
-     16254045000.0
+     7442986000.0
     ],
     "gross": [
      1240878000.0,
@@ -79229,7 +79229,7 @@ window.SEED_DATA = {
      1650812000.0,
      1665839000.0,
      2747719000.0,
-     4867478000.0
+     2119759000.0
     ],
     "op_exp": [
      784341000.0,
@@ -79244,7 +79244,7 @@ window.SEED_DATA = {
      863646000.0,
      984645000.0,
      892864000.0,
-     1743573000.0
+     850709000.0
     ],
     "op_income": [
      456537000.0,
@@ -79259,7 +79259,7 @@ window.SEED_DATA = {
      787166000.0,
      681194000.0,
      1854855000.0,
-     3123905000.0
+     1269050000.0
     ],
     "nonop": [
      329888000.0,
@@ -79274,7 +79274,7 @@ window.SEED_DATA = {
      158340000.0,
      -35072000.0,
      72482000.0,
-     238593000.0
+     166111000.0
     ],
     "pre_tax": [
      786425000.0,
@@ -79289,7 +79289,7 @@ window.SEED_DATA = {
      945506000.0,
      646122000.0,
      1927337000.0,
-     3362498000.0
+     1435161000.0
     ],
     "net": [
      626928000.0,
@@ -79304,7 +79304,7 @@ window.SEED_DATA = {
      759016000.0,
      443512000.0,
      1515633000.0,
-     2727167000.0
+     1211534000.0
     ],
     "eps": [
      1.14,
@@ -79334,7 +79334,7 @@ window.SEED_DATA = {
      0.1979569143456443,
      0.172017751552001,
      0.2377170839339591,
-     0.2304510901036824
+     0.2216684644419568
     ]
    },
    "cashflow": {
@@ -79472,12 +79472,12 @@ window.SEED_DATA = {
      3139479000
     ]
    },
-   "fetched_at": "2026-10-20T18:53:09+08:00",
+   "fetched_at": "2026-10-22T19:03:45+08:00",
    "quote": {
-    "close": 191.0,
-    "date": "2026-10-20",
-    "spread": -3.0,
-    "pe_ttm": 26.3
+    "close": 192.0,
+    "date": "2026-10-22",
+    "spread": 0.0,
+    "pe_ttm": 26.4
    }
   },
   {
@@ -79712,7 +79712,7 @@ window.SEED_DATA = {
      3269700000.0,
      3352456000.0,
      3421155000.0,
-     7376723000.0
+     3955568000.0
     ],
     "cogs": [
      2651423000.0,
@@ -79727,7 +79727,7 @@ window.SEED_DATA = {
      2246017000.0,
      2257087000.0,
      2301199000.0,
-     4942625000.0
+     2641426000.0
     ],
     "gross": [
      889667000.0,
@@ -79742,7 +79742,7 @@ window.SEED_DATA = {
      1023683000.0,
      1095369000.0,
      1119956000.0,
-     2434098000.0
+     1314142000.0
     ],
     "op_exp": [
      593139000.0,
@@ -79757,7 +79757,7 @@ window.SEED_DATA = {
      747380000.0,
      833505000.0,
      897649000.0,
-     1747302000.0
+     849653000.0
     ],
     "op_income": [
      296528000.0,
@@ -79772,7 +79772,7 @@ window.SEED_DATA = {
      276303000.0,
      261864000.0,
      222307000.0,
-     686796000.0
+     464489000.0
     ],
     "nonop": [
      123982000.0,
@@ -79787,7 +79787,7 @@ window.SEED_DATA = {
      166631000.0,
      217795000.0,
      178985000.0,
-     361671000.0
+     182686000.0
     ],
     "pre_tax": [
      420510000.0,
@@ -79802,7 +79802,7 @@ window.SEED_DATA = {
      442934000.0,
      479659000.0,
      401292000.0,
-     1048467000.0
+     647175000.0
     ],
     "net": [
      362586000.0,
@@ -79817,7 +79817,7 @@ window.SEED_DATA = {
      366112000.0,
      407271000.0,
      309301000.0,
-     836142000.0
+     526841000.0
     ],
     "eps": [
      0.79,
@@ -79847,7 +79847,7 @@ window.SEED_DATA = {
      0.3130816282839404,
      0.3267362793128381,
      0.32736195816909786,
-     0.3299700964777992
+     0.3322258649073913
     ]
    },
    "cashflow": {
@@ -79985,11 +79985,11 @@ window.SEED_DATA = {
      1525122000
     ]
    },
-   "fetched_at": "2026-10-20T18:53:12+08:00",
+   "fetched_at": "2026-10-22T19:03:48+08:00",
    "quote": {
     "close": 153.5,
-    "date": "2026-10-20",
-    "spread": -4.0,
+    "date": "2026-10-22",
+    "spread": -5.5,
     "pe_ttm": 40.8
    }
   },
@@ -80225,7 +80225,7 @@ window.SEED_DATA = {
      4250756000.0,
      4295957000.0,
      4722344000.0,
-     10005945000.0
+     5283601000.0
     ],
     "cogs": [
      2704094000.0,
@@ -80240,7 +80240,7 @@ window.SEED_DATA = {
      3474555000.0,
      3440525000.0,
      3606510000.0,
-     7609096000.0
+     4002586000.0
     ],
     "gross": [
      811524000.0,
@@ -80255,7 +80255,7 @@ window.SEED_DATA = {
      776201000.0,
      855432000.0,
      1115834000.0,
-     2396849000.0
+     1281015000.0
     ],
     "op_exp": [
      147050000.0,
@@ -80270,7 +80270,7 @@ window.SEED_DATA = {
      181243000.0,
      180185000.0,
      192218000.0,
-     389995000.0
+     197777000.0
     ],
     "op_income": [
      664474000.0,
@@ -80285,7 +80285,7 @@ window.SEED_DATA = {
      594958000.0,
      675247000.0,
      923616000.0,
-     2006854000.0
+     1083238000.0
     ],
     "nonop": [
      90502000.0,
@@ -80300,7 +80300,7 @@ window.SEED_DATA = {
      245106000.0,
      111682000.0,
      84968000.0,
-     111534000.0
+     26566000.0
     ],
     "pre_tax": [
      754976000.0,
@@ -80315,7 +80315,7 @@ window.SEED_DATA = {
      840064000.0,
      786929000.0,
      1008584000.0,
-     2118388000.0
+     1109804000.0
     ],
     "net": [
      595094000.0,
@@ -80330,7 +80330,7 @@ window.SEED_DATA = {
      744605000.0,
      637222000.0,
      797929000.0,
-     1692497000.0
+     894568000.0
     ],
     "eps": [
      1.05,
@@ -80360,7 +80360,7 @@ window.SEED_DATA = {
      0.18260304755201193,
      0.1991248981309636,
      0.23628816536872366,
-     0.23954249198851282
+     0.24245112376956549
     ]
    },
    "cashflow": {
@@ -80498,12 +80498,12 @@ window.SEED_DATA = {
      1956811000
     ]
    },
-   "fetched_at": "2026-10-20T18:53:15+08:00",
+   "fetched_at": "2026-10-22T19:03:51+08:00",
    "quote": {
-    "close": 112.5,
-    "date": "2026-10-20",
-    "spread": -3.0,
-    "pe_ttm": 20.8
+    "close": 111.0,
+    "date": "2026-10-22",
+    "spread": -6.5,
+    "pe_ttm": 20.5
    }
   },
   {
@@ -80738,7 +80738,7 @@ window.SEED_DATA = {
      1803929000.0,
      2233654000.0,
      2980415000.0,
-     6503650000.0
+     3523235000.0
     ],
     "cogs": [
      663079000.0,
@@ -80753,7 +80753,7 @@ window.SEED_DATA = {
      1044901000.0,
      1302200000.0,
      1698659000.0,
-     3871464000.0
+     2172805000.0
     ],
     "gross": [
      353529000.0,
@@ -80768,7 +80768,7 @@ window.SEED_DATA = {
      759028000.0,
      931454000.0,
      1281756000.0,
-     2632186000.0
+     1350430000.0
     ],
     "op_exp": [
      187234000.0,
@@ -80783,7 +80783,7 @@ window.SEED_DATA = {
      351677000.0,
      456784000.0,
      505060000.0,
-     1030333000.0
+     525273000.0
     ],
     "op_income": [
      166295000.0,
@@ -80798,7 +80798,7 @@ window.SEED_DATA = {
      407351000.0,
      474670000.0,
      776696000.0,
-     1601853000.0
+     825157000.0
     ],
     "nonop": [
      -4494000.0,
@@ -80813,7 +80813,7 @@ window.SEED_DATA = {
      51856000.0,
      96851000.0,
      97332000.0,
-     119804000.0
+     22472000.0
     ],
     "pre_tax": [
      161801000.0,
@@ -80828,7 +80828,7 @@ window.SEED_DATA = {
      459207000.0,
      571521000.0,
      874028000.0,
-     1721657000.0
+     847629000.0
     ],
     "net": [
      135694000.0,
@@ -80843,7 +80843,7 @@ window.SEED_DATA = {
      371768000.0,
      483338000.0,
      698551000.0,
-     1370770000.0
+     672219000.0
     ],
     "eps": [
      3.96,
@@ -80873,7 +80873,7 @@ window.SEED_DATA = {
      0.4207637883752631,
      0.41700908018878485,
      0.43005957224077856,
-     0.40472442397730507
+     0.38329262737228714
     ]
    },
    "cashflow": {
@@ -81011,12 +81011,12 @@ window.SEED_DATA = {
      1250373000
     ]
    },
-   "fetched_at": "2026-10-20T18:53:18+08:00",
+   "fetched_at": "2026-10-22T19:03:56+08:00",
    "quote": {
-    "close": 4960.0,
-    "date": "2026-10-20",
-    "spread": -200.0,
-    "pe_ttm": 79.7
+    "close": 4795.0,
+    "date": "2026-10-22",
+    "spread": -175.0,
+    "pe_ttm": 77.1
    }
   },
   {
@@ -81251,7 +81251,7 @@ window.SEED_DATA = {
      24138053000.0,
      24148480000.0,
      23998243000.0,
-     48294600000.0
+     24296357000.0
     ],
     "cogs": [
      7986406000.0,
@@ -81266,7 +81266,7 @@ window.SEED_DATA = {
      8281273000.0,
      8268806000.0,
      8011505000.0,
-     16233792000.0
+     8222287000.0
     ],
     "gross": [
      16150201000.0,
@@ -81281,7 +81281,7 @@ window.SEED_DATA = {
      15856780000.0,
      15879674000.0,
      15986738000.0,
-     32060808000.0
+     16074070000.0
     ],
     "op_exp": [
      8252004000.0,
@@ -81296,7 +81296,7 @@ window.SEED_DATA = {
      9619006000.0,
      9115028000.0,
      9081691000.0,
-     17976078000.0
+     8894387000.0
     ],
     "op_income": [
      8161528000.0,
@@ -81311,7 +81311,7 @@ window.SEED_DATA = {
      6471415000.0,
      7061481000.0,
      7424734000.0,
-     15085841000.0
+     7661107000.0
     ],
     "nonop": [
      926194000.0,
@@ -81326,7 +81326,7 @@ window.SEED_DATA = {
      265249000.0,
      143916000.0,
      1049327000.0,
-     1276540000.0
+     227213000.0
     ],
     "pre_tax": [
      9087722000.0,
@@ -81341,7 +81341,7 @@ window.SEED_DATA = {
      6736664000.0,
      7205397000.0,
      8474061000.0,
-     16362381000.0
+     7888320000.0
     ],
     "net": [
      6442473000.0,
@@ -81356,7 +81356,7 @@ window.SEED_DATA = {
      4765260000.0,
      5047075000.0,
      5897396000.0,
-     11428366000.0
+     5530970000.0
     ],
     "eps": [
      3.39,
@@ -81386,7 +81386,7 @@ window.SEED_DATA = {
      0.6569204235320886,
      0.6575848252146719,
      0.6661628520054572,
-     0.6638590649886322
+     0.6615835452203802
     ]
    },
    "cashflow": {
@@ -81524,12 +81524,12 @@ window.SEED_DATA = {
      8192220000
     ]
    },
-   "fetched_at": "2026-10-20T18:53:21+08:00",
+   "fetched_at": "2026-10-22T19:03:59+08:00",
    "quote": {
-    "close": 106.5,
-    "date": "2026-10-20",
-    "spread": 0.0,
-    "pe_ttm": 9.4
+    "close": 106.0,
+    "date": "2026-10-22",
+    "spread": -1.5,
+    "pe_ttm": 9.3
    }
   },
   {
@@ -81764,7 +81764,7 @@ window.SEED_DATA = {
      4108501000.0,
      6803668000.0,
      13628469000.0,
-     32443888000.0
+     18815419000.0
     ],
     "cogs": [
      1884967000.0,
@@ -81779,7 +81779,7 @@ window.SEED_DATA = {
      2250967000.0,
      2611386000.0,
      3217780000.0,
-     7538847000.0
+     4321067000.0
     ],
     "gross": [
      584610000.0,
@@ -81794,7 +81794,7 @@ window.SEED_DATA = {
      1857534000.0,
      4192282000.0,
      10410689000.0,
-     24905041000.0
+     14494352000.0
     ],
     "op_exp": [
      287248000.0,
@@ -81809,7 +81809,7 @@ window.SEED_DATA = {
      344843000.0,
      410075000.0,
      625657000.0,
-     992874000.0
+     367217000.0
     ],
     "op_income": [
      297362000.0,
@@ -81824,7 +81824,7 @@ window.SEED_DATA = {
      1512691000.0,
      3782207000.0,
      9785032000.0,
-     23912167000.0
+     14127135000.0
     ],
     "nonop": [
      259983000.0,
@@ -81839,7 +81839,7 @@ window.SEED_DATA = {
      320093000.0,
      270563000.0,
      304901000.0,
-     940547000.0
+     635646000.0
     ],
     "pre_tax": [
      557345000.0,
@@ -81854,7 +81854,7 @@ window.SEED_DATA = {
      1832784000.0,
      4052770000.0,
      10089933000.0,
-     24852714000.0
+     14762781000.0
     ],
     "net": [
      399512000.0,
@@ -81869,7 +81869,7 @@ window.SEED_DATA = {
      1510995000.0,
      3262654000.0,
      8122489000.0,
-     20019710000.0
+     11897221000.0
     ],
     "eps": [
      0.93,
@@ -81899,7 +81899,7 @@ window.SEED_DATA = {
      0.45211964168926816,
      0.6161796842526708,
      0.7638927747496802,
-     0.7676342921662164
+     0.7703443649062506
     ]
    },
    "cashflow": {
@@ -82037,12 +82037,12 @@ window.SEED_DATA = {
      6035203000
     ]
    },
-   "fetched_at": "2026-10-20T18:53:24+08:00",
+   "fetched_at": "2026-10-22T19:04:02+08:00",
    "quote": {
-    "close": 269.5,
-    "date": "2026-10-20",
-    "spread": 0.0,
-    "pe_ttm": 4.7
+    "close": 275.0,
+    "date": "2026-10-22",
+    "spread": 1.0,
+    "pe_ttm": 4.8
    }
   },
   {
@@ -82277,7 +82277,7 @@ window.SEED_DATA = {
      42092048000.0,
      37292622000.0,
      38660500000.0,
-     84583500000.0
+     45923000000.0
     ],
     "cogs": [
      31496089000.0,
@@ -82292,7 +82292,7 @@ window.SEED_DATA = {
      35399642000.0,
      35177010000.0,
      35836720000.0,
-     73703908000.0
+     37867188000.0
     ],
     "gross": [
      3550284000.0,
@@ -82307,7 +82307,7 @@ window.SEED_DATA = {
      6692406000.0,
      2115612000.0,
      2823780000.0,
-     10879592000.0
+     8055812000.0
     ],
     "op_exp": [
      2089837000.0,
@@ -82322,7 +82322,7 @@ window.SEED_DATA = {
      2307775000.0,
      2710328000.0,
      2156831000.0,
-     4585659000.0
+     2428828000.0
     ],
     "op_income": [
      1571882000.0,
@@ -82337,7 +82337,7 @@ window.SEED_DATA = {
      4414392000.0,
      -721863000.0,
      748244000.0,
-     6432357000.0
+     5684113000.0
     ],
     "nonop": [
      4582656000.0,
@@ -82352,7 +82352,7 @@ window.SEED_DATA = {
      3287884000.0,
      2680679000.0,
      1152817000.0,
-     2444176000.0
+     1291359000.0
     ],
     "pre_tax": [
      6154538000.0,
@@ -82367,7 +82367,7 @@ window.SEED_DATA = {
      7702276000.0,
      1958816000.0,
      1901061000.0,
-     8876533000.0
+     6975472000.0
     ],
     "net": [
      -13115000.0,
@@ -82382,7 +82382,7 @@ window.SEED_DATA = {
      6111967000.0,
      2375228000.0,
      1497124000.0,
-     7315606000.0
+     5818482000.0
     ],
     "eps": [
      -0.04,
@@ -82412,7 +82412,7 @@ window.SEED_DATA = {
      0.15899454452774547,
      0.05673004166883197,
      0.07304044179459655,
-     0.1286254647774093
+     0.17541998562811664
     ]
    },
    "cashflow": {
@@ -82550,12 +82550,12 @@ window.SEED_DATA = {
      21699526000
     ]
    },
-   "fetched_at": "2026-10-20T18:53:27+08:00",
+   "fetched_at": "2026-10-22T19:04:04+08:00",
    "quote": {
-    "close": 62.2,
-    "date": "2026-10-20",
-    "spread": -1.3,
-    "pe_ttm": 14.0
+    "close": 61.9,
+    "date": "2026-10-22",
+    "spread": -0.2,
+    "pe_ttm": 13.9
    }
   },
   {
@@ -82790,7 +82790,7 @@ window.SEED_DATA = {
      1032558000.0,
      1106744000.0,
      1245827000.0,
-     2859714000.0
+     1613887000.0
     ],
     "cogs": [
      852386000.0,
@@ -82805,7 +82805,7 @@ window.SEED_DATA = {
      695371000.0,
      751370000.0,
      822050000.0,
-     1855224000.0
+     1033174000.0
     ],
     "gross": [
      382258000.0,
@@ -82820,7 +82820,7 @@ window.SEED_DATA = {
      337187000.0,
      355374000.0,
      423777000.0,
-     1004490000.0
+     580713000.0
     ],
     "op_exp": [
      277660000.0,
@@ -82835,7 +82835,7 @@ window.SEED_DATA = {
      228196000.0,
      236233000.0,
      278425000.0,
-     588354000.0
+     309929000.0
     ],
     "op_income": [
      104598000.0,
@@ -82850,7 +82850,7 @@ window.SEED_DATA = {
      108991000.0,
      119141000.0,
      145352000.0,
-     416136000.0
+     270784000.0
     ],
     "nonop": [
      48481000.0,
@@ -82865,7 +82865,7 @@ window.SEED_DATA = {
      -2930000.0,
      4000.0,
      3130000.0,
-     8192000.0
+     5062000.0
     ],
     "pre_tax": [
      153079000.0,
@@ -82880,7 +82880,7 @@ window.SEED_DATA = {
      106061000.0,
      119145000.0,
      148482000.0,
-     424328000.0
+     275846000.0
     ],
     "net": [
      147063000.0,
@@ -82895,7 +82895,7 @@ window.SEED_DATA = {
      83897000.0,
      98886000.0,
      123588000.0,
-     357469000.0
+     233881000.0
     ],
     "eps": [
      2.07,
@@ -82925,7 +82925,7 @@ window.SEED_DATA = {
      0.32655502160653443,
      0.321098646118705,
      0.34015718073215623,
-     0.3512554052608058
+     0.35982258980957155
     ]
    },
    "cashflow": {
@@ -83063,12 +83063,12 @@ window.SEED_DATA = {
      1020897000
     ]
    },
-   "fetched_at": "2026-10-20T18:53:30+08:00",
+   "fetched_at": "2026-10-22T19:04:07+08:00",
    "quote": {
-    "close": 570.0,
-    "date": "2026-10-20",
-    "spread": 8.0,
-    "pe_ttm": 78.6
+    "close": 581.0,
+    "date": "2026-10-22",
+    "spread": -46.0,
+    "pe_ttm": 80.1
    }
   },
   {
@@ -83303,7 +83303,7 @@ window.SEED_DATA = {
      69575979000.0,
      65000989000.0,
      81749811000.0,
-     168904093000.0
+     87154282000.0
     ],
     "cogs": [
      74785707000.0,
@@ -83318,7 +83318,7 @@ window.SEED_DATA = {
      66541954000.0,
      62371277000.0,
      75422038000.0,
-     157048822000.0
+     81626784000.0
     ],
     "gross": [
      383131000.0,
@@ -83333,7 +83333,7 @@ window.SEED_DATA = {
      3034025000.0,
      2629712000.0,
      6327773000.0,
-     11855271000.0
+     5527498000.0
     ],
     "op_exp": [
      3536585000.0,
@@ -83348,7 +83348,7 @@ window.SEED_DATA = {
      3248709000.0,
      3492166000.0,
      3207342000.0,
-     6803380000.0
+     3596038000.0
     ],
     "op_income": [
      -3153454000.0,
@@ -83363,7 +83363,7 @@ window.SEED_DATA = {
      -214684000.0,
      -862454000.0,
      3120431000.0,
-     5051891000.0
+     1931460000.0
     ],
     "nonop": [
      4745514000.0,
@@ -83378,7 +83378,7 @@ window.SEED_DATA = {
      2538472000.0,
      1021643000.0,
      4174071000.0,
-     9289057000.0
+     5114986000.0
     ],
     "pre_tax": [
      1592060000.0,
@@ -83393,7 +83393,7 @@ window.SEED_DATA = {
      2323788000.0,
      159189000.0,
      7294502000.0,
-     14340948000.0
+     7046446000.0
     ],
     "net": [
      1689369000.0,
@@ -83408,7 +83408,7 @@ window.SEED_DATA = {
      2032423000.0,
      -348403000.0,
      6534544000.0,
-     13050007000.0
+     6515463000.0
     ],
     "eps": [
      0.29,
@@ -83438,7 +83438,7 @@ window.SEED_DATA = {
      0.04360736339764619,
      0.040456492131219726,
      0.07740413002300396,
-     0.07018936480124256
+     0.06342198998323456
     ]
    },
    "cashflow": {
@@ -83576,12 +83576,12 @@ window.SEED_DATA = {
      33399645000
     ]
    },
-   "fetched_at": "2026-10-20T18:53:33+08:00",
+   "fetched_at": "2026-10-22T19:04:09+08:00",
    "quote": {
-    "close": 73.8,
-    "date": "2026-10-20",
-    "spread": -1.7,
-    "pe_ttm": 31.3
+    "close": 73.0,
+    "date": "2026-10-22",
+    "spread": -3.2,
+    "pe_ttm": 30.9
    }
   },
   {
@@ -83816,7 +83816,7 @@ window.SEED_DATA = {
      8245914000.0,
      9035139000.0,
      10013502000.0,
-     22177887000.0
+     12164385000.0
     ],
     "cogs": [
      4352201000.0,
@@ -83831,7 +83831,7 @@ window.SEED_DATA = {
      4449236000.0,
      4742945000.0,
      5209930000.0,
-     11326122000.0
+     6116192000.0
     ],
     "gross": [
      3649778000.0,
@@ -83846,7 +83846,7 @@ window.SEED_DATA = {
      3796678000.0,
      4292194000.0,
      4803572000.0,
-     10851765000.0
+     6048193000.0
     ],
     "op_exp": [
      1222125000.0,
@@ -83861,7 +83861,7 @@ window.SEED_DATA = {
      1336482000.0,
      1468845000.0,
      1478697000.0,
-     3262143000.0
+     1783446000.0
     ],
     "op_income": [
      2427653000.0,
@@ -83876,7 +83876,7 @@ window.SEED_DATA = {
      2460196000.0,
      2823349000.0,
      3324875000.0,
-     7589622000.0
+     4264747000.0
     ],
     "nonop": [
      -271359000.0,
@@ -83891,7 +83891,7 @@ window.SEED_DATA = {
      191978000.0,
      133792000.0,
      99232000.0,
-     72518000.0
+     -26714000.0
     ],
     "pre_tax": [
      2156294000.0,
@@ -83906,7 +83906,7 @@ window.SEED_DATA = {
      2652174000.0,
      2957141000.0,
      3424107000.0,
-     7662140000.0
+     4238033000.0
     ],
     "net": [
      1704052000.0,
@@ -83921,7 +83921,7 @@ window.SEED_DATA = {
      2099409000.0,
      2327777000.0,
      2670926000.0,
-     5981787000.0
+     3310861000.0
     ],
     "eps": [
      8.52,
@@ -83951,7 +83951,7 @@ window.SEED_DATA = {
      0.4604314330709731,
      0.4750556687617091,
      0.4797094962381792,
-     0.489305631325473
+     0.49720499638904886
     ]
    },
    "cashflow": {
@@ -84089,12 +84089,12 @@ window.SEED_DATA = {
      3810653000
     ]
    },
-   "fetched_at": "2026-10-20T18:53:36+08:00",
+   "fetched_at": "2026-10-22T19:04:12+08:00",
    "quote": {
-    "close": 1110.0,
-    "date": "2026-10-20",
-    "spread": -55.0,
-    "pe_ttm": 21.3
+    "close": 1100.0,
+    "date": "2026-10-22",
+    "spread": -20.0,
+    "pe_ttm": 21.1
    }
   },
   {
@@ -84329,7 +84329,7 @@ window.SEED_DATA = {
      73399105000.0,
      74359447000.0,
      72423012000.0,
-     157726373000.0
+     85303361000.0
     ],
     "cogs": [
      52005259000.0,
@@ -84344,7 +84344,7 @@ window.SEED_DATA = {
      65209596000.0,
      65765588000.0,
      64337122000.0,
-     139939963000.0
+     75602841000.0
     ],
     "gross": [
      6255394000.0,
@@ -84359,7 +84359,7 @@ window.SEED_DATA = {
      8189509000.0,
      8593859000.0,
      8085890000.0,
-     17786410000.0
+     9700520000.0
     ],
     "op_exp": [
      5221092000.0,
@@ -84374,7 +84374,7 @@ window.SEED_DATA = {
      6679129000.0,
      6879792000.0,
      7299255000.0,
-     15233355000.0
+     7934100000.0
     ],
     "op_income": [
      1046139000.0,
@@ -84389,7 +84389,7 @@ window.SEED_DATA = {
      1505176000.0,
      1865927000.0,
      803155000.0,
-     2586008000.0
+     1782853000.0
     ],
     "nonop": [
      1174336000.0,
@@ -84404,7 +84404,7 @@ window.SEED_DATA = {
      1209126000.0,
      313632000.0,
      960761000.0,
-     3067547000.0
+     2106786000.0
     ],
     "pre_tax": [
      2220475000.0,
@@ -84419,7 +84419,7 @@ window.SEED_DATA = {
      2714302000.0,
      2179559000.0,
      1763916000.0,
-     5653555000.0
+     3889639000.0
     ],
     "net": [
      1595257000.0,
@@ -84434,7 +84434,7 @@ window.SEED_DATA = {
      2033691000.0,
      1721627000.0,
      1339038000.0,
-     4135130000.0
+     2796092000.0
     ],
     "eps": [
      0.46,
@@ -84464,7 +84464,7 @@ window.SEED_DATA = {
      0.11157505258408805,
      0.11557185195312171,
      0.11164807671904063,
-     0.11276750781557628
+     0.11371791083354851
     ]
    },
    "cashflow": {
@@ -84602,11 +84602,11 @@ window.SEED_DATA = {
      34737210000
     ]
    },
-   "fetched_at": "2026-10-20T18:53:39+08:00",
+   "fetched_at": "2026-10-22T19:04:15+08:00",
    "quote": {
-    "close": 32.4,
-    "date": "2026-10-20",
-    "spread": 0.35,
+    "close": 32.45,
+    "date": "2026-10-22",
+    "spread": 0.15,
     "pe_ttm": 19.3
    }
   },
@@ -85115,12 +85115,12 @@ window.SEED_DATA = {
      247115000
     ]
    },
-   "fetched_at": "2026-10-20T18:53:42+08:00",
+   "fetched_at": "2026-10-22T19:04:17+08:00",
    "quote": {
-    "close": 1240.0,
-    "date": "2026-10-20",
-    "spread": -35.0,
-    "pe_ttm": 54.6
+    "close": 1185.0,
+    "date": "2026-10-22",
+    "spread": -70.0,
+    "pe_ttm": 52.2
    }
   },
   {
@@ -85355,7 +85355,7 @@ window.SEED_DATA = {
      53519321000.0,
      70333413000.0,
      110164542000.0,
-     260775359000.0
+     150610817000.0
     ],
     "cogs": [
      36095975000.0,
@@ -85370,7 +85370,7 @@ window.SEED_DATA = {
      52104613000.0,
      67118072000.0,
      105925922000.0,
-     250856752000.0
+     144930830000.0
     ],
     "gross": [
      1502918000.0,
@@ -85385,7 +85385,7 @@ window.SEED_DATA = {
      1414708000.0,
      3215341000.0,
      4238620000.0,
-     9918607000.0
+     5679987000.0
     ],
     "op_exp": [
      548418000.0,
@@ -85400,7 +85400,7 @@ window.SEED_DATA = {
      540504000.0,
      594952000.0,
      820452000.0,
-     1670748000.0
+     850296000.0
     ],
     "op_income": [
      954500000.0,
@@ -85415,7 +85415,7 @@ window.SEED_DATA = {
      874204000.0,
      2620389000.0,
      3418168000.0,
-     8247859000.0
+     4829691000.0
     ],
     "nonop": [
      -220772000.0,
@@ -85430,7 +85430,7 @@ window.SEED_DATA = {
      -72775000.0,
      -195996000.0,
      -525929000.0,
-     -1470888000.0
+     -944959000.0
     ],
     "pre_tax": [
      733728000.0,
@@ -85445,7 +85445,7 @@ window.SEED_DATA = {
      801429000.0,
      2424393000.0,
      2892239000.0,
-     6776971000.0
+     3884732000.0
     ],
     "net": [
      522697000.0,
@@ -85460,7 +85460,7 @@ window.SEED_DATA = {
      571053000.0,
      1839195000.0,
      2179906000.0,
-     5136309000.0
+     2956403000.0
     ],
     "eps": [
      1.16,
@@ -85490,7 +85490,7 @@ window.SEED_DATA = {
      0.026433593953854535,
      0.04571569703293085,
      0.038475356253920616,
-     0.03803506220079636
+     0.0377130083558341
     ]
    },
    "cashflow": {
@@ -85628,11 +85628,11 @@ window.SEED_DATA = {
      66034488000
     ]
    },
-   "fetched_at": "2026-10-20T18:53:45+08:00",
+   "fetched_at": "2026-10-22T19:04:19+08:00",
    "quote": {
-    "close": 83.3,
-    "date": "2026-10-20",
-    "spread": 0.4,
+    "close": 83.8,
+    "date": "2026-10-22",
+    "spread": -0.7,
     "pe_ttm": 6.0
    }
   },
@@ -85868,7 +85868,7 @@ window.SEED_DATA = {
      674530000.0,
      785732000.0,
      822846000.0,
-     1755748000.0
+     932902000.0
     ],
     "cogs": [
      536537000.0,
@@ -85883,7 +85883,7 @@ window.SEED_DATA = {
      553314000.0,
      601192000.0,
      604517000.0,
-     1285320000.0
+     680803000.0
     ],
     "gross": [
      53074000.0,
@@ -85898,7 +85898,7 @@ window.SEED_DATA = {
      121216000.0,
      184540000.0,
      218329000.0,
-     470428000.0
+     252099000.0
     ],
     "op_exp": [
      96436000.0,
@@ -85913,7 +85913,7 @@ window.SEED_DATA = {
      97411000.0,
      123693000.0,
      97782000.0,
-     211676000.0
+     113894000.0
     ],
     "op_income": [
      -43362000.0,
@@ -85928,7 +85928,7 @@ window.SEED_DATA = {
      23805000.0,
      60847000.0,
      120547000.0,
-     258752000.0
+     138205000.0
     ],
     "nonop": [
      18354000.0,
@@ -85943,7 +85943,7 @@ window.SEED_DATA = {
      5826000.0,
      7249000.0,
      -5260000.0,
-     -8929000.0
+     -3669000.0
     ],
     "pre_tax": [
      -25008000.0,
@@ -85958,7 +85958,7 @@ window.SEED_DATA = {
      29631000.0,
      68096000.0,
      115287000.0,
-     249823000.0
+     134536000.0
     ],
     "net": [
      -26063000.0,
@@ -85973,7 +85973,7 @@ window.SEED_DATA = {
      21823000.0,
      52700000.0,
      88218000.0,
-     193804000.0
+     105586000.0
     ],
     "eps": [
      -0.31,
@@ -86003,7 +86003,7 @@ window.SEED_DATA = {
      0.17970438675818717,
      0.23486379579805838,
      0.2653339750086893,
-     0.26793594524954606
+     0.2702309567350054
     ]
    },
    "cashflow": {
@@ -86141,12 +86141,12 @@ window.SEED_DATA = {
      227052000
     ]
    },
-   "fetched_at": "2026-10-20T18:53:48+08:00",
+   "fetched_at": "2026-10-22T19:04:22+08:00",
    "quote": {
-    "close": 166.5,
-    "date": "2026-10-20",
-    "spread": -7.5,
-    "pe_ttm": 53.7
+    "close": 161.0,
+    "date": "2026-10-22",
+    "spread": -11.0,
+    "pe_ttm": 51.9
    }
   },
   {
@@ -86381,7 +86381,7 @@ window.SEED_DATA = {
      57731197000.0,
      57608253000.0,
      56256838000.0,
-     106169557000.0
+     49912719000.0
     ],
     "cogs": [
      35604317000.0,
@@ -86396,7 +86396,7 @@ window.SEED_DATA = {
      51231800000.0,
      51206035000.0,
      47816332000.0,
-     89760168000.0
+     41943836000.0
     ],
     "gross": [
      5687474000.0,
@@ -86411,7 +86411,7 @@ window.SEED_DATA = {
      6499397000.0,
      6402218000.0,
      8440506000.0,
-     16409389000.0
+     7968883000.0
     ],
     "op_exp": [
      3249792000.0,
@@ -86426,7 +86426,7 @@ window.SEED_DATA = {
      4702094000.0,
      4886766000.0,
      4564149000.0,
-     9252146000.0
+     4687997000.0
     ],
     "op_income": [
      2437682000.0,
@@ -86441,7 +86441,7 @@ window.SEED_DATA = {
      1797303000.0,
      1515452000.0,
      3876357000.0,
-     7157243000.0
+     3280886000.0
     ],
     "nonop": [
      114238000.0,
@@ -86456,7 +86456,7 @@ window.SEED_DATA = {
      173904000.0,
      346424000.0,
      257074000.0,
-     609269000.0
+     352195000.0
     ],
     "pre_tax": [
      2551920000.0,
@@ -86471,7 +86471,7 @@ window.SEED_DATA = {
      1971207000.0,
      1861876000.0,
      4133431000.0,
-     7766512000.0
+     3633081000.0
     ],
     "net": [
      1979138000.0,
@@ -86486,7 +86486,7 @@ window.SEED_DATA = {
      1695944000.0,
      1631923000.0,
      3416814000.0,
-     6415854000.0
+     2999040000.0
     ],
     "eps": [
      2.34,
@@ -86516,7 +86516,7 @@ window.SEED_DATA = {
      0.11258032637015997,
      0.11113369468086456,
      0.15003520105413673,
-     0.1545583259803938
+     0.1596563593339806
     ]
    },
    "cashflow": {
@@ -86654,12 +86654,12 @@ window.SEED_DATA = {
      19910016000
     ]
    },
-   "fetched_at": "2026-10-20T18:53:51+08:00",
+   "fetched_at": "2026-10-22T19:04:24+08:00",
    "quote": {
-    "close": 164.5,
-    "date": "2026-10-20",
-    "spread": 5.0,
-    "pe_ttm": 14.3
+    "close": 163.0,
+    "date": "2026-10-22",
+    "spread": -2.0,
+    "pe_ttm": 14.1
    }
   },
   {
@@ -87167,12 +87167,12 @@ window.SEED_DATA = {
      177406000
     ]
    },
-   "fetched_at": "2026-10-20T18:53:54+08:00",
+   "fetched_at": "2026-10-22T19:04:27+08:00",
    "quote": {
-    "close": 2655.0,
-    "date": "2026-10-20",
-    "spread": -40.0,
-    "pe_ttm": 89.1
+    "close": 2485.0,
+    "date": "2026-10-22",
+    "spread": -105.0,
+    "pe_ttm": 83.4
    }
   },
   {
@@ -87407,7 +87407,7 @@ window.SEED_DATA = {
      512650000.0,
      447099000.0,
      486204000.0,
-     1008161000.0
+     521957000.0
     ],
     "cogs": [
      330377000.0,
@@ -87422,7 +87422,7 @@ window.SEED_DATA = {
      460163000.0,
      404675000.0,
      409099000.0,
-     854346000.0
+     445247000.0
     ],
     "gross": [
      41115000.0,
@@ -87437,7 +87437,7 @@ window.SEED_DATA = {
      52487000.0,
      42424000.0,
      77105000.0,
-     153815000.0
+     76710000.0
     ],
     "op_exp": [
      59163000.0,
@@ -87452,7 +87452,7 @@ window.SEED_DATA = {
      98736000.0,
      99568000.0,
      101625000.0,
-     200784000.0
+     99159000.0
     ],
     "op_income": [
      -18048000.0,
@@ -87467,7 +87467,7 @@ window.SEED_DATA = {
      -46249000.0,
      -57144000.0,
      -24520000.0,
-     -46969000.0
+     -22449000.0
     ],
     "nonop": [
      21362000.0,
@@ -87482,7 +87482,7 @@ window.SEED_DATA = {
      41583000.0,
      15708000.0,
      7549000.0,
-     11481000.0
+     3932000.0
     ],
     "pre_tax": [
      3314000.0,
@@ -87497,7 +87497,7 @@ window.SEED_DATA = {
      -4666000.0,
      -41436000.0,
      -16971000.0,
-     -35488000.0
+     -18517000.0
     ],
     "net": [
      3314000.0,
@@ -87512,7 +87512,7 @@ window.SEED_DATA = {
      -4666000.0,
      -41489000.0,
      -16971000.0,
-     -35488000.0
+     -18517000.0
     ],
     "eps": [
      0.02,
@@ -87542,7 +87542,7 @@ window.SEED_DATA = {
      0.10238369257778211,
      0.0948872621052608,
      0.15858569653890137,
-     0.15256987723191037
+     0.14696612939380063
     ]
    },
    "cashflow": {
@@ -87680,11 +87680,11 @@ window.SEED_DATA = {
      174775000
     ]
    },
-   "fetched_at": "2026-10-20T18:53:57+08:00",
+   "fetched_at": "2026-10-22T19:04:30+08:00",
    "quote": {
-    "close": 41.05,
-    "date": "2026-10-20",
-    "spread": -0.15,
+    "close": 40.5,
+    "date": "2026-10-22",
+    "spread": -1.9,
     "pe_ttm_label": "本益比為負"
    }
   },
@@ -87920,7 +87920,7 @@ window.SEED_DATA = {
      5664598000.0,
      6740001000.0,
      7107292000.0,
-     14928332000.0
+     7821040000.0
     ],
     "cogs": [
      1920876000.0,
@@ -87935,7 +87935,7 @@ window.SEED_DATA = {
      3889927000.0,
      4748221000.0,
      4774202000.0,
-     10041945000.0
+     5267743000.0
     ],
     "gross": [
      592929000.0,
@@ -87950,7 +87950,7 @@ window.SEED_DATA = {
      1774671000.0,
      1991780000.0,
      2333090000.0,
-     4886387000.0
+     2553297000.0
     ],
     "op_exp": [
      254674000.0,
@@ -87965,7 +87965,7 @@ window.SEED_DATA = {
      487093000.0,
      639859000.0,
      563576000.0,
-     1201990000.0
+     638414000.0
     ],
     "op_income": [
      343365000.0,
@@ -87980,7 +87980,7 @@ window.SEED_DATA = {
      1293075000.0,
      1345251000.0,
      1779296000.0,
-     3705229000.0
+     1925933000.0
     ],
     "nonop": [
      34968000.0,
@@ -87995,7 +87995,7 @@ window.SEED_DATA = {
      54376000.0,
      99632000.0,
      12583000.0,
-     -9699000.0
+     -22282000.0
     ],
     "pre_tax": [
      378333000.0,
@@ -88010,7 +88010,7 @@ window.SEED_DATA = {
      1347451000.0,
      1444883000.0,
      1791879000.0,
-     3695530000.0
+     1903651000.0
     ],
     "net": [
      270849000.0,
@@ -88025,7 +88025,7 @@ window.SEED_DATA = {
      1029824000.0,
      1108544000.0,
      1365005000.0,
-     2768934000.0
+     1403929000.0
     ],
     "eps": [
      2.07,
@@ -88055,7 +88055,7 @@ window.SEED_DATA = {
      0.31329160515891863,
      0.29551627662963253,
      0.3282670811892912,
-     0.3273230391714225
+     0.3264651504147786
     ]
    },
    "cashflow": {
@@ -88193,12 +88193,12 @@ window.SEED_DATA = {
      2475728000
     ]
    },
-   "fetched_at": "2026-10-20T18:54:00+08:00",
+   "fetched_at": "2026-10-22T19:04:32+08:00",
    "quote": {
-    "close": 801.0,
-    "date": "2026-10-20",
-    "spread": -12.0,
-    "pe_ttm": 20.8
+    "close": 764.0,
+    "date": "2026-10-22",
+    "spread": -38.0,
+    "pe_ttm": 19.9
    }
   },
   {
@@ -88433,7 +88433,7 @@ window.SEED_DATA = {
      5995331000.0,
      6503036000.0,
      6379288000.0,
-     13887696000.0
+     7508408000.0
     ],
     "cogs": [
      4367631000.0,
@@ -88448,7 +88448,7 @@ window.SEED_DATA = {
      4280579000.0,
      4744170000.0,
      4341614000.0,
-     9284750000.0
+     4943136000.0
     ],
     "gross": [
      2215618000.0,
@@ -88463,7 +88463,7 @@ window.SEED_DATA = {
      1714752000.0,
      1758866000.0,
      2037674000.0,
-     4602946000.0
+     2565272000.0
     ],
     "op_exp": [
      1256523000.0,
@@ -88478,7 +88478,7 @@ window.SEED_DATA = {
      1304206000.0,
      1443503000.0,
      1407153000.0,
-     2938524000.0
+     1531371000.0
     ],
     "op_income": [
      959095000.0,
@@ -88493,7 +88493,7 @@ window.SEED_DATA = {
      410546000.0,
      315363000.0,
      630521000.0,
-     1664422000.0
+     1033901000.0
     ],
     "nonop": [
      -87589000.0,
@@ -88508,7 +88508,7 @@ window.SEED_DATA = {
      162513000.0,
      207154000.0,
      88704000.0,
-     134399000.0
+     45695000.0
     ],
     "pre_tax": [
      871506000.0,
@@ -88523,7 +88523,7 @@ window.SEED_DATA = {
      573059000.0,
      522517000.0,
      719225000.0,
-     1798821000.0
+     1079596000.0
     ],
     "net": [
      579976000.0,
@@ -88538,7 +88538,7 @@ window.SEED_DATA = {
      421093000.0,
      427967000.0,
      548996000.0,
-     1365493000.0
+     816497000.0
     ],
     "eps": [
      1.77,
@@ -88568,7 +88568,7 @@ window.SEED_DATA = {
      0.2860145670022222,
      0.2704684396641815,
      0.31942028640186804,
-     0.33144057876842925
+     0.3416532505958653
     ]
    },
    "cashflow": {
@@ -88706,18 +88706,18 @@ window.SEED_DATA = {
      2720090000
     ]
    },
-   "fetched_at": "2026-10-20T18:54:03+08:00",
+   "fetched_at": "2026-10-22T19:04:35+08:00",
    "quote": {
-    "close": 300.5,
-    "date": "2026-10-20",
-    "spread": -4.5,
-    "pe_ttm": 45.5
+    "close": 299.0,
+    "date": "2026-10-22",
+    "spread": -9.0,
+    "pe_ttm": 45.3
    }
   },
   {
    "id": "6805",
    "name": "富世達",
-   "industry": "電子零組件業",
+   "industry": "電子工業",
    "theme": "機構件",
    "has_contract_liab": true,
    "quarters": [
@@ -88946,7 +88946,7 @@ window.SEED_DATA = {
      3565848000.0,
      3976151000.0,
      4183854000.0,
-     7923593000.0
+     3739739000.0
     ],
     "cogs": [
      1100813000.0,
@@ -88961,7 +88961,7 @@ window.SEED_DATA = {
      2579404000.0,
      2821241000.0,
      2832017000.0,
-     5298555000.0
+     2466538000.0
     ],
     "gross": [
      314307000.0,
@@ -88976,7 +88976,7 @@ window.SEED_DATA = {
      986444000.0,
      1154910000.0,
      1351837000.0,
-     2625038000.0
+     1273201000.0
     ],
     "op_exp": [
      111642000.0,
@@ -88991,7 +88991,7 @@ window.SEED_DATA = {
      193753000.0,
      285618000.0,
      231538000.0,
-     461334000.0
+     229796000.0
     ],
     "op_income": [
      202665000.0,
@@ -89006,7 +89006,7 @@ window.SEED_DATA = {
      792691000.0,
      869292000.0,
      1120299000.0,
-     2163704000.0
+     1043405000.0
     ],
     "nonop": [
      45815000.0,
@@ -89021,7 +89021,7 @@ window.SEED_DATA = {
      37514000.0,
      29846000.0,
      45039000.0,
-     77055000.0
+     32016000.0
     ],
     "pre_tax": [
      248480000.0,
@@ -89036,7 +89036,7 @@ window.SEED_DATA = {
      830205000.0,
      899138000.0,
      1165338000.0,
-     2240759000.0
+     1075421000.0
     ],
     "net": [
      178315000.0,
@@ -89051,7 +89051,7 @@ window.SEED_DATA = {
      686955000.0,
      751502000.0,
      917260000.0,
-     1766401000.0
+     849141000.0
     ],
     "eps": [
      2.95,
@@ -89081,7 +89081,7 @@ window.SEED_DATA = {
      0.276636581256408,
      0.2904592909072115,
      0.3231080721267998,
-     0.3312938965946383
+     0.3404518336707455
     ]
    },
    "cashflow": {
@@ -89219,12 +89219,12 @@ window.SEED_DATA = {
      1613339000
     ]
    },
-   "fetched_at": "2026-10-20T18:54:06+08:00",
+   "fetched_at": "2026-10-22T19:04:38+08:00",
    "quote": {
-    "close": 2290.0,
-    "date": "2026-10-20",
-    "spread": -45.0,
-    "pe_ttm": 49.0
+    "close": 2335.0,
+    "date": "2026-10-22",
+    "spread": -60.0,
+    "pe_ttm": 49.9
    }
   },
   {
@@ -89459,7 +89459,7 @@ window.SEED_DATA = {
      88929011000.0,
      89784563000.0,
      88527614000.0,
-     180703389000.0
+     92175775000.0
     ],
     "cogs": [
      51457570000.0,
@@ -89474,7 +89474,7 @@ window.SEED_DATA = {
      57796065000.0,
      59192285000.0,
      57917330000.0,
-     118211845000.0
+     60294515000.0
     ],
     "gross": [
      26128765000.0,
@@ -89489,7 +89489,7 @@ window.SEED_DATA = {
      31132946000.0,
      30592278000.0,
      30610284000.0,
-     62491544000.0
+     31881260000.0
     ],
     "op_exp": [
      22625917000.0,
@@ -89504,7 +89504,7 @@ window.SEED_DATA = {
      27346387000.0,
      27943722000.0,
      26837025000.0,
-     54873023000.0
+     28035998000.0
     ],
     "op_income": [
      3502848000.0,
@@ -89519,7 +89519,7 @@ window.SEED_DATA = {
      3786559000.0,
      2648556000.0,
      3773259000.0,
-     7618521000.0
+     3845262000.0
     ],
     "nonop": [
      543871000.0,
@@ -89534,7 +89534,7 @@ window.SEED_DATA = {
      579926000.0,
      993758000.0,
      847588000.0,
-     1710046000.0
+     862458000.0
     ],
     "pre_tax": [
      4046719000.0,
@@ -89549,7 +89549,7 @@ window.SEED_DATA = {
      4366485000.0,
      3642314000.0,
      4620847000.0,
-     9328567000.0
+     4707720000.0
     ],
     "net": [
      3103869000.0,
@@ -89564,7 +89564,7 @@ window.SEED_DATA = {
      3381092000.0,
      2884377000.0,
      3570819000.0,
-     7319192000.0
+     3748373000.0
     ],
     "eps": [
      2.46,
@@ -89594,7 +89594,7 @@ window.SEED_DATA = {
      0.3500876221371674,
      0.3407298201139543,
      0.34577102687981626,
-     0.34582386277215865
+     0.3458746075094026
     ]
    },
    "cashflow": {
@@ -89732,12 +89732,12 @@ window.SEED_DATA = {
      31448583000
     ]
    },
-   "fetched_at": "2026-10-20T18:54:09+08:00",
+   "fetched_at": "2026-10-22T19:04:41+08:00",
    "quote": {
-    "close": 227.0,
-    "date": "2026-10-20",
-    "spread": -1.5,
-    "pe_ttm": 20.5
+    "close": 226.0,
+    "date": "2026-10-22",
+    "spread": 1.5,
+    "pe_ttm": 20.4
    }
   },
   {
@@ -90245,11 +90245,11 @@ window.SEED_DATA = {
      121152000
     ]
    },
-   "fetched_at": "2026-10-20T18:54:12+08:00",
+   "fetched_at": "2026-10-22T19:04:44+08:00",
    "quote": {
-    "close": 185.5,
-    "date": "2026-10-20",
-    "spread": 7.5,
+    "close": 177.5,
+    "date": "2026-10-22",
+    "spread": -19.0,
     "pe_ttm_label": "本益比為負"
    }
   },
@@ -90485,7 +90485,7 @@ window.SEED_DATA = {
      2116621000.0,
      1849829000.0,
      2025886000.0,
-     4534628000.0
+     2508742000.0
     ],
     "cogs": [
      767926000.0,
@@ -90500,7 +90500,7 @@ window.SEED_DATA = {
      1421614000.0,
      1166678000.0,
      1301218000.0,
-     2907208000.0
+     1605990000.0
     ],
     "gross": [
      295806000.0,
@@ -90515,7 +90515,7 @@ window.SEED_DATA = {
      695007000.0,
      683151000.0,
      724668000.0,
-     1627420000.0
+     902752000.0
     ],
     "op_exp": [
      190217000.0,
@@ -90530,7 +90530,7 @@ window.SEED_DATA = {
      288243000.0,
      293803000.0,
      266220000.0,
-     594869000.0
+     328649000.0
     ],
     "op_income": [
      105589000.0,
@@ -90545,7 +90545,7 @@ window.SEED_DATA = {
      406764000.0,
      389348000.0,
      458448000.0,
-     1032551000.0
+     574103000.0
     ],
     "nonop": [
      100632000.0,
@@ -90560,7 +90560,7 @@ window.SEED_DATA = {
      -13105000.0,
      12642000.0,
      48158000.0,
-     82266000.0
+     34108000.0
     ],
     "pre_tax": [
      206221000.0,
@@ -90575,7 +90575,7 @@ window.SEED_DATA = {
      393659000.0,
      401990000.0,
      506606000.0,
-     1114817000.0
+     608211000.0
     ],
     "net": [
      190125000.0,
@@ -90590,7 +90590,7 @@ window.SEED_DATA = {
      308014000.0,
      333995000.0,
      410084000.0,
-     888919000.0
+     478835000.0
     ],
     "eps": [
      1.57,
@@ -90620,7 +90620,7 @@ window.SEED_DATA = {
      0.32835684801388626,
      0.3693049465653312,
      0.3577042340980687,
-     0.358887211916832
+     0.35984250273643126
     ]
    },
    "cashflow": {
@@ -90758,12 +90758,12 @@ window.SEED_DATA = {
      907112000
     ]
    },
-   "fetched_at": "2026-10-20T18:54:15+08:00",
+   "fetched_at": "2026-10-22T19:04:46+08:00",
    "quote": {
-    "close": 324.0,
-    "date": "2026-10-20",
-    "spread": -9.5,
-    "pe_ttm": 27.1
+    "close": 317.0,
+    "date": "2026-10-22",
+    "spread": -20.0,
+    "pe_ttm": 26.5
    }
   },
   {
@@ -90998,7 +90998,7 @@ window.SEED_DATA = {
      4861064000.0,
      4363151000.0,
      3773945000.0,
-     6455149000.0
+     2681204000.0
     ],
     "cogs": [
      4620968000.0,
@@ -91013,7 +91013,7 @@ window.SEED_DATA = {
      3469331000.0,
      2923447000.0,
      2686961000.0,
-     4594281000.0
+     1907320000.0
     ],
     "gross": [
      2270788000.0,
@@ -91028,7 +91028,7 @@ window.SEED_DATA = {
      1391733000.0,
      1439704000.0,
      1086984000.0,
-     1860868000.0
+     773884000.0
     ],
     "op_exp": [
      903821000.0,
@@ -91043,7 +91043,7 @@ window.SEED_DATA = {
      653313000.0,
      842466000.0,
      843556000.0,
-     1569629000.0
+     726073000.0
     ],
     "op_income": [
      1366967000.0,
@@ -91058,7 +91058,7 @@ window.SEED_DATA = {
      738420000.0,
      597238000.0,
      243428000.0,
-     291239000.0
+     47811000.0
     ],
     "nonop": [
      5612069000.0,
@@ -91073,7 +91073,7 @@ window.SEED_DATA = {
      3047548000.0,
      2423361000.0,
      1608063000.0,
-     3227114000.0
+     1619051000.0
     ],
     "pre_tax": [
      6979036000.0,
@@ -91088,7 +91088,7 @@ window.SEED_DATA = {
      3785968000.0,
      3020599000.0,
      1851491000.0,
-     3518353000.0
+     1666862000.0
     ],
     "net": [
      4483281000.0,
@@ -91103,7 +91103,7 @@ window.SEED_DATA = {
      2969052000.0,
      2365676000.0,
      1535534000.0,
-     2946102000.0
+     1410568000.0
     ],
     "eps": [
      6.59,
@@ -91133,7 +91133,7 @@ window.SEED_DATA = {
      0.2863021346766881,
      0.3299688688289725,
      0.28802327537894695,
-     0.2882765370714138
+     0.2886330171072399
     ]
    },
    "cashflow": {
@@ -91271,12 +91271,12 @@ window.SEED_DATA = {
      1028108000
     ]
    },
-   "fetched_at": "2026-10-20T18:54:18+08:00",
+   "fetched_at": "2026-10-22T19:04:49+08:00",
    "quote": {
-    "close": 194.5,
-    "date": "2026-10-20",
-    "spread": 0.5,
-    "pe_ttm": 14.3
+    "close": 196.5,
+    "date": "2026-10-22",
+    "spread": 1.0,
+    "pe_ttm": 14.4
    }
   },
   {
@@ -91511,7 +91511,7 @@ window.SEED_DATA = {
      975240000.0,
      1064798000.0,
      1058983000.0,
-     2367626000.0
+     1308643000.0
     ],
     "cogs": [
      965311000.0,
@@ -91526,7 +91526,7 @@ window.SEED_DATA = {
      899274000.0,
      939007000.0,
      870756000.0,
-     1872478000.0
+     1001722000.0
     ],
     "gross": [
      113376000.0,
@@ -91541,7 +91541,7 @@ window.SEED_DATA = {
      75966000.0,
      125791000.0,
      188227000.0,
-     495148000.0
+     306921000.0
     ],
     "op_exp": [
      72671000.0,
@@ -91556,7 +91556,7 @@ window.SEED_DATA = {
      70952000.0,
      73771000.0,
      75998000.0,
-     161459000.0
+     85461000.0
     ],
     "op_income": [
      40705000.0,
@@ -91571,7 +91571,7 @@ window.SEED_DATA = {
      5014000.0,
      52020000.0,
      112229000.0,
-     333689000.0
+     221460000.0
     ],
     "nonop": [
      14027000.0,
@@ -91586,7 +91586,7 @@ window.SEED_DATA = {
      12183000.0,
      9663000.0,
      13593000.0,
-     20827000.0
+     7234000.0
     ],
     "pre_tax": [
      54732000.0,
@@ -91601,7 +91601,7 @@ window.SEED_DATA = {
      17197000.0,
      61683000.0,
      125822000.0,
-     354516000.0
+     228694000.0
     ],
     "net": [
      43573000.0,
@@ -91616,7 +91616,7 @@ window.SEED_DATA = {
      13756000.0,
      46478000.0,
      100656000.0,
-     288329000.0
+     187673000.0
     ],
     "eps": [
      0.15,
@@ -91646,7 +91646,7 @@ window.SEED_DATA = {
      0.0778946720807186,
      0.11813602204361766,
      0.17774317434746356,
-     0.20913269241003435
+     0.23453378805373198
     ]
    },
    "cashflow": {
@@ -91784,12 +91784,12 @@ window.SEED_DATA = {
      512783000
     ]
    },
-   "fetched_at": "2026-10-20T18:54:21+08:00",
+   "fetched_at": "2026-10-22T19:04:51+08:00",
    "quote": {
-    "close": 151.0,
-    "date": "2026-10-20",
-    "spread": 1.5,
-    "pe_ttm": 124.8
+    "close": 145.0,
+    "date": "2026-10-22",
+    "spread": -9.5,
+    "pe_ttm": 119.8
    }
   },
   {
@@ -92297,12 +92297,12 @@ window.SEED_DATA = {
      2249539000
     ]
    },
-   "fetched_at": "2026-10-20T18:54:24+08:00",
+   "fetched_at": "2026-10-22T19:04:55+08:00",
    "quote": {
-    "close": 783.0,
-    "date": "2026-10-20",
-    "spread": 9.0,
-    "pe_ttm": 18.1
+    "close": 787.0,
+    "date": "2026-10-22",
+    "spread": 5.0,
+    "pe_ttm": 18.2
    }
   },
   {
@@ -92810,12 +92810,12 @@ window.SEED_DATA = {
      1160237000
     ]
    },
-   "fetched_at": "2026-10-20T18:54:27+08:00",
+   "fetched_at": "2026-10-22T19:04:57+08:00",
    "quote": {
-    "close": 1320.0,
-    "date": "2026-10-20",
-    "spread": -85.0,
-    "pe_ttm": 67.3
+    "close": 1260.0,
+    "date": "2026-10-22",
+    "spread": -70.0,
+    "pe_ttm": 64.3
    }
   },
   {
@@ -93050,7 +93050,7 @@ window.SEED_DATA = {
      969232000.0,
      868345000.0,
      889642000.0,
-     1927958000.0
+     1038316000.0
     ],
     "cogs": [
      727745000.0,
@@ -93065,7 +93065,7 @@ window.SEED_DATA = {
      787765000.0,
      713456000.0,
      763744000.0,
-     1576828000.0
+     813084000.0
     ],
     "gross": [
      134690000.0,
@@ -93080,7 +93080,7 @@ window.SEED_DATA = {
      181467000.0,
      154889000.0,
      125898000.0,
-     351130000.0
+     225232000.0
     ],
     "op_exp": [
      83675000.0,
@@ -93095,7 +93095,7 @@ window.SEED_DATA = {
      95030000.0,
      110490000.0,
      98277000.0,
-     197762000.0
+     99485000.0
     ],
     "op_income": [
      51015000.0,
@@ -93110,7 +93110,7 @@ window.SEED_DATA = {
      86437000.0,
      44399000.0,
      27621000.0,
-     153368000.0
+     125747000.0
     ],
     "nonop": [
      3485000.0,
@@ -93125,7 +93125,7 @@ window.SEED_DATA = {
      21799000.0,
      47542000.0,
      6025000.0,
-     25728000.0
+     19703000.0
     ],
     "pre_tax": [
      54500000.0,
@@ -93140,7 +93140,7 @@ window.SEED_DATA = {
      108236000.0,
      91941000.0,
      33646000.0,
-     179096000.0
+     145450000.0
     ],
     "net": [
      39926000.0,
@@ -93155,7 +93155,7 @@ window.SEED_DATA = {
      81467000.0,
      67866000.0,
      22217000.0,
-     131698000.0
+     109481000.0
     ],
     "eps": [
      0.4,
@@ -93185,7 +93185,7 @@ window.SEED_DATA = {
      0.1872276193934992,
      0.17837265142310949,
      0.14151535111876462,
-     0.18212533675526127
+     0.21692047507695153
     ]
    },
    "cashflow": {
@@ -93323,18 +93323,18 @@ window.SEED_DATA = {
      380841000
     ]
    },
-   "fetched_at": "2026-10-20T18:54:30+08:00",
+   "fetched_at": "2026-10-22T19:05:00+08:00",
    "quote": {
-    "close": 189.5,
-    "date": "2026-10-20",
-    "spread": -4.0,
-    "pe_ttm": 68.4
+    "close": 186.5,
+    "date": "2026-10-22",
+    "spread": -8.0,
+    "pe_ttm": 67.3
    }
   },
   {
    "id": "3312",
    "name": "弘憶股",
-   "industry": "電子通路業",
+   "industry": "電子工業",
    "theme": "電子通路",
    "has_contract_liab": true,
    "quarters": [
@@ -93563,7 +93563,7 @@ window.SEED_DATA = {
      5205413000.0,
      4904092000.0,
      5660657000.0,
-     12216684000.0
+     6556027000.0
     ],
     "cogs": [
      3620541000.0,
@@ -93578,7 +93578,7 @@ window.SEED_DATA = {
      4958204000.0,
      4628747000.0,
      5358913000.0,
-     11576858000.0
+     6217945000.0
     ],
     "gross": [
      120397000.0,
@@ -93593,7 +93593,7 @@ window.SEED_DATA = {
      247209000.0,
      275345000.0,
      301744000.0,
-     639826000.0
+     338082000.0
     ],
     "op_exp": [
      107356000.0,
@@ -93608,7 +93608,7 @@ window.SEED_DATA = {
      144483000.0,
      146394000.0,
      141060000.0,
-     295920000.0
+     154860000.0
     ],
     "op_income": [
      13041000.0,
@@ -93623,7 +93623,7 @@ window.SEED_DATA = {
      102726000.0,
      128951000.0,
      160684000.0,
-     343906000.0
+     183222000.0
     ],
     "nonop": [
      22357000.0,
@@ -93638,7 +93638,7 @@ window.SEED_DATA = {
      85077000.0,
      113796000.0,
      65984000.0,
-     52945000.0
+     -13039000.0
     ],
     "pre_tax": [
      35398000.0,
@@ -93653,7 +93653,7 @@ window.SEED_DATA = {
      187803000.0,
      242747000.0,
      226668000.0,
-     396851000.0
+     170183000.0
     ],
     "net": [
      26700000.0,
@@ -93668,7 +93668,7 @@ window.SEED_DATA = {
      154339000.0,
      181651000.0,
      187350000.0,
-     336461000.0
+     149111000.0
     ],
     "eps": [
      0.18,
@@ -93698,7 +93698,7 @@ window.SEED_DATA = {
      0.04749075625699632,
      0.056145969529119766,
      0.05330547319860574,
-     0.05237313169432884
+     0.05156812197387228
     ]
    },
    "cashflow": {
@@ -93836,12 +93836,12 @@ window.SEED_DATA = {
      2116091000
     ]
    },
-   "fetched_at": "2026-10-20T18:54:33+08:00",
+   "fetched_at": "2026-10-22T19:05:03+08:00",
    "quote": {
-    "close": 48.7,
-    "date": "2026-10-20",
-    "spread": 0.0,
-    "pe_ttm": 12.0
+    "close": 50.1,
+    "date": "2026-10-22",
+    "spread": -0.7,
+    "pe_ttm": 12.3
    }
   },
   {
@@ -94076,7 +94076,7 @@ window.SEED_DATA = {
      6095421000.0,
      5586159000.0,
      5467013000.0,
-     10847066000.0
+     5380053000.0
     ],
     "cogs": [
      6847410000.0,
@@ -94091,7 +94091,7 @@ window.SEED_DATA = {
      6013267000.0,
      5529383000.0,
      5542613000.0,
-     10692495000.0
+     5149882000.0
     ],
     "gross": [
      1276092000.0,
@@ -94106,7 +94106,7 @@ window.SEED_DATA = {
      82154000.0,
      56776000.0,
      -75600000.0,
-     154571000.0
+     230171000.0
     ],
     "op_exp": [
      850736000.0,
@@ -94121,7 +94121,7 @@ window.SEED_DATA = {
      924574000.0,
      897341000.0,
      924153000.0,
-     1854929000.0
+     930776000.0
     ],
     "op_income": [
      425356000.0,
@@ -94136,7 +94136,7 @@ window.SEED_DATA = {
      -842420000.0,
      -840565000.0,
      -999753000.0,
-     -1700358000.0
+     -700605000.0
     ],
     "nonop": [
      255935000.0,
@@ -94151,7 +94151,7 @@ window.SEED_DATA = {
      98832000.0,
      83214000.0,
      17988000.0,
-     80323000.0
+     62335000.0
     ],
     "pre_tax": [
      681291000.0,
@@ -94166,7 +94166,7 @@ window.SEED_DATA = {
      -743588000.0,
      -757351000.0,
      -981765000.0,
-     -1620035000.0
+     -638270000.0
     ],
     "net": [
      560165000.0,
@@ -94181,7 +94181,7 @@ window.SEED_DATA = {
      -607658000.0,
      -576885000.0,
      -817437000.0,
-     -1344457000.0
+     -527020000.0
     ],
     "eps": [
      1.75,
@@ -94211,7 +94211,7 @@ window.SEED_DATA = {
      0.01347798618011783,
      0.010163692082520387,
      -0.013828392213444526,
-     0.014250028533061383
+     0.04278229229340306
     ]
    },
    "cashflow": {
@@ -94349,11 +94349,11 @@ window.SEED_DATA = {
      2099160000
     ]
    },
-   "fetched_at": "2026-10-20T18:54:36+08:00",
+   "fetched_at": "2026-10-22T19:05:05+08:00",
    "quote": {
-    "close": 88.3,
-    "date": "2026-10-20",
-    "spread": 8.0,
+    "close": 78.7,
+    "date": "2026-10-22",
+    "spread": -7.9,
     "pe_ttm_label": "本益比為負"
    }
   },
@@ -94589,7 +94589,7 @@ window.SEED_DATA = {
      3432980000.0,
      3319774000.0,
      3618451000.0,
-     7715738000.0
+     4097287000.0
     ],
     "cogs": [
      2722337000.0,
@@ -94604,7 +94604,7 @@ window.SEED_DATA = {
      2808398000.0,
      2734958000.0,
      2741412000.0,
-     5765963000.0
+     3024551000.0
     ],
     "gross": [
      619432000.0,
@@ -94619,7 +94619,7 @@ window.SEED_DATA = {
      624582000.0,
      584816000.0,
      877039000.0,
-     1949775000.0
+     1072736000.0
     ],
     "op_exp": [
      405437000.0,
@@ -94634,7 +94634,7 @@ window.SEED_DATA = {
      356467000.0,
      391813000.0,
      393679000.0,
-     839915000.0
+     446236000.0
     ],
     "op_income": [
      213995000.0,
@@ -94649,7 +94649,7 @@ window.SEED_DATA = {
      268115000.0,
      193003000.0,
      483360000.0,
-     1109860000.0
+     626500000.0
     ],
     "nonop": [
      13717000.0,
@@ -94664,7 +94664,7 @@ window.SEED_DATA = {
      67995000.0,
      74392000.0,
      85285000.0,
-     221249000.0
+     135964000.0
     ],
     "pre_tax": [
      227712000.0,
@@ -94679,7 +94679,7 @@ window.SEED_DATA = {
      336110000.0,
      267395000.0,
      568645000.0,
-     1331109000.0
+     762464000.0
     ],
     "net": [
      163476000.0,
@@ -94694,7 +94694,7 @@ window.SEED_DATA = {
      264853000.0,
      267864000.0,
      455409000.0,
-     1067920000.0
+     612511000.0
     ],
     "eps": [
      1.34,
@@ -94724,7 +94724,7 @@ window.SEED_DATA = {
      0.1819358108698565,
      0.17616138929939207,
      0.24237968125034717,
-     0.2527010378009207
+     0.2618161725063438
     ]
    },
    "cashflow": {
@@ -94862,12 +94862,12 @@ window.SEED_DATA = {
      1597836000
     ]
    },
-   "fetched_at": "2026-10-20T18:54:39+08:00",
+   "fetched_at": "2026-10-22T19:05:08+08:00",
    "quote": {
-    "close": 794.0,
-    "date": "2026-10-20",
-    "spread": 59.0,
-    "pe_ttm": 77.5
+    "close": 756.0,
+    "date": "2026-10-22",
+    "spread": -59.0,
+    "pe_ttm": 73.8
    }
   },
   {
@@ -95102,7 +95102,7 @@ window.SEED_DATA = {
      57924337000.0,
      65651267000.0,
      59988435000.0,
-     121351909000.0
+     61363474000.0
     ],
     "cogs": [
      33076273000.0,
@@ -95117,7 +95117,7 @@ window.SEED_DATA = {
      36412454000.0,
      43574383000.0,
      37238688000.0,
-     75566838000.0
+     38328150000.0
     ],
     "gross": [
      20387378000.0,
@@ -95132,7 +95132,7 @@ window.SEED_DATA = {
      21511883000.0,
      22076884000.0,
      22749747000.0,
-     45785071000.0
+     23035324000.0
     ],
     "op_exp": [
      8128411000.0,
@@ -95147,7 +95147,7 @@ window.SEED_DATA = {
      9413711000.0,
      10576753000.0,
      9647148000.0,
-     19423637000.0
+     9776489000.0
     ],
     "op_income": [
      12260638000.0,
@@ -95162,7 +95162,7 @@ window.SEED_DATA = {
      12100177000.0,
      11379768000.0,
      13104526000.0,
-     26365933000.0
+     13261407000.0
     ],
     "nonop": [
      399022000.0,
@@ -95177,7 +95177,7 @@ window.SEED_DATA = {
      157897000.0,
      802490000.0,
      76199000.0,
-     767574000.0
+     691375000.0
     ],
     "pre_tax": [
      12659660000.0,
@@ -95192,7 +95192,7 @@ window.SEED_DATA = {
      12258074000.0,
      12182258000.0,
      13180725000.0,
-     27133507000.0
+     13952782000.0
     ],
     "net": [
      10206689000.0,
@@ -95207,7 +95207,7 @@ window.SEED_DATA = {
      9854849000.0,
      9861814000.0,
      10607722000.0,
-     21873887000.0
+     11266165000.0
     ],
     "eps": [
      1.28,
@@ -95237,7 +95237,7 @@ window.SEED_DATA = {
      0.37137901120905364,
      0.3362750638156001,
      0.3792355476518099,
-     0.37729172435186004
+     0.37539145844317745
     ]
    },
    "cashflow": {
@@ -95375,12 +95375,12 @@ window.SEED_DATA = {
      24398810000
     ]
    },
-   "fetched_at": "2026-10-20T18:54:42+08:00",
+   "fetched_at": "2026-10-22T19:05:11+08:00",
    "quote": {
-    "close": 154.5,
-    "date": "2026-10-20",
-    "spread": 0.0,
-    "pe_ttm": 30.3
+    "close": 158.0,
+    "date": "2026-10-22",
+    "spread": 4.0,
+    "pe_ttm": 31.0
    }
   },
   {
@@ -95615,7 +95615,7 @@ window.SEED_DATA = {
      224423000.0,
      211344000.0,
      216325000.0,
-     500767000.0
+     284442000.0
     ],
     "cogs": [
      139870000.0,
@@ -95630,7 +95630,7 @@ window.SEED_DATA = {
      146141000.0,
      135176000.0,
      145551000.0,
-     322606000.0
+     177055000.0
     ],
     "gross": [
      74415000.0,
@@ -95645,7 +95645,7 @@ window.SEED_DATA = {
      78282000.0,
      76168000.0,
      70774000.0,
-     178161000.0
+     107387000.0
     ],
     "op_exp": [
      47740000.0,
@@ -95660,7 +95660,7 @@ window.SEED_DATA = {
      48223000.0,
      52825000.0,
      54708000.0,
-     107214000.0
+     52506000.0
     ],
     "op_income": [
      26675000.0,
@@ -95675,7 +95675,7 @@ window.SEED_DATA = {
      30059000.0,
      23343000.0,
      16066000.0,
-     70947000.0
+     54881000.0
     ],
     "nonop": [
      24826000.0,
@@ -95690,7 +95690,7 @@ window.SEED_DATA = {
      38935000.0,
      12291000.0,
      42239000.0,
-     54504000.0
+     12265000.0
     ],
     "pre_tax": [
      51501000.0,
@@ -95705,7 +95705,7 @@ window.SEED_DATA = {
      68994000.0,
      35634000.0,
      58305000.0,
-     125451000.0
+     67146000.0
     ],
     "net": [
      41371000.0,
@@ -95720,7 +95720,7 @@ window.SEED_DATA = {
      62235000.0,
      15797000.0,
      41461000.0,
-     100213000.0
+     58752000.0
     ],
     "eps": [
      0.25,
@@ -95750,7 +95750,7 @@ window.SEED_DATA = {
      0.3488145154462778,
      0.3603982133393898,
      0.32716514503640354,
-     0.35577623924899204
+     0.3775356663221325
     ]
    },
    "cashflow": {
@@ -95888,12 +95888,12 @@ window.SEED_DATA = {
      118893000
     ]
    },
-   "fetched_at": "2026-10-20T18:54:45+08:00",
+   "fetched_at": "2026-10-22T19:05:13+08:00",
    "quote": {
-    "close": 42.8,
-    "date": "2026-10-20",
-    "spread": 0.65,
-    "pe_ttm": 40.0
+    "close": 44.65,
+    "date": "2026-10-22",
+    "spread": -1.65,
+    "pe_ttm": 41.7
    }
   },
   {
@@ -96401,11 +96401,11 @@ window.SEED_DATA = {
      223771000
     ]
    },
-   "fetched_at": "2026-10-20T18:54:48+08:00",
+   "fetched_at": "2026-10-22T19:05:16+08:00",
    "quote": {
-    "close": 169.0,
-    "date": "2026-10-20",
-    "spread": 0.5,
+    "close": 160.5,
+    "date": "2026-10-22",
+    "spread": -6.5,
     "pe_ttm_label": "本益比為負"
    }
   },
@@ -96914,12 +96914,12 @@ window.SEED_DATA = {
      222619000
     ]
    },
-   "fetched_at": "2026-10-20T18:54:51+08:00",
+   "fetched_at": "2026-10-22T19:05:19+08:00",
    "quote": {
-    "close": 464.0,
-    "date": "2026-10-20",
-    "spread": -22.0,
-    "pe_ttm": 43.4
+    "close": 433.5,
+    "date": "2026-10-22",
+    "spread": -43.5,
+    "pe_ttm": 40.6
    }
   },
   {
@@ -97154,7 +97154,7 @@ window.SEED_DATA = {
      14538145000.0,
      15334616000.0,
      14235194000.0,
-     30835311000.0
+     16600117000.0
     ],
     "cogs": [
      11182156000.0,
@@ -97169,7 +97169,7 @@ window.SEED_DATA = {
      10985402000.0,
      11763293000.0,
      10893613000.0,
-     23318727000.0
+     12425114000.0
     ],
     "gross": [
      3881908000.0,
@@ -97184,7 +97184,7 @@ window.SEED_DATA = {
      3552743000.0,
      3571323000.0,
      3341581000.0,
-     7516584000.0
+     4175003000.0
     ],
     "op_exp": [
      2101004000.0,
@@ -97199,7 +97199,7 @@ window.SEED_DATA = {
      1919362000.0,
      2580719000.0,
      2163871000.0,
-     4589104000.0
+     2425233000.0
     ],
     "op_income": [
      1780340000.0,
@@ -97214,7 +97214,7 @@ window.SEED_DATA = {
      1633558000.0,
      992045000.0,
      1178530000.0,
-     2925438000.0
+     1746908000.0
     ],
     "nonop": [
      998038000.0,
@@ -97229,7 +97229,7 @@ window.SEED_DATA = {
      532591000.0,
      374542000.0,
      403360000.0,
-     1785376000.0
+     1382016000.0
     ],
     "pre_tax": [
      2778378000.0,
@@ -97244,7 +97244,7 @@ window.SEED_DATA = {
      2166149000.0,
      1366587000.0,
      1581890000.0,
-     4710814000.0
+     3128924000.0
     ],
     "net": [
      2254375000.0,
@@ -97259,7 +97259,7 @@ window.SEED_DATA = {
      1690778000.0,
      1150681000.0,
      1238690000.0,
-     3949819000.0
+     2711129000.0
     ],
     "eps": [
      1.01,
@@ -97289,7 +97289,7 @@ window.SEED_DATA = {
      0.24437388676478328,
      0.23289288756888338,
      0.23474081210273637,
-     0.2437654674538551
+     0.2515044321675564
     ]
    },
    "cashflow": {
@@ -97427,12 +97427,12 @@ window.SEED_DATA = {
      5914588000
     ]
    },
-   "fetched_at": "2026-10-20T18:54:55+08:00",
+   "fetched_at": "2026-10-22T19:05:21+08:00",
    "quote": {
-    "close": 68.3,
-    "date": "2026-10-20",
-    "spread": -1.0,
-    "pe_ttm": 24.2
+    "close": 69.7,
+    "date": "2026-10-22",
+    "spread": -0.9,
+    "pe_ttm": 24.7
    }
   },
   {
@@ -97667,7 +97667,7 @@ window.SEED_DATA = {
      666296000.0,
      474058000.0,
      418613000.0,
-     985891000.0
+     567278000.0
     ],
     "cogs": [
      442556000.0,
@@ -97682,7 +97682,7 @@ window.SEED_DATA = {
      354861000.0,
      197660000.0,
      231509000.0,
-     519152000.0
+     287643000.0
     ],
     "gross": [
      237562000.0,
@@ -97697,7 +97697,7 @@ window.SEED_DATA = {
      311435000.0,
      276398000.0,
      187104000.0,
-     466739000.0
+     279635000.0
     ],
     "op_exp": [
      206650000.0,
@@ -97712,7 +97712,7 @@ window.SEED_DATA = {
      204687000.0,
      248028000.0,
      195311000.0,
-     399388000.0
+     204077000.0
     ],
     "op_income": [
      30912000.0,
@@ -97727,7 +97727,7 @@ window.SEED_DATA = {
      106748000.0,
      28370000.0,
      -8207000.0,
-     67351000.0
+     75558000.0
     ],
     "nonop": [
      4585273000.0,
@@ -97742,7 +97742,7 @@ window.SEED_DATA = {
      2857252000.0,
      2609000000.0,
      2744793000.0,
-     9433440000.0
+     6688647000.0
     ],
     "pre_tax": [
      4616185000.0,
@@ -97757,7 +97757,7 @@ window.SEED_DATA = {
      2964000000.0,
      2637370000.0,
      2736586000.0,
-     9500791000.0
+     6764205000.0
     ],
     "net": [
      4554558000.0,
@@ -97772,7 +97772,7 @@ window.SEED_DATA = {
      2901480000.0,
      2741609000.0,
      2717995000.0,
-     9438880000.0
+     6720885000.0
     ],
     "eps": [
      4.33,
@@ -97802,7 +97802,7 @@ window.SEED_DATA = {
      0.4674123812839939,
      0.5830468001805686,
      0.44696175226282986,
-     0.4734184610671971
+     0.49294173227236027
     ]
    },
    "cashflow": {
@@ -97940,11 +97940,11 @@ window.SEED_DATA = {
      110846000
     ]
    },
-   "fetched_at": "2026-10-20T18:54:58+08:00",
+   "fetched_at": "2026-10-22T19:05:24+08:00",
    "quote": {
-    "close": 57.9,
-    "date": "2026-10-20",
-    "spread": -1.2,
+    "close": 57.8,
+    "date": "2026-10-22",
+    "spread": 0.2,
     "pe_ttm": 4.1
    }
   },
@@ -98180,7 +98180,7 @@ window.SEED_DATA = {
      4129336000.0,
      4460912000.0,
      4529845000.0,
-     9337903000.0
+     4808058000.0
     ],
     "cogs": [
      1483805000.0,
@@ -98195,7 +98195,7 @@ window.SEED_DATA = {
      2686727000.0,
      2945161000.0,
      2894382000.0,
-     5824420000.0
+     2930038000.0
     ],
     "gross": [
      886490000.0,
@@ -98210,7 +98210,7 @@ window.SEED_DATA = {
      1442609000.0,
      1515751000.0,
      1635463000.0,
-     3513483000.0
+     1878020000.0
     ],
     "op_exp": [
      410787000.0,
@@ -98225,7 +98225,7 @@ window.SEED_DATA = {
      484770000.0,
      536139000.0,
      540854000.0,
-     1108124000.0
+     567270000.0
     ],
     "op_income": [
      475703000.0,
@@ -98240,7 +98240,7 @@ window.SEED_DATA = {
      957839000.0,
      979612000.0,
      1094609000.0,
-     2405359000.0
+     1310750000.0
     ],
     "nonop": [
      81419000.0,
@@ -98255,7 +98255,7 @@ window.SEED_DATA = {
      56108000.0,
      46865000.0,
      61053000.0,
-     136182000.0
+     75129000.0
     ],
     "pre_tax": [
      557122000.0,
@@ -98270,7 +98270,7 @@ window.SEED_DATA = {
      1013947000.0,
      1026477000.0,
      1155662000.0,
-     2541541000.0
+     1385879000.0
     ],
     "net": [
      439494000.0,
@@ -98285,7 +98285,7 @@ window.SEED_DATA = {
      798432000.0,
      810472000.0,
      908707000.0,
-     2002874000.0
+     1094167000.0
     ],
     "eps": [
      5.15,
@@ -98315,7 +98315,7 @@ window.SEED_DATA = {
      0.34935616767441546,
      0.3397850036046441,
      0.3610417133478077,
-     0.3762603873696268
+     0.39059844951953576
     ]
    },
    "cashflow": {
@@ -98453,12 +98453,12 @@ window.SEED_DATA = {
      1760420000
     ]
    },
-   "fetched_at": "2026-10-20T18:55:01+08:00",
+   "fetched_at": "2026-10-22T19:05:26+08:00",
    "quote": {
-    "close": 916.0,
-    "date": "2026-10-20",
-    "spread": -19.0,
-    "pe_ttm": 21.7
+    "close": 894.0,
+    "date": "2026-10-22",
+    "spread": -24.0,
+    "pe_ttm": 21.1
    }
   },
   {
@@ -98966,11 +98966,11 @@ window.SEED_DATA = {
      224257000
     ]
    },
-   "fetched_at": "2026-10-20T18:55:04+08:00",
+   "fetched_at": "2026-10-22T19:05:29+08:00",
    "quote": {
-    "close": 517.0,
-    "date": "2026-10-20",
-    "spread": -18.0,
+    "close": 506.0,
+    "date": "2026-10-22",
+    "spread": -43.0,
     "pe_ttm_label": "本益比為負"
    }
   },
@@ -99206,7 +99206,7 @@ window.SEED_DATA = {
      6837709000.0,
      6073203000.0,
      5814686000.0,
-     13171088000.0
+     7356402000.0
     ],
     "cogs": [
      3509195000.0,
@@ -99221,7 +99221,7 @@ window.SEED_DATA = {
      6241866000.0,
      5517586000.0,
      5309614000.0,
-     12108035000.0
+     6798421000.0
     ],
     "gross": [
      327037000.0,
@@ -99236,7 +99236,7 @@ window.SEED_DATA = {
      595843000.0,
      555617000.0,
      505072000.0,
-     1063053000.0
+     557981000.0
     ],
     "op_exp": [
      390190000.0,
@@ -99251,7 +99251,7 @@ window.SEED_DATA = {
      443845000.0,
      515121000.0,
      442596000.0,
-     960574000.0
+     517978000.0
     ],
     "op_income": [
      -63153000.0,
@@ -99266,7 +99266,7 @@ window.SEED_DATA = {
      151998000.0,
      40496000.0,
      62476000.0,
-     102479000.0
+     40003000.0
     ],
     "nonop": [
      -246046000.0,
@@ -99281,7 +99281,7 @@ window.SEED_DATA = {
      256213000.0,
      327124000.0,
      48789000.0,
-     234114000.0
+     185325000.0
     ],
     "pre_tax": [
      -309199000.0,
@@ -99296,7 +99296,7 @@ window.SEED_DATA = {
      408211000.0,
      367620000.0,
      111265000.0,
-     336593000.0
+     225328000.0
     ],
     "net": [
      -257414000.0,
@@ -99311,7 +99311,7 @@ window.SEED_DATA = {
      327981000.0,
      262098000.0,
      95581000.0,
-     276191000.0
+     180610000.0
     ],
     "eps": [
      -0.33,
@@ -99341,7 +99341,7 @@ window.SEED_DATA = {
      0.08714073675846691,
      0.09148665045446365,
      0.0868614401534322,
-     0.08071109994861472
+     0.07584971566262964
     ]
    },
    "cashflow": {
@@ -99479,12 +99479,12 @@ window.SEED_DATA = {
      3445381000
     ]
    },
-   "fetched_at": "2026-10-20T18:55:07+08:00",
+   "fetched_at": "2026-10-22T19:05:32+08:00",
    "quote": {
-    "close": 40.1,
-    "date": "2026-10-20",
-    "spread": -0.2,
-    "pe_ttm": 29.5
+    "close": 39.15,
+    "date": "2026-10-22",
+    "spread": -2.55,
+    "pe_ttm": 28.8
    }
   },
   {
@@ -99992,12 +99992,12 @@ window.SEED_DATA = {
      242257000
     ]
    },
-   "fetched_at": "2026-10-20T18:55:10+08:00",
+   "fetched_at": "2026-10-22T19:05:36+08:00",
    "quote": {
-    "close": 556.0,
-    "date": "2026-10-20",
-    "spread": -17.0,
-    "pe_ttm": 57.7
+    "close": 552.0,
+    "date": "2026-10-22",
+    "spread": -31.0,
+    "pe_ttm": 57.3
    }
   },
   {
@@ -100505,12 +100505,12 @@ window.SEED_DATA = {
      3613296000
     ]
    },
-   "fetched_at": "2026-10-20T18:55:13+08:00",
+   "fetched_at": "2026-10-22T19:05:39+08:00",
    "quote": {
-    "close": 156.0,
-    "date": "2026-10-20",
-    "spread": -1.0,
-    "pe_ttm": 15.2
+    "close": 153.5,
+    "date": "2026-10-22",
+    "spread": -2.0,
+    "pe_ttm": 14.9
    }
   },
   {
@@ -100745,7 +100745,7 @@ window.SEED_DATA = {
      7152524000.0,
      6976253000.0,
      6209310000.0,
-     14237685000.0
+     8028375000.0
     ],
     "cogs": [
      3613799000.0,
@@ -100760,7 +100760,7 @@ window.SEED_DATA = {
      5578579000.0,
      5893046000.0,
      5135323000.0,
-     11687129000.0
+     6551806000.0
     ],
     "gross": [
      837595000.0,
@@ -100775,7 +100775,7 @@ window.SEED_DATA = {
      1573945000.0,
      1083207000.0,
      1073987000.0,
-     2550556000.0
+     1476569000.0
     ],
     "op_exp": [
      578238000.0,
@@ -100790,7 +100790,7 @@ window.SEED_DATA = {
      696190000.0,
      678428000.0,
      591940000.0,
-     1261412000.0
+     669472000.0
     ],
     "op_income": [
      259357000.0,
@@ -100805,7 +100805,7 @@ window.SEED_DATA = {
      877755000.0,
      404779000.0,
      482047000.0,
-     1289144000.0
+     807097000.0
     ],
     "nonop": [
      252345000.0,
@@ -100820,7 +100820,7 @@ window.SEED_DATA = {
      -45444000.0,
      -48450000.0,
      -66771000.0,
-     -59328000.0
+     7443000.0
     ],
     "pre_tax": [
      511702000.0,
@@ -100835,7 +100835,7 @@ window.SEED_DATA = {
      832311000.0,
      356329000.0,
      415276000.0,
-     1229816000.0
+     814540000.0
     ],
     "net": [
      414669000.0,
@@ -100850,7 +100850,7 @@ window.SEED_DATA = {
      613522000.0,
      359166000.0,
      354471000.0,
-     977303000.0
+     622832000.0
     ],
     "eps": [
      1.07,
@@ -100880,7 +100880,7 @@ window.SEED_DATA = {
      0.2200544870593933,
      0.15527060156791905,
      0.1729639847261612,
-     0.1791412016770985
+     0.18391878804863998
     ]
    },
    "cashflow": {
@@ -101018,12 +101018,12 @@ window.SEED_DATA = {
      2534552000
     ]
    },
-   "fetched_at": "2026-10-20T18:55:16+08:00",
+   "fetched_at": "2026-10-22T19:05:43+08:00",
    "quote": {
-    "close": 132.0,
-    "date": "2026-10-20",
-    "spread": 1.5,
-    "pe_ttm": 22.3
+    "close": 129.5,
+    "date": "2026-10-22",
+    "spread": -4.5,
+    "pe_ttm": 21.8
    }
   },
   {
@@ -101258,7 +101258,7 @@ window.SEED_DATA = {
      12788131000.0,
      12087405000.0,
      12555084000.0,
-     25785584000.0
+     13230500000.0
     ],
     "cogs": [
      10805730000.0,
@@ -101273,7 +101273,7 @@ window.SEED_DATA = {
      11167380000.0,
      10508520000.0,
      11135630000.0,
-     22806019000.0
+     11670389000.0
     ],
     "gross": [
      1380107000.0,
@@ -101288,7 +101288,7 @@ window.SEED_DATA = {
      1620751000.0,
      1578885000.0,
      1419454000.0,
-     2979565000.0
+     1560111000.0
     ],
     "op_exp": [
      697471000.0,
@@ -101303,7 +101303,7 @@ window.SEED_DATA = {
      677610000.0,
      796466000.0,
      695467000.0,
-     1437771000.0
+     742304000.0
     ],
     "op_income": [
      682636000.0,
@@ -101318,7 +101318,7 @@ window.SEED_DATA = {
      943141000.0,
      782419000.0,
      723987000.0,
-     1541794000.0
+     817807000.0
     ],
     "nonop": [
      158238000.0,
@@ -101333,7 +101333,7 @@ window.SEED_DATA = {
      -24493000.0,
      170992000.0,
      75053000.0,
-     162396000.0
+     87343000.0
     ],
     "pre_tax": [
      840874000.0,
@@ -101348,7 +101348,7 @@ window.SEED_DATA = {
      918648000.0,
      953411000.0,
      799040000.0,
-     1704190000.0
+     905150000.0
     ],
     "net": [
      632805000.0,
@@ -101363,7 +101363,7 @@ window.SEED_DATA = {
      696962000.0,
      729633000.0,
      628121000.0,
-     1428502000.0
+     800381000.0
     ],
     "eps": [
      2.16,
@@ -101393,7 +101393,7 @@ window.SEED_DATA = {
      0.1267386923077344,
      0.130622329606727,
      0.11305810458934405,
-     0.1155515810694844
+     0.11791776576848947
     ]
    },
    "cashflow": {
@@ -101531,12 +101531,12 @@ window.SEED_DATA = {
      5162030000
     ]
    },
-   "fetched_at": "2026-10-20T18:55:19+08:00",
+   "fetched_at": "2026-10-22T19:05:47+08:00",
    "quote": {
-    "close": 288.0,
-    "date": "2026-10-20",
-    "spread": -1.5,
-    "pe_ttm": 29.4
+    "close": 290.5,
+    "date": "2026-10-22",
+    "spread": -26.0,
+    "pe_ttm": 29.6
    }
   },
   {
@@ -101771,7 +101771,7 @@ window.SEED_DATA = {
      2514032000.0,
      2999698000.0,
      2705681000.0,
-     6386649000.0
+     3680968000.0
     ],
     "cogs": [
      448280000.0,
@@ -101786,7 +101786,7 @@ window.SEED_DATA = {
      996274000.0,
      1272667000.0,
      1206501000.0,
-     2586444000.0
+     1379943000.0
     ],
     "gross": [
      250312000.0,
@@ -101801,7 +101801,7 @@ window.SEED_DATA = {
      1517758000.0,
      1727031000.0,
      1499180000.0,
-     3800205000.0
+     2301025000.0
     ],
     "op_exp": [
      183669000.0,
@@ -101816,7 +101816,7 @@ window.SEED_DATA = {
      962910000.0,
      919144000.0,
      784913000.0,
-     1905988000.0
+     1121075000.0
     ],
     "op_income": [
      66643000.0,
@@ -101831,7 +101831,7 @@ window.SEED_DATA = {
      554848000.0,
      807887000.0,
      714267000.0,
-     1894217000.0
+     1179950000.0
     ],
     "nonop": [
      41990000.0,
@@ -101846,7 +101846,7 @@ window.SEED_DATA = {
      141465000.0,
      136541000.0,
      101500000.0,
-     78331000.0
+     -23169000.0
     ],
     "pre_tax": [
      108633000.0,
@@ -101861,7 +101861,7 @@ window.SEED_DATA = {
      696313000.0,
      944428000.0,
      815767000.0,
-     1972548000.0
+     1156781000.0
     ],
     "net": [
      70949000.0,
@@ -101876,7 +101876,7 @@ window.SEED_DATA = {
      529438000.0,
      731394000.0,
      606226000.0,
-     1496641000.0
+     890415000.0
     ],
     "eps": [
      1.07,
@@ -101906,7 +101906,7 @@ window.SEED_DATA = {
      0.6037146702985483,
      0.5757349573190368,
      0.5540860138353338,
-     0.5950233056490187
+     0.6251141004214109
     ]
    },
    "cashflow": {
@@ -102044,12 +102044,12 @@ window.SEED_DATA = {
      2061154000
     ]
    },
-   "fetched_at": "2026-10-20T18:55:25+08:00",
+   "fetched_at": "2026-10-22T19:05:51+08:00",
    "quote": {
-    "close": 1455.0,
-    "date": "2026-10-20",
-    "spread": -40.0,
-    "pe_ttm": 40.8
+    "close": 1410.0,
+    "date": "2026-10-22",
+    "spread": -90.0,
+    "pe_ttm": 39.6
    }
   },
   {
@@ -102557,12 +102557,12 @@ window.SEED_DATA = {
      478248000
     ]
    },
-   "fetched_at": "2026-10-20T18:55:28+08:00",
+   "fetched_at": "2026-10-22T19:05:55+08:00",
    "quote": {
-    "close": 69.4,
-    "date": "2026-10-20",
-    "spread": -1.0,
-    "pe_ttm": 22.1
+    "close": 66.4,
+    "date": "2026-10-22",
+    "spread": -4.5,
+    "pe_ttm": 21.1
    }
   },
   {
@@ -102797,7 +102797,7 @@ window.SEED_DATA = {
      108484000.0,
      98821000.0,
      85699000.0,
-     180916000.0
+     95217000.0
     ],
     "cogs": [
      96455000.0,
@@ -102812,7 +102812,7 @@ window.SEED_DATA = {
      123749000.0,
      113209000.0,
      93303000.0,
-     203118000.0
+     109815000.0
     ],
     "gross": [
      15775000.0,
@@ -102827,7 +102827,7 @@ window.SEED_DATA = {
      -15265000.0,
      -14388000.0,
      -7604000.0,
-     -22202000.0
+     -14598000.0
     ],
     "op_exp": [
      25141000.0,
@@ -102842,7 +102842,7 @@ window.SEED_DATA = {
      29480000.0,
      23437000.0,
      23169000.0,
-     48289000.0
+     25120000.0
     ],
     "op_income": [
      -9366000.0,
@@ -102857,7 +102857,7 @@ window.SEED_DATA = {
      -44745000.0,
      -37825000.0,
      -30773000.0,
-     -70491000.0
+     -39718000.0
     ],
     "nonop": [
      19863000.0,
@@ -102872,7 +102872,7 @@ window.SEED_DATA = {
      27460000.0,
      15466000.0,
      7034000.0,
-     6897000.0
+     -137000.0
     ],
     "pre_tax": [
      10497000.0,
@@ -102887,7 +102887,7 @@ window.SEED_DATA = {
      -17285000.0,
      -22359000.0,
      -23739000.0,
-     -63594000.0
+     -39855000.0
     ],
     "net": [
      20586000.0,
@@ -102902,7 +102902,7 @@ window.SEED_DATA = {
      -20442000.0,
      -1469000.0,
      -24456000.0,
-     -61624000.0
+     -37168000.0
     ],
     "eps": [
      0.34,
@@ -102932,7 +102932,7 @@ window.SEED_DATA = {
      -0.1407119943954869,
      -0.14559658372208337,
      -0.08872915669961143,
-     -0.12271993632403988
+     -0.1533129588203787
     ]
    },
    "cashflow": {
@@ -103070,11 +103070,11 @@ window.SEED_DATA = {
      31243000
     ]
    },
-   "fetched_at": "2026-10-20T18:55:32+08:00",
+   "fetched_at": "2026-10-22T19:05:58+08:00",
    "quote": {
-    "close": 59.9,
-    "date": "2026-10-20",
-    "spread": -1.2,
+    "close": 59.2,
+    "date": "2026-10-22",
+    "spread": 0.3,
     "pe_ttm_label": "本益比為負"
    }
   },
@@ -103310,7 +103310,7 @@ window.SEED_DATA = {
      2215410000.0,
      2044241000.0,
      2111258000.0,
-     4348946000.0
+     2237688000.0
     ],
     "cogs": [
      1250827000.0,
@@ -103325,7 +103325,7 @@ window.SEED_DATA = {
      1434142000.0,
      1264944000.0,
      1274971000.0,
-     2608390000.0
+     1333419000.0
     ],
     "gross": [
      831996000.0,
@@ -103340,7 +103340,7 @@ window.SEED_DATA = {
      781268000.0,
      779297000.0,
      836287000.0,
-     1740556000.0
+     904269000.0
     ],
     "op_exp": [
      399569000.0,
@@ -103355,7 +103355,7 @@ window.SEED_DATA = {
      428321000.0,
      449239000.0,
      465765000.0,
-     918407000.0
+     452642000.0
     ],
     "op_income": [
      432427000.0,
@@ -103370,7 +103370,7 @@ window.SEED_DATA = {
      352947000.0,
      330058000.0,
      370522000.0,
-     822149000.0
+     451627000.0
     ],
     "nonop": [
      120892000.0,
@@ -103385,7 +103385,7 @@ window.SEED_DATA = {
      112630000.0,
      114048000.0,
      67589000.0,
-     91627000.0
+     24038000.0
     ],
     "pre_tax": [
      553319000.0,
@@ -103400,7 +103400,7 @@ window.SEED_DATA = {
      465577000.0,
      444106000.0,
      438111000.0,
-     913776000.0
+     475665000.0
     ],
     "net": [
      428398000.0,
@@ -103415,7 +103415,7 @@ window.SEED_DATA = {
      401193000.0,
      415867000.0,
      402259000.0,
-     799335000.0
+     397076000.0
     ],
     "eps": [
      4.9,
@@ -103445,7 +103445,7 @@ window.SEED_DATA = {
      0.35265165364424644,
      0.38121581555208023,
      0.3961083865638401,
-     0.40022479009856643
+     0.4041086156783251
     ]
    },
    "cashflow": {
@@ -103583,11 +103583,11 @@ window.SEED_DATA = {
      828391000
     ]
    },
-   "fetched_at": "2026-10-20T18:55:35+08:00",
+   "fetched_at": "2026-10-22T19:06:01+08:00",
    "quote": {
-    "close": 264.0,
-    "date": "2026-10-20",
-    "spread": 3.0,
+    "close": 265.0,
+    "date": "2026-10-22",
+    "spread": 0.0,
     "pe_ttm": 14.4
    }
   },
@@ -104096,12 +104096,12 @@ window.SEED_DATA = {
      640453000
     ]
    },
-   "fetched_at": "2026-10-20T18:55:38+08:00",
+   "fetched_at": "2026-10-22T19:06:04+08:00",
    "quote": {
-    "close": 50.9,
-    "date": "2026-10-20",
-    "spread": -0.3,
-    "pe_ttm": 11.7
+    "close": 47.85,
+    "date": "2026-10-22",
+    "spread": 0.0,
+    "pe_ttm": 11.0
    }
   },
   {
@@ -104336,7 +104336,7 @@ window.SEED_DATA = {
      2079628000.0,
      2004017000.0,
      2053739000.0,
-     4751446000.0
+     2697707000.0
     ],
     "cogs": [
      1160477000.0,
@@ -104351,7 +104351,7 @@ window.SEED_DATA = {
      1238173000.0,
      1220422000.0,
      1356021000.0,
-     3041663000.0
+     1685642000.0
     ],
     "gross": [
      655972000.0,
@@ -104366,7 +104366,7 @@ window.SEED_DATA = {
      841455000.0,
      783595000.0,
      697718000.0,
-     1709783000.0
+     1012065000.0
     ],
     "op_exp": [
      297300000.0,
@@ -104381,7 +104381,7 @@ window.SEED_DATA = {
      291849000.0,
      336042000.0,
      289115000.0,
-     634049000.0
+     344934000.0
     ],
     "op_income": [
      358672000.0,
@@ -104396,7 +104396,7 @@ window.SEED_DATA = {
      549606000.0,
      447553000.0,
      408603000.0,
-     1075734000.0
+     667131000.0
     ],
     "nonop": [
      44868000.0,
@@ -104411,7 +104411,7 @@ window.SEED_DATA = {
      84886000.0,
      114209000.0,
      -46276000.0,
-     245647000.0
+     291923000.0
     ],
     "pre_tax": [
      403540000.0,
@@ -104426,7 +104426,7 @@ window.SEED_DATA = {
      634492000.0,
      561762000.0,
      362327000.0,
-     1321381000.0
+     959054000.0
     ],
     "net": [
      313041000.0,
@@ -104441,7 +104441,7 @@ window.SEED_DATA = {
      407290000.0,
      422882000.0,
      284442000.0,
-     969224000.0
+     684782000.0
     ],
     "eps": [
      2.43,
@@ -104471,7 +104471,7 @@ window.SEED_DATA = {
      0.404618037456699,
      0.39101215209252216,
      0.33973060841713576,
-     0.3598447714653602
+     0.3751574948650836
     ]
    },
    "cashflow": {
@@ -104609,12 +104609,12 @@ window.SEED_DATA = {
      1008842000
     ]
    },
-   "fetched_at": "2026-10-20T18:55:41+08:00",
+   "fetched_at": "2026-10-22T19:06:07+08:00",
    "quote": {
-    "close": 251.0,
-    "date": "2026-10-20",
-    "spread": -5.5,
-    "pe_ttm": 17.8
+    "close": 242.5,
+    "date": "2026-10-22",
+    "spread": -15.5,
+    "pe_ttm": 17.2
    }
   },
   {
@@ -104849,7 +104849,7 @@ window.SEED_DATA = {
      11466239000.0,
      14643498000.0,
      14308544000.0,
-     35508124000.0
+     21199580000.0
     ],
     "cogs": [
      12250336000.0,
@@ -104864,7 +104864,7 @@ window.SEED_DATA = {
      10205081000.0,
      13098835000.0,
      12367423000.0,
-     30715150000.0
+     18347727000.0
     ],
     "gross": [
      1372029000.0,
@@ -104879,7 +104879,7 @@ window.SEED_DATA = {
      1261158000.0,
      1544663000.0,
      1941121000.0,
-     4792974000.0
+     2851853000.0
     ],
     "op_exp": [
      664621000.0,
@@ -104894,7 +104894,7 @@ window.SEED_DATA = {
      974161000.0,
      893859000.0,
      761353000.0,
-     1721644000.0
+     960291000.0
     ],
     "op_income": [
      707408000.0,
@@ -104909,7 +104909,7 @@ window.SEED_DATA = {
      286997000.0,
      650804000.0,
      1179768000.0,
-     3071330000.0
+     1891562000.0
     ],
     "nonop": [
      343024000.0,
@@ -104924,7 +104924,7 @@ window.SEED_DATA = {
      1052588000.0,
      251969000.0,
      206483000.0,
-     526893000.0
+     320410000.0
     ],
     "pre_tax": [
      1050432000.0,
@@ -104939,7 +104939,7 @@ window.SEED_DATA = {
      1339585000.0,
      902773000.0,
      1386251000.0,
-     3598223000.0
+     2211972000.0
     ],
     "net": [
      804149000.0,
@@ -104954,7 +104954,7 @@ window.SEED_DATA = {
      1162757000.0,
      753766000.0,
      1109065000.0,
-     2900848000.0
+     1791783000.0
     ],
     "eps": [
      4.18,
@@ -104984,7 +104984,7 @@ window.SEED_DATA = {
      0.10998881150131268,
      0.10548456386581949,
      0.13566167179553698,
-     0.13498246204164432
+     0.13452403302329574
     ]
    },
    "cashflow": {
@@ -105122,12 +105122,12 @@ window.SEED_DATA = {
      7174334000
     ]
    },
-   "fetched_at": "2026-10-20T18:55:44+08:00",
+   "fetched_at": "2026-10-22T19:06:09+08:00",
    "quote": {
-    "close": 593.0,
-    "date": "2026-10-20",
-    "spread": -5.0,
-    "pe_ttm": 26.6
+    "close": 597.0,
+    "date": "2026-10-22",
+    "spread": -18.0,
+    "pe_ttm": 26.7
    }
   },
   {
@@ -105362,7 +105362,7 @@ window.SEED_DATA = {
      8070817000.0,
      9197632000.0,
      8580758000.0,
-     18095950000.0
+     9515192000.0
     ],
     "cogs": [
      3971297000.0,
@@ -105377,7 +105377,7 @@ window.SEED_DATA = {
      6035466000.0,
      6752809000.0,
      6487847000.0,
-     13982105000.0
+     7494258000.0
     ],
     "gross": [
      962484000.0,
@@ -105392,7 +105392,7 @@ window.SEED_DATA = {
      2035351000.0,
      2444823000.0,
      2092911000.0,
-     4113845000.0
+     2020934000.0
     ],
     "op_exp": [
      862668000.0,
@@ -105407,7 +105407,7 @@ window.SEED_DATA = {
      1753590000.0,
      2085684000.0,
      1841430000.0,
-     3722802000.0
+     1881372000.0
     ],
     "op_income": [
      99816000.0,
@@ -105422,7 +105422,7 @@ window.SEED_DATA = {
      281761000.0,
      359139000.0,
      251481000.0,
-     391043000.0
+     139562000.0
     ],
     "nonop": [
      -42667000.0,
@@ -105437,7 +105437,7 @@ window.SEED_DATA = {
      112154000.0,
      10441000.0,
      74633000.0,
-     64113000.0
+     -10520000.0
     ],
     "pre_tax": [
      57149000.0,
@@ -105452,7 +105452,7 @@ window.SEED_DATA = {
      393915000.0,
      369580000.0,
      326114000.0,
-     455156000.0
+     129042000.0
     ],
     "net": [
      28166000.0,
@@ -105467,7 +105467,7 @@ window.SEED_DATA = {
      254595000.0,
      478319000.0,
      231311000.0,
-     305289000.0
+     73978000.0
     ],
     "eps": [
      0.03,
@@ -105497,7 +105497,7 @@ window.SEED_DATA = {
      0.25218648867890325,
      0.26581004762965077,
      0.24390747297616364,
-     0.22733512194717603
+     0.21239024919307986
     ]
    },
    "cashflow": {
@@ -105635,12 +105635,12 @@ window.SEED_DATA = {
      3833227000
     ]
    },
-   "fetched_at": "2026-10-20T18:55:47+08:00",
+   "fetched_at": "2026-10-22T19:06:13+08:00",
    "quote": {
-    "close": 41.8,
-    "date": "2026-10-20",
-    "spread": -0.55,
-    "pe_ttm": 34.3
+    "close": 41.7,
+    "date": "2026-10-22",
+    "spread": -1.2,
+    "pe_ttm": 34.2
    }
   },
   {
@@ -105875,7 +105875,7 @@ window.SEED_DATA = {
      1185505000.0,
      1189551000.0,
      979142000.0,
-     2100786000.0
+     1121644000.0
     ],
     "cogs": [
      585942000.0,
@@ -105890,7 +105890,7 @@ window.SEED_DATA = {
      774230000.0,
      773279000.0,
      571140000.0,
-     1257329000.0
+     686189000.0
     ],
     "gross": [
      209724000.0,
@@ -105905,7 +105905,7 @@ window.SEED_DATA = {
      411275000.0,
      416272000.0,
      408002000.0,
-     843457000.0
+     435455000.0
     ],
     "op_exp": [
      226755000.0,
@@ -105920,7 +105920,7 @@ window.SEED_DATA = {
      237101000.0,
      236320000.0,
      227436000.0,
-     468413000.0
+     240977000.0
     ],
     "op_income": [
      -17031000.0,
@@ -105935,7 +105935,7 @@ window.SEED_DATA = {
      174174000.0,
      179952000.0,
      180566000.0,
-     375044000.0
+     194478000.0
     ],
     "nonop": [
      42258000.0,
@@ -105950,7 +105950,7 @@ window.SEED_DATA = {
      126898000.0,
      111217000.0,
      87786000.0,
-     160611000.0
+     72825000.0
     ],
     "pre_tax": [
      25227000.0,
@@ -105965,7 +105965,7 @@ window.SEED_DATA = {
      301072000.0,
      291169000.0,
      268352000.0,
-     535655000.0
+     267303000.0
     ],
     "net": [
      24302000.0,
@@ -105980,7 +105980,7 @@ window.SEED_DATA = {
      249076000.0,
      244805000.0,
      221048000.0,
-     442965000.0
+     221917000.0
     ],
     "eps": [
      0.3,
@@ -106010,7 +106010,7 @@ window.SEED_DATA = {
      0.34691966714606853,
      0.3499404397121267,
      0.4166933907441413,
-     0.40149591629037895
+     0.3882292420768087
     ]
    },
    "cashflow": {
@@ -106148,12 +106148,12 @@ window.SEED_DATA = {
      302427000
     ]
    },
-   "fetched_at": "2026-10-20T18:55:50+08:00",
+   "fetched_at": "2026-10-22T19:06:15+08:00",
    "quote": {
-    "close": 176.5,
-    "date": "2026-10-20",
-    "spread": -2.0,
-    "pe_ttm": 19.9
+    "close": 175.0,
+    "date": "2026-10-22",
+    "spread": -4.5,
+    "pe_ttm": 19.7
    }
   },
   {
@@ -106388,7 +106388,7 @@ window.SEED_DATA = {
      5602991000.0,
      5207730000.0,
      5245484000.0,
-     11569048000.0
+     6323564000.0
     ],
     "cogs": [
      5565003000.0,
@@ -106403,7 +106403,7 @@ window.SEED_DATA = {
      5282538000.0,
      5345485000.0,
      4661155000.0,
-     10298513000.0
+     5637358000.0
     ],
     "gross": [
      278984000.0,
@@ -106418,7 +106418,7 @@ window.SEED_DATA = {
      320453000.0,
      -137755000.0,
      584329000.0,
-     1270535000.0
+     686206000.0
     ],
     "op_exp": [
      1333251000.0,
@@ -106433,7 +106433,7 @@ window.SEED_DATA = {
      1183246000.0,
      1177555000.0,
      891752000.0,
-     1975693000.0
+     1083941000.0
     ],
     "op_income": [
      -1044865000.0,
@@ -106448,7 +106448,7 @@ window.SEED_DATA = {
      -857785000.0,
      -1314618000.0,
      -306588000.0,
-     -685091000.0
+     -378503000.0
     ],
     "nonop": [
      1252000.0,
@@ -106463,7 +106463,7 @@ window.SEED_DATA = {
      249881000.0,
      618688000.0,
      187467000.0,
-     1819776000.0
+     1632309000.0
     ],
     "pre_tax": [
      -1043613000.0,
@@ -106478,7 +106478,7 @@ window.SEED_DATA = {
      -607904000.0,
      -695930000.0,
      -119121000.0,
-     1134685000.0
+     1253806000.0
     ],
     "net": [
      -1037559000.0,
@@ -106493,7 +106493,7 @@ window.SEED_DATA = {
      -615879000.0,
      -705738000.0,
      -137955000.0,
-     1117166000.0
+     1255121000.0
     ],
     "eps": [
      -1.22,
@@ -106523,7 +106523,7 @@ window.SEED_DATA = {
      0.05719320270191403,
      -0.026452024202483614,
      0.11139658418555848,
-     0.10982191447386164
+     0.10851570411875329
     ]
    },
    "cashflow": {
@@ -106661,18 +106661,18 @@ window.SEED_DATA = {
      2126893000
     ]
    },
-   "fetched_at": "2026-10-20T18:55:53+08:00",
+   "fetched_at": "2026-10-22T19:06:18+08:00",
    "quote": {
     "close": 61.7,
-    "date": "2026-10-20",
-    "spread": -1.2,
+    "date": "2026-10-22",
+    "spread": -0.9,
     "pe_ttm_label": "本益比為負"
    }
   },
   {
    "id": "2369",
    "name": "菱生",
-   "industry": "半導體業",
+   "industry": "電子工業",
    "theme": "電子工業",
    "has_contract_liab": false,
    "quarters": [
@@ -106901,7 +106901,7 @@ window.SEED_DATA = {
      1438503000.0,
      1543026000.0,
      1689388000.0,
-     3537444000.0
+     1848056000.0
     ],
     "cogs": [
      1368034000.0,
@@ -106916,7 +106916,7 @@ window.SEED_DATA = {
      1496339000.0,
      1502017000.0,
      1566905000.0,
-     3225718000.0
+     1658813000.0
     ],
     "gross": [
      72720000.0,
@@ -106931,7 +106931,7 @@ window.SEED_DATA = {
      -57836000.0,
      41009000.0,
      122483000.0,
-     311726000.0
+     189243000.0
     ],
     "op_exp": [
      110745000.0,
@@ -106946,7 +106946,7 @@ window.SEED_DATA = {
      91204000.0,
      89798000.0,
      96123000.0,
-     198267000.0
+     102144000.0
     ],
     "op_income": [
      -38025000.0,
@@ -106961,7 +106961,7 @@ window.SEED_DATA = {
      -149040000.0,
      -48789000.0,
      26360000.0,
-     113459000.0
+     87099000.0
     ],
     "nonop": [
      14170000.0,
@@ -106976,7 +106976,7 @@ window.SEED_DATA = {
      20683000.0,
      19354000.0,
      14725000.0,
-     23855000.0
+     9130000.0
     ],
     "pre_tax": [
      -23855000.0,
@@ -106991,7 +106991,7 @@ window.SEED_DATA = {
      -128357000.0,
      -29435000.0,
      41085000.0,
-     137314000.0
+     96229000.0
     ],
     "net": [
      1639000.0,
@@ -107006,7 +107006,7 @@ window.SEED_DATA = {
      -127284000.0,
      -29786000.0,
      34161000.0,
-     109297000.0
+     75136000.0
     ],
     "eps": [
      0.0,
@@ -107036,7 +107036,7 @@ window.SEED_DATA = {
      -0.040205686050011714,
      0.026576998702549405,
      0.07250140287488724,
-     0.08812181903091611
+     0.10240111771504759
     ]
    },
    "cashflow": {
@@ -107174,11 +107174,11 @@ window.SEED_DATA = {
      591534000
     ]
    },
-   "fetched_at": "2026-10-20T18:55:56+08:00",
+   "fetched_at": "2026-10-22T19:06:21+08:00",
    "quote": {
-    "close": 29.05,
-    "date": "2026-10-20",
-    "spread": -0.5,
+    "close": 28.8,
+    "date": "2026-10-22",
+    "spread": -0.9,
     "pe_ttm_label": "本益比為負"
    }
   },
@@ -107414,7 +107414,7 @@ window.SEED_DATA = {
      1872277000.0,
      1989885000.0,
      1969998000.0,
-     3913114000.0
+     1943116000.0
     ],
     "cogs": [
      1757513000.0,
@@ -107429,7 +107429,7 @@ window.SEED_DATA = {
      1802812000.0,
      1810370000.0,
      1772250000.0,
-     3538596000.0
+     1766346000.0
     ],
     "gross": [
      -14800000.0,
@@ -107444,7 +107444,7 @@ window.SEED_DATA = {
      69465000.0,
      179515000.0,
      197748000.0,
-     374518000.0
+     176770000.0
     ],
     "op_exp": [
      98635000.0,
@@ -107459,7 +107459,7 @@ window.SEED_DATA = {
      101540000.0,
      222145000.0,
      94311000.0,
-     267271000.0
+     172960000.0
     ],
     "op_income": [
      -113435000.0,
@@ -107474,7 +107474,7 @@ window.SEED_DATA = {
      -32075000.0,
      -42630000.0,
      103437000.0,
-     107247000.0
+     3810000.0
     ],
     "nonop": [
      19926000.0,
@@ -107489,7 +107489,7 @@ window.SEED_DATA = {
      1057429000.0,
      749510000.0,
      205536000.0,
-     1303301000.0
+     1097765000.0
     ],
     "pre_tax": [
      -93509000.0,
@@ -107504,7 +107504,7 @@ window.SEED_DATA = {
      1025354000.0,
      706880000.0,
      308973000.0,
-     1410548000.0
+     1101575000.0
     ],
     "net": [
      -78058000.0,
@@ -107519,7 +107519,7 @@ window.SEED_DATA = {
      847777000.0,
      601122000.0,
      245977000.0,
-     1322988000.0
+     1077011000.0
     ],
     "eps": [
      -0.08,
@@ -107549,7 +107549,7 @@ window.SEED_DATA = {
      0.037101881826246866,
      0.09021375607133075,
      0.10037979733989577,
-     0.09570843067694935
+     0.0909724380839847
     ]
    },
    "cashflow": {
@@ -107687,12 +107687,12 @@ window.SEED_DATA = {
      777105000
     ]
    },
-   "fetched_at": "2026-10-20T18:56:00+08:00",
+   "fetched_at": "2026-10-22T19:06:24+08:00",
    "quote": {
-    "close": 45.2,
-    "date": "2026-10-20",
-    "spread": -1.1,
-    "pe_ttm": 8.2
+    "close": 44.5,
+    "date": "2026-10-22",
+    "spread": -1.3,
+    "pe_ttm": 8.1
    }
   },
   {
@@ -107927,7 +107927,7 @@ window.SEED_DATA = {
      24761874000.0,
      30525826000.0,
      31863922000.0,
-     72818194000.0
+     40954272000.0
     ],
     "cogs": [
      8207571000.0,
@@ -107942,7 +107942,7 @@ window.SEED_DATA = {
      21476411000.0,
      27465135000.0,
      28929876000.0,
-     66137282000.0
+     37207406000.0
     ],
     "gross": [
      1025860000.0,
@@ -107957,7 +107957,7 @@ window.SEED_DATA = {
      3285463000.0,
      3060691000.0,
      2934046000.0,
-     6680912000.0
+     3746866000.0
     ],
     "op_exp": [
      882551000.0,
@@ -107972,7 +107972,7 @@ window.SEED_DATA = {
      1613692000.0,
      1850803000.0,
      1747873000.0,
-     3797756000.0
+     2049883000.0
     ],
     "op_income": [
      143309000.0,
@@ -107987,7 +107987,7 @@ window.SEED_DATA = {
      1671771000.0,
      1209888000.0,
      1186173000.0,
-     2883156000.0
+     1696983000.0
     ],
     "nonop": [
      607335000.0,
@@ -108002,7 +108002,7 @@ window.SEED_DATA = {
      781531000.0,
      589347000.0,
      459002000.0,
-     1118153000.0
+     659151000.0
     ],
     "pre_tax": [
      750644000.0,
@@ -108017,7 +108017,7 @@ window.SEED_DATA = {
      2453302000.0,
      1799235000.0,
      1645175000.0,
-     4001309000.0
+     2356134000.0
     ],
     "net": [
      711401000.0,
@@ -108032,7 +108032,7 @@ window.SEED_DATA = {
      2143881000.0,
      2032545000.0,
      1536911000.0,
-     3574074000.0
+     2037163000.0
     ],
     "eps": [
      0.59,
@@ -108062,7 +108062,7 @@ window.SEED_DATA = {
      0.1326823244476569,
      0.10026562426189549,
      0.09208050408860528,
-     0.09174783983244628
+     0.09148901487004824
     ]
    },
    "cashflow": {
@@ -108200,11 +108200,11 @@ window.SEED_DATA = {
      18912799000
     ]
    },
-   "fetched_at": "2026-10-20T18:56:03+08:00",
+   "fetched_at": "2026-10-22T19:06:26+08:00",
    "quote": {
-    "close": 80.7,
-    "date": "2026-10-20",
-    "spread": 0.4,
+    "close": 80.5,
+    "date": "2026-10-22",
+    "spread": -0.8,
     "pe_ttm": 14.4
    }
   },
@@ -108440,7 +108440,7 @@ window.SEED_DATA = {
      514866000.0,
      484033000.0,
      519337000.0,
-     1157509000.0
+     638172000.0
     ],
     "cogs": [
      361402000.0,
@@ -108455,7 +108455,7 @@ window.SEED_DATA = {
      461723000.0,
      426685000.0,
      426107000.0,
-     950884000.0
+     524777000.0
     ],
     "gross": [
      60500000.0,
@@ -108470,7 +108470,7 @@ window.SEED_DATA = {
      53143000.0,
      57348000.0,
      93230000.0,
-     206625000.0
+     113395000.0
     ],
     "op_exp": [
      45739000.0,
@@ -108485,7 +108485,7 @@ window.SEED_DATA = {
      51446000.0,
      57738000.0,
      50079000.0,
-     103167000.0
+     53088000.0
     ],
     "op_income": [
      14761000.0,
@@ -108500,7 +108500,7 @@ window.SEED_DATA = {
      1697000.0,
      -390000.0,
      43151000.0,
-     103458000.0
+     60307000.0
     ],
     "nonop": [
      3104000.0,
@@ -108515,7 +108515,7 @@ window.SEED_DATA = {
      689000.0,
      2317000.0,
      -2052000.0,
-     -1447000.0
+     605000.0
     ],
     "pre_tax": [
      17865000.0,
@@ -108530,7 +108530,7 @@ window.SEED_DATA = {
      2386000.0,
      1927000.0,
      41099000.0,
-     102011000.0
+     60912000.0
     ],
     "net": [
      14893000.0,
@@ -108545,7 +108545,7 @@ window.SEED_DATA = {
      1936000.0,
      1527000.0,
      35899000.0,
-     84711000.0
+     48812000.0
     ],
     "eps": [
      0.14,
@@ -108575,7 +108575,7 @@ window.SEED_DATA = {
      0.10321714776271884,
      0.11847952515634265,
      0.1795173461548089,
-     0.17850833125271595
+     0.177687206583805
     ]
    },
    "cashflow": {
@@ -108713,12 +108713,12 @@ window.SEED_DATA = {
      252718000
     ]
    },
-   "fetched_at": "2026-10-20T18:56:06+08:00",
+   "fetched_at": "2026-10-22T19:06:29+08:00",
    "quote": {
-    "close": 96.2,
-    "date": "2026-10-20",
-    "spread": -0.8,
-    "pe_ttm": 139.4
+    "close": 93.2,
+    "date": "2026-10-22",
+    "spread": -5.9,
+    "pe_ttm": 135.1
    }
   },
   {
@@ -108953,7 +108953,7 @@ window.SEED_DATA = {
      5401841000.0,
      6507696000.0,
      5630744000.0,
-     11293727000.0
+     5662983000.0
     ],
     "cogs": [
      3939980000.0,
@@ -108968,7 +108968,7 @@ window.SEED_DATA = {
      3889391000.0,
      4316139000.0,
      3800450000.0,
-     7621485000.0
+     3821035000.0
     ],
     "gross": [
      1611212000.0,
@@ -108983,7 +108983,7 @@ window.SEED_DATA = {
      1512450000.0,
      2191557000.0,
      1830294000.0,
-     3672242000.0
+     1841948000.0
     ],
     "op_exp": [
      814657000.0,
@@ -108998,7 +108998,7 @@ window.SEED_DATA = {
      893854000.0,
      1015801000.0,
      942803000.0,
-     1892349000.0
+     949546000.0
     ],
     "op_income": [
      796555000.0,
@@ -109013,7 +109013,7 @@ window.SEED_DATA = {
      618596000.0,
      1175756000.0,
      887491000.0,
-     1779893000.0
+     892402000.0
     ],
     "nonop": [
      152934000.0,
@@ -109028,7 +109028,7 @@ window.SEED_DATA = {
      213834000.0,
      353657000.0,
      300926000.0,
-     398369000.0
+     97443000.0
     ],
     "pre_tax": [
      949489000.0,
@@ -109043,7 +109043,7 @@ window.SEED_DATA = {
      832430000.0,
      1529413000.0,
      1188417000.0,
-     2178262000.0
+     989845000.0
     ],
     "net": [
      759194000.0,
@@ -109058,7 +109058,7 @@ window.SEED_DATA = {
      669636000.0,
      1246054000.0,
      942021000.0,
-     1746455000.0
+     804434000.0
     ],
     "eps": [
      1.28,
@@ -109088,7 +109088,7 @@ window.SEED_DATA = {
      0.2799878782067077,
      0.3367638869424755,
      0.325053669639394,
-     0.32515767381308225
+     0.32526108589766206
     ]
    },
    "cashflow": {
@@ -109226,11 +109226,11 @@ window.SEED_DATA = {
      2098009000
     ]
    },
-   "fetched_at": "2026-10-20T18:56:09+08:00",
+   "fetched_at": "2026-10-22T19:06:33+08:00",
    "quote": {
-    "close": 81.5,
-    "date": "2026-10-20",
-    "spread": 0.0,
+    "close": 81.6,
+    "date": "2026-10-22",
+    "spread": 0.5,
     "pe_ttm": 13.2
    }
   },
@@ -109466,7 +109466,7 @@ window.SEED_DATA = {
      2811621000.0,
      3165698000.0,
      2526342000.0,
-     5345683000.0
+     2819341000.0
     ],
     "cogs": [
      1902149000.0,
@@ -109481,7 +109481,7 @@ window.SEED_DATA = {
      2312968000.0,
      2530646000.0,
      2083105000.0,
-     4315617000.0
+     2232512000.0
     ],
     "gross": [
      370926000.0,
@@ -109496,7 +109496,7 @@ window.SEED_DATA = {
      498653000.0,
      635052000.0,
      443237000.0,
-     1030066000.0
+     586829000.0
     ],
     "op_exp": [
      181383000.0,
@@ -109511,7 +109511,7 @@ window.SEED_DATA = {
      228183000.0,
      261540000.0,
      232861000.0,
-     504723000.0
+     271862000.0
     ],
     "op_income": [
      190024000.0,
@@ -109526,7 +109526,7 @@ window.SEED_DATA = {
      269726000.0,
      373258000.0,
      211127000.0,
-     525854000.0
+     314727000.0
     ],
     "nonop": [
      21439000.0,
@@ -109541,7 +109541,7 @@ window.SEED_DATA = {
      39474000.0,
      19899000.0,
      36266000.0,
-     36378000.0
+     112000.0
     ],
     "pre_tax": [
      211463000.0,
@@ -109556,7 +109556,7 @@ window.SEED_DATA = {
      309200000.0,
      393157000.0,
      247393000.0,
-     562232000.0
+     314839000.0
     ],
     "net": [
      166452000.0,
@@ -109571,7 +109571,7 @@ window.SEED_DATA = {
      246202000.0,
      305358000.0,
      200461000.0,
-     452697000.0
+     252236000.0
     ],
     "eps": [
      0.68,
@@ -109601,7 +109601,7 @@ window.SEED_DATA = {
      0.17735427356674316,
      0.20060410058066183,
      0.17544615891276794,
-     0.19269118651442668
+     0.208144030821387
     ]
    },
    "cashflow": {
@@ -109739,11 +109739,11 @@ window.SEED_DATA = {
      980973000
     ]
    },
-   "fetched_at": "2026-10-20T18:56:12+08:00",
+   "fetched_at": "2026-10-22T19:06:36+08:00",
    "quote": {
-    "close": 98.8,
-    "date": "2026-10-20",
-    "spread": -1.0,
+    "close": 98.6,
+    "date": "2026-10-22",
+    "spread": -1.3,
     "pe_ttm": 27.1
    }
   },
@@ -109979,7 +109979,7 @@ window.SEED_DATA = {
      2874960000.0,
      2745183000.0,
      2415476000.0,
-     5111593000.0
+     2696117000.0
     ],
     "cogs": [
      1610260000.0,
@@ -109994,7 +109994,7 @@ window.SEED_DATA = {
      2342806000.0,
      2208018000.0,
      1883307000.0,
-     3955859000.0
+     2072552000.0
     ],
     "gross": [
      469275000.0,
@@ -110009,7 +110009,7 @@ window.SEED_DATA = {
      532154000.0,
      537165000.0,
      532169000.0,
-     1155734000.0
+     623565000.0
     ],
     "op_exp": [
      321437000.0,
@@ -110024,7 +110024,7 @@ window.SEED_DATA = {
      400102000.0,
      429714000.0,
      385685000.0,
-     836427000.0
+     450742000.0
     ],
     "op_income": [
      147838000.0,
@@ -110039,7 +110039,7 @@ window.SEED_DATA = {
      132052000.0,
      107451000.0,
      146484000.0,
-     319307000.0
+     172823000.0
     ],
     "nonop": [
      11927000.0,
@@ -110054,7 +110054,7 @@ window.SEED_DATA = {
      107418000.0,
      132634000.0,
      73333000.0,
-     211139000.0
+     137806000.0
     ],
     "pre_tax": [
      159765000.0,
@@ -110069,7 +110069,7 @@ window.SEED_DATA = {
      239470000.0,
      240085000.0,
      219817000.0,
-     530446000.0
+     310629000.0
     ],
     "net": [
      122177000.0,
@@ -110084,7 +110084,7 @@ window.SEED_DATA = {
      225082000.0,
      192180000.0,
      174915000.0,
-     416442000.0
+     241527000.0
     ],
     "eps": [
      0.66,
@@ -110114,7 +110114,7 @@ window.SEED_DATA = {
      0.18509961877730471,
      0.1956754795581934,
      0.22031640968488198,
-     0.22610055221532702
+     0.23128261866973873
     ]
    },
    "cashflow": {
@@ -110252,12 +110252,12 @@ window.SEED_DATA = {
      839825000
     ]
    },
-   "fetched_at": "2026-10-20T18:56:15+08:00",
+   "fetched_at": "2026-10-22T19:06:38+08:00",
    "quote": {
-    "close": 296.0,
-    "date": "2026-10-20",
-    "spread": -3.0,
-    "pe_ttm": 93.1
+    "close": 266.0,
+    "date": "2026-10-22",
+    "spread": -27.0,
+    "pe_ttm": 83.6
    }
   },
   {
@@ -110492,7 +110492,7 @@ window.SEED_DATA = {
      1168676000.0,
      1341277000.0,
      1339565000.0,
-     3165595000.0
+     1826030000.0
     ],
     "cogs": [
      500010000.0,
@@ -110507,7 +110507,7 @@ window.SEED_DATA = {
      802589000.0,
      873999000.0,
      849478000.0,
-     1912667000.0
+     1063189000.0
     ],
     "gross": [
      112573000.0,
@@ -110522,7 +110522,7 @@ window.SEED_DATA = {
      366087000.0,
      467278000.0,
      490087000.0,
-     1252928000.0
+     762841000.0
     ],
     "op_exp": [
      127487000.0,
@@ -110537,7 +110537,7 @@ window.SEED_DATA = {
      182614000.0,
      208846000.0,
      218080000.0,
-     478586000.0
+     260506000.0
     ],
     "op_income": [
      -9804000.0,
@@ -110552,7 +110552,7 @@ window.SEED_DATA = {
      186128000.0,
      257642000.0,
      269508000.0,
-     782223000.0
+     512715000.0
     ],
     "nonop": [
      16009000.0,
@@ -110567,7 +110567,7 @@ window.SEED_DATA = {
      6653000.0,
      1162000.0,
      143000.0,
-     5909000.0
+     5766000.0
     ],
     "pre_tax": [
      6205000.0,
@@ -110582,7 +110582,7 @@ window.SEED_DATA = {
      192781000.0,
      258804000.0,
      269651000.0,
-     788132000.0
+     518481000.0
     ],
     "net": [
      -127543000.0,
@@ -110597,7 +110597,7 @@ window.SEED_DATA = {
      129188000.0,
      179261000.0,
      189432000.0,
-     552098000.0
+     362666000.0
     ],
     "eps": [
      -0.87,
@@ -110627,7 +110627,7 @@ window.SEED_DATA = {
      0.31324935225845313,
      0.34838292164854834,
      0.3658553336344261,
-     0.3957954191865984
+     0.41775929201601286
     ]
    },
    "cashflow": {
@@ -110765,18 +110765,18 @@ window.SEED_DATA = {
      829656000
     ]
    },
-   "fetched_at": "2026-10-20T18:56:18+08:00",
+   "fetched_at": "2026-10-22T19:06:41+08:00",
    "quote": {
-    "close": 489.0,
-    "date": "2026-10-20",
-    "spread": -31.0,
-    "pe_ttm": 96.3
+    "close": 479.0,
+    "date": "2026-10-22",
+    "spread": -27.0,
+    "pe_ttm": 94.3
    }
   },
   {
    "id": "6191",
    "name": "精成科",
-   "industry": "電子零組件業",
+   "industry": "電子工業",
    "theme": "PCB板廠",
    "has_contract_liab": false,
    "quarters": [
@@ -111005,7 +111005,7 @@ window.SEED_DATA = {
      9570191000.0,
      9318978000.0,
      9340071000.0,
-     19292828000.0
+     9952757000.0
     ],
     "cogs": [
      4671154000.0,
@@ -111020,7 +111020,7 @@ window.SEED_DATA = {
      7759448000.0,
      7704049000.0,
      7801889000.0,
-     16230958000.0
+     8429069000.0
     ],
     "gross": [
      1238704000.0,
@@ -111035,7 +111035,7 @@ window.SEED_DATA = {
      1810743000.0,
      1614929000.0,
      1538182000.0,
-     3061870000.0
+     1523688000.0
     ],
     "op_exp": [
      541590000.0,
@@ -111050,7 +111050,7 @@ window.SEED_DATA = {
      890910000.0,
      908505000.0,
      771683000.0,
-     1596488000.0
+     824805000.0
     ],
     "op_income": [
      697114000.0,
@@ -111065,7 +111065,7 @@ window.SEED_DATA = {
      919833000.0,
      706424000.0,
      766499000.0,
-     1465382000.0
+     698883000.0
     ],
     "nonop": [
      242030000.0,
@@ -111080,7 +111080,7 @@ window.SEED_DATA = {
      277943000.0,
      453671000.0,
      417681000.0,
-     465929000.0
+     48248000.0
     ],
     "pre_tax": [
      939144000.0,
@@ -111095,7 +111095,7 @@ window.SEED_DATA = {
      1197776000.0,
      1160095000.0,
      1184180000.0,
-     1931311000.0
+     747131000.0
     ],
     "net": [
      644731000.0,
@@ -111110,7 +111110,7 @@ window.SEED_DATA = {
      940329000.0,
      777189000.0,
      798528000.0,
-     1149483000.0
+     350955000.0
     ],
     "eps": [
      1.39,
@@ -111140,7 +111140,7 @@ window.SEED_DATA = {
      0.18920656860453464,
      0.1732946466876518,
      0.1646863284015721,
-     0.15870508978776984
+     0.15309205278497204
     ]
    },
    "cashflow": {
@@ -111278,12 +111278,12 @@ window.SEED_DATA = {
      4246062000
     ]
    },
-   "fetched_at": "2026-10-20T18:56:21+08:00",
+   "fetched_at": "2026-10-22T19:06:44+08:00",
    "quote": {
-    "close": 90.5,
-    "date": "2026-10-20",
-    "spread": -0.5,
-    "pe_ttm": 15.6
+    "close": 89.8,
+    "date": "2026-10-22",
+    "spread": -2.4,
+    "pe_ttm": 15.5
    }
   },
   {
@@ -111518,7 +111518,7 @@ window.SEED_DATA = {
      1389967000.0,
      1334508000.0,
      1357265000.0,
-     3008421000.0
+     1651156000.0
     ],
     "cogs": [
      864820000.0,
@@ -111533,7 +111533,7 @@ window.SEED_DATA = {
      996219000.0,
      1007849000.0,
      1002466000.0,
-     2176200000.0
+     1173734000.0
     ],
     "gross": [
      222943000.0,
@@ -111548,7 +111548,7 @@ window.SEED_DATA = {
      393748000.0,
      326659000.0,
      354799000.0,
-     832221000.0
+     477422000.0
     ],
     "op_exp": [
      88199000.0,
@@ -111563,7 +111563,7 @@ window.SEED_DATA = {
      105979000.0,
      86161000.0,
      95271000.0,
-     194378000.0
+     99107000.0
     ],
     "op_income": [
      134744000.0,
@@ -111578,7 +111578,7 @@ window.SEED_DATA = {
      287769000.0,
      240498000.0,
      259528000.0,
-     637843000.0
+     378315000.0
     ],
     "nonop": [
      69363000.0,
@@ -111593,7 +111593,7 @@ window.SEED_DATA = {
      31769000.0,
      22820000.0,
      3504000.0,
-     -6580000.0
+     -10084000.0
     ],
     "pre_tax": [
      204107000.0,
@@ -111608,7 +111608,7 @@ window.SEED_DATA = {
      319538000.0,
      263318000.0,
      263032000.0,
-     631263000.0
+     368231000.0
     ],
     "net": [
      155276000.0,
@@ -111623,7 +111623,7 @@ window.SEED_DATA = {
      239060000.0,
      193219000.0,
      208716000.0,
-     495141000.0
+     286425000.0
     ],
     "eps": [
      1.2,
@@ -111653,7 +111653,7 @@ window.SEED_DATA = {
      0.2832786677669326,
      0.244778600053353,
      0.26140731544687296,
-     0.27663049819157626
+     0.2891440905644288
     ]
    },
    "cashflow": {
@@ -111791,12 +111791,12 @@ window.SEED_DATA = {
      595452000
     ]
    },
-   "fetched_at": "2026-10-20T18:56:24+08:00",
+   "fetched_at": "2026-10-22T19:06:46+08:00",
    "quote": {
-    "close": 121.5,
-    "date": "2026-10-20",
-    "spread": -4.0,
-    "pe_ttm": 16.9
+    "close": 118.0,
+    "date": "2026-10-22",
+    "spread": -6.5,
+    "pe_ttm": 16.4
    }
   },
   {
@@ -112031,7 +112031,7 @@ window.SEED_DATA = {
      4527072000.0,
      4673213000.0,
      4394312000.0,
-     9080585000.0
+     4686273000.0
     ],
     "cogs": [
      4969200000.0,
@@ -112046,7 +112046,7 @@ window.SEED_DATA = {
      4613759000.0,
      4466820000.0,
      4163344000.0,
-     8807238000.0
+     4643894000.0
     ],
     "gross": [
      82977000.0,
@@ -112061,7 +112061,7 @@ window.SEED_DATA = {
      -86739000.0,
      204037000.0,
      230376000.0,
-     271493000.0
+     41117000.0
     ],
     "op_exp": [
      486653000.0,
@@ -112076,7 +112076,7 @@ window.SEED_DATA = {
      453249000.0,
      484444000.0,
      445358000.0,
-     953509000.0
+     508151000.0
     ],
     "op_income": [
      -403676000.0,
@@ -112091,7 +112091,7 @@ window.SEED_DATA = {
      -539988000.0,
      -280407000.0,
      -214982000.0,
-     -682016000.0
+     -467034000.0
     ],
     "nonop": [
      18292000.0,
@@ -112106,7 +112106,7 @@ window.SEED_DATA = {
      138212000.0,
      668566000.0,
      38204000.0,
-     74346000.0
+     36142000.0
     ],
     "pre_tax": [
      -385384000.0,
@@ -112121,7 +112121,7 @@ window.SEED_DATA = {
      -401776000.0,
      388159000.0,
      -176778000.0,
-     -607670000.0
+     -430892000.0
     ],
     "net": [
      -389371000.0,
@@ -112136,7 +112136,7 @@ window.SEED_DATA = {
      -317792000.0,
      303012000.0,
      -176885000.0,
-     -607652000.0
+     -430767000.0
     ],
     "eps": [
      -0.35,
@@ -112166,7 +112166,7 @@ window.SEED_DATA = {
      -0.019160066374027184,
      0.04366096730450763,
      0.05242595427907713,
-     0.029898183872514823
+     0.008773923328837223
     ]
    },
    "cashflow": {
@@ -112304,11 +112304,11 @@ window.SEED_DATA = {
      1520476000
     ]
    },
-   "fetched_at": "2026-10-20T18:56:27+08:00",
+   "fetched_at": "2026-10-22T19:06:49+08:00",
    "quote": {
-    "close": 12.85,
-    "date": "2026-10-20",
-    "spread": -0.3,
+    "close": 12.8,
+    "date": "2026-10-22",
+    "spread": 0.05,
     "pe_ttm_label": "本益比為負"
    }
   },
@@ -112544,7 +112544,7 @@ window.SEED_DATA = {
      4713879000.0,
      5307405000.0,
      5328772000.0,
-     11580606000.0
+     6251834000.0
     ],
     "cogs": [
      2860285000.0,
@@ -112559,7 +112559,7 @@ window.SEED_DATA = {
      3351322000.0,
      3690846000.0,
      3659355000.0,
-     7732917000.0
+     4073562000.0
     ],
     "gross": [
      1549278000.0,
@@ -112574,7 +112574,7 @@ window.SEED_DATA = {
      1362557000.0,
      1616559000.0,
      1669417000.0,
-     3847689000.0
+     2178272000.0
     ],
     "op_exp": [
      811847000.0,
@@ -112589,7 +112589,7 @@ window.SEED_DATA = {
      911128000.0,
      959449000.0,
      1055393000.0,
-     2206333000.0
+     1150940000.0
     ],
     "op_income": [
      737719000.0,
@@ -112604,7 +112604,7 @@ window.SEED_DATA = {
      451762000.0,
      657451000.0,
      614352000.0,
-     1642023000.0
+     1027671000.0
     ],
     "nonop": [
      99254000.0,
@@ -112619,7 +112619,7 @@ window.SEED_DATA = {
      117430000.0,
      69200000.0,
      181256000.0,
-     369928000.0
+     188672000.0
     ],
     "pre_tax": [
      836973000.0,
@@ -112634,7 +112634,7 @@ window.SEED_DATA = {
      569192000.0,
      726651000.0,
      795608000.0,
-     2011951000.0
+     1216343000.0
     ],
     "net": [
      719392000.0,
@@ -112649,7 +112649,7 @@ window.SEED_DATA = {
      494633000.0,
      673380000.0,
      680917000.0,
-     1734925000.0
+     1054008000.0
     ],
     "eps": [
      4.93,
@@ -112679,7 +112679,7 @@ window.SEED_DATA = {
      0.28905217974411307,
      0.30458557430608746,
      0.31328362331884346,
-     0.3322528199301487
+     0.348421279259814
     ]
    },
    "cashflow": {
@@ -112817,18 +112817,18 @@ window.SEED_DATA = {
      1978993000
     ]
    },
-   "fetched_at": "2026-10-20T18:56:30+08:00",
+   "fetched_at": "2026-10-22T19:06:52+08:00",
    "quote": {
-    "close": 288.5,
-    "date": "2026-10-20",
-    "spread": -8.0,
-    "pe_ttm": 14.5
+    "close": 294.5,
+    "date": "2026-10-22",
+    "spread": -3.5,
+    "pe_ttm": 14.8
    }
   },
   {
    "id": "2498",
    "name": "宏達電",
-   "industry": "電子工業",
+   "industry": "通信網路業",
    "theme": "品牌電子",
    "has_contract_liab": false,
    "quarters": [
@@ -113057,7 +113057,7 @@ window.SEED_DATA = {
      716371000.0,
      780967000.0,
      652623000.0,
-     1266828000.0
+     614205000.0
     ],
     "cogs": [
      670553000.0,
@@ -113072,7 +113072,7 @@ window.SEED_DATA = {
      464176000.0,
      512010000.0,
      380452000.0,
-     732807000.0
+     352355000.0
     ],
     "gross": [
      473371000.0,
@@ -113087,7 +113087,7 @@ window.SEED_DATA = {
      252195000.0,
      268957000.0,
      272171000.0,
-     534021000.0
+     261850000.0
     ],
     "op_exp": [
      1581930000.0,
@@ -113102,7 +113102,7 @@ window.SEED_DATA = {
      1106149000.0,
      887234000.0,
      834948000.0,
-     1669444000.0
+     834496000.0
     ],
     "op_income": [
      -1108559000.0,
@@ -113117,7 +113117,7 @@ window.SEED_DATA = {
      -853954000.0,
      -618277000.0,
      -562777000.0,
-     -1135423000.0
+     -572646000.0
     ],
     "nonop": [
      207427000.0,
@@ -113132,7 +113132,7 @@ window.SEED_DATA = {
      4325476000.0,
      134672000.0,
      334296000.0,
-     646879000.0
+     312583000.0
     ],
     "pre_tax": [
      -901132000.0,
@@ -113147,7 +113147,7 @@ window.SEED_DATA = {
      3471522000.0,
      -483605000.0,
      -228481000.0,
-     -488544000.0
+     -260063000.0
     ],
     "net": [
      -900602000.0,
@@ -113162,7 +113162,7 @@ window.SEED_DATA = {
      3243274000.0,
      -556819000.0,
      -241674000.0,
-     -521137000.0
+     -279463000.0
     ],
     "eps": [
      -1.08,
@@ -113192,7 +113192,7 @@ window.SEED_DATA = {
      0.35204523912888713,
      0.34438971172917676,
      0.4170416917577223,
-     0.42154183519783267
+     0.426323458780049
     ]
    },
    "cashflow": {
@@ -113330,12 +113330,12 @@ window.SEED_DATA = {
      338824000
     ]
    },
-   "fetched_at": "2026-10-20T18:56:33+08:00",
+   "fetched_at": "2026-10-22T19:06:54+08:00",
    "quote": {
-    "close": 39.95,
-    "date": "2026-10-20",
-    "spread": 0.0,
-    "pe_ttm": 15.4
+    "close": 39.75,
+    "date": "2026-10-22",
+    "spread": -0.8,
+    "pe_ttm": 15.3
    }
   },
   {
@@ -113570,7 +113570,7 @@ window.SEED_DATA = {
      2091277000.0,
      2171808000.0,
      2293229000.0,
-     4785896000.0
+     2492667000.0
     ],
     "cogs": [
      1109008000.0,
@@ -113585,7 +113585,7 @@ window.SEED_DATA = {
      1413968000.0,
      1429385000.0,
      1490669000.0,
-     2985139000.0
+     1494470000.0
     ],
     "gross": [
      466055000.0,
@@ -113600,7 +113600,7 @@ window.SEED_DATA = {
      677309000.0,
      742423000.0,
      802560000.0,
-     1800757000.0
+     998197000.0
     ],
     "op_exp": [
      240758000.0,
@@ -113615,7 +113615,7 @@ window.SEED_DATA = {
      344094000.0,
      405905000.0,
      358121000.0,
-     752660000.0
+     394539000.0
     ],
     "op_income": [
      225297000.0,
@@ -113630,7 +113630,7 @@ window.SEED_DATA = {
      333215000.0,
      336518000.0,
      444439000.0,
-     1048097000.0
+     603658000.0
     ],
     "nonop": [
      58369000.0,
@@ -113645,7 +113645,7 @@ window.SEED_DATA = {
      83737000.0,
      253970000.0,
      87512000.0,
-     148234000.0
+     60722000.0
     ],
     "pre_tax": [
      283666000.0,
@@ -113660,7 +113660,7 @@ window.SEED_DATA = {
      416952000.0,
      590488000.0,
      531951000.0,
-     1196331000.0
+     664380000.0
     ],
     "net": [
      225797000.0,
@@ -113675,7 +113675,7 @@ window.SEED_DATA = {
      330306000.0,
      497199000.0,
      442152000.0,
-     977910000.0
+     535758000.0
     ],
     "eps": [
      1.54,
@@ -113705,7 +113705,7 @@ window.SEED_DATA = {
      0.3238734036667548,
      0.34184559592744845,
      0.34996940994553966,
-     0.3762632953160704
+     0.400453409942042
     ]
    },
    "cashflow": {
@@ -113843,12 +113843,12 @@ window.SEED_DATA = {
      908501000
     ]
    },
-   "fetched_at": "2026-10-20T18:56:36+08:00",
+   "fetched_at": "2026-10-22T19:06:57+08:00",
    "quote": {
-    "close": 858.0,
-    "date": "2026-10-20",
-    "spread": -9.0,
-    "pe_ttm": 71.9
+    "close": 846.0,
+    "date": "2026-10-22",
+    "spread": -31.0,
+    "pe_ttm": 70.9
    }
   },
   {
@@ -114083,7 +114083,7 @@ window.SEED_DATA = {
      46339806000.0,
      56786409000.0,
      49778303000.0,
-     99210679000.0
+     49432376000.0
     ],
     "cogs": [
      34902079000.0,
@@ -114098,7 +114098,7 @@ window.SEED_DATA = {
      36465549000.0,
      45595311000.0,
      39045908000.0,
-     77521993000.0
+     38476085000.0
     ],
     "gross": [
      8644240000.0,
@@ -114113,7 +114113,7 @@ window.SEED_DATA = {
      9874257000.0,
      11191098000.0,
      10732395000.0,
-     21688686000.0
+     10956291000.0
     ],
     "op_exp": [
      4395479000.0,
@@ -114128,7 +114128,7 @@ window.SEED_DATA = {
      5061357000.0,
      5608913000.0,
      5113170000.0,
-     10231352000.0
+     5118182000.0
     ],
     "op_income": [
      4480292000.0,
@@ -114143,7 +114143,7 @@ window.SEED_DATA = {
      5124014000.0,
      6008028000.0,
      5932746000.0,
-     12051947000.0
+     6119201000.0
     ],
     "nonop": [
      -135628000.0,
@@ -114158,7 +114158,7 @@ window.SEED_DATA = {
      -231083000.0,
      -422615000.0,
      -263836000.0,
-     -334097000.0
+     -70261000.0
     ],
     "pre_tax": [
      4344664000.0,
@@ -114173,7 +114173,7 @@ window.SEED_DATA = {
      4892931000.0,
      5585413000.0,
      5668910000.0,
-     11717850000.0
+     6048940000.0
     ],
     "net": [
      3513514000.0,
@@ -114188,7 +114188,7 @@ window.SEED_DATA = {
      3941327000.0,
      4447738000.0,
      4526241000.0,
-     9436955000.0
+     4910714000.0
     ],
     "eps": [
      1.08,
@@ -114218,7 +114218,7 @@ window.SEED_DATA = {
      0.21308369309962152,
      0.19707352863252894,
      0.21560387464393874,
-     0.21861241368986095
+     0.2216420064453305
     ]
    },
    "cashflow": {
@@ -114356,12 +114356,12 @@ window.SEED_DATA = {
      17411550000
     ]
    },
-   "fetched_at": "2026-10-20T18:56:39+08:00",
+   "fetched_at": "2026-10-22T19:06:59+08:00",
    "quote": {
-    "close": 130.5,
-    "date": "2026-10-20",
-    "spread": 0.0,
-    "pe_ttm": 24.5
+    "close": 133.0,
+    "date": "2026-10-22",
+    "spread": 2.5,
+    "pe_ttm": 25.0
    }
   },
   {
@@ -114596,7 +114596,7 @@ window.SEED_DATA = {
      324974000.0,
      344596000.0,
      375050000.0,
-     838890000.0
+     463840000.0
     ],
     "cogs": [
      156261000.0,
@@ -114611,7 +114611,7 @@ window.SEED_DATA = {
      212061000.0,
      221100000.0,
      231739000.0,
-     530752000.0
+     299013000.0
     ],
     "gross": [
      95493000.0,
@@ -114626,7 +114626,7 @@ window.SEED_DATA = {
      112913000.0,
      123496000.0,
      143311000.0,
-     308138000.0
+     164827000.0
     ],
     "op_exp": [
      108782000.0,
@@ -114641,7 +114641,7 @@ window.SEED_DATA = {
      141450000.0,
      162130000.0,
      145945000.0,
-     310316000.0
+     164371000.0
     ],
     "op_income": [
      -13289000.0,
@@ -114656,7 +114656,7 @@ window.SEED_DATA = {
      -28537000.0,
      -38634000.0,
      -2634000.0,
-     -2178000.0
+     456000.0
     ],
     "nonop": [
      13751000.0,
@@ -114671,7 +114671,7 @@ window.SEED_DATA = {
      29979000.0,
      8535000.0,
      54543000.0,
-     98247000.0
+     43704000.0
     ],
     "pre_tax": [
      462000.0,
@@ -114686,7 +114686,7 @@ window.SEED_DATA = {
      1442000.0,
      -30099000.0,
      51909000.0,
-     96069000.0
+     44160000.0
     ],
     "net": [
      987000.0,
@@ -114701,7 +114701,7 @@ window.SEED_DATA = {
      4366000.0,
      -29781000.0,
      50721000.0,
-     96439000.0
+     45718000.0
     ],
     "eps": [
      0.01,
@@ -114731,7 +114731,7 @@ window.SEED_DATA = {
      0.3474524115775416,
      0.35837908739509455,
      0.38211171843754166,
-     0.3673163346803514
+     0.3553531390134529
     ]
    },
    "cashflow": {
@@ -114869,12 +114869,12 @@ window.SEED_DATA = {
      117583000
     ]
    },
-   "fetched_at": "2026-10-20T18:56:42+08:00",
+   "fetched_at": "2026-10-22T19:07:02+08:00",
    "quote": {
-    "close": 160.0,
-    "date": "2026-10-20",
-    "spread": -1.0,
-    "pe_ttm": 320.0
+    "close": 158.0,
+    "date": "2026-10-22",
+    "spread": -5.0,
+    "pe_ttm": 316.0
    }
   },
   {
