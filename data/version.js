@@ -1,2 +1,2 @@
 // 由 etl/build_data.py 自動產生，供 index.html 快取破壞用。
-window.__SEED_V = "2026-11-24T01:18:43+08:00";
+window.__SEED_V = "2026-11-25T00:58:53+08:00";
